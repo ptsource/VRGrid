@@ -16,6 +16,15 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 ![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/01.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/02.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/03.PNG)
 ![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/04.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/05.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/06.PNG)
 
+## Features
+
+* Cloud based VRF files
+* Github hosting support for team management
+* Integrated speech engine
+* Integrated HTML support
+* Integrated Media support
+* Custom VRI Texture format
+
 ## VRModes supported
 
 * Side by Side
