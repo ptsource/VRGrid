@@ -24,6 +24,7 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 * Integrated HTML support
 * Integrated Media support
 * Custom VRI Texture format
+* PHP & MYSQL Get and Post support
 * ... and much more
 
 ## VRModes supported
