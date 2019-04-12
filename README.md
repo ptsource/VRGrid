@@ -9,7 +9,7 @@ Virtual reality (VR) is an interactive computer-generated experience taking plac
 
 # VRI Image format
 
-VRI supports palette-based images (with palettes of 24-bit RGB or 32-bit RGBA colors), grayscale images (with or without alpha channel for transparency), and full-color non-palette-based RGB/RGBA images (with or without alpha channel).
+VRI image format only displays in VRGrid. VRI image format supports palette-based images (with palettes of 24-bit RGB or 32-bit RGBA colors), grayscale images (with or without alpha channel for transparency), and full-color non-palette-based RGB/RGBA images (with or without alpha channel) converted from PNG or APNG high resolution format.
 
 ## Screenshots
 
