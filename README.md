@@ -28,9 +28,8 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 
 ## Trackers supported
 
-* Hillcrest Labs
-* FreeTrack
-* Shared Memory Tracker
-* Oculus Tracker
+* Memory Tracker
+* Hillcrest Labs Tracker
+* FreeTrack Tracker
 
 
