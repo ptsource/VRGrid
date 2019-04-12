@@ -20,9 +20,6 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 
 * Side by Side
 * Over Under
-* Horizontal Interleave
-* Vertical Interleave
-* Checkerboard
 * Anaglyph (Red/Cyan)
 * Anaglyph (Yellow/Blue)
 * Anaglyph (Green/Magenta)
