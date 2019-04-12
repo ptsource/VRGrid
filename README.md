@@ -16,4 +16,24 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 ![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/01.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/02.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/03.PNG)
 ![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/04.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/05.PNG)![PTSource VRGrid](https://raw.githubusercontent.com/ptsource/VRGrid/master/images/06.PNG)
 
+## VRModes supported
+
+* Side by Side
+* Over Under
+* Horizontal Interleave
+* Vertical Interleave
+* Checkerboard
+* Anaglyph (Red/Cyan)
+* Anaglyph (Yellow/Blue)
+* Anaglyph (Green/Magenta)
+* DIY Rift
+* Oculus Rift DK1
+
+## Trackers supported
+
+* Hillcrest Labs
+* FreeTrack
+* Shared Memory Tracker
+* Oculus Tracker
+
 
