@@ -32,7 +32,6 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 ## VRModes supported
 
 * Side by Side
-* Over Under
 * Anaglyph (Red/Cyan)
 * Anaglyph (Yellow/Blue)
 * Anaglyph (Green/Magenta)
