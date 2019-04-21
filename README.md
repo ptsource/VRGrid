@@ -9,6 +9,10 @@ Virtual reality (VR) is an interactive computer-generated experience taking plac
 
 [![Maintenance](/images/maintained.svg)]() [![Travis](/images/rust.svg)]() [![Help here.](/images/docs-here-blue.svg)](https://wiki.ptsource.eu/)
 
+# VRF File format
+
+The VRF format uses standard XML developed by the World Wide Web Consortium, along with the Powers & Stevens parsers and the Simkin engine by Simon Whiteside. The design goals of the VRF format emphasize simplicity, generality, and usability across diferent platforms. It is a textual data format with strong support via Unicode for different human languages. 
+
 # VRI Image format
 
 VRI image format only displays in VRGrid. VRI image format supports palette-based images (with palettes of 24-bit RGB or 32-bit RGBA colors), grayscale images (with or without alpha channel for transparency), and full-color non-palette-based RGB/RGBA images (with or without alpha channel) converted from PNG or APNG high resolution format.
