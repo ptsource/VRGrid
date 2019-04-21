@@ -11,7 +11,7 @@ Virtual reality (VR) is an interactive computer-generated experience taking plac
 
 # VRF File format
 
-The VRF format uses standard XML developed by the World Wide Web Consortium, along with the Powers & Stevens parsers and the Simkin engine by Simon Whiteside. The design goals of XML emphasize simplicity, generality, and usability across diferent platforms. It is a textual data format with strong support via Unicode for different human languages. 
+The VRF format uses standard XML developed by the World Wide Web Consortium, along with the Powers & Stevens parsers for XML and the Simkin script engine by Simon Whiteside. The design goals of XML emphasize simplicity, generality, and usability across diferent platforms. It is a textual data format with strong support via Unicode for different human languages. 
 
 # VRI Image format
 
