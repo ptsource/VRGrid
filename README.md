@@ -40,11 +40,11 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 ## VRModes supported
 
 * Side by Side
+* DIY Rift
+* Oculus Rift DK1
 * Anaglyph (Red/Cyan)
 * Anaglyph (Yellow/Blue)
 * Anaglyph (Green/Magenta)
-* DIY Rift
-* Oculus Rift DK1
 
 ## Trackers supported
 
