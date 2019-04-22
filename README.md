@@ -9,6 +9,10 @@ Virtual reality (VR) is an interactive computer-generated experience taking plac
 
 [![Maintenance](/images/maintained.svg)]() [![Travis](/images/rust.svg)]() [![Help here.](/images/docs-here-blue.svg)](https://wiki.ptsource.eu/)
 
+# VRGrid Rendering
+
+VRGrid uses Microsoft DirectX SDK (runtimes included in the installer) , Oculus Rift SDK and Hillcrest Labs Freespace SDK for its rendering . Rendering for interactive media, such as simulations, is calculated and displayed in real time, at rates of approximately 20 to 120 frames per second. In real-time rendering, the goal is to show as much information as possible as the eye can process in a fraction of a second (a.k.a. "in one frame": In the case of a 30 frame-per-second animation, a frame encompasses one 30th of a second).
+
 # VRF File format
 
 The VRF format uses standard XML developed by the World Wide Web Consortium, along with the Powers & Stevens parsers for XML and the Simkin script engine by Simon Whiteside. The design goals of XML emphasize simplicity, generality, and usability across diferent platforms. It is a textual data format with strong support via Unicode for different human languages. 
