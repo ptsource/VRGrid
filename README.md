@@ -30,7 +30,7 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 ## Features
 
 * Cloud based VRF(xml) files
-* Native VR Oculus support
+* Native VR support
 * Github hosting support for team management
 * Integrated speech engine
 * Integrated HTML support
