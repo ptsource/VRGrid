@@ -58,7 +58,7 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 ### Here is a list of what you can do and what we need 
 
 * VRF Creators and Designers
-* 3D Object Desiners
+* 3D Object Designers
 * Texture designers
 * Documentation writers
 * so give us a snail contact [here ](https://wiki.ptsource.eu/) if you are interested.
