@@ -1,7 +1,7 @@
 # Virtual Space modelling
 
-Ad hoc models, or sketch models, are sometimes made to study the interaction of volumes, different viewpoints, or concepts during the design process.
-Presentation models can be used to exhibit and visualise final design. A model are also used as show pieces, for instance as a feature in the reception of a building, a part of a museum exhibition,  scale replicas of historical buildings or even for building virtual gaming structures.
+Virtual space modelling is a collective virtual shared space, created by the convergence of virtually enhanced physical reality and physically persistent virtual space, including the sum of all virtual worlds, augmented reality, and the internet. 
+Virtual presentation models can be used to exhibit and visualise final designs. A model are also used as show pieces, for instance as a feature in the reception of a building, a part of a museum exhibition,  scale replicas of historical buildings or even for building virtual gaming structures.
 
 # VRGrid & Virtual reality
 ### Current version 9 released 16/06/2019 compiled and tested under Windows 10
