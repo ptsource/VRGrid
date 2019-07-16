@@ -1,0 +1,51 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Streaming Action" />
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/> 
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(7,5,2)"/>
+<ground /> 
+<stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/video.rm"/>
+<devel />
+</globals>
+<design>
+<create unit="@@" vrobj="basic:portal">
+</create>
+<create unit="11" vrobj="basic:full">
+<side name="s" stream="bugslife" rect="0%,0%,33.3%,50%"/>
+</create>
+<create unit="22" vrobj="basic:full">
+<side name="s" stream="bugslife" rect="33.3%,0%,66.6%,50%"/>
+</create>
+<create unit="33" vrobj="basic:full">
+<side name="s" stream="bugslife" rect="66.6%,0%,100%,50%"/>
+</create>
+<create unit="44" vrobj="basic:full">
+<side name="s" stream="bugslife" rect="0%,50%,33.3%,100%"/>
+</create>
+<create unit="55" vrobj="basic:full">
+<side name="s" stream="bugslife" rect="33.3%,50%,66.6%,100%"/>
+</create>
+<create unit="66" vrobj="basic:full">
+<side name="s" stream="bugslife" rect="66.6%,50%,100%,100%"/>
+</create>
+<layer number="1">
+.. .. 44 55 66 .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. @@ .. .. .. .. ..
+.. .. .. .. .. .. ..
+</layer>
+<layer number="2">
+.. .. 11 22 33 .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+</layer>
+<enter name="default" location="(3,5,1)" />
+</design>
+</vrf>
