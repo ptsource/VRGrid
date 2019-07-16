@@ -1,0 +1,349 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf >
+<globals>
+<title name="VRGrid Scripting Example (Water effects)"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib"/>
+<lib href="https://ptsource.github.io/VRGrid/packs/garden.vlib"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(10,10,3)"/>
+<sky color="(0,0,255)"/>
+<ground/>
+<devel/>
+</globals>
+<design>
+<import href="scripts/water.vrf"/>
+<define>
+   <function name="start">
+      vrobj = map.get_vrobj("X4");
+      vrobj.location:x = 4.0*256.0;
+      vrobj.location:y = 2.0*256.0 + 10.0;
+      vrobj.location:z = 5.0*256.0;
+      vrobj = map.get_vrobj("X1");
+      vrobj.location:x = 5.0*256.0;
+      vrobj.location:y = 2.0*256.0 + 10.0;
+      vrobj.location:z = 5.0*256.0;
+      vrobj = map.get_vrobj("X3");
+      vrobj.location:x = 4.0*256.0;
+      vrobj.location:y = 2.0*256.0 + 10.0;
+      vrobj.location:z = 4.0*256.0;
+      vrobj = map.get_vrobj("X2");
+      vrobj.location:x = 5.0*256.0;
+      vrobj.location:y = 2.0*256.0 + 10.0;
+      vrobj.location:z = 4.0*256.0;
+
+      //CircleWater(vrobj, Nvertices, Xcenter, Ycenter, Zcenter, Rinner, Router )
+      // define large pool wave
+      circle = map.get_vrobj("c0");
+      CircleWater(circle, 31, 0.0, 0.0, 0.0, 8.0, 300.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0, 2.0*256.0+60.0, 5.0*256.0 );
+
+      //***************************
+      //      Water Arm 1
+      //***************************
+      // ElbowWater(vrobj, Nvertices, Xoffset, Ystart, Yend, Zstart, Zend, Rinit, Rfinal) 
+      elbow = map.get_vrobj("e0");
+      ElbowWater(elbow, 15, 0.0, 187.5, 48.0, 14.0, 145.0, 4.5, 9.0 );
+      elbow.rotate_y(45);
+      // Translate(block, Xcenter, Ycenter, Zcenter)
+      TranslateBlockAbsolute(elbow, 5.0*256.0, 2.0*256.0+10.0, 5.0*256.0);
+
+      // define inner splash circle
+      circle = map.get_vrobj("s0");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 17.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0+102.0, 2.0*256.0+65.0, 5.0*256.0+102.0);
+
+      // define outer splash circle
+      circle = map.get_vrobj("s1");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 30.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0+102.0, 2.0*256.0+60.0, 5.0*256.0+102.0);
+
+      //***************************
+      //      Water Arm 2
+      //***************************
+      // ElbowWater(vrobj, Nvertices, Xoffset, Ystart, Yend, Zstart, Zend, Rinit, Rfinal) 
+      elbow = map.get_vrobj("e2");
+      ElbowWater(elbow, 15, 0.0, 187.5, 48.0, 14.0, 145.0, 4.5, 9.0 );
+      elbow.rotate_y(135);
+      // Translate(block, Xcenter, Ycenter, Zcenter)
+      TranslateBlockAbsolute(elbow, 5.0*256.0, 2.0*256.0+10.0, 5.0*256.0);
+
+      // define inner splash circle
+      circle = map.get_vrobj("s2");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 17.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0+102.0, 2.0*256.0+65.0, 5.0*256.0-102.0);
+
+      // define outer splash circle
+      circle = map.get_vrobj("s3");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 30.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0+102.0, 2.0*256.0+60.0, 5.0*256.0-102.0);
+
+      //***************************
+      //      Water Arm 3
+      //***************************
+      // ElbowWater(vrobj, Nvertices, Xoffset, Ystart, Yend, Zstart, Zend, Rinit, Rfinal) 
+      elbow = map.get_vrobj("e4");
+      ElbowWater(elbow, 15, 0.0, 187.5, 48.0, 14.0, 145.0, 4.5, 9.0 );
+      elbow.rotate_y(225);
+      // Translate(vrobj, Xcenter, Ycenter, Zcenter)
+      TranslateBlockAbsolute(elbow, 5.0*256.0, 2.0*256.0+10.0, 5.0*256.0);
+
+      // define inner splash circle
+      circle = map.get_vrobj("s4");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 17.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0-102.0, 2.0*256.0+65.0, 5.0*256.0-102.0);
+
+      // define outer splash circle
+      circle = map.get_vrobj("s5");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 30.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0-102.0, 2.0*256.0+60.0, 5.0*256.0-102.0);
+
+      //***************************
+      //      Water Arm 4
+      //***************************
+      // ElbowWater(vrobj, Nvertices, Xoffset, Ystart, Yend, Zstart, Zend, Rinit, Rfinal) 
+      elbow = map.get_vrobj("e6");
+      ElbowWater(elbow, 15, 0.0, 187.5, 48.0, 14.0, 145.0, 4.5, 9.0 );
+      elbow.rotate_y(315);
+      // Translate(block, Xcenter, Ycenter, Zcenter)
+      TranslateBlockAbsolute(elbow, 5.0*256.0, 2.0*256.0+10.0, 5.0*256.0);
+
+      // define inner splash circle
+      circle = map.get_vrobj("s6");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 17.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0-102.0, 2.0*256.0+65.0, 5.0*256.0+102.0);
+
+      // define outer splash circle
+      circle = map.get_vrobj("s7");
+      CircleWater(circle, 15, 0, 0, 0, 2.0, 30.0);
+      TranslateBlockAbsolute(circle, 5.0*256.0-102.0, 2.0*256.0+60.0, 5.0*256.0+102.0);
+
+
+
+   </function>
+
+</define>
+<!-- Fountain -->
+<create unit="X1" vrobj="garden:fountainquarter">
+   <side name="waterspout" faces="0"/>
+   <param walkable="yes" orient="0"/>
+</create>
+<create unit="X2" vrobj="garden:fountainquarter">
+   <side name="waterspout" faces="0"/>
+   <param walkable="yes" orient="90"/>
+</create>
+<create unit="X3" vrobj="garden:fountainquarter">
+   <side name="waterspout" faces="0"/>
+   <param walkable="yes" orient="180"/>
+</create>
+<create unit="X4" vrobj="garden:fountainquarter">
+   <side name="waterspout" faces="0"/>
+   <param walkable="yes" orient="270"/>
+</create>
+
+<!-- Ground Block -->
+<create unit="fg" vrobj="base:full">
+   <side name="*" texture="@base:clear.gif" style="tiled"/>
+   <param orient="0"/>
+</create>
+
+<!-- Pool Block -->
+<create unit="c0" vrobj="water:Circle31x31">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewater.jpg" style="tiled" clarity="50%" faces="1"/>
+<action trigger="start">
+   <ripple style="waves" force="10.0" droprate="50%" damp="93%"/>
+</action>
+</create>
+
+<!--
+*************************
+     Water Arm 1
+**************************
+-->
+<!-- Elbow water Block -->
+<create unit="e0" vrobj="water:Elbow15x15">
+<param walkable="yes" origin="(0,0,0)"/>
+<side name="water" texture="@water:bluewater.jpg" style="scaled" clarity="70%" faces="2"/>
+<side name="interior" texture="@water:bluewater.jpg" style="tiled" faces="1" clarity="90%"/>
+<action trigger="start">
+   <ripple style="raindrops" force="8.0" droprate="50%" damp="99%"/>
+</action>
+</create>
+
+<!-- Splash circle Blocks -->
+<create unit="s0" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewaterspray2.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="raindrops" force="30.0" droprate="60%" damp="97%"/>
+</action>
+</create>
+
+<create unit="s1" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewater.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="waves" force="10.0" droprate="50%" damp="94%"/>
+</action>
+</create>
+
+<!--
+*************************
+     Water Arm 2
+**************************
+-->
+<!-- Elbow water Block -->
+<create unit="e2" vrobj="water:Elbow15x15">
+<param walkable="yes" origin="(0,0,0)"/>
+<side name="water" texture="@water:bluewater.jpg" style="scaled" clarity="70%" faces="2"/>
+<side name="interior" texture="@water:bluewater.jpg" style="tiled" faces="1" clarity="90%"/>
+<!--<side name="interior" faces="2" clarity="80%"/>-->
+<action trigger="start">
+   <ripple style="raindrops" force="8.0" droprate="50%" damp="99%"/>
+</action>
+</create>
+
+<!-- Splash circle Blocks -->
+<create unit="s2" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewaterspray2.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="raindrops" force="30.0" droprate="60%" damp="97%"/>
+</action>
+</create>
+
+<create unit="s3" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewater.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="waves" force="10.0" droprate="50%" damp="94%"/>
+</action>
+</create>
+
+<!--
+*************************
+     Water Arm 3
+**************************
+-->
+<!-- Elbow water Block -->
+<create unit="e4" vrobj="water:Elbow15x15">
+<param walkable="yes" origin="(0,0,0)"/>
+<side name="water" texture="@water:bluewater.jpg" style="scaled" clarity="70%" faces="2"/>
+<side name="interior" texture="@water:bluewater.jpg" style="tiled" faces="1" clarity="90%"/>
+<!--<side name="interior" faces="2" clarity="80%"/>-->
+<action trigger="start">
+   <ripple style="raindrops" force="8.0" droprate="50%" damp="99%"/>
+</action>
+</create>
+
+<!-- Splash circle Blocks -->
+<create unit="s4" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewaterspray2.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="raindrops" force="30.0" droprate="60%" damp="97%"/>
+</action>
+</create>
+
+<create unit="s5" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewater.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="waves" force="10.0" droprate="50%" damp="94%"/>
+</action>
+</create>
+
+<!--
+*************************
+     Water Arm 4
+**************************
+-->
+<!-- Elbow water Block -->
+<create unit="e6" vrobj="water:Elbow15x15">
+<param walkable="yes" origin="(0,0,0)"/>
+<side name="water" texture="@water:bluewater.jpg" style="scaled" clarity="70%" faces="2"/>
+<side name="interior" texture="@water:bluewater.jpg" style="tiled" faces="1" clarity="90%"/>
+<!--<side name="interior" faces="2" clarity="80%"/>-->
+<action trigger="start">
+   <ripple style="raindrops" force="8.0" droprate="50%" damp="99%"/>
+</action>
+</create>
+
+<!-- Splash circle Blocks -->
+<create unit="s6" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewaterspray2.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="raindrops" force="30.0" droprate="60%" damp="97%"/>
+</action>
+</create>
+
+<create unit="s7" vrobj="water:Circle15x15">
+<param walkable="yes"/>
+<side name="*" texture="@water:bluewater.jpg" style="scaled" clarity="60%" faces="2"/>
+<action trigger="start">
+   <ripple style="waves" force="10.0" droprate="50%" damp="94%"/>
+</action>
+</create>
+
+
+<!--
+ 1  2  3  4  5  6  7  8  9 10  -->
+<layer number="1">
+X4 X1 .. .. c0 .. e0 s0 s1 ..  <!--  1 -->
+X3 X2 .. .. .. .. e2 s2 s3 ..  <!--  2 -->
+.. .. .. .. .. .. e4 s4 s5 ..  <!--  3 -->
+.. .. .. .. .. .. e6 s6 s7 ..  <!--  4 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  5 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  6 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  7 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  8 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  9 -->
+.. .. .. .. .. .. .. .. .. ..  <!-- 10 -->
+</layer>
+
+
+<!--
+ 1  2  3  4  5  6  7  8  9 10  -->
+<layer number="2">
+fg fg fg fg fg fg fg fg fg fg  <!--  1 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  2 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  3 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  4 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  5 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  6 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  7 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  8 -->
+fg fg fg fg fg fg fg fg fg fg  <!--  9 -->
+fg fg fg fg fg fg fg fg fg fg  <!-- 10 -->
+</layer>
+
+<!--
+ 1  2  3  4  5  6  7  8  9 10  -->
+<layer number="3">
+.. .. .. .. .. .. .. .. .. ..  <!--  1 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  2 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  3 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  4 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  5 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  6 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  7 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  8 -->
+.. .. .. .. .. .. .. .. .. ..  <!--  9 -->
+.. .. .. .. .. .. .. .. .. ..  <!-- 10 -->
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter name="default" location="(9,9,3)" angle="300,-5"/>
+</design>
+</vrf>
+

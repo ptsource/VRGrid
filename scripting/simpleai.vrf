@@ -1,0 +1,224 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf >
+<globals>
+<title name="VRGrid Scripting Example (Simple AI)"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" required="2.9"/> 
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(10,10,2)"/> 
+<sky color="(0,0,255)"/>
+<ground texture="@base:gtile.gif"/>
+<atmosphere brightness="100%"/>
+<devel/>
+</globals> 
+<design>
+<define>
+	<distance></distance>
+	<y_angle></y_angle>
+	<health>100</health>
+	<life>1</life>
+	<lastx></lastx>
+	<lastz></lastz>
+	<intro>1</intro>
+	<function name="start">
+		player.camera:y = -64; 
+	</function>
+	<function name="display">
+		// Display Player Stats
+		if (vrf.health lt 0) { vrf.health = 0; }
+		if (vrf.health gt 100) { vrf.health = 100; }
+		vrf.title="Health Status: " # vrf.health;
+	</function>
+	<function name="reset">
+                atmosphere.colour:green = 255; // Revert ambient light
+		atmosphere.colour:blue = 255;
+		soundcheckaaah = map.get_vrobjs(4, 5, 2);
+		if (soundcheckaaah.elements = 1) {
+			map.set_vrobj(4, 5, 2, "..");
+		}
+		health = 100;
+		life = 1;
+		lastx = 1;
+		lastz = 1;
+		start();
+	</function>
+	<function name="quit">
+		intro = 1;
+	</function>
+</define>
+<script trigger="key down" key="n" location="(1,1,1)">
+	intro = 0;
+</script>
+<script trigger="key down" key="r" location="(1,1,1)">
+      reset();
+</script>
+<script trigger="key down" key="q" location="(1,1,1)">
+	quit();
+</script>
+<script trigger="timer" delay="0.1">
+// TODO Bug here DirectX Crashes on resize when timer is less than 0.2
+if (intro = 1) {
+		vrf.title = "VRGrid Scripting Example (Simple AI) - Press 'N' to start, 'R' to reset or 'Q' to quit.";
+} else {
+if (vrf.health gt 0) {
+	wasp = map.get_vrobj("s1");
+	wasp.origin:x = -128; // Allows the wasp to rotate in place w/o traveling in a circle (actually only needs to be set once)
+	vrf.distance = math.sqrt(((player.location:z - 128 - wasp.location:z) * (player.location:z - 128 - wasp.location:z)) + ((player.location:x + 128 - wasp.location:x) * (player.location:x + 128 - wasp.location:x)));
+	
+	// wasp Attack
+	if (vrf.distance lt 256) { // If player is within attack range of wasp
+		atmosphere.colour:green = 0; // Make abient light completely red
+		atmosphere.colour:blue = 0;
+		soundcheckaaah = map.get_vrobjs(4, 5, 2); 
+		if (soundcheckaaah.elements = 0) {
+			map.set_vrobj(4, 5, 2, "ah");
+		}
+		health = health - 1;
+		player.orientation:look_angle = player.orientation:look_angle + math.random(-1,2); // Shake screen randomly
+		player.orientation:turn_angle = player.orientation:turn_angle + math.random(-1,2);
+	} else {
+		atmosphere.colour:green = 255; 
+		atmosphere.colour:blue = 255;
+		soundcheckaaah = map.get_vrobjs(4, 5, 2); 
+		if (soundcheckaaah.elements = 1) {
+			map.set_vrobj(4, 5, 2, "..");
+		}
+	}
+	
+	// wasp Movement
+	if (vrf.distance gt 160) {
+		wasp.location:x = (player.location:x + 128 - wasp.location:x) * 0.01 + wasp.location:x; // Moves the wasp along the x-axis a fraction of the distance between the wasp and the player
+		wasp.location:z = (player.location:z - 128 - wasp.location:z) * 0.01 + wasp.location:z; // Moves the wasp along the z-axis a fraction of the distance between the wasp and the player
+	}
+	
+	// wasp Rotation
+	if (player.location:x + 128 != wasp.location:x) {
+		vrf.y_angle = 90 - math.deg(math.atan((player.location:z - 128 - wasp.location:z) / (player.location:x + 128 - wasp.location:x))); // Calculate the angle between the wasp and the player using trigonometry and adjust the angle so that north is zero degrees
+		if (player.location:x + 128 lt wasp.location:x) { vrf.y_angle = vrf.y_angle + 180; } // Adjust for angles greater than 180 degrees
+	} else {
+		vrf.y_angle = 0;
+		if (player.location:z - 128 lt wasp.location:z) { vrf.y_angle = 180; }
+	}
+	wasp.orient(vrf.y_angle, 0, 0); // Set the wasp's orientation to the angle
+	
+	// Display Player Stats
+	vrf.display();
+	
+	// Record Player Location
+	lastx = player.location:x;
+	lastz = player.location:z;
+}
+
+// Death Animation
+if (vrf.health = 0) {
+	soundcheckaaah = map.get_vrobjs(4, 5, 2); 
+	if (soundcheckaaah.elements = 1) {
+		map.set_vrobj(4, 5, 2, "..");
+	}
+	atmosphere.brightness = atmosphere.brightness - 1;
+	player.location:x = lastx;
+	player.location:z = lastz;
+	vrf.title="You have been killed. Press 'R' to reset find a new position and 'N' to start again.";
+	intro = 1;
+}
+}
+</script>
+<create unit="ah" vrobj="gametools:sound">
+	<sound file="@gametools:scream.wav" playback="looped" volume="100%" radius="99" flood="yes"/>
+</create>
+
+<create unit="##" vrobj="base:full">
+	<param walkable="yes"/>
+	<action trigger="step in" radius="1">
+		<replace source="#n"/>
+	</action>
+</create>
+
+<create unit="#n" vrobj="base:full">
+	<action trigger="step out" radius="1">
+		<replace source="##"/>
+	</action>
+	<side name="*" texture="@gametools:metal.gif"/>
+</create>
+
+
+<create unit="ms" vrobj="gametools:box">
+     <side name="1" texture="@gametools:meshblue.gif" />
+	<param solid="no"/>
+	<script trigger="step in">
+		if ((vrf.health gt 0) and (vrf.health lt 100)) {
+			vrf.health = vrf.health + 25;
+			vrf.display();
+			
+		}
+	</script>
+</create>
+
+<create unit="ml" vrobj="gametools:box">
+    <side name="1" texture="@gametools:meshred.gif" />
+	<param solid="no"/>
+	<script trigger="step in">
+		if ((vrf.health gt 0) and (vrf.health lt 100)) {
+			vrf.health = vrf.health + 50;
+			vrf.display();
+		}
+	</script>
+</create>
+
+
+<create unit="s1" vrobj="gametools:wasp">
+	<param walkable="yes"/>
+	<action trigger="click on">
+		<replace source="x1" target="(-1,0,0)"/>
+		<replace source=".."/>
+	</action>
+</create>
+
+<create unit="x1" vrobj="gametools:wasp">
+	<script trigger="timer" delay="0">
+		atmosphere.colour:green = 255; 
+		atmosphere.colour:blue = 255;
+		soundcheckaaah = map.get_vrobjs(4, 5, 2);
+		if (soundcheckaaah.elements = 1) {
+			map.set_vrobj(4, 5, 2, "..");
+		}
+	</script>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. ms .. .. .. ml .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. s1 .. .. .. ..
+</layer>
+<layer number="2">
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter location="(5,1,1)" name="default" angle="180"/>
+</design>
+</vrf>
+

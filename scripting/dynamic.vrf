@@ -1,0 +1,90 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf> 
+<globals> 
+<title name="VRGrid Scripting Example (Dynamic color change)" />
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(11,11,1)" /> 
+<sky brightness="1%" color="(0,0,255)"/>
+<ground texture="@basic:gtile.gif"/>
+<devel/>
+</globals> 
+<design>
+<create unit="re" vrobj="basic:full">
+	<side name="*" color="(255,0,0)"/>
+	<define> 
+		<rmod>1</rmod>
+	</define>
+	<script trigger="proximity" radius="2">
+		if (sky.color:red gt 254) { rmod = -1; } 
+		if (sky.color:red lt 1) { rmod = 1; }
+		sky.color:red = sky.color:red + rmod;
+	</script>
+</create>
+<create unit="gr" vrobj="basic:full">
+	<side name="*" color="(0,255,0)"/>
+	<define> 
+		<gmod>1</gmod>
+	</define>
+	<script trigger="proximity" radius="2">
+		if (sky.color:green gt 254) { gmod = -1; } 
+		if (sky.color:green lt 1) { gmod = 1; }
+		sky.color:green = sky.color:green + gmod;
+	</script>
+</create>
+<create unit="bl" vrobj="basic:full">
+	<side name="*" color="(0,0,255)"/>
+	<define> 
+		<bmod>1</bmod>
+	</define>
+	<script trigger="proximity" radius="2">
+		if (sky.color:blue gt 254) { bmod = -1; } 
+		if (sky.color:blue lt 1) { bmod = 1; }
+		sky.color:blue = sky.color:blue + bmod;
+	</script>
+</create>
+<create unit="br" vrobj="basic:full">
+	<side name="*" color="(128,128,128)"/>
+	<define> 
+		<brmod>1</brmod>
+	</define>
+	<script trigger="proximity" radius="2">
+		if (sky.brightness gt 99) { brmod = -1; } 
+		if (sky.brightness lt 1) { brmod = 1; }
+		sky.brightness = sky.brightness + brmod;
+	</script>
+	<script trigger="timer" delay="1">
+		vrf.title = "sky.brightness=" # sky.brightness #
+			", sky.color:red=" # sky.color:red #
+			", green=" # sky.color:green #
+			", blue=" # sky.color:blue;
+	</script>
+</create>
+<layer number="1">  
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. br .. .. .. re .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. bl .. .. .. gr .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(6,6,1)" radius="1" placement="center" text="This sample demonstrates the sky.brightness and sky.color objects. Move close to a 3d object of a particular color to adjust brightness or color of sky. View source for more details."/>
+<enter location="(6,6,1)" name="default" angle="0.0" /> 
+</design> 
+</vrf> 
+

@@ -1,0 +1,376 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Scripting Example (Controled Fall)" />
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(10,10,20)" />
+<sky color="(0,0,255)"/>
+<ground />
+<devel />
+</globals>
+<design>
+<create unit="##" vrobj="basic:full">
+	<side name="*" texture="@basic:wood4.jpg" />
+</create>
+<create unit="pp" vrobj="basic:ground">
+	<side name="*" texture="@basic:clear.gif" />
+	<param walkable="yes" />
+	<define>
+		<parashuting>0</parashuting>
+		<turbulencex>0</turbulencex>
+		<turbulencez>0</turbulencez>
+		<dtx>0</dtx>
+		<dtz>0</dtz>
+		<die>0</die>
+		<spd>0</spd>
+		<anglespeed>0</anglespeed>
+		<pushspeedx>0</pushspeedx>
+		<pushspeedz>0</pushspeedz>
+		<pushaccx>0</pushaccx>
+		<pushaccz>0</pushaccz>
+	</define>
+	<script trigger="key down" key="p">
+		parashuting=1;
+		parashute=map.get_vrobj("pp");
+		parashute.location:y=player.location:y;
+		parashute.location:x=player.location:x;
+		parashute.location:z=player.location:z;
+	</script>
+	<script trigger="timer" delay="0.01">
+	
+	if(parashuting=1){
+		pushspeedx=pushspeedx-pushaccx;
+		pushspeedz=pushspeedz-pushaccz;
+		
+		parashute=map.get_vrobj("pp");
+		dtx=math.random(-10,10);
+		dtz=math.random(-10,10);
+		turbulencex=turbulencex+dtx;
+		if (turbulencex gt 20){turbulencex=20;}
+		if (turbulencex lt -20){turbulencex=-20;}
+		turbulencez=turbulencez+dtz;
+		if (turbulencez gt 20){turbulencez=20;}
+		if (turbulencez lt -20){turbulencez=-20;}
+		parashute.location:x=parashute.location:x+turbulencex+pushspeedx+(spd*math.sin(math.rad(player.orientation:turn_angle)));
+		if(parashute.location:x lt 256){parashute.location:x=256;}
+		if(parashute.location:x gt 2127){parashute.location:x=2127;}
+		parashute.location:z=parashute.location:z+turbulencez+pushspeedz+(spd*math.cos(math.rad(player.orientation:turn_angle)));
+		if(parashute.location:z lt 256){parashute.location:z=256;}
+		if(parashute.location:z gt 2127){parashute.location:z=2127;}
+		player.location:x=parashute.location:x+128;
+		player.location:z=parashute.location:z+128;
+		parashute.location:y=parashute.location:y-10;
+		player.location:y=parashute.location:y;
+		vrf.title=player.location:y#"   "#pushspeedz#"   "#pushspeedx;
+	}
+	if ((player.location:y lt 680) and (player.location:y gt 410) and (parashuting = 0)){die=1;}
+	if (player.location:y lt 400){
+		parashuting=0;
+		parashute.location:x=1000000;
+		die=0;
+	}
+	
+	</script>
+	<script trigger="timer" delay="0.01">
+	if (die=1){
+		vrf.user_can_move=0;
+		vrf.user_can_look=0;
+		player.orientation:look_angle = player.orientation:look_angle + 5 ;
+		if (player.orientation:look_angle lt -90){player.orientation:look_angle=-90;}
+		atmosphere.brightness=atmosphere.brightness-5;
+	}
+	if (math.abs(pushspeedx) lt 1){
+		pushaccx=0;
+		pushspeedx=0;
+	}
+	if (math.abs(pushspeedz) lt 1){
+		pushaccz=0;
+		pushspeedz=0;
+	}
+	</script>
+	<script trigger="key down" key="e">
+		spd=15;
+	</script>
+	<script trigger="key up" key="e">
+		spd=0;
+	</script>
+	<script trigger="key down" key="d">
+		spd=-15;
+	</script>
+	<script trigger="key up" key="d">
+		spd=0;
+	</script>
+	<script trigger="key down" key="w">
+		if (player.location:x lt 400){
+			pushspeedx=40;
+			pushaccx=1;
+		}
+		if (player.location:x gt 2200){
+			pushspeedx=-40;
+			pushaccx=-1;
+		}
+		if (player.location:z lt 400){
+			pushspeedz=40;
+			pushaccz=1;
+		}
+		if (player.location:z gt 2200){
+			pushspeedz=-40;
+			pushaccz=-1;
+		}
+	</script>
+</create>
+<layer number="1">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="2">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="3">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="4">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="5">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="6">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="7">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="8">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="9">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="10">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="11">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="12">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="13">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="14">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="15">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="16">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="17">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="18">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="19">
+## ## ## ## ## ## ## ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="20">
+## ## ## .. .. .. .. ## ## ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## .. .. .. __ .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## pp .. .. .. .. .. .. .. ##
+## .. .. .. .. .. .. .. .. ##
+## ## ## ## ## ## ## ## ## ##
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter location="(5,6,20)" name="default" angle="0"/>
+</design>
+</vrf>
+

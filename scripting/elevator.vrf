@@ -1,0 +1,94 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Scripting Example (Platform elevator)"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(5,5,3)"/>
+<sky color="(0,0,255)"/>
+<ground texture="@basic:gtile.gif"/>
+<devel/>
+</globals>
+<design>
+    <define>
+      <direction>5</direction>
+    </define>
+    <script location="(1,1,1)" trigger="key down" key="[end]">
+	player.orientation:look_angle = 0;
+</script>
+    <script location="(1,2,1)" trigger="key hold" key="[page up]" delay="0.01">
+	player.orientation:look_angle = player.orientation:look_angle - 2;
+</script>
+    <script location="(1,3,1)" trigger="key hold" key="[page down]" delay="0.01">
+	player.orientation:look_angle = player.orientation:look_angle + 2;
+</script>
+    <create unit="$$" vrobj="basic:floor">
+      <side name="top" texture="@basic:wood4.jpg" />
+      <param walkable="no"/>
+        <action trigger="click on" text="Get on top of it and click on it to start.">
+        <replace source="##"/>
+      </action>
+    </create>
+    <create unit="##" vrobj="basic:floor">
+      <side name="top" texture="@basic:wood4.jpg" />
+      <param walkable="yes"/>
+      <script trigger="timer" delay="0.01">
+		if (location:y gt (3 * 256)) {
+			vrf.direction = vrf.direction * -1;
+		}
+		if (location:y lt 256) {
+			vrf.direction = vrf.direction * -1;
+		}
+		location:y = location:y + vrf.direction;
+        	if (player.location:x gt (location:x - 40)) {
+        		if (player.location:x lt (location:x + 296)) {
+				if (player.location:z gt (location:z - 40)) {
+        				if (player.location:z lt (location:z + 296)) {
+        					if (math.abs(player.location:y - location:y) lt 64) {
+							player.location:y = location:y;
+						}
+					}
+				}
+        		}
+        	}
+	</script>
+    </create>
+    <create unit="@@" vrobj="basic:portal">
+      <action trigger="step in">
+        <exit href="https://ptsource.github.io/VRGrid/base/base.vrf"/>
+      </action>
+    </create>
+<layer>
+.. .. .. .. ..
+.. .. $$ .. ..
+.. .. .. .. ..
+.. .. .. .. ..
+.. .. .. .. ..
+</layer>
+<layer>
+.. .. .. -- ..
+.. .. .. -- ..
+.. .. .. -- ..
+.. .. .. -- ..
+.. .. .. .. ..
+</layer>
+<layer>
+.. .. .. .. ..
+.. .. .. .. ..
+.. .. .. .. ..
+.. .. .. @@ ..
+.. .. .. .. ..
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter name="default" location="(3,5,1)" angle="0"/>
+</design>
+</vrf>

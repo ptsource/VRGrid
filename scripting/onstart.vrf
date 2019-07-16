@@ -1,0 +1,65 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Scripting Example (On Start Function)"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(10,10,1)"/>
+<sky color="(0,0,255)"/>
+<ground/>
+<devel/>
+</globals>
+<design>
+<define>
+   <function name="start">
+      redunit = map.get_vrobj(".r");
+      redunit.location:x = 0;
+      redunit.location:y = 128;
+      redunit.location:z = 0;
+      greenunit = map.get_vrobj(".g");
+      greenunit.location:x = 256;
+      greenunit.location:y = 512;
+      greenunit.location:z = 256;
+   </function>
+</define>
+
+<create unit=".r" vrobj="basic:full">
+<param walkable="yes"/>
+<side name="*" texture="@basic2:redmetal.gif"/>
+</create>
+<create unit=".b" vrobj="basic:full">
+<param walkable="yes"/>
+<side name="*" texture="@basic2:bluemetal.gif"/>
+</create>
+<create unit=".g" vrobj="basic:full">
+<param walkable="yes"/>
+<side name="*" texture="@basic2:greenmetal.gif"/>
+</create>
+
+<layer number="1">
+...................g
+....................
+....................
+....................
+....................
+....................
+....................
+....................
+.b..................
+.r..................
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter location="(5,10,1)" name="default" angle="270,0"/>
+</design>
+</vrf>
+

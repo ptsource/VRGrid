@@ -1,0 +1,105 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Scripting Example (Ladder)"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(9,9,3)"/>
+<sky color="(0,0,255)"/>
+<ground texture="@basic:gtile.gif"/>
+<devel/>
+</globals>
+<design>
+<define>
+	<function name="start"> <!-- This function will reset the player to the default entrance location -->
+		ladder = map.get_vrobj("gg");
+		floor = map.get_vrobj("ff");
+		floor.location:z = ladder.location:z;
+	</function>
+</define>
+<script trigger="timer" delay="0.01">
+ladder = map.get_vrobj("gg");
+floor = map.get_vrobj("ff");
+// Check player location and climb
+if ((player.location:x gt ladder.location:x)
+	and (player.location:x lt 256 + ladder.location:x)
+	and (player.location:y gt ladder.location:y)
+	and (player.location:y lt ladder.location:y + 512)
+	and (player.location:z gt ladder.location:z)
+	and (player.location:z lt ladder.location:z + 256)) {
+	if ((player.orientation:turn_angle lt 45) or (player.orientation:turn_angle gt 315)) {
+		if (player.orientation:look_angle gt 0) {
+			player.location:y = player.location:y + 6;
+		} else {
+			player.location:y = player.location:y - 6;
+		}
+		player.location:z = ladder.location:z + 128 - math.abs(math.sin(player.location:y / 64 * math.pi) * 32);
+		floor.location:y = player.location:y;
+	} else {
+		floor.location:y = ladder.location:y;
+	}
+} else {
+	floor.location:y = ladder.location:y;
+}
+</script>
+<create vrobj="basic2:grate" unit="gg">
+	<side name="*" texture="@basic:wood4.jpg"/>
+</create>
+<create vrobj="basic:ground" unit="ff">
+	<param walkable="yes"/>
+	<side name="*" faces="2"/>
+</create>
+<create vrobj="basic2:grate" unit="g1">
+	<side name="*" texture="@basic:wood4.jpg"/>
+</create>
+<create vrobj="basic:roundportal" unit="g3">
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. ff .. .. .. ..
+.. .. .. .. gg .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="2">
+.. .. .. .. -- .. .. .. ..
+.. .. .. .. -- .. .. .. ..
+.. .. .. .. -- .. .. .. ..
+.. .. .. .. -- .. .. .. ..
+.. .. .. .. g1 .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="3">
+.. .. .. .. g3 .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ..
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(5,9,1)" radius="1" placement="center" text="This sample demonstrates the player location object. Run into the ladder and climb. View source for more details."/>
+<enter location="(5,9,1)" name="default" angle="0"/>
+</design>
+</vrf>
+
