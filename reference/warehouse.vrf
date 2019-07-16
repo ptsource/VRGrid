@@ -1,0 +1,265 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Warehouse Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/warehouse.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,5)"/>
+<sky/>
+<ground/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="warehouse:b1"><popup text="warehouse:b1" placement="top" trigger="rollover"/></create>
+<create unit="b2" vrobj="warehouse:b2"><popup text="warehouse:b2" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="warehouse:b3"><popup text="warehouse:b3" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="warehouse:b4"><popup text="warehouse:b4" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="warehouse:b5"><popup text="warehouse:b5" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="warehouse:a1"><popup text="warehouse:a1" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="warehouse:a2"><popup text="warehouse:a2" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="warehouse:a3"><popup text="warehouse:a3" placement="top" trigger="rollover"/></create>
+<create unit="bb" vrobj="warehouse:a4"><popup text="warehouse:a4" placement="top" trigger="rollover"/></create>
+<create unit="bc" vrobj="warehouse:a5"><popup text="warehouse:a5" placement="top" trigger="rollover"/></create>
+<create unit="bd" vrobj="warehouse:afullImpe"><popup text="warehouse:afullImpe" placement="top" trigger="rollover"/></create>
+<create unit="be" vrobj="warehouse:amulti"><popup text="warehouse:amulti" placement="top" trigger="rollover"/></create>
+<create unit="bf" vrobj="warehouse:aterraFull"><popup text="warehouse:aterraFull" placement="top" trigger="rollover"/></create>
+<create unit="bg" vrobj="warehouse:freccia"><popup text="warehouse:freccia" placement="top" trigger="rollover"/></create>
+<create unit="bh" vrobj="warehouse:mezzo"><popup text="warehouse:mezzo" placement="top" trigger="rollover"/></create>
+<create unit="bi" vrobj="warehouse:multi"><popup text="warehouse:multi" placement="top" trigger="rollover"/></create>
+<create unit="bj" vrobj="warehouse:porta"><popup text="warehouse:porta" placement="top" trigger="rollover"/></create>
+<create unit="bk" vrobj="warehouse:maniglia"><popup text="warehouse:maniglia" placement="top" trigger="rollover"/></create>
+<create unit="bl" vrobj="warehouse:prisma"><popup text="warehouse:prisma" placement="top" trigger="rollover"/></create>
+<create unit="bm" vrobj="warehouse:prisma2"><popup text="warehouse:prisma2" placement="top" trigger="rollover"/></create>
+<create unit="bn" vrobj="warehouse:rullo"><popup text="warehouse:rullo" placement="top" trigger="rollover"/></create>
+<create unit="bo" vrobj="warehouse:single"><popup text="warehouse:single" placement="top" trigger="rollover"/></create>
+<create unit="bp" vrobj="warehouse:singleImpe"><popup text="warehouse:singleImpe" placement="top" trigger="rollover"/></create>
+<create unit="bJ" vrobj="warehouse:soffitto"><popup text="warehouse:soffitto" placement="top" trigger="rollover"/></create>
+<create unit="bK" vrobj="warehouse:vuoto"><popup text="warehouse:vuoto" placement="top" trigger="rollover"/></create>
+<!-- textures -->
+<create unit="ta" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_1.gif"/><popup text="@warehouse:_1.gif" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_2.gif"/><popup text="@warehouse:_2.gif" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_3.gif"/><popup text="@warehouse:_3.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_4.gif"/><popup text="@warehouse:_4.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_5.gif"/><popup text="@warehouse:_5.gif" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_6.gif"/><popup text="@warehouse:_6.gif" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_7.gif"/><popup text="@warehouse:_7.gif" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_8.gif"/><popup text="@warehouse:_8.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_9.gif"/><popup text="@warehouse:_9.gif" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_10.gif"/><popup text="@warehouse:_10.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_11.gif"/><popup text="@warehouse:_11.gif" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_12.gif"/><popup text="@warehouse:_12.gif" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_13.gif"/><popup text="@warehouse:_13.gif" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_14.gif"/><popup text="@warehouse:_14.gif" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_15.gif"/><popup text="@warehouse:_15.gif" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_16.gif"/><popup text="@warehouse:_16.gif" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_17.gif"/><popup text="@warehouse:_17.gif" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_18.gif"/><popup text="@warehouse:_18.gif" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_19.gif"/><popup text="@warehouse:_19.gif" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_20.gif"/><popup text="@warehouse:_20.gif" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_21.gif"/><popup text="@warehouse:_21.gif" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_22.gif"/><popup text="@warehouse:_22.gif" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_23.gif"/><popup text="@warehouse:_23.gif" placement="top" trigger="rollover"/></create>
+<create unit="ua" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_24.gif"/><popup text="@warehouse:_24.gif" placement="top" trigger="rollover"/></create>
+<create unit="ub" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_25.gif"/><popup text="@warehouse:_25.gif" placement="top" trigger="rollover"/></create>
+<create unit="uc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_26.gif"/><popup text="@warehouse:_26.gif" placement="top" trigger="rollover"/></create>
+<create unit="ud" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_27.gif"/><popup text="@warehouse:_27.gif" placement="top" trigger="rollover"/></create>
+<create unit="ue" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_28.gif"/><popup text="@warehouse:_28.gif" placement="top" trigger="rollover"/></create>
+<create unit="uf" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_29.gif"/><popup text="@warehouse:_29.gif" placement="top" trigger="rollover"/></create>
+<create unit="ug" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_30.gif"/><popup text="@warehouse:_30.gif" placement="top" trigger="rollover"/></create>
+<create unit="uh" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_31.gif"/><popup text="@warehouse:_31.gif" placement="top" trigger="rollover"/></create>
+<create unit="ui" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_32.gif"/><popup text="@warehouse:_32.gif" placement="top" trigger="rollover"/></create>
+<create unit="uj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_33.gif"/><popup text="@warehouse:_33.gif" placement="top" trigger="rollover"/></create>
+<create unit="ul" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_34.gif"/><popup text="@warehouse:_34.gif" placement="top" trigger="rollover"/></create>
+<create unit="um" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_35.gif"/><popup text="@warehouse:_35.gif" placement="top" trigger="rollover"/></create>
+<create unit="un" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_36.gif"/><popup text="@warehouse:_36.gif" placement="top" trigger="rollover"/></create>
+<create unit="uo" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_37.gif"/><popup text="@warehouse:_36.gif" placement="top" trigger="rollover"/></create>
+<create unit="up" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_38.gif"/><popup text="@warehouse:_38.gif" placement="top" trigger="rollover"/></create>
+<create unit="uq" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_39.gif"/><popup text="@warehouse:_39.gif" placement="top" trigger="rollover"/></create>
+<create unit="ur" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_40.gif"/><popup text="@warehouse:_40.gif" placement="top" trigger="rollover"/></create>
+<create unit="us" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_41.gif"/><popup text="@warehouse:_41.gif" placement="top" trigger="rollover"/></create>
+<create unit="ut" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_42.gif"/><popup text="@warehouse:_42.gif" placement="top" trigger="rollover"/></create>
+<create unit="uu" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_43.gif"/><popup text="@warehouse:_43.gif" placement="top" trigger="rollover"/></create>
+<create unit="uv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_44.gif"/><popup text="@warehouse:_44.gif" placement="top" trigger="rollover"/></create>
+<create unit="ux" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_45.gif"/><popup text="@warehouse:_45.gif" placement="top" trigger="rollover"/></create>
+<create unit="uz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_46.gif"/><popup text="@warehouse:_46.gif" placement="top" trigger="rollover"/></create>
+<create unit="za" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_47.gif"/><popup text="@warehouse:_47.gif" placement="top" trigger="rollover"/></create>
+<create unit="zb" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_48.gif"/><popup text="@warehouse:_48.gif" placement="top" trigger="rollover"/></create>
+<create unit="zc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_49.gif"/><popup text="@warehouse:_49.gif" placement="top" trigger="rollover"/></create>
+<create unit="zd" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_50.gif"/><popup text="@warehouse:_50.gif" placement="top" trigger="rollover"/></create>
+<create unit="ze" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_51.gif"/><popup text="@warehouse:_51.gif" placement="top" trigger="rollover"/></create>
+<create unit="zf" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_52.gif"/><popup text="@warehouse:_52.gif" placement="top" trigger="rollover"/></create>
+<create unit="zg" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_53.gif"/><popup text="@warehouse:_53.gif" placement="top" trigger="rollover"/></create>
+<create unit="zh" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_54.gif"/><popup text="@warehouse:_54.gif" placement="top" trigger="rollover"/></create>
+<create unit="zi" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_55.gif"/><popup text="@warehouse:_55.gif" placement="top" trigger="rollover"/></create>
+<create unit="zj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_56.gif"/><popup text="@warehouse:_56.gif" placement="top" trigger="rollover"/></create>
+<create unit="zl" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_57.gif"/><popup text="@warehouse:_57.gif" placement="top" trigger="rollover"/></create>
+<create unit="zm" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_58.gif"/><popup text="@warehouse:_58.gif" placement="top" trigger="rollover"/></create>
+<create unit="zn" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_59.gif"/><popup text="@warehouse:_59.gif" placement="top" trigger="rollover"/></create>
+<create unit="zo" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_60.gif"/><popup text="@warehouse:_60.gif" placement="top" trigger="rollover"/></create>
+<create unit="zp" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_61.gif"/><popup text="@warehouse:_61.gif" placement="top" trigger="rollover"/></create>
+<create unit="zq" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_62.gif"/><popup text="@warehouse:_62.gif" placement="top" trigger="rollover"/></create>
+<create unit="zr" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:1.gif"/><popup text="@warehouse:1.gif" placement="top" trigger="rollover"/></create>
+<create unit="zs" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:2.gif"/><popup text="@warehouse:2.gif" placement="top" trigger="rollover"/></create>
+<create unit="zt" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:3.gif"/><popup text="@warehouse:3.gif" placement="top" trigger="rollover"/></create>
+<create unit="zu" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:4.gif"/><popup text="@warehouse:4.gif" placement="top" trigger="rollover"/></create>
+<create unit="zv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:5.gif"/><popup text="@warehouse:5.gif" placement="top" trigger="rollover"/></create>
+<create unit="zx" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:6.gif"/><popup text="@warehouse:6.gif" placement="top" trigger="rollover"/></create>
+<create unit="zz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:7.gif"/><popup text="@warehouse:7.gif" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="warehouse:ceiling">
+         <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b8 .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. bg .. bo .. .. .. bp .. bh .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b5 .. be .. b6 .. bf .. bn .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b4 .. bd .. bl .. .. .. .. .. bm .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b3 .. bc .. bk .. bK .. .. .. b1 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b2 .. bb .. bj .. bJ .. .. .. bi .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+@@ .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ua .. ub .. uc .. ud .. ue .. uf .. ug ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. uh .. ui .. uj .. ul .. um .. un .. uo ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. up .. uq .. ur .. us .. ut .. uu .. uv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ux .. uz .. .. .. .. .. .. .. .. .. .. ..
+.. za .. zb .. zc .. zd .. ze .. zf .. zg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zh .. zi .. zj .. zl .. zm .. zn .. zo ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zp .. zq .. zr .. zs .. zt .. zu .. zv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zx .. zz .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="4">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="5">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ua .. ub .. uc .. ud .. ue .. uf .. ug ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. uh .. ui .. uj .. ul .. um .. un .. uo ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. up .. uq .. ur .. us .. ut .. uu .. uv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ux .. uz .. .. .. .. .. .. .. .. .. .. ..
+.. za .. zb .. zc .. zd .. ze .. zf .. zg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zh .. zi .. zj .. zl .. zm .. zn .. zo ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zp .. zq .. zr .. zs .. zt .. zu .. zv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zx .. zz .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<enter location="(4,23,1)" name="default" angle="0" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<enter location="(15,22,5)" name="top" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(1,23,1)" href="#top" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+<exit location="(15,23,5)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>

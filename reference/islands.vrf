@@ -1,0 +1,200 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Islands Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/islands.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)" />
+<sky/>
+<ground/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="islands:desk"><popup text="desk" placement="top" trigger="rollover"/></create>
+<create unit="b2" vrobj="islands:railangle2"><popup text="railangle2" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="islands:railangle"><popup text="railangle" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="islands:curvepath1"><popup text="curvepath1" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="islands:curvepath2"><popup text="curvepath2" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="islands:curvepath3"><popup text="curvepath3" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="islands:curvepath4"><popup text="curvepath4" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="islands:curvepath5"><popup text="curvepath5" placement="top" trigger="rollover"/></create>
+<create unit="bb" vrobj="islands:curvepath6"><popup text="curvepath6" placement="top" trigger="rollover"/></create>
+<create unit="bc" vrobj="islands:curvepath7"><popup text="curvepath7" placement="top" trigger="rollover"/></create>
+<create unit="bd" vrobj="islands:curvepath8"><popup text="curvepath8" placement="top" trigger="rollover"/></create>
+<create unit="be" vrobj="islands:curvepath9"><popup text="curvepath9" placement="top" trigger="rollover"/></create>
+<create unit="bf" vrobj="islands:island1"><popup text="island1" placement="top" trigger="rollover"/></create>
+<create unit="bg" vrobj="islands:island2"><popup text="island2" placement="top" trigger="rollover"/></create>
+<create unit="bh" vrobj="islands:island3"><popup text="island3" placement="top" trigger="rollover"/></create>
+<create unit="bi" vrobj="islands:island4"><popup text="island4" placement="top" trigger="rollover"/></create>
+<create unit="bj" vrobj="islands:island5"><popup text="island5" placement="top" trigger="rollover"/></create>
+<create unit="bk" vrobj="islands:island6"><popup text="island6" placement="top" trigger="rollover"/></create>
+<create unit="bl" vrobj="islands:island7"><popup text="island7" placement="top" trigger="rollover"/></create>
+<create unit="bm" vrobj="islands:island8"><popup text="island8" placement="top" trigger="rollover"/></create>
+<create unit="bn" vrobj="islands:island9"><popup text="island9" placement="top" trigger="rollover"/></create>
+<create unit="bo" vrobj="islands:island10"><popup text="island10" placement="top" trigger="rollover"/></create>
+<create unit="bp" vrobj="islands:island11"><popup text="island11" placement="top" trigger="rollover"/></create>
+<create unit="bJ" vrobj="islands:island12"><popup text="island12" placement="top" trigger="rollover"/></create>
+<create unit="bK" vrobj="islands:island13"><popup text="island13" placement="top" trigger="rollover"/></create>
+<create unit="bL" vrobj="islands:island14"><popup text="island14" placement="top" trigger="rollover"/></create>
+<create unit="bM" vrobj="islands:island15"><popup text="island15" placement="top" trigger="rollover"/></create>
+<create unit="bN" vrobj="islands:lcurvestair"><popup text="lcurvestair" placement="top" trigger="rollover"/></create>
+<create unit="bO" vrobj="islands:rcurvestair"><popup text="rcurvestair" placement="top" trigger="rollover"/></create>
+<create unit="bq" vrobj="islands:stairs"><popup text="stairs" placement="top" trigger="rollover"/></create>
+<create unit="br" vrobj="islands:rail"><popup text="rail" placement="top" trigger="rollover"/></create>
+<create unit="bs" vrobj="islands:railturnleft"><popup text="railturnleft" placement="top" trigger="rollover"/></create>
+<create unit="bt" vrobj="islands:railturnright"><popup text="railturnright" placement="top" trigger="rollover"/></create>
+<!-- textures -->
+<create unit="ta" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:board.jpg"/><popup text="board.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:bookshelves1.jpg"/><popup text="bookshelves1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:bookshelves2.jpg"/><popup text="bookshelves2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:bookshelves3.jpg"/><popup text="bookshelves3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:cement1.jpg"/><popup text="cement1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:cement2.jpg"/><popup text="cement2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:cement3.jpg"/><popup text="cement3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:cement4.jpg"/><popup text="cement4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:cement5.jpg"/><popup text="cement5.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:clouds.gif"/><popup text="clouds.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:darkwood.gif"/><popup text="darkwood.gif" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:fire.gif"/><popup text="fire.gif" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:grass.gif"/><popup text="grass.gif" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:ground1.jpg"/><popup text="ground1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:ground2.jpg"/><popup text="ground2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:ground3.jpg"/><popup text="ground3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:ground4.jpg"/><popup text="ground4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:bookshelves4.jpg"/><popup text="bookshelves4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:bookshelves5.jpg"/><popup text="bookshelves5.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:bookshelves6.jpg"/><popup text="bookshelves6.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:straw.jpg"/><popup text="straw.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW01.jpg"/><popup text="SW01.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW02.jpg"/><popup text="SW02.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t0" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW03.jpg"/><popup text="SW03.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t1" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW05.jpg"/><popup text="SW05.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t2" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW06.jpg"/><popup text="SW06.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t3" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW07.jpg"/><popup text="SW07.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t4" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW08.jpg"/><popup text="SW08.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t5" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW09.jpg"/><popup text="SW09.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t6" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW10.jpg"/><popup text="SW10.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t7" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:SW04.jpg"/><popup text="SW04.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y0" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS01.jpg"/><popup text="TIS01.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y1" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS02.jpg"/><popup text="TIS02.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y2" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS03.jpg"/><popup text="TIS03.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y3" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS04.jpg"/><popup text="TIS04.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y4" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS05.jpg"/><popup text="TIS05.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y5" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS06.jpg"/><popup text="TIS06.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y6" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS07.jpg"/><popup text="TIS07.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y7" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS08.jpg"/><popup text="TIS08.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y8" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS09.jpg"/><popup text="TIS09.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y9" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:TIS10.jpg"/><popup text="TIS10.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u0" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD01.jpg"/><popup text="WFD01.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u1" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD02.jpg"/><popup text="WFD02.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u2" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD03.jpg"/><popup text="WFD03.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u3" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD04.jpg"/><popup text="WFD04.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u4" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD05.jpg"/><popup text="WFD05.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u5" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD06.jpg"/><popup text="WFD06.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u6" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD07.jpg"/><popup text="WFD07.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u7" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD08.jpg"/><popup text="WFD08.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u8" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD09.jpg"/><popup text="WFD09.jpg" placement="top" trigger="rollover"/></create>
+<create unit="u9" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:WFD10.jpg"/><popup text="WFD10.jpg" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="islands:ceiling"> 
+         <side NAME="*" TEXTURE="@islands:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b8 .. bh .. bp .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. bg .. bo .. bO .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b6 .. bf .. bn .. bN .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b5 .. be .. bm .. bM .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b4 .. bd .. bl .. bL .. bt .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b3 .. bc .. bk .. bK .. bs .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b2 .. bb .. bj .. bJ .. br .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b1 .. .. .. bi .. .. .. bq .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. t0 .. t1 .. t2 .. t3 .. t4 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. t5 .. t6 .. t7 .. y0 .. y1 .. y2 .. y3 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. y4 .. y5 .. y6 .. y7 .. y8 .. y9 .. u0 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. u1 .. u2 .. u3 .. u4 .. u5 .. u6 .. u7 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. u8 .. u9 .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<enter location="(4,23,1)" name="default" angle="0" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>

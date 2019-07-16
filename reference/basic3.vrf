@@ -1,0 +1,217 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Basic3 Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/libs/basic3.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(37,15,3)" />
+<sky />
+<ground />
+<ambience file="@people:welcome.wav" playback="once"/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="ww" vrobj="basic3:wall"><popup text="basic3:wall" placement="top" trigger="rollover"/></create>
+<create unit="wW" vrobj="basic3:wallc"><popup text="basic3:wallc" placement="top" trigger="rollover"/></create>
+<create unit="wc" vrobj="basic3:wallcorner"><popup text="basic3:wallcorner" placement="top" trigger="rollover"/></create>
+<create unit="wC" vrobj="basic3:wallcornerc"><popup text="basic3:wallcornerc" placement="top" trigger="rollover"/></create>
+<create unit="w-" vrobj="basic3:ceiling"><popup text="basic3:ceiling" placement="top" trigger="rollover"/></create>
+<create unit="w=" vrobj="basic3:2walls"><popup text="basic3:2walls" placement="top" trigger="rollover"/></create>
+<create unit="w%" vrobj="basic3:2wallsc"><popup text="basic3:2wallsc" placement="top" trigger="rollover"/></create>
+<create unit="w`" vrobj="basic3:3walls"><popup text="basic3:3walls" placement="top" trigger="rollover"/></create>
+<create unit="w~" vrobj="basic3:3wallsc"><popup text="basic3:3wallsc" placement="top" trigger="rollover"/></create>
+<create unit="w#" vrobj="basic3:4walls"><popup text="basic3:4walls" placement="top" trigger="rollover"/></create>
+<create unit="w^" vrobj="basic3:4wallsc"><popup text="basic3:4wallsc" placement="top" trigger="rollover"/></create>
+<create unit="wp" vrobj="basic3:passage"><popup text="basic3:passage" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wP" vrobj="basic3:widepassage"><popup text="basic3:widepassage" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="ws" vrobj="basic3:passageleft"><popup text="basic3:passageleft" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wS" vrobj="basic3:passageright"><popup text="basic3:passageright" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wt" vrobj="basic3:widepassageleft"><popup text="basic3:widepassageleft" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wT" vrobj="basic3:widepassageright"><popup text="basic3:widepassageright" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wa" vrobj="basic3:doorway1"><popup text="basic3:doorway1" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wb" vrobj="basic3:widedoorway1"><popup text="basic3:widedoorway1" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wd" vrobj="basic3:window1"><popup text="basic3:window1" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="we" vrobj="basic3:widewindow1"><popup text="basic3:widewindow1" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wf" vrobj="basic3:doorway2"><popup text="basic3:doorway2" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wg" vrobj="basic3:widedoorway2"><popup text="basic3:widedoorway2" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wh" vrobj="basic3:window2"><popup text="basic3:window2" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wi" vrobj="basic3:widewindow2"><popup text="basic3:widewindow2" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wj" vrobj="basic3:doorway3"><popup text="basic3:doorway3" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wk" vrobj="basic3:widedoorway3"><popup text="basic3:widedoorway3" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wl" vrobj="basic3:window3"><popup text="basic3:window3" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wm" vrobj="basic3:widewindow3"><popup text="basic3:widewindow3" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wA" vrobj="basic3:doorway1c"><popup text="basic3:doorway1c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wB" vrobj="basic3:widedoorway1c"><popup text="basic3:widedoorway1c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wD" vrobj="basic3:window1c"><popup text="basic3:window1c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wE" vrobj="basic3:widewindow1c"><popup text="basic3:widewindow1c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wF" vrobj="basic3:doorway2c"><popup text="basic3:doorway2c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wG" vrobj="basic3:widedoorway2c"><popup text="basic3:widedoorway2c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wH" vrobj="basic3:window2c"><popup text="basic3:window2c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wI" vrobj="basic3:widewindow2c"><popup text="basic3:widewindow2c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wJ" vrobj="basic3:doorway3c"><popup text="basic3:doorway3c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wK" vrobj="basic3:widedoorway3c"><popup text="basic3:widedoorway3c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wL" vrobj="basic3:window3c"><popup text="basic3:window3c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wM" vrobj="basic3:widewindow3c"><popup text="basic3:widewindow3c" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wu" vrobj="basic3:doorway1left"><popup text="basic3:doorway1left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wv" vrobj="basic3:widedoorway1left"><popup text="basic3:widedoorway1left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wx" vrobj="basic3:window1left"><popup text="basic3:window1left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wy" vrobj="basic3:widewindow1left"><popup text="basic3:widewindow1left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wz" vrobj="basic3:doorway2left"><popup text="basic3:doorway2left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w(" vrobj="basic3:widedoorway2left"><popup text="basic3:widedoorway2left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w[" vrobj="basic3:window2left"><popup text="basic3:window2left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w{" vrobj="basic3:widewindow2left"><popup text="basic3:widewidewindow2left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wn" vrobj="basic3:doorway3left"><popup text="basic3:doorway3left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wo" vrobj="basic3:widedoorway3left"><popup text="basic3:widedoorway3left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wq" vrobj="basic3:window3left"><popup text="basic3:window3left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wr" vrobj="basic3:widewindow3left"><popup text="basic3:widewindow3left" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wU" vrobj="basic3:doorway1right"><popup text="basic3:doorway1right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wV" vrobj="basic3:widedoorway1right"><popup text="basic3:widedoorway1right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wX" vrobj="basic3:window1right"><popup text="basic3:window1right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wY" vrobj="basic3:widewindow1right"><popup text="basic3:widewindow1right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wZ" vrobj="basic3:doorway2right"><popup text="basic3:doorway2right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w)" vrobj="basic3:widedoorway2right"><popup text="basic3:widedoorway2right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w]" vrobj="basic3:window2right"><popup text="basic3:window2right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w}" vrobj="basic3:widewindow2right"><popup text="basic3:widewindow2right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wN" vrobj="basic3:doorway3right"><popup text="basic3:doorway3right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wO" vrobj="basic3:widedoorway3right"><popup text="basic3:widedoorway3right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wQ" vrobj="basic3:window3right"><popup text="basic3:window3right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="wR" vrobj="basic3:widewindow3right"><popup text="basic3:widewindow3right" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w1" vrobj="basic3:doorway1leftc"><popup text="basic3:doorway1leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w3" vrobj="basic3:widedoorway1leftc"><popup text="basic3:widedoorway1leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w5" vrobj="basic3:window1leftc"><popup text="basic3:window1leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w7" vrobj="basic3:widewindow1leftc"><popup text="basic3:widewindow1leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w9" vrobj="basic3:doorway2leftc"><popup text="basic3:doorway2leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w?" vrobj="basic3:widedoorway2leftc"><popup text="basic3:widedoorway2leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w/" vrobj="basic3:widewindow2leftc"><popup text="basic3:widewindow2leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w:" vrobj="basic3:doorway3leftc"><popup text="basic3:doorway3leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w," vrobj="basic3:widedoorway3leftc"><popup text="basic3:widedoorway3leftc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w2" vrobj="basic3:doorway1rightc"><popup text="basic3:doorway1rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w4" vrobj="basic3:widedoorway1rightc"><popup text="basic3:widedoorway1rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w6" vrobj="basic3:window1rightc"><popup text="basic3:window1rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w8" vrobj="basic3:widewindow1rightc"><popup text="basic3:widewindow1rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w0" vrobj="basic3:doorway2rightc"><popup text="basic3:doorway2rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w!" vrobj="basic3:widedoorway2rightc"><popup text="basic3:widedoorway2rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w;" vrobj="basic3:doorway3rightc"><popup text="basic3:doorway3rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+<create unit="w'" vrobj="basic3:widedoorway3rightc"><popup text="basic3:widedoorway3rightc" placement="top" trigger="rollover"/><side name="fill" clarity="75%"/></create>
+
+<!-- textures -->
+<create unit="ta" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:brick.gif"/><popup text="@basic3:brick.gif" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:charcoal.gif"/><popup text="@basic3:charcoal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:gray.gif"/><popup text="@basic3:gray.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:metal.gif"/><popup text="@basic3:metal.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:metal1.jpg"/><popup text="@basic3:metal1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:rain.gif"/><popup text="@basic3:rain.gif" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:rain_clouds.gif"/><popup text="@basic3:rain_clouds.gif" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:rock1.jpg"/><popup text="@basic3:rock1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:rock2.jpg"/><popup text="@basic3:rock2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:rock3.jpg"/><popup text="@basic3:rock3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:roof1.jpg"/><popup text="@basic3:roof1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:roof2.jpg"/><popup text="@basic3:roof2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:roof3.jpg"/><popup text="@basic3:roof3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:sand1.jpg"/><popup text="@basic3:sand1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:sand2.jpg"/><popup text="@basic3:sand2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:sand3.jpg"/><popup text="@basic3:sand3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:tarmac1.jpg"/><popup text="@basic3:tarmac1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:tarmac2.jpg"/><popup text="@basic3:tarmac2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:terrain.jpg"/><popup text="@basic3:terrain.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:turquoise.gif"/><popup text="@basic3:turquoise.gif" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:wallpaper1.jpg"/><popup text="@basic3:wallpaper1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:wallpaper2.jpg"/><popup text="@basic3:wallpaper2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:wallpaper3.jpg"/><popup text="@basic3:wallpaper3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t1" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:water.gif"/><popup text="@basic3:water.gif" placement="top" trigger="rollover"/></create>
+<create unit="t2" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:water1.gif"/><popup text="@basic3:water1.gif" placement="top" trigger="rollover"/></create>
+<create unit="t3" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:water1.jpg"/><popup text="@basic3:water1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t4" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:water2.jpg"/><popup text="@basic3:water2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t5" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:wood1.jpg"/><popup text="@basic3:wood1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t6" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:wood2.jpg"/><popup text="@basic3:wood2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t7" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:wood3.jpg"/><popup text="@basic3:wood3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t8" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:woodfloor1.jpg"/><popup text="@basic3:woodfloor1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t9" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:woodfloor2.jpg"/><popup text="@basic3:woodfloor2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y1" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:woodfloor3.jpg"/><popup text="@basic3:woodfloor3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y2" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:woodwall1.jpg"/><popup text="@basic3:woodwall1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y3" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:woodwall2.jpg"/><popup text="@basic3:woodwall2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y4" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:woodwall3.jpg"/><popup text="@basic3:woodwall3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y5" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:woodwall4.jpg"/><popup text="@basic3:woodwall4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y6" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:glass.jpg"/><popup text="@basic3:glass.jpg" placement="top" trigger="rollover"/></create>
+<create unit="y7" vrobj="basic3:spriteface"><side NAME="*" TEXTURE="@basic3:glassbrick.jpg"/><popup text="@basic3:glassbrick.jpg" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="basic3:ceiling">
+         <side NAME="*" TEXTURE="@basic3:box.gif" STYLE="scaled"/>  
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. w; .. w' .. w2 .. w4 .. w6 .. w8 .. w0 .. w! .. w- .. w` .. w~ .. w1 .. w3 .. w5 .. w7 .. w9 .. w? .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. ww .. .. wp .. wP .. .. wa .. wb .. wd .. we .. .. wf .. wg .. wh .. wi .. .. wj .. wk .. wl .. wm .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. wC .. .. w= .. w% .. .. wU .. wV .. wX .. wY .. .. wZ .. w) .. w] .. w{ .. .. wN .. wO .. wQ .. wR .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. wc .. .. wS .. wT .. .. wu .. wv .. wx .. wy .. .. wz .. w( .. w[ .. w} .. .. wn .. wo .. wq .. wr .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. wW .. .. ws .. wt .. .. wA .. wB .. wD .. wE .. .. wF .. wG .. wH .. wI .. .. wJ .. wK .. wL .. wM .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. w/ .. .. w: .. w, .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. ta .. tb .. tc .. td .. te .. tf .. tg .. th .. ti .. tj .. tl .. tm .. tn .. to .. tp .. tq .. tr .. ts ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tt .. tu .. tv .. tx .. t1 .. t2 .. t3 .. t4 .. t5 .. t6 .. t7 .. t8 .. t9 .. y1 .. y2 .. y3 .. y4 .. y5 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. y6 .. y7 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<popup location="(20,15,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Basic3 library. This library contains 89 objects and 50 textures. Current version of this lib is 2.8. View source for more details."/>
+<enter location="(20,15,1)" name="default" angle="45" />
+<enter location="(37,14,1)" name="floor" /> 
+<enter location="(37,14,3)" name="roof" /> 
+<exit location="(37,15,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(37,15,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" /> 
+</design>
+</vrf>

@@ -1,0 +1,191 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Basic2 Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)"/>
+<sky/>
+<ground/>
+<ambience file="@people:welcome.wav" playback="once"/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="basic2:archwindow"><popup text="basic2:archwindow" placement="top" trigger="rollover"/></create>
+<create unit="b2" vrobj="basic2:arch"><popup text="basic2:arch" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="basic2:bottomwedge"><popup text="basic2:bottomwedge" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="basic2:boxcorner"><popup text="basic2:boxcorner" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="basic2:windowround"><popup text="basic2:windowround" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="basic2:windowsquare"><popup text="basic2:windowsquare" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="basic2:quarter"><popup text="basic2:quarter" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="basic2:floorhalf"><popup text="basic2:floorhalf" placement="top" trigger="rollover"/></create>
+<create unit="bb" vrobj="basic2:doorway"><popup text="basic2:doorway" placement="top" trigger="rollover"/></create>
+<create unit="bc" vrobj="basic2:cornercolumn"><popup text="basic2:cornercolumn" placement="top" trigger="rollover"/></create>
+<create unit="bd" vrobj="basic2:topwedge"><popup text="basic2:topwedge" placement="top" trigger="rollover"/></create>
+<create unit="be" vrobj="basic2:wedge"><popup text="basic2:wedge" placement="top" trigger="rollover"/></create>
+<create unit="bf" vrobj="basic2:grate"><popup text="basic2:grate" placement="top" trigger="rollover"/></create>
+<create unit="bg" vrobj="basic2:bottomstairs"><popup text="basic2:bottomstairs" placement="top" trigger="rollover"/></create>
+<create unit="bh" vrobj="basic2:lcurvestairbottom"><popup text="basic2:lcurvestairbottom" placement="top" trigger="rollover"/></create>
+<create unit="bi" vrobj="basic2:rcurvestairbottom"><popup text="basic2:rcurvestairbottom" placement="top" trigger="rollover"/></create>
+<create unit="bj" vrobj="basic2:sphere"><popup text="basic2:sphere" placement="top" trigger="rollover"/></create>
+<create unit="bk" vrobj="basic2:box"><popup text="basic2:box" placement="top" trigger="rollover"/></create>
+<create unit="bl" vrobj="basic2:curveincornerramp"><popup text="basic2:curveincornerramp" placement="top" trigger="rollover"/></create>
+<create unit="bm" vrobj="basic2:halfdisk"><popup text="basic2:halfdisk" placement="top" trigger="rollover"/></create>
+<create unit="bn" vrobj="basic2:disk"><popup text="basic2:disk" placement="top" trigger="rollover"/></create>
+<create unit="bo" vrobj="basic2:smallspherecorner"><popup text="basic2:smallspherecorner" placement="top" trigger="rollover"/></create>
+<create unit="bp" vrobj="basic2:smalldomecorner"><popup text="basic2:smalldomecorner" placement="top" trigger="rollover"/></create>
+<create unit="bJ" vrobj="basic2:smallsphere"><popup text="basic2:smallsphere" placement="top" trigger="rollover"/></create>
+<create unit="bK" vrobj="basic2:smalldome"><popup text="basic2:smalldome" placement="top" trigger="rollover"/></create>
+<create unit="bL" vrobj="basic2:convex"><popup text="basic2:convex" placement="top" trigger="rollover"/></create>
+<create unit="bM" vrobj="basic2:concave"><popup text="basic2:concave" placement="top" trigger="rollover"/></create>
+<create unit="bN" vrobj="basic2:doubleconcave"><popup text="basic2:doubleconcave" placement="top" trigger="rollover"/></create>
+<create unit="bO" vrobj="basic2:lcurvestairtop"><popup text="basic2:lcurvestairtop" placement="top" trigger="rollover"/></create>
+<create unit="bP" vrobj="basic2:topstairs"><popup text="basic2:topstairs" placement="top" trigger="rollover"/></create>
+<create unit="bq" vrobj="basic2:rcurvestairtop"><popup text="basic2:rcurvestairtop" placement="top" trigger="rollover"/></create>
+<create unit="br" vrobj="basic2:lcurvestair"><popup text="basic2:lcurvestair" placement="top" trigger="rollover"/></create>
+<create unit="bs" vrobj="basic2:rcurvestair"><popup text="basic2:rcurvestair" placement="top" trigger="rollover"/></create>
+<create unit="bt" vrobj="basic2:stairs"><popup text="basic2:stairs" placement="top" trigger="rollover"/></create>
+<create unit="bu" vrobj="basic2:dome"><popup text="basic2:dome" placement="top" trigger="rollover"/></create>
+<create unit="bv" vrobj="basic2:curveincorner"><popup text="basic2:curveincorner" placement="top" trigger="rollover"/></create>
+<create unit="bx" vrobj="basic2:curveoutcorner"><popup text="basic2:curveoutcorner" placement="top" trigger="rollover"/></create>
+<create unit="bS" vrobj="basic2:pipecorner"><popup text="basic2:pipecorner" placement="top" trigger="rollover"/></create>
+<create unit="bT" vrobj="basic2:pipecross"><popup text="basic2:pipecross" placement="top" trigger="rollover"/></create>
+<create unit="bU" vrobj="basic2:pipecurve"><popup text="basic2:pipecurve" placement="top" trigger="rollover"/></create>
+<create unit="bV" vrobj="basic2:pipejack"><popup text="basic2:pipejack" placement="top" trigger="rollover"/></create>
+<create unit="bW" vrobj="basic2:pipe"><popup text="basic2:pipe" placement="top" trigger="rollover"/></create>
+<!-- textures -->
+<create unit="ta" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:bluemetal.gif"/><popup text="@basic2:bluemetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:board.jpg"/><popup text="@basic2:board.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:brownmetal.gif"/><popup text="@basic2:brownmetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:charcoalmetal.gif"/><popup text="@basic2:charcoalmetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:clouds.gif"/><popup text="@basic2:clouds.gif" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:coppermetal.gif"/><popup text="@basic2:coppermetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:gray.gif"/><popup text="@basic2:gray.gif" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:greenmetal.gif"/><popup text="@basic2:greenmetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:magentametal.gif"/><popup text="@basic2:magentametal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:metalmetal.gif"/><popup text="@basic2:metalmetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:purplemetal.gif"/><popup text="@basic2:purplemetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:redmetal.gif"/><popup text="@basic2:redmetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:terrain.gif"/><popup text="@basic2:terrain.gif" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:turquoisemetal.gif"/><popup text="@basic2:turquoisemetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:yellowmetal.gif"/><popup text="@basic2:yellowmetal.gif" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:sun.gif"/><popup text="@basic2:sun.gif" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone1.jpg"/><popup text="@basic2:stone1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone2.jpg"/><popup text="@basic2:stone2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone3.jpg"/><popup text="@basic2:stone3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone4.jpg"/><popup text="@basic2:stone4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone5.jpg"/><popup text="@basic2:stone5.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone6.jpg"/><popup text="@basic2:stone6.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone7.jpg"/><popup text="@basic2:stone7.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t1" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone8.jpg"/><popup text="@basic2:stone8.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t2" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone9.jpg"/><popup text="@basic2:stone9.jpg" placement="top" trigger="rollover"/></create>
+<create unit="t3" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:strawtile.vri"/><popup text="@basic2:strawtile.vri" placement="top" trigger="rollover"/></create>
+<create unit="t4" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:fence.vri"/><popup text="@basic2:fence.vri" placement="top" trigger="rollover"/></create>
+<create unit="t5" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:specular.vri"/><popup text="@basic2:specular.vri" placement="top" trigger="rollover"/></create>
+<create unit="t6" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:woodpanel.vri"/><popup text="@basic2:woodpanel.vri" placement="top" trigger="rollover"/></create>
+
+
+<create unit="--" vrobj="basic2:ceiling">
+         <side NAME="*" TEXTURE="@basic2:box.gif" STYLE="scaled"/>  
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b8 .. bh .. bp .. bP .. bx .. bi .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. bg .. bo .. bO .. bq .. b1 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b6 .. bf .. bn .. bN .. bv .. bW .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b5 .. be .. bm .. bM .. bu .. bV .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b4 .. bd .. bl .. bL .. bt .. bU .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b3 .. bc .. bk .. bK .. bs .. bT .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b2 .. bb .. bj .. bJ .. br .. bS .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. t1 .. t2 .. t3 .. t6 .. t5 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. t4 .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Basic2 library. This library contains 45 objects and 40 textures. Current version of this lib is 2.8. View source for more details."/>
+<enter location="(4,23,1)" name="default" angle="45" />
+<enter location="(15,22,1)" name="floor" /> 
+<enter location="(15,22,3)" name="roof" /> 
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" /> 
+</design>
+</vrf>

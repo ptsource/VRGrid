@@ -1,0 +1,166 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Village Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)"/>
+<sky/>
+<ground/>
+<ambience file="@people:welcome.wav" playback="once"/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="village:house1"><popup text="village:house1" placement="top" trigger="rollover"/></create>
+<create unit="b2" vrobj="village:house5"><popup text="village:house5" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="village:roof1"><popup text="village:roof1" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="village:house2"><popup text="village:house2" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="village:house6"><popup text="village:house6" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="village:roof2"><popup text="village:roof2" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="village:house3"><popup text="village:house3" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="village:roof3"><popup text="village:roof3" placement="top" trigger="rollover"/></create>
+<create unit="bb" vrobj="village:roof5"><popup text="village:roof5" placement="top" trigger="rollover"/></create>
+<create unit="bc" vrobj="village:house4"><popup text="village:house4" placement="top" trigger="rollover"/></create>
+<create unit="bd" vrobj="village:roof4"><popup text="village:roof4" placement="top" trigger="rollover"/></create>
+<create unit="be" vrobj="village:roof6"><popup text="village:roof6" placement="top" trigger="rollover"/></create>
+<create unit="bi" vrobj="village:tree"><popup text="village:tree" placement="top" trigger="rollover"/></create>
+<create unit="bj" vrobj="village:path"><popup text="village:path" placement="top" trigger="rollover"/></create>
+<create unit="bk" vrobj="village:pathcorner"><popup text="village:pathcorner" placement="top" trigger="rollover"/></create>
+<create unit="bl" vrobj="village:pathturn"><popup text="village:pathturn" placement="top" trigger="rollover"/></create>
+<create unit="bm" vrobj="village:lamp"><popup text="village:lamp" placement="top" trigger="rollover"/></create>
+<create unit="bn" vrobj="village:sign"><popup text="village:sign" placement="top" trigger="rollover"/></create>
+<create unit="bo" vrobj="village:pot"><popup text="village:pot" placement="top" trigger="rollover"/></create>
+<create unit="bJ" vrobj="village:bench"><popup text="village:bench" placement="top" trigger="rollover"/></create>
+<create unit="bK" vrobj="village:garbagecan"><popup text="village:garbagecan" placement="top" trigger="rollover"/></create>
+<create unit="bL" vrobj="village:swingset"><popup text="village:swingset" placement="top" trigger="rollover"/></create>
+<create unit="bM" vrobj="village:fence"><popup text="village:fence" placement="top" trigger="rollover"/></create>
+<create unit="bN" vrobj="village:gate"><popup text="village:gate" placement="top" trigger="rollover"/></create>
+<create unit="bO" vrobj="village:gateopen"><popup text="village:gateopen" placement="top" trigger="rollover"/></create>
+<create unit="bs" vrobj="village:wallbush"><popup text="village:wallbush" placement="top" trigger="rollover"/></create>
+<create unit="bT" vrobj="village:tree1"><popup text="village:tree1" placement="top" trigger="rollover"/></create>
+<!-- textures -->
+<create unit="ta" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:bmetal.jpg"/><popup text="@village:bmetal.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:box.jpg"/><popup text="@village:box.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:lava.jpg"/><popup text="@village:lava.jpg" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:ground.gif"/><popup text="@village:ground.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:marble.jpg"/><popup text="@village:marble.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:night.gif"/><popup text="@village:night.gif" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:rooftexts.jpg"/><popup text="@village:rooftexts.jpg" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:sidewalk.gif"/><popup text="@village:sidewalk.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:stainless.jpg"/><popup text="@village:stainless.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:tarmac.gif"/><popup text="@village:tarmac.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:wall1.jpg"/><popup text="@village:wall1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:wall.jpg"/><popup text="@village:wall.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:brownbrick.vri"/><popup text="@village:brownbrick.vri" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:wood.jpg"/><popup text="@village:wood.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:terrain.jpg"/><popup text="@village:terrain.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:terrain1.jpg"/><popup text="@village:terrain1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:terrain2.jpg"/><popup text="@village:terrain2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:oldwood.jpg"/><popup text="@village:oldwood.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:rust.jpg"/><popup text="@village:rust.jpg" placement="top" trigger="rollover"/></create>
+
+
+<create unit="--" vrobj="village:ceiling">
+         <side NAME="*" TEXTURE="@village:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b8 .. bT .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. .. .. bo .. bO .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b5 .. be .. b6 .. .. .. bn .. bN .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b4 .. bd .. bl .. bL .. bM .. bm .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b3 .. bc .. bk .. bK .. bs .. b1 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b2 .. bb .. bj .. bJ .. .. .. bi .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tn .. tb .. tc .. td .. te .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. ta .. to ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Village library. This library contains 30 objects and 44 textures. Current version of this lib is 2.8. View source for more details."/>
+<enter location="(4,23,1)" name="default" angle="45" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>

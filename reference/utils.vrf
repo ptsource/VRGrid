@@ -1,0 +1,177 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Utils Reference" />
+<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" />
+<!-- Various Utils -->
+<lib href="https://ptsource.github.io/VRGrid/utils/animation.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/axis.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/vrgrid.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/skybox.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)" />
+<sky/>
+<ground/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<!-- Axis -->
+<create unit="b1" vrobj="axis:axis"><popup text="axis:axis" placement="top" trigger="rollover"/></create>
+<!-- Water -->
+<create unit="b2" vrobj="water:Circle15x15"><popup text="water:Circle15x15" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="water:Circle31x31"><popup text="water:Circle31x31" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="water:Circle43x43"><popup text="water:Circle43x43" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="water:Elbow15x15"><popup text="water:Elbow15x15" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="water:Elbow31x31"><popup text="water:Elbow31x31" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="water:Elbow43x43"><popup text="water:Elbow43x43" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="water:Tube15x15"><popup text="water:Tube15x15" placement="top" trigger="rollover"/></create>
+<create unit="b9" vrobj="water:Tube31x31"><popup text="water:Tube31x31" placement="top" trigger="rollover"/></create>
+<create unit="c1" vrobj="water:Tube43x43"><popup text="water:Tube43x43" placement="top" trigger="rollover"/></create>
+<!-- VRGrid -->
+<create unit="c2" vrobj="vrgrid:vrgrid"><popup text="vrgrid:vrgrid" placement="top" trigger="rollover"/></create>
+<!-- GameTools -->
+<create unit="c3" vrobj="gametools:pistol"><popup text="gametools:pistol" placement="top" trigger="rollover"/></create>
+<create unit="c4" vrobj="gametools:bullettrail"><popup text="gametools:bullettrail" placement="top" trigger="rollover"/></create>
+<create unit="c5" vrobj="gametools:football"><popup text="gametools:football" placement="top" trigger="rollover"/></create>
+<create unit="c6" vrobj="gametools:car"><popup text="gametools:car" placement="top" trigger="rollover"/></create>
+<create unit="c7" vrobj="gametools:wasp"><popup text="gametools:wasp" placement="top" trigger="rollover"/></create>
+<create unit="c8" vrobj="gametools:box"><popup text="gametools:box" placement="top" trigger="rollover"/></create>
+<create unit="c9" vrobj="gametools:xwing"><popup text="gametools:xwing" placement="top" trigger="rollover"/></create>
+<create unit="a1" vrobj="gametools:twing"><popup text="gametools:twing" placement="top" trigger="rollover"/></create>
+<create unit="a2" vrobj="gametools:incorner"><popup text="gametools:incorner" placement="top" trigger="rollover"/></create>
+<create unit="a3" vrobj="gametools:outcorner"><popup text="gametools:outcorner" placement="top" trigger="rollover"/></create>
+<create unit="a4" vrobj="gametools:straight"><popup text="gametools:straight" placement="top" trigger="rollover"/></create>
+<!-- Animation -->
+<create unit="g2" vrobj="animation:crow">
+<param walkable="yes"/>
+	<action trigger="timer" delay="0.1">
+		<animate/>
+		<setframe number="+1"/>
+	</action>
+</create>
+<!-- Skyboxes -->
+<create unit="s1" vrobj="skybox:dusk">
+<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+<popup text="skybox:dusk" placement="top" trigger="rollover"/>
+</create>
+<create unit="s2" vrobj="skybox:met">
+<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+<popup text="skybox:met" placement="top" trigger="rollover"/>
+</create>
+<create unit="s3" vrobj="skybox:ashcanyon">
+<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+<popup text="skybox:ashcanyon" placement="top" trigger="rollover"/>
+</create>
+<create unit="s4" vrobj="skybox:hills">
+<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+<popup text="skybox:hills" placement="top" trigger="rollover"/>
+</create>
+<!-- Terrain -->
+<create unit="a6" vrobj="terrain:filling"><popup text="terrain:filling" placement="top" trigger="rollover"/></create>
+<create unit="a7" vrobj="terrain:ground"><popup text="terrain:ground" placement="top" trigger="rollover"/></create>
+<create unit="a8" vrobj="terrain:terrain"><popup text="terrain:terrain" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="base:ceiling"> 
+         <side NAME="*" TEXTURE="@base:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. b1 .. b2 .. b3 .. b4 .. b5 .. b6 .. b7 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. b8 .. b9 .. c1 .. c2 .. c3 .. c4 .. c5 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. c6 .. c7 .. c8 .. c9 .. a1 .. a2 .. a3 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. a4 .. s1 .. a6 .. a7 .. a8 .. s2 .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. s3 .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. g2 .. .. .. .. .. s4 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for various Utils libraries. It includes Terrain, Skybox, Axis, Gametools, Water and the VRGrid logo object. View source for more details."/>
+<enter location="(4,23,1)" name="default" angle="45" />
+<enter location="(15,22,1)" name="floor" /> 
+<enter location="(15,22,3)" name="roof" /> 
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" /> 
+</design>
+</vrf>

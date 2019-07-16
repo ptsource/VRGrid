@@ -1,0 +1,145 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid House Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/house.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)" />
+<sky/>
+<ground/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="house:cage"><popup text="house:cage" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="house:ceiling"><popup text="house:ceiling" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="house:ceilinglamp"><popup text="house:ceilinglamp" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="house:convex2"><popup text="house:convex2" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="house:door"><popup text="house:door" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="house:dooropen"><popup text="house:dooropen" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="house:doorwaygate"><popup text="house:doorwaygate" placement="top" trigger="rollover"/></create>
+<create unit="bb" vrobj="house:elevatorhandle"><popup text="house:elevatorhandle" placement="top" trigger="rollover"/></create>
+<create unit="bc" vrobj="house:elevatorhandle2"><popup text="house:elevatorhandle2" placement="top" trigger="rollover"/></create>
+<create unit="bd" vrobj="house:walls"><popup text="house:walls" placement="top" trigger="rollover"/></create>
+<create unit="be" vrobj="house:floorlayer"><popup text="house:floorlayer" placement="top" trigger="rollover"/></create>
+<create unit="bf" vrobj="house:floorlamp"><popup text="house:floorlamp" placement="top" trigger="rollover"/></create>
+<create unit="bg" vrobj="house:floorlayer2"><popup text="house:floorlayer2" placement="top" trigger="rollover"/></create>
+<create unit="bh" vrobj="house:gate"><popup text="house:gate" placement="top" trigger="rollover"/></create>
+<create unit="bi" vrobj="house:halffence"><popup text="house:halffence" placement="top" trigger="rollover"/></create>
+<create unit="bj" vrobj="house:halffence2"><popup text="house:halffence2" placement="top" trigger="rollover"/></create>
+<create unit="bk" vrobj="house:halfwall"><popup text="house:halfwall" placement="top" trigger="rollover"/></create>
+<create unit="bl" vrobj="house:kitchencorner"><popup text="house:kitchencorner" placement="top" trigger="rollover"/></create>
+<create unit="bm" vrobj="house:kitchentop"><popup text="house:kitchentop" placement="top" trigger="rollover"/></create>
+<create unit="bn" vrobj="house:kitchentop2"><popup text="house:kitchentop2" placement="top" trigger="rollover"/></create>
+<create unit="bo" vrobj="house:layer"><popup text="house:layer" placement="top" trigger="rollover"/></create>
+<create unit="bp" vrobj="house:opengate"><popup text="house:opengate" placement="top" trigger="rollover"/></create>
+<create unit="bJ" vrobj="house:panel"><popup text="house:panel" placement="top" trigger="rollover"/></create>
+<create unit="bK" vrobj="house:radiotop"><popup text="house:radiotop" placement="top" trigger="rollover"/></create>
+<create unit="bL" vrobj="house:sink"><popup text="house:sink" placement="top" trigger="rollover"/></create>
+<create unit="bM" vrobj="house:sink2"><popup text="house:sink2" placement="top" trigger="rollover"/></create>
+<create unit="bN" vrobj="house:smalldome2"><popup text="house:smalldome2" placement="top" trigger="rollover"/></create>
+<create unit="bO" vrobj="house:toilet"><popup text="house:toilet" placement="top" trigger="rollover"/></create>
+<create unit="bP" vrobj="house:tub"><popup text="house:tub" placement="top" trigger="rollover"/></create>
+<create unit="bq" vrobj="house:wincurtain"><popup text="house:wincurtain" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="house:ceiling"> 
+         <side NAME="*" TEXTURE="@house:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. bB .. bA .. b1 .. bi .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b8 .. bh .. bp .. bP .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. bg .. bo .. bO .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b6 .. bf .. bn .. bN .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b5 .. be .. bm .. bM .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b4 .. bd .. bl .. bL .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b3 .. bc .. bk .. bK .. .. .. bq .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. bb .. bj .. bJ .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<enter location="(4,23,1)" name="default" angle="0" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>

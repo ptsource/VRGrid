@@ -1,0 +1,192 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Egypt Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/egypt.vlib" required="2.9"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)" />
+<sky/>
+<ground/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="egypt:pyramid"><popup text="pyramid" placement="top" trigger="rollover"/></create>
+<create unit="b2" vrobj="egypt:chupavidus"><popup text="chupaviduse" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="egypt:majaslipi"><popup text="majaslipi" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="egypt:majaslipi1"><popup text="majaslipi1" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="egypt:majaslipi1jumts"><popup text="majaslipi1jumts" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="egypt:majaslipi2"><popup text="majaslipi2" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="egypt:majaslipi4"><popup text="majaslipi4" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="egypt:majaslipi5"><popup text="majaslipi5" placement="top" trigger="rollover"/></create>
+<create unit="b9" vrobj="egypt:majaslipi12"><popup text="majaslipi12" placement="top" trigger="rollover"/></create>
+<create unit="c1" vrobj="egypt:majaslipi32"><popup text="majaslipi32" placement="top" trigger="rollover"/></create>
+<create unit="c2" vrobj="egypt:majaslipi42"><popup text="majaslipi42" placement="top" trigger="rollover"/></create>
+<create unit="c3" vrobj="egypt:majaslipi52"><popup text="majaslipi52" placement="top" trigger="rollover"/></create>
+<create unit="c4" vrobj="egypt:majaslipi62"><popup text="majaslipi62" placement="top" trigger="rollover"/></create>
+<create unit="c5" vrobj="egypt:majaslipi72"><popup text="majaslipi72" placement="top" trigger="rollover"/></create>
+<create unit="c6" vrobj="egypt:majaslipi82"><popup text="majaslipi82" placement="top" trigger="rollover"/></create>
+<create unit="c7" vrobj="egypt:majaslipi92"><popup text="majaslipi92" placement="top" trigger="rollover"/></create>
+<create unit="c8" vrobj="egypt:majaslipijumts0"><popup text="majaslipijumts0" placement="top" trigger="rollover"/></create>
+<create unit="c9" vrobj="egypt:majaslipijumts1"><popup text="majaslipijumts1" placement="top" trigger="rollover"/></create>
+<create unit="d1" vrobj="egypt:majaslipijumts2"><popup text="majaslipijumts2" placement="top" trigger="rollover"/></create>
+<create unit="d2" vrobj="egypt:majaslipijumts3"><popup text="majaslipijumts3" placement="top" trigger="rollover"/></create>
+<create unit="d3" vrobj="egypt:majaslipijumts4"><popup text="majaslipijumts4" placement="top" trigger="rollover"/></create>
+<create unit="d4" vrobj="egypt:majaslipijumts5"><popup text="majaslipijumts5" placement="top" trigger="rollover"/></create>
+<create unit="d5" vrobj="egypt:majaslipijumts6"><popup text="majaslipijumts6" placement="top" trigger="rollover"/></create>
+<create unit="d6" vrobj="egypt:majaslipijumts7"><popup text="majaslipijumts7" placement="top" trigger="rollover"/></create>
+<create unit="d7" vrobj="egypt:majaslipijumts8"><popup text="majaslipijumts8" placement="top" trigger="rollover"/></create>
+<create unit="d8" vrobj="egypt:maxihalf"><popup text="maxihalf" placement="top" trigger="rollover"/></create>
+<create unit="d9" vrobj="egypt:minihalf2"><popup text="minihalf2" placement="top" trigger="rollover"/></create>
+<create unit="e1" vrobj="egypt:ratjumts1"><popup text="ratjumts1" placement="top" trigger="rollover"/></create>
+<create unit="e2" vrobj="egypt:ratjumts1mala"><popup text="ratjumts1mala" placement="top" trigger="rollover"/></create>
+<create unit="e3" vrobj="egypt:ratjumts1malar"><popup text="ratjumts1malar" placement="top" trigger="rollover"/></create>
+<create unit="e4" vrobj="egypt:ratjumts2"><popup text="ratjumts2" placement="top" trigger="rollover"/></create>
+<create unit="e5" vrobj="egypt:ratjumts2mala"><popup text="ratjumts2mala" placement="top" trigger="rollover"/></create>
+<create unit="e6" vrobj="egypt:ratjumts2malar"><popup text="ratjumts2malar" placement="top" trigger="rollover"/></create>
+<create unit="e7" vrobj="egypt:ratsiena1"><popup text="ratsiena1" placement="top" trigger="rollover"/></create>
+<create unit="e8" vrobj="egypt:ratsiena2"><popup text="ratsiena2" placement="top" trigger="rollover"/></create>
+<create unit="e9" vrobj="egypt:ratsiena3"><popup text="ratsiena3" placement="top" trigger="rollover"/></create>
+<create unit="f1" vrobj="egypt:ratsienamala"><popup text="ratsienamala" placement="top" trigger="rollover"/></create>
+<create unit="f2" vrobj="egypt:skunisjumts"><popup text="skunisjumts" placement="top" trigger="rollover"/></create>
+<create unit="f3" vrobj="egypt:skunisjumts2"><popup text="skunisjumts2" placement="top" trigger="rollover"/></create>
+<create unit="f4" vrobj="egypt:skunisjumts2mala"><popup text="skunisjumts2mala" placement="top" trigger="rollover"/></create>
+<create unit="f5" vrobj="egypt:skunisjumts2malar"><popup text="skunisjumts2malar" placement="top" trigger="rollover"/></create>
+<create unit="f6" vrobj="egypt:skunisjumts3"><popup text="skunisjumts3" placement="top" trigger="rollover"/></create>
+<create unit="f7" vrobj="egypt:skunisjumts3mala"><popup text="skunisjumts3mala" placement="top" trigger="rollover"/></create>
+<create unit="f8" vrobj="egypt:skunisjumts4"><popup text="skunisjumts4" placement="top" trigger="rollover"/></create>
+<create unit="f9" vrobj="egypt:skunisjumts4mala"><popup text="skunisjumts4mala" placement="top" trigger="rollover"/></create>
+<create unit="g1" vrobj="egypt:skunisjumts4malar"><popup text="skunisjumts4malar" placement="top" trigger="rollover"/></create>
+<create unit="g2" vrobj="egypt:skunisjumtsmala"><popup text="skunisjumtsmala" placement="top" trigger="rollover"/></create>
+<create unit="g3" vrobj="egypt:skunisjumtsmalar"><popup text="skunisjumtsmalar" placement="top" trigger="rollover"/></create>
+<create unit="g4" vrobj="egypt:tilts1"><popup text="tilts1" placement="top" trigger="rollover"/></create>
+<create unit="g5" vrobj="egypt:tilts2"><popup text="tilts2" placement="top" trigger="rollover"/></create>
+<create unit="g6" vrobj="egypt:sarcophagus"><popup text="egypt:sarcophagus" placement="top" trigger="rollover"/></create>
+
+<!-- textures -->
+<create unit="ta" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone2.gif"/><popup text="base_stone2.gif" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone2_moss.gif"/><popup text="base_stone2_moss.gif" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone3.gif"/><popup text="base_stone3.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_heiroglyphs.gif"/><popup text="deco_heiroglyphs.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel.gif"/><popup text="deco_panel.gif" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel_half.gif"/><popup text="deco_panel_half.gif" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel_half_statue.gif"/><popup text="deco_panel_half_statue.gif" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:halfmoon.gif"/><popup text="halfmoon.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:hotsun.gif"/><popup text="hotsun.gif" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:moon.gif"/><popup text="moon.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand1.jpg"/><popup text="sand1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand2.jpg"/><popup text="sand2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand3.jpg"/><popup text="sand3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sun.gif"/><popup text="sun.gif" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:trim_darktiles.gif"/><popup text="trim_darktiles.gif" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:trim_glyphband1.gif"/><popup text="trim_glyphband1.gif" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block01b.gif"/><popup text="block01b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block02b.gif"/><popup text="block02b.gif" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block04b.gif"/><popup text="block04b.gif" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:grate2b.gif"/><popup text="grate2b.gif" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:jump.gif"/><popup text="jump.gif" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:jumppad1bb.gif"/><popup text="jumppad1bb.gif" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:plate.gif"/><popup text="plate.gif" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="egypt:ceiling"> 
+         <side NAME="*" TEXTURE="@egypt:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b1 .. b2 .. b3 .. b4 .. b5 .. b6 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. b8 .. b9 .. c1 .. c2 .. c3 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. c4 .. c5 .. c6 .. c7 .. c8 .. c9 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. d1 .. d2 .. d3 .. d4 .. d5 .. d6 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. d7 .. d8 .. d9 .. e1 .. e2 .. e3 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. e4 .. e5 .. e6 .. e7 .. e8 .. e9 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. f1 .. f2 .. f3 .. f4 .. f5 .. f6 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. f7 .. f8 .. f9 .. g1 .. g2 .. g3 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. g4 .. g5 .. g6 .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<enter location="(4,23,1)" name="default" angle="0" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>
+

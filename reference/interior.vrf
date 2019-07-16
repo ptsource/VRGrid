@@ -1,0 +1,184 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Interior Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)" />
+<sky/>
+<ground/>
+<ambience file="@people:welcome.wav" playback="once"/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="interior:chimneystack"><popup text="interior:chimneystack" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="interior:window"><popup text="interior:window" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="interior:draftingtable"><popup text="interior:draftingtable" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="interior:dresser"><popup text="interior:dresser" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="interior:bench"><popup text="interior:bench" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="interior:chair"><popup text="interior:chair" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="interior:table"><popup text="interior:table" placement="top" trigger="rollover"/></create>
+<create unit="bb" vrobj="interior:edgetable"><popup text="interior:edgetable" placement="top" trigger="rollover"/></create>
+<create unit="bc" vrobj="interior:cornertable"><popup text="interior:cornertable" placement="top" trigger="rollover"/></create>
+<create unit="bd" vrobj="interior:roundtable"><popup text="interior:roundtable" placement="top" trigger="rollover"/></create>
+<create unit="be" vrobj="interior:coffeetable"><popup text="interior:coffeetable" placement="top" trigger="rollover"/></create>
+<create unit="bf" vrobj="interior:rcabinet"><popup text="interior:rcabinet" placement="top" trigger="rollover"/></create>
+<create unit="bg" vrobj="interior:lcabinet"><popup text="interior:lcabinet" placement="top" trigger="rollover"/></create>
+<create unit="bh" vrobj="interior:smalltv"><popup text="interior:smalltv" placement="top" trigger="rollover"/></create>
+<create unit="bi" vrobj="interior:spotlite"><popup text="interior:spotlite" placement="top" trigger="rollover"/></create>
+<create unit="bj" vrobj="interior:largeframe"><popup text="interior:largeframe" placement="top" trigger="rollover"/></create>
+<create unit="bk" vrobj="interior:lamp"><popup text="interior:lamp" placement="top" trigger="rollover"/></create>
+<create unit="bl" vrobj="interior:fan"><popup text="interior:fan" placement="top" trigger="rollover"/></create>
+<create unit="bm" vrobj="interior:fireplace"><popup text="interior:fireplace" placement="top" trigger="rollover"/></create>
+<create unit="bn" vrobj="interior:largetv"><popup text="interior:largetv" placement="top" trigger="rollover"/></create>
+<create unit="bo" vrobj="interior:smallframe"><popup text="interior:smallframe" placement="top" trigger="rollover"/></create>
+<create unit="bp" vrobj="interior:crossbeam"><popup text="interior:crossbeam" placement="top" trigger="rollover"/></create>
+<create unit="bJ" vrobj="interior:crossbeamlamp"><popup text="interior:crossbeamlamp" placement="top" trigger="rollover"/></create>
+<create unit="bK" vrobj="interior:poster"><popup text="interior:poster" placement="top" trigger="rollover"/></create>
+<create unit="bL" vrobj="interior:wallposter"><popup text="interior:wallposter" placement="top" trigger="rollover"/></create>
+<create unit="bM" vrobj="interior:computer"><popup text="interior:computer" placement="top" trigger="rollover"/></create>
+<create unit="bN" vrobj="interior:sofa"><popup text="interior:sofa" placement="top" trigger="rollover"/></create>
+<create unit="bO" vrobj="interior:sofa2"><popup text="interior:sofa2" placement="top" trigger="rollover"/></create>
+<create unit="bP" vrobj="interior:bed"><popup text="interior:bed" placement="top" trigger="rollover"/></create>
+<create unit="bq" vrobj="interior:dooropen"><popup text="interior:dooropen" placement="top" trigger="rollover"/></create>
+<create unit="br" vrobj="interior:door"><popup text="interior:door" placement="top" trigger="rollover"/></create>
+<create unit="bs" vrobj="interior:seat"><popup text="interior:seat" placement="top" trigger="rollover"/></create>
+<create unit="bt" vrobj="interior:curvelamp"><popup text="interior:curvelamp" placement="top" trigger="rollover"/></create>
+<create unit="bu" vrobj="interior:plasma"><popup text="interior:plasma" placement="top" trigger="rollover"/></create>
+<create unit="bv" vrobj="interior:filecabinet"><popup text="interior:filecabinet" placement="top" trigger="rollover"/></create>
+<create unit="bx" vrobj="interior:vidscreen"><popup text="interior:vidscreen" placement="top" trigger="rollover"/></create>
+<create unit="bS" vrobj="interior:terminal"><popup text="interior:terminal" placement="top" trigger="rollover"/></create>
+<create unit="bT" vrobj="interior:metalsofa"><popup text="interior:metalsofa" placement="top" trigger="rollover"/></create>
+<create unit="bU" vrobj="interior:onewaydoor"><popup text="interior:onewaydoor" placement="top" trigger="rollover"/></create>
+<create unit="bW" vrobj="interior:wallfull"><popup text="interior:wallfull" placement="top" trigger="rollover"/></create>
+<create unit="bX" vrobj="interior:corner"><popup text="interior:corner" placement="top" trigger="rollover"/></create>
+<create unit="bY" vrobj="interior:wallcorner"><popup text="interior:wallcorner" placement="top" trigger="rollover"/></create>
+<create unit="bZ" vrobj="interior:glassdooropen"><popup text="interior:glassdooropen" placement="top" trigger="rollover"/></create>
+<create unit="bI" vrobj="interior:glassdoorclosed"><popup text="interior:glassdoorclosed" placement="top" trigger="rollover"/></create>
+<create unit="b_" vrobj="interior:console"><popup text="interior:console" placement="top" trigger="rollover"/></create>
+<create unit="bw" vrobj="interior:piano"><popup text="interior:piano" placement="top" trigger="rollover"/></create>
+<create unit="b!" vrobj="interior:chairx2"><popup text="interior:chairx2" placement="top" trigger="rollover"/></create>
+<create unit="bA" vrobj="interior:roundtablelight"><popup text="interior:roundtablelight" placement="top" trigger="rollover"/></create>
+<create unit="bB" vrobj="interior:uplighter"><popup text="interior:uplighter" placement="top" trigger="rollover"/></create>
+<create unit="bC" vrobj="interior:posterc"><popup text="interior:posterc" placement="top" trigger="rollover"/></create>
+<create unit="bD" vrobj="interior:portposter"><popup text="interior:portposter" placement="top" trigger="rollover"/></create>
+<create unit="bE" vrobj="interior:cornerposter"><popup text="interior:cornerposter" placement="top" trigger="rollover"/></create>
+<create unit="bF" vrobj="interior:wallcornerc"><popup text="interior:wallcornerc" placement="top" trigger="rollover"/></create>
+
+<!-- textures -->
+<create unit="ta" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:blackcushion.gif"/><popup text="@interior:blackcushion.gif" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:blackglare.gif"/><popup text="@interior:blackglare.gif" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:blueprint.gif"/><popup text="@interior:blueprint.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:bluevelvet.gif"/><popup text="@interior:bluevelvet.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:bookshelves.jpg"/><popup text="@interior:bookshelves.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:brick.gif"/><popup text="@interior:brick.gif" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:brownleather.jpg"/><popup text="@interior:brownleather.jpg" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:cabinetfront.gif"/><popup text="@interior:cabinetfront.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:carpet.jpg"/><popup text="@interior:carpet.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:chandelier.gif"/><popup text="@interior:chandelier.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:door.gif"/><popup text="@interior:door.gif" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="interior:ceiling"> 
+         <side NAME="*" TEXTURE="@interior:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. bF .. bE .. bD .. bC .. bI .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b! .. bB .. bA .. b1 .. bi .. bZ .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b8 .. bh .. bp .. bP .. bx .. bY .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. bg .. bo .. bO .. bw .. bX .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b6 .. bf .. bn .. bN .. bv .. bW .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b5 .. be .. bm .. bM .. bu .. bq .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b4 .. bd .. bl .. bL .. bt .. bU .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b3 .. bc .. bk .. bK .. bs .. bT .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b_ .. bb .. bj .. bJ .. br .. bS .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. te .. td .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Interior library. This library contains 58 objects and 55 textures. Current version of this lib is 2.8. View source for more details."/>
+<enter location="(4,23,1)" name="default" angle="45" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>

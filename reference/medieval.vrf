@@ -1,0 +1,186 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Medieval Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/medieval.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)" />
+<sky/>
+<ground/>
+<ambience file="@people:welcome.wav" playback="once"/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="medieval:16minihalf1"><popup text="16minihalf1" placement="top" trigger="rollover"/></create>
+<create unit="b2" vrobj="medieval:16minihalf2"><popup text="16minihalf2" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="medieval:16siena1"><popup text="16siena1" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="medieval:16siena2"><popup text="16siena2" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="medieval:16siena3"><popup text="16siena3" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="medieval:43half2"><popup text="43half2" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="medieval:43jumts1"><popup text="43jumts1" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="medieval:43jumts3"><popup text="43jumts3" placement="top" trigger="rollover"/></create>
+<create unit="b9" vrobj="medieval:44jumts1"><popup text="44jumts1" placement="top" trigger="rollover"/></create>
+<create unit="c1" vrobj="medieval:44jumts2"><popup text="44jumts2" placement="top" trigger="rollover"/></create>
+<create unit="c2" vrobj="medieval:44jumts3"><popup text="44jumts3" placement="top" trigger="rollover"/></create>
+<create unit="c3" vrobj="medieval:44jumts4"><popup text="44jumts4" placement="top" trigger="rollover"/></create>
+<create unit="c4" vrobj="medieval:44jumts5"><popup text="44jumts5" placement="top" trigger="rollover"/></create>
+<create unit="c5" vrobj="medieval:44jumtsmala"><popup text="44jumtsmala" placement="top" trigger="rollover"/></create>
+<create unit="c6" vrobj="medieval:44jumtsmala2"><popup text="44jumtsmala2" placement="top" trigger="rollover"/></create>
+<create unit="c7" vrobj="medieval:44jumtsmala3"><popup text="44jumtsmala3" placement="top" trigger="rollover"/></create>
+<create unit="c8" vrobj="medieval:44jumtsmala4"><popup text="44jumtsmala4" placement="top" trigger="rollover"/></create>
+<create unit="c9" vrobj="medieval:44siena"><popup text="44siena" placement="top" trigger="rollover"/></create>
+<create unit="d1" vrobj="medieval:45corner"><popup text="45corner" placement="top" trigger="rollover"/></create>
+<create unit="d2" vrobj="medieval:45jumtasturis"><popup text="45jumtasturis" placement="top" trigger="rollover"/></create>
+<create unit="d3" vrobj="medieval:45jumts1"><popup text="45jumts1" placement="top" trigger="rollover"/></create>
+<create unit="d4" vrobj="medieval:45jumts2"><popup text="45jumts2" placement="top" trigger="rollover"/></create>
+<create unit="d5" vrobj="medieval:45jumts3"><popup text="45jumts3" placement="top" trigger="rollover"/></create>
+<create unit="d6" vrobj="medieval:45jumts4"><popup text="45jumts4" placement="top" trigger="rollover"/></create>
+<create unit="d7" vrobj="medieval:45jumts5"><popup text="45jumts5" placement="top" trigger="rollover"/></create>
+<create unit="d8" vrobj="medieval:45jumts6"><popup text="45jumts6" placement="top" trigger="rollover"/></create>
+<create unit="d9" vrobj="medieval:45minimalina45"><popup text="45minimalina45" placement="top" trigger="rollover"/></create>
+<create unit="e1" vrobj="medieval:45minimalina451"><popup text="45minimalina451" placement="top" trigger="rollover"/></create>
+<create unit="e2" vrobj="medieval:45minimalina452"><popup text="45minimalina452" placement="top" trigger="rollover"/></create>
+<create unit="e3" vrobj="medieval:45minimalina453"><popup text="45minimalina453" placement="top" trigger="rollover"/></create>
+<create unit="e4" vrobj="medieval:45nramp"><popup text="45nramp" placement="top" trigger="rollover"/></create>
+<create unit="e5" vrobj="medieval:47blukis"><popup text="47blukis" placement="top" trigger="rollover"/></create>
+<create unit="e6" vrobj="medieval:47blukis2"><popup text="47blukis2" placement="top" trigger="rollover"/></create>
+<create unit="e7" vrobj="medieval:47jumts1mala"><popup text="47jumts1mala" placement="top" trigger="rollover"/></create>
+<create unit="e8" vrobj="medieval:47jumts1malar"><popup text="47jumts1malar" placement="top" trigger="rollover"/></create>
+<create unit="e9" vrobj="medieval:47jumts3"><popup text="47jumts3" placement="top" trigger="rollover"/></create>
+<create unit="f1" vrobj="medieval:47jumts3mala"><popup text="47jumts3mala" placement="top" trigger="rollover"/></create>
+<create unit="f2" vrobj="medieval:47jumts3malar"><popup text="47jumts3malar" placement="top" trigger="rollover"/></create>
+<create unit="f3" vrobj="medieval:47jumts4"><popup text="47jumts4" placement="top" trigger="rollover"/></create>
+<create unit="f4" vrobj="medieval:47jumts4mala"><popup text="47jumts4mala" placement="top" trigger="rollover"/></create>
+<create unit="f5" vrobj="medieval:47jumts4malar"><popup text="47jumts4malar" placement="top" trigger="rollover"/></create>
+<create unit="f6" vrobj="medieval:48mala"><popup text="48mala" placement="top" trigger="rollover"/></create>
+<create unit="f7" vrobj="medieval:48mala1"><popup text="48mala1" placement="top" trigger="rollover"/></create>
+<create unit="f8" vrobj="medieval:48mala2"><popup text="48mala2" placement="top" trigger="rollover"/></create>
+<create unit="f9" vrobj="medieval:48mala3"><popup text="48mala3" placement="top" trigger="rollover"/></create>
+<create unit="g1" vrobj="medieval:aka"><popup text="aka" placement="top" trigger="rollover"/></create>
+<create unit="g2" vrobj="medieval:aka1"><popup text="aka1" placement="top" trigger="rollover"/></create>
+<create unit="g3" vrobj="medieval:aka2"><popup text="aka2" placement="top" trigger="rollover"/></create>
+<create unit="g4" vrobj="medieval:aka3"><popup text="aka3" placement="top" trigger="rollover"/></create>
+<create unit="g5" vrobj="medieval:augsha"><popup text="augsha" placement="top" trigger="rollover"/></create>
+<create unit="g6" vrobj="medieval:gandrizfull3"><popup text="gandrizfull3" placement="top" trigger="rollover"/></create>
+<create unit="g7" vrobj="medieval:kol"><popup text="kol" placement="top" trigger="rollover"/></create>
+<create unit="g8" vrobj="medieval:nramp1"><popup text="nramp1" placement="top" trigger="rollover"/></create>
+<create unit="g9" vrobj="medieval:nramp2"><popup text="nramp2" placement="top" trigger="rollover"/></create>
+<create unit="h1" vrobj="medieval:vigvam"><popup text="vigvam" placement="top" trigger="rollover"/></create>
+<create unit="h2" vrobj="medieval:vigvam2"><popup text="vigvam2" placement="top" trigger="rollover"/></create>
+<create unit="h3" vrobj="medieval:vigvam3"><popup text="vigvam3" placement="top" trigger="rollover"/></create>
+<create unit="h4" vrobj="medieval:vigvam4"><popup text="vigvam4" placement="top" trigger="rollover"/></create>
+<!-- textures -->
+<create unit="ta" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:bamboo.gif"/><popup text="@medieval:bamboo.gif" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:floor_stone.gif"/><popup text="@medieval:floor_stone.gif" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:stone.gif"/><popup text="@medieval:stone.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:bones.gif"/><popup text="@medieval:bones.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:grate.vri"/><popup text="@medieval:grate.vri" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:iron.vri"/><popup text="@medieval:iron.vri" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:wood.gif"/><popup text="@medieval:wood.gif" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:window.gif"/><popup text="@medieval:window.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:stone_trim.gif"/><popup text="@medieval:stone_trim.gif" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="medieval:ceiling"> 
+         <side NAME="*" TEXTURE="@medieval:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b1 .. b2 .. b3 .. b4 .. b5 .. b6 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b7 .. b8 .. b9 .. c1 .. c2 .. c3 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. c4 .. c5 .. c6 .. c7 .. c8 .. c9 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. h4
+.. .. d1 .. d2 .. d3 .. d4 .. d5 .. d6 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. d7 .. d8 .. d9 .. e1 .. e2 .. e3 .. h2
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. e4 .. e5 .. e6 .. e7 .. e8 .. e9 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. h1
+.. .. f1 .. f2 .. f3 .. f4 .. f5 .. f6 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. f7 .. f8 .. f9 .. g1 .. g2 .. g3 .. h3
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. g4 .. g5 .. g6 .. g7 .. g8 .. g9 .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<enter location="(4,23,1)" name="default" angle="0" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>
+

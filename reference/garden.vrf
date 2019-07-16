@@ -1,0 +1,154 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Garden Lib Reference" />
+<lib href="https://ptsource.github.io/VRGrid/packs/garden.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(15,23,3)"/>
+<sky />
+<ground/>
+<ambience file="@people:welcome.wav" playback="once"/>
+<devel />
+</globals>
+<design>
+<!-- 3d objects -->
+<create unit="b1" vrobj="garden:foundation"><popup text="garden:foundation" placement="top" trigger="rollover"/></create>
+<create unit="b2" vrobj="garden:foundationarc"><popup text="garden:foundationarc" placement="top" trigger="rollover"/></create>
+<create unit="b3" vrobj="garden:foundationarc2"><popup text="garden:foundationarc2" placement="top" trigger="rollover"/></create>
+<create unit="b4" vrobj="garden:foundationbush"><popup text="garden:foundationbush" placement="top" trigger="rollover"/></create>
+<create unit="b5" vrobj="garden:foundationcorner"><popup text="garden:foundationcorner" placement="top" trigger="rollover"/></create>
+<create unit="b6" vrobj="garden:foundationcorner2"><popup text="garden:foundationcorner2" placement="top" trigger="rollover"/></create>
+<create unit="b7" vrobj="garden:foundationpillar"><popup text="garden:foundationpillar" placement="top" trigger="rollover"/></create>
+<create unit="b8" vrobj="garden:foundationramp"><popup text="garden:foundationramp" placement="top" trigger="rollover"/></create>
+<create unit="bb" vrobj="garden:foundationrampn"><popup text="garden:foundationrampn" placement="top" trigger="rollover"/></create>
+<create unit="bc" vrobj="garden:foundationramps"><popup text="garden:foundationramps" placement="top" trigger="rollover"/></create>
+<create unit="bd" vrobj="garden:foundationt"><popup text="garden:foundationt" placement="top" trigger="rollover"/></create>
+<create unit="be" vrobj="garden:foundationtraverse"><popup text="garden:foundationtraverse" placement="top" trigger="rollover"/></create>
+<create unit="bf" vrobj="garden:foundationtraverse2"><popup text="garden:foundationtraverse2" placement="top" trigger="rollover"/></create>
+<create unit="bg" vrobj="garden:fountaincenter"><popup text="garden:fountaincenter" placement="top" trigger="rollover"/></create>
+<create unit="bh" vrobj="garden:fountainquarter"><popup text="garden:fountainquarter" placement="top" trigger="rollover"/></create>
+<create unit="bi" vrobj="garden:fountainquarter2"><popup text="garden:fountainquarter2" placement="top" trigger="rollover"/></create>
+<create unit="bj" vrobj="garden:fountainquarter3"><popup text="garden:fountainquarter3" placement="top" trigger="rollover"/></create>
+<create unit="bk" vrobj="garden:fountainside"><popup text="garden:fountainside" placement="top" trigger="rollover"/></create>
+<create unit="bl" vrobj="garden:gardenwall"><popup text="garden:gardenwall" placement="top" trigger="rollover"/></create>
+<create unit="bm" vrobj="garden:gardenwallarc"><popup text="garden:gardenwallarc" placement="top" trigger="rollover"/></create>
+<create unit="bn" vrobj="garden:gardenwallcorner"><popup text="garden:gardenwallcorner" placement="top" trigger="rollover"/></create>
+<create unit="bo" vrobj="garden:gardenwallend"><popup text="garden:gardenwallend" placement="top" trigger="rollover"/></create>
+<create unit="bp" vrobj="garden:gardenwallpillar"><popup text="garden:gardenwallpillar" placement="top" trigger="rollover"/></create>
+<create unit="bJ" vrobj="garden:gardenwallt"><popup text="garden:gardenwallt" placement="top" trigger="rollover"/></create>
+<create unit="bK" vrobj="garden:gardenwalltraverse"><popup text="garden:gardenwalltraverse" placement="top" trigger="rollover"/></create>
+<create unit="bL" vrobj="garden:portal"><popup text="garden:portal" placement="top" trigger="rollover"/></create>
+<create unit="bO" vrobj="garden:bars"><popup text="garden:bars" placement="top" trigger="rollover"/></create>
+<create unit="bP" vrobj="garden:cellprops"><popup text="garden:cellprops" placement="top" trigger="rollover"/></create>
+<create unit="bQ" vrobj="garden:cornerbars"><popup text="garden:cornerbars" placement="top" trigger="rollover"/></create>
+<create unit="bR" vrobj="garden:doorbarsclosed"><popup text="garden:doorbarsclosed" placement="top" trigger="rollover"/></create>
+<create unit="bS" vrobj="garden:doorbarsopen"><popup text="garden:doorbarsopen" placement="top" trigger="rollover"/></create>
+<create unit="bT" vrobj="garden:smallwindowbars"><popup text="garden:smallwindowbars" placement="top" trigger="rollover"/></create>
+<create unit="bU" vrobj="garden:drip"><popup text="garden:drip" placement="top" trigger="rollover"/></create>
+<create unit="bV" vrobj="garden:torch"><popup text="garden:torch" placement="top" trigger="rollover"/></create>
+<create unit="bX" vrobj="garden:bricksanddoor"><popup text="garden:bricksanddoor" placement="top" trigger="rollover"/></create>
+<create unit="bZ" vrobj="garden:lumenaria"><popup text="garden:lumenaria" placement="top" trigger="rollover"/></create>
+
+<create unit="--" vrobj="garden:ceiling">
+         <side NAME="*" TEXTURE="@garden:box.gif" STYLE="scaled"/>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. b1 .. bi .. bO .. bX .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b8 .. bh .. bp .. bP .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. bZ .. ..
+.. .. b7 .. bg .. bo .. bQ .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b6 .. bf .. bn .. bR .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b5 .. be .. bm .. bS .. bT .. bU .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b4 .. bd .. bl .. bL .. bV .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b3 .. bc .. bk .. bK .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. b2 .. bb .. bj .. bJ .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+
+<layer number="2">
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</layer>
+
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. TT .. tj .. tl .. tm .. tn .. to .. tp ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. tq .. tr .. ts .. tt .. tu .. tv ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tg .. tx .. tz .. t1 .. t2 .. t3 .. t4 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tf .. t5 .. t6 .. t7 .. t8 .. t9 .. T1 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. te .. T2 .. T3 .. T4 .. T5 .. T6 .. T7 ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. td .. T8 .. T9 .. TA .. TB .. TC .. TD ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tc .. TE .. TF .. TG .. TH .. TI .. TJ ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tb .. TL .. TM .. TN .. TO .. TP .. TQ ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. TR .. TS .. ti .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<imagemap name="vtpl">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Garden library. This library contains 40 objects and 30 textures. Current version of this lib is 2.8. View source for more details."/>
+<enter location="(4,23,1)" name="default" angle="45" />
+<enter location="(15,22,1)" name="floor" />
+<enter location="(15,22,3)" name="roof" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+</design>
+</vrf>
