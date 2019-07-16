@@ -1,0 +1,149 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf vrfid="000004">
+  <globals>
+    <title name="VRGrid First Person Shooter Example" />
+    <lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" required="2.8"/>
+    <lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" required="2.9"/>
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map dimensions="(25,27,2)" />
+    <sky color="(0,0,255)" brightness="100%" />
+    <ground texture="@village:gtile.gif" />
+    <atmosphere brightness="65%" />
+    <orb position="(160,60)" brightness="100%" />
+    <ambience file="@gametools:comeon.wav" playback="once"/>
+    <scope />
+    <devel />
+  </globals>
+  <design>
+    <import href="scripts/jumpkey.vrf" />
+    <create unit="11" vrobj="village:gateopen" />
+    <create unit="es" vrobj="gametools:spriterevolve">
+      <side name="sprite" texture="@gametools:gun.vri" angle="0" />
+      <param align="bottom" solid="no" walkable="yes" size="(150,60)" />
+      <action trigger="proximity" radius="1">
+        <replace source=".." />
+        <replace source="a1" target="(1,1,2)" />
+        <replace source="*1" target="(9,13,1)" />
+        <replace source="*1" target="(11,13,1)" />
+        <replace source="*1" target="(13,13,1)" />
+        <replace source="*1" target="(15,13,1)" />
+        <replace source="*1" target="(17,13,1)" />
+        <replace source="s2" target="(11,20,1)" />
+        <replace source="s2" target="(12,20,1)" />
+        <replace source="s2" target="(13,20,1)" />
+      </action>
+    </create>
+    <create unit="a1" vrobj="gametools:full">
+      <side name="*" faces="0" />
+      <popup texture="@gametools:hold.vri" placement="bottom" trigger="everywhere" />
+      <sound file="@gametools:pkup.wav" playback="once" flood="yes" volume="100%" />
+    </create>
+    <create unit="a2" vrobj="gametools:full">
+      <side name="*" faces="0" />
+      <popup texture="@gametools:shoot.vri" placement="bottom" trigger="everywhere" />
+      <sound file="@gametools:shotgn.wav" playback="once" flood="yes" volume="100%" />
+      <action trigger="timer" delay="0.7">
+        <replace source="a1" />
+      </action>
+    </create>
+    <create unit="*1" vrobj="village:gate">
+      <sound file="@gametools:warning.wav" playback="looped" flood="yes" volume="50%" />
+      <action trigger="click on">
+        <replace source="*2" />
+        <replace source="a2" target="(1,1,2)" />
+      </action>
+    </create>
+    <create unit="*2" vrobj="village:gate" />
+    <create unit="22" vrobj="village:fence" />
+    <create unit="s1" vrobj="gametools:spriteface">
+      <side name="*" texture="images/soldierb.gif" />
+      <param align="bottom" solid="yes" size="(87,170)" />
+    </create>
+    <create unit="s2" vrobj="gametools:spriteface">
+      <side name="*" texture="images/soldiera.gif" />
+      <sound file="@gametools:stop.wav" playback="once" flood="yes" volume="100%" />
+      <param align="bottom" solid="yes" size="(80,100)" />
+      <action trigger="click on">
+        <replace source="s3" />
+        <replace source="a2" target="(1,1,2)" />
+      </action>
+    </create>
+    <create unit="s3" vrobj="gametools:spriteface">
+      <side name="*" texture="images/dead.gif" />
+      <sound file="@gametools:auhhh.wav" playback="once" flood="yes" volume="100%" />
+      <param align="bottom" solid="yes" size="(87,170)" />
+    </create>
+    <create unit="bb" vrobj="village:building">
+    <param orient="270,0" walkable="yes" origin="(0,0,0)" scale="(8.0,8.0,8.0)"/>
+    </create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. bb .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+22 22 22 22 22 22 22 22 11 22 11 22 11 22 11 22 11 22 22 22 22 22 22 22 22
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. s1 s1 s1 .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. es .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="2">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+   <imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+    <enter location="(13,26,1)" name="default" angle="0.0" />
+  </design>
+</vrf>

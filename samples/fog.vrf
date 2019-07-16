@@ -1,0 +1,130 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Fog Demo"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/"/>
+<map dimensions="(17,17,4)"/>
+<atmosphere brightness="50%" />
+<orb brightness="50%"/>
+<fog color="(128,128,128)" density="2%"/>
+<ground texture="@base:gtile.gif" />
+<devel />
+</globals>
+<design> 
+<create unit=".e" vrobj="base:full">
+<script trigger="key down" key="1">
+	fog.color:red = 20.0;
+</script>
+<script trigger="key down" key="2">
+	fog.color:blue = 40.0;
+</script>
+<script trigger="key down" key="3">
+	fog.color:blue = 255.0;
+	fog.color:red = 255.0;
+</script>
+<script trigger="key down" key="4">
+	fog.density = 2.0;
+</script>
+<script trigger="key down" key="5">
+	fog.density = 100.0;
+</script>
+<script trigger="key down" key="6">
+	fog.startradius = 0.0;
+</script>
+<script trigger="key down" key="7">
+	fog.startradius = 25.0;
+</script>
+</create>
+<layer number="1" >
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .N .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+</layer>
+<layer number="2" >
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .E ## ## ## ## .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .e .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+</layer>
+<layer number="3" >
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+</layer>
+<layer number="4" >
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+</layer>
+<popup location="(2,3,1)" radius="1" placement="center" text="This sample demonstrates the use of keys and the fog object. Use keyboard keys 1 to 7 to change fog colors. View source for more details."/>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<enter location="(2,3,1)"   name="default" angle="160"/>
+</design>
+</vrf>
+
+

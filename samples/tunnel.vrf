@@ -1,0 +1,73 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Tunnel Lamp Demo" />
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map  dimensions="(17,17,2)" />
+<atmosphere brightness="10%" />
+<ground/>
+<devel />
+</globals>
+<design>
+<create unit="LL" vrobj="basic:tunnellamp">
+</create>
+<create unit="##" vrobj="basic:full">
+</create>
+<layer number="1">
+LL .. .. .. .. .. .. ## ## ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## LL ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## LL ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## LL ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## LL ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## LL ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="2">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. -- .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. -- .. .. .. .. .. .. ..
+</layer>
+<vrf_light style="static" location="(9,3,2)" position="(128,256,128)" brightness="100%" radius="3" flood="yes"  color="(255,255,255)"direction="(0,-90)" cone="30"/>
+<vrf_light style="static" location="(9,5,2)" position="(128,256,128)" brightness="100%" radius="3" flood="yes"  color="(255,255,255)"direction="(0,-90)" cone="30"/>
+<vrf_light style="static" location="(9,7,2)" position="(128,256,128)" brightness="100%" radius="3" flood="yes"  color="(255,255,255)"direction="(0,-90)" cone="30"/>
+<vrf_light style="static" location="(9,9,2)" position="(128,256,128)" brightness="100%" radius="3" flood="yes"  color="(255,255,255)"direction="(0,-90)" cone="30"/>
+<vrf_light style="static" location="(9,11,2)" position="(128,256,128)" brightness="100%" radius="3" flood="yes"  color="(255,255,255)"direction="(0,-90)" cone="30"/>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<enter location="(9,10,1)" name="default" angle="0,0" />
+</design>
+</vrf>
+

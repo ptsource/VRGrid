@@ -1,0 +1,61 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Skybox Demo"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/skybox.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions = "( 10, 10, 2)"/>
+<sky texture="@basic:clear.gif" brightness="100%"/>
+<fog color="(68,68,68)" density="1%"/>
+<ground />
+<devel />
+</globals>
+ <design>
+<create unit="44" vrobj="skybox:dusk">
+<param walkable="yes" scale="(30,30,30)" orient="down,0"/>
+ <script trigger="timer" delay=".01">
+  unit = map.get_vrobj("44");
+  unit.location:x = player.location:x-(128*30);
+  unit.location:y = player.location:y-(128*30);
+  unit.location:z = player.location:z-(128*30);
+ </script>
+</create>
+<layer number=" 1">
+.. .. .. .. .. .. .. .. ## ##
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. 44 .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. ## ## ## ## .. .. .. ## ..
+.. .. .. .. .. .. .. .. .. ..
+</layer> 
+<layer number=" 2">
+.. .. .. .. .. .. .. .. ## ##
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. ..
+.. ## ## ## ## .. .. .. ## ..
+.. .. .. .. .. .. .. .. .. ..
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<popup location="(5,5,1)" radius="1" placement="center" text="This shows how to use the Skybox lib to get instant skyboxes. The lib includes dozens of skyboxes avaliable see the Utils reference. View source for more details."/>
+<enter location="( 5, 5, 1)"  name="default" angle="30"/>
+</design>
+</vrf>

@@ -1,0 +1,215 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Art Gallery Demo"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(26,10,4)"/>
+<sky color="(0,0,0)" brightness="0%"/>
+<ambience file="@people:croudinside.wav" volume="85%" playback="looped"/>
+<devel/>
+</globals>
+<design>
+<create unit="Ii" vrobj="interior:crossbeamlamp">
+</create>
+<create unit="Ih" vrobj="interior:crossbeam">
+</create>
+<create unit="I!" vrobj="interior:bench">
+	<param orient="90"/>
+</create>
+<create unit="Ib" vrobj="interior:bench">
+</create>
+<create unit="IB" vrobj="interior:bench">
+	<param orient="180"/>
+</create>
+<create unit="IC" vrobj="interior:bench">
+	<param orient="270"/>
+</create>
+<create unit="Ws" vrobj="basic:floor">
+	<param orient="180,-90,-90"/>
+	<side name="*" texture="@basic:cherywd.gif" style="scaled" clarity="60%"/>
+</create>
+<create unit="We" vrobj="basic:floor">
+	<param orient="-90,0,90"/>
+	<side name="*" texture="@basic:cherywd.gif" style="scaled" clarity="60%"/>
+</create>
+<create unit="Ww" vrobj="basic:floor">
+	<param orient="0,180,90"/>
+	<side name="*" texture="@basic:cherywd.gif" style="scaled" clarity="60%"/>
+</create>
+<create unit="Wn" vrobj="basic:floor">
+	<param orient="0,90,90"/>
+	<side name="*" texture="@basic:cherywd.gif" style="scaled" clarity="60%"/>
+</create>
+<create unit="R," vrobj="basic:ceiling">
+	<side name="*" texture="@basic:ceiling.jpg" style="scaled" clarity="60%"/>
+</create>
+<create unit="__" vrobj="basic:ground">
+	<param orient="0,180"/>
+	<side name="*" texture="@interior:carpet.jpg"/>
+</create>
+<create unit="Aa" vrobj="basic:full"> 
+<side name="s" texture="images/art1.jpg"/>
+</create>
+<create unit="Ab" vrobj="basic:full"> 
+<side name="s" texture="images/art2.jpg"/> 
+</create>
+<create unit="Ac" vrobj="basic:full"> 
+<side name="s" texture="images/art3.jpg"/> 
+</create>
+<create unit="Ad" vrobj="basic:full">
+<side name="w" texture="images/art4.jpg"/> 
+</create>
+<create unit="Ae" vrobj="basic:full"> 
+<side name="w" texture="images/art5.jpg"/> 
+</create>
+<create unit="Af" vrobj="basic:full"> 
+<side name="w" texture="images/art6.jpg"/> 
+</create>
+<create unit="Ag" vrobj="basic:full"> 
+<side name="n" texture="images/art7.jpg"/> 
+</create>
+<create unit="Ah" vrobj="basic:full"> 
+<side name="n" texture="images/art1.jpg"/> 
+</create>
+<create unit="Ai" vrobj="basic:full"> 
+<side name="n" texture="images/art2.jpg"/> 
+</create>
+<create unit="Aj" vrobj="basic:full"> 
+<side name="e" texture="images/art3.jpg"/> 
+</create>
+<create unit="Ak" vrobj="basic:full"> 
+<side name="e" texture="images/art4.jpg"/> 
+</create>
+<create unit="Al" vrobj="basic:full"> 
+<side name="w" texture="images/art5.jpg"/>
+</create>
+<create unit="Am" vrobj="basic:full"> 
+<side name="w" texture="images/art6.jpg"/> 
+</create>
+<create unit="An" vrobj="basic:full"> 
+<side name="e" texture="images/art7.jpg"/> 
+</create>
+<create unit="Ao" vrobj="basic:full"> 
+<side name="s" texture="images/art1.jpg"/>
+</create>
+<create unit="Ap" vrobj="basic:full"> 
+<side name="s" texture="images/art2.jpg"/> 
+</create>
+<create unit="Aq" vrobj="basic:full"> 
+<side name="s" texture="images/art3.jpg"/> 
+</create>
+<create unit="Ar" vrobj="basic:full"> 
+<side name="s" texture="images/art4.jpg"/> 
+</create>
+<create unit="As" vrobj="basic:full"> 
+<side name="n" texture="images/art5.jpg"/> 
+</create>
+<create unit="At" vrobj="basic:full"> 
+<side name="n" texture="images/art6.jpg"/> 
+</create>
+<create unit="Au" vrobj="basic:full"> 
+<side name="n" texture="images/art7.jpg"/> 
+</create>
+<create unit="Av" vrobj="basic:full"> 
+<side name="n" texture="images/art1.jpg"/> 
+</create>
+<create unit="Aw" vrobj="basic:full"> 
+<side name="e" texture="images/art2.jpg"/> 
+</create>
+<create unit="Ba" vrobj="basic:full"> 
+<side name="e" texture="images/art3.jpg"/> 
+</create>
+<create unit="Bb" vrobj="basic:full"> 
+<side name="e" texture="images/art4.jpg"/> 
+</create>
+<create unit="p1" vrobj="people:personsprite">
+   <side name="*" texture="@people:people1.vri"/>
+</create>
+<create unit="p2" vrobj="people:personsprite">
+   <side name="*" texture="@people:people2.vri"/>
+</create>
+<create unit="p3" vrobj="people:personsprite">
+   <side name="*" texture="@people:people3.vri"/>
+</create>
+<create unit="p4" vrobj="people:personsprite">
+   <side name="*" texture="@people:people11.vri"/>
+</create>
+<create unit="p5" vrobj="people:personsprite">
+   <side name="*" texture="@people:people5.vri"/>
+</create>
+<create unit="p6" vrobj="people:personsprite">
+   <side name="*" texture="@people:people6.vri"/>
+</create>
+<create unit="p7" vrobj="people:personsprite">
+   <side name="*" texture="@people:people7.vri"/>
+</create>
+<create unit="p8" vrobj="people:personsprite">
+   <side name="*" texture="@people:people8.vri"/>
+</create>
+<create unit="p9" vrobj="people:personsprite">
+   <side name="*" texture="@people:people9.vri"/>
+</create>
+<layer number="1">
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ 
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ 
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+</layer>
+<layer number="2">
+Ww Wn Wn Wn Wn Wn Wn Wn Ao Wn Ap Wn Aq Wn Ar Wn Wn Wn Wn Aa Wn Ab Wn Ac Wn We
+Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. .. .. We
+Aw .. p6 .. .. We Ba .. .. .. p2 .. .. .. .. .. Al Ak .. .. .. .. .. p3 .. Ad
+Ww .. .. .. .. We Ww .. .. .. .. .. .. .. p7 .. We Ww .. .. .. .. .. .. .. We
+Ww .. I! IC .. Ws Ws .. .. .. IB IB IB .. .. .. Ws Ws .. .. IB IB .. .. .. We
+Ww .. I! IC .. Wn Wn .. .. .. Ib Ib Ib .. .. .. Wn Wn .. .. Ib Ib .. p8 .. Ae
+Bb .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. .. .. We
+Ww .. p4 .. .. We An .. .. .. .. p5 .. .. .. .. Am Aj .. .. p1 .. .. .. .. Af
+Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. p9 .. We
+Ww Ws Ws Ws Ws Ws Ws Ws As Ws At Ws Au Ws Av Ws Ws Ws Ws Ai Ws Ah Ws Ag Ws We
+</layer>
+<layer number="3">
+Ww Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn We
+Ww Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih We
+Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
+Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
+Ww Ih Ih Ih Ih Ws Ws Ih Ih Ih Ih Ih Ih Ih Ih Ih Ih Ww Ih Ih Ih Ih Ih Ih Ih We
+Ww Ih Ih Ih Ih Wn Wn Ih Ii Ii Ih Ih Ih Ih Ih Ih Ih Ww Ih Ih Ih Ih Ih Ih Ih We
+Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
+Ww Ih Ii Ii Ih We Ww Ih Ii Ih Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We 
+Ww Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih We 
+Ww Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws We
+</layer>
+<layer number="4">
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<enter location="(11,9,2)" name="default"/>
+</design>
+</vrf>

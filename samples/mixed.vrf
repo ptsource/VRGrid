@@ -1,0 +1,868 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf vrfid="000003">
+<globals>
+<title name="VRGrid Mixed Shop Demo" />
+<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(30,20,11)"/>
+<loader texture="@basic:loadtile.vri" />
+<sky texture="@basic:clouds.gif" brightness="80%" />
+<atmosphere brightness="60%" color="(255,255,255)" /> 
+<orb position="(45,60)" brightness="60%" color="(255,255,204)" />
+<ambience file="@basic:ambient.wav" volume="85%" playback="looped"/> 
+<devel />
+</globals>
+<design>
+<create unit="wa" vrobj="basic:full">
+    <side name="*" texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="wA" vrobj="basic:full">
+    <side name="n,s,e,w" texture="@basic:brown_top.jpg" style="scaled"/>
+    <side name="top,bottom" texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="fb" vrobj="basic:full">
+    <side name="top" style="scaled" texture="@basic:tex1.jpg"/>
+    <side name="n,s,e,w,bottom" texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="fc" vrobj="basic:full">
+    <side name="*" faces="0"/>
+</create>
+<create unit="wb" vrobj="basic:etopramp">
+    <side name="bottom" style="tiled" angle="180" texture="@basic:inside_wall_base.jpg"/>
+    <side name="n" texture="@basic:brown_base.jpg" style="scaled"/>
+    <side name="top" angle="270" texture="@basic:brown_base.jpg" style="scaled"/>
+    <side name="w"  angle="270" texture="@basic:brown_base.jpg" style="scaled"/>
+    <point_light style="static" position="(64,192,0)" radius="2" brightness="90%" color="(255,255,192)" />
+    <param orient="0,270"/>
+</create>
+<create unit="fa" vrobj="basic:full">
+    <side name="top" texture="@basic:stone_floor.jpg"/>
+</create>
+<create unit="l1" vrobj="basic:ground">
+    <side name="*" faces="0"/>
+    <param solid="no"/>
+    <point_light style="static" position="(128,255,128)" radius="1" brightness="80%" color="(255,255,153)" />
+</create>
+<create unit="l2" vrobj="basic:ground">
+    <side name="*" faces="0"/>
+    <param solid="no"/>
+    <point_light style="static" position="(0,128,0)" radius="2" brightness="90%" color="(255,0,0)" />
+</create>
+<create unit="wB" vrobj="basic:etopramp">
+    <side name="bottom" style="tiled" angle="180" texture="@basic:inside_wall.jpg"/>
+    <side name="top,n"  texture="@basic:brown_top.jpg" style="scaled"/>
+    <side name="w" angle="270" texture="@basic:brown_top.jpg" style="scaled"/>
+    <param orient="0,270"/>
+</create>
+<create unit="wd" vrobj="basic:etopramp">
+    <param orient="0,90"/>
+    <side name="*" style="tiled" texture="@interior:bluevelvet.gif"/>
+</create>
+<create unit="wk" vrobj="basic2:floorhalf">
+    <param orient="0,0,270"/>
+    <side name="*" angle="90" texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="wK" vrobj="basic2:floorhalf">
+    <param orient="0,0,270"/>
+    <side name="*" angle="90" texture="@basic:brown_top.jpg" style="scaled"/>
+</create>
+<create unit="wh" vrobj="basic2:floorhalf">
+    <param orient="0,270"/>
+    <side name="top" texture="@basic:top_sign.jpg"/>
+    <side name="bottom" texture="@basic:top_sign.jpg"/>
+    <side name="n,s,e,w" texture="@basic:sign_trim.jpg"/>
+</create>
+<create unit="n1" vrobj="basic:ceiling">
+    <param orient="90,0,90"/>
+    <side name="top" style="tiled" angle="180" texture="@basic:inside_wall_base.jpg"/>
+    <side name="bottom" texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="n2" vrobj="basic:ceiling">
+    <param orient="90,0,90"/>
+    <side name="top" style="tiled" angle="180" texture="@basic:inside_wall_base.jpg"/>
+    <side name="bottom"  texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="n3" vrobj="basic:ceiling">
+    <param orient="90,0,90"/>
+    <side name="top" style="tiled" angle="180" texture="@basic:inside_wall_base.jpg"/>
+    <side name="bottom"  texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="n4" vrobj="basic:ceiling">
+    <param orient="90,0,90"/>
+    <side name="top" style="tiled" angle="180" texture="@basic:inside_wall_base.jpg"/>
+    <side name="bottom"  texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="we" vrobj="basic:ceiling">
+    <param orient="90,0,90"/>
+    <side name="top" style="tiled" angle="180" texture="@basic:inside_wall_base.jpg"/>
+    <side name="n,s,e,w,bottom"  texture="@basic:brown_base.jpg" style="scaled"/>
+</create>
+<create unit="wm" vrobj="basic:full">
+    <side name="n,s,e,w" style="tiled" texture="@basic:inside_wall_base.jpg"/>
+    <side name="top" texture="@basic:stone_floor.jpg"/>
+</create>
+<create unit="wM" vrobj="basic:full">
+    <side name="n,s,e,w" style="tiled" texture="@basic:inside_wall.jpg"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="wr" vrobj="basic:full">
+    <side name="n,s,e,w" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="wR" vrobj="basic:full">
+    <side name="n,s,e,w" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="wq" vrobj="basic:full">
+    <side name="n" style="scaled" texture="images/upstairs.gif"/>
+    <side name="s,e,w" style="tiled" texture="@basic:inside_wall.jpg"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="ws" vrobj="basic:half">
+    <param orient="0,270"/>
+    <side name="n,s,e,w" angle="270" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom,top" style="tiled" texture="@interior:brick.gif"/>
+</create>
+<create unit="wS" vrobj="basic:half">
+    <param orient="0,270"/>
+    <side name="n,s,e,w" angle="270" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom,top" style="tiled" texture="@interior:brick.gif"/>
+</create>
+<create unit="wv" vrobj="basic:half">
+    <param orient="0,270"/>
+    <side name="n,s,e,w" angle="270" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom,top" style="tiled" texture="@interior:brick.gif"/>
+</create>
+<create unit="wt" vrobj="basic:half">
+    <param orient="0,0,270"/>
+    <side name="n,s,e,w" angle="270" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom,top" angle="90" style="tiled" texture="@interior:brick.gif"/>
+</create>
+<create unit="wT" vrobj="basic:half">
+    <param orient="0,0,270"/>
+    <side name="n,s,e,w" angle="270" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom,top" angle="90" style="tiled" texture="@interior:brick.gif"/>
+</create>
+<create unit="wu" vrobj="basic:full">
+    <side name="n" style="tiled" texture="images/jean_wall.jpg"/>
+    <side name="bottom,top,s,w,e" style="tiled" texture="@interior:brick.gif"/>
+</create>
+<create unit="wU" vrobj="basic:full">
+    <side name="*" style="tiled" texture="@interior:brick.gif"/>
+</create>
+<create unit="wE" vrobj="basic:ceiling">
+    <param orient="90,0,90"/>
+    <side name="top" style="tiled" angle="180" texture="@basic:inside_wall.jpg"/>
+    <side name="n,s,e,w,bottom" texture="@basic:brown_top.jpg" style="scaled"/>
+</create>
+<create unit="wf" vrobj="basic2:concave">
+    <param orient="0,270"/>
+    <side name="curve" style="tiled" projection="top" texture="@basic:inside_wall_strip.jpg"/>
+</create>
+<create unit="wF" vrobj="basic:full">
+    <side name="n,s,e,w" style="tiled" texture="@basic:inside_wall.jpg"/>
+    <side name="bottom" texture="@basic:light_ceiling.jpg"/>
+    <point_light style="static" position="(128,0,128)" radius="1" brightness="90%" color="(255,255,192)" />
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="WF" vrobj="basic:full">
+    <side name="n,s,e,w" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom" texture="@basic:light_ceiling.jpg"/>
+    <point_light style="static" position="(128,0,128)" radius="1" brightness="90%" color="(255,255,192)" />
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="wg" vrobj="basic2:concave">
+    <param orient="0,90"/>
+    <side name="n,s,e,w,bottom" faces="0" solid="no"/>
+</create>
+<create unit="wj" vrobj="basic:half">
+    <param orient="0,180"/>
+</create>
+<create unit="ca" vrobj="basic:ebottomramp">
+    <param orient="0,180"/>
+    <side name="top" style="stretched" texture="@basic:inner_ceiling.jpg"/>
+    <side name="n,s" color="(0,0,0)"/>
+</create>
+<create unit="cA" vrobj="basic:ebottomramp">
+    <param orient="0,180"/>
+    <side name="top" style="stretched" texture="@basic:inner_ceiling.jpg"/>
+    <point_light style="static" position="(128,32,128)" radius="1" brightness="90%" color="(255,255,150)" />
+    <side name="n,s" color="(0,0,0)"/>
+</create>
+<create unit="cb" vrobj="basic:wbottomramp">
+    <param orient="0,180"/>
+    <side name="top" style="stretched" texture="@basic:inner_ceiling.jpg"/>
+    <side name="n,s" color="(0,0,0)"/>
+</create>
+<create unit="cB" vrobj="basic:wbottomramp">
+    <param orient="0,180"/>
+    <side name="top" style="stretched" texture="@basic:inner_ceiling.jpg"/>
+    <point_light style="static" position="(64,32,128)" radius="2" brightness="80%" color="(255,255,150)" />
+    <side name="n,s" color="(0,0,0)"/>
+</create>
+<create unit="ma" vrobj="basic:spriteface">
+    <side name="*" texture="images/manniquin.vri"/>
+    <param align="bottom"/>
+</create>
+<create unit="mb" vrobj="basic2:floorhalf">
+    <param orient="180,270"/>
+    <side name="bottom" angle="180" texture="@basic:soft_railing.gif"/>
+    <side name="top,n,s,e,w" faces="0"/>
+</create>
+<create unit="mc" vrobj="basic2:floorhalf">
+    <param orient="90,0,90"/>
+    <side name="bottom" angle="180" texture="@basic:soft_railing.gif"/>
+    <side name="top,n,s,e,w" faces="0"/>
+</create>
+<create unit="wn" vrobj="basic:ntopramp">
+    <side name="n" style="tiled" angle="90" texture="@basic:inside_wall_base.jpg"/>
+    <side name="top,s,e,w,bottom" style="tiled" angle="270" texture="@basic:inside_wall_base.jpg"/>
+    <param orient="0,0,90"/>
+</create>
+<create unit="wN" vrobj="basic:ntopramp">
+    <side name="n" style="tiled" angle="90" texture="@basic:inside_wall.jpg"/>
+    <side name="top,s,e,w,bottom" style="tiled" angle="270" texture="@basic:inside_wall.jpg"/>
+    <param orient="0,0,90"/>
+</create>
+<create unit="wl" vrobj="basic:sramp">
+    <side name="s,bottom,e,w" style="tiled" angle="90" texture="@basic:inside_wall_base.jpg"/>
+    <side name="top" style="tiled" angle="270" texture="@basic:inside_wall_base.jpg"/>
+    <param orient="0,0,270"/>
+</create>
+<create unit="wL" vrobj="basic:sramp">
+    <side name="s,bottom" style="tiled" angle="90" texture="@basic:inside_wall.jpg"/>
+    <side name="top,e,w" style="tiled" angle="270" texture="@basic:inside_wall.jpg"/>
+    <param orient="0,0,270"/>
+</create>
+<create unit="cc" vrobj="interior:crossbeam">
+    <param orient="0,180"/>
+    <side name="*" texture="@interior:blackglare.gif"/>
+</create>
+<create unit="cd" vrobj="basic:full">
+    <side name="*" color="(0,0,0)"/>
+</create>
+<create unit="cD" vrobj="basic:full">
+    <side name="*" color="(0,0,0)"/>
+</create>
+<!-- pictures -->
+<create unit="pa" vrobj="interior:largeframe">
+    <param orient="270"/>
+    <side name="n,s" texture="images/inner_sign1.jpg"/>
+    <side name="outerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <side name="innerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+</create>
+<create unit="pb" vrobj="interior:largeframe">
+    <param orient="270"/>
+    <side name="n,s" texture="images/inner_sign2.jpg"/>
+    <side name="outerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <side name="innerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+</create>
+<create unit="pc" vrobj="interior:largeframe">
+    <param orient="270"/>
+    <side name="n,s" texture="images/inner_sign3.jpg"/>
+    <side name="outerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <side name="innerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+</create>
+<create unit="pd" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign4.jpg"/>
+    <side name="outerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <side name="innerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <param orient="90"/>
+    <action trigger="timer" delay="4">
+        <replace source="pf"/>
+    </action>
+</create>
+<create unit="pf" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign5.jpg"/>
+    <side name="outerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <side name="innerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <param orient="90"/>
+    <action trigger="timer" delay="2">
+        <replace source="pg"/>
+    </action>
+</create>
+<create unit="pg" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign2.jpg"/>
+    <side name="outerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <side name="innerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <param orient="90"/>
+    <action trigger="timer" delay="4">
+        <replace source="pd"/>
+    </action>
+</create>
+<create unit="pe" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign1.jpg"/>
+    <side name="outerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <side name="innerframe" style="tiled" texture="@basic:brushed_metal.jpg"/>
+    <param orient="90"/>
+</create>
+<!-- commerce area ceiling and pictures -->
+<create unit="Ca" vrobj="basic:column">
+    <side name="*" style="scaled" texture="@basic:pipe_covering.jpg"/>
+    <param orient="0,0,90"/>
+</create>
+<create unit="Cb" vrobj="basic2:pipe">
+    <side name="*" style="scaled" texture="@basic:pipe_covering.jpg"/>
+    <param orient="0,90"/>
+</create>
+<create unit="Cc" vrobj="basic2:pipecross">
+    <side name="*" style="scaled" texture="@basic:pipe_covering.jpg"/>
+    <param orient="0,90"/>
+</create>
+<create unit="Cd" vrobj="basic2:pipe">
+    <side name="*" style="scaled" texture="@basic:pipe_covering.jpg"/>
+    <param orient="0,0,90"/>
+</create>
+<create unit="Ce" vrobj="basic2:pipecorner">
+    <side name="*" style="scaled" texture="@basic:pipe_covering.jpg"/>
+    <param orient="180,90"/>
+</create>
+<create unit="Cf" vrobj="interior:spotlite">
+    <point_light style="static" position="(128,0,128)" radius="3" brightness="100%" color="(255,255,192)" />
+    <side name="lampshade" texture="@interior:blackglare.gif"/>
+</create>
+<create unit="Cg" vrobj="basic2:pipecorner">
+    <side name="*" style="scaled" texture="@basic:pipe_covering.jpg"/>
+    <param orient="0,270"/>
+</create>
+<create unit="CH" vrobj="basic2:convex">
+    <param orient="0,90"/>
+    <side name="n,s" style="scaled" texture="@basic:brushed_metal.jpg"/>
+    <side name="curve" style="scaled" angle="180" projection="top" texture="@basic:brushed_metal.jpg"/>
+</create>
+<create unit="CI" vrobj="basic2:convex">
+    <param orient="0,270"/>
+    <side name="n,s" style="scaled" texture="@basic:brushed_metal.jpg"/>
+    <side name="curve" style="scaled" angle="180" projection="top" texture="@basic:brushed_metal.jpg"/>
+</create>
+<create unit="sa" vrobj="basic2:stairs">
+    <side name="stairtop" style="tiled" faces="2" texture="@basic:metal_floor.jpg"/>
+    <side name="stairfront" faces="2" texture="@basic:metal_stair_front.gif"/>
+    <side name="back,e,w" faces="0"/>
+</create>
+<create unit="sb" vrobj="basic2:rcurvestair">
+    <side name="stairtop" style="tiled" faces="2" texture="@basic:metal_floor.jpg"/>
+    <side name="stairfront" faces="2" texture="@basic:metal_stair_front.gif"/>
+    <side name="back,side" faces="0"/>
+</create>
+<create unit="sc" vrobj="basic2:stairs">
+    <param orient="180"/>
+    <side name="stairtop" style="tiled" faces="2" texture="@basic:metal_floor.jpg"/>
+    <side name="stairfront" faces="2" texture="@basic:metal_stair_front.gif"/>
+    <side name="back,e,w" faces="0"/>
+</create>
+<create unit="sd" vrobj="basic2:lcurvestair">
+    <param orient="180"/>
+    <side name="stairtop" style="tiled" faces="2" texture="@basic:metal_floor.jpg"/>
+    <side name="stairfront" faces="2" texture="@basic:metal_stair_front.gif"/>
+    <side name="back,side" faces="0"/>
+</create>
+<create unit="s1" vrobj="basic:full">
+    <side name="w" style="scaled" texture="images/big_sign1.jpg"/>
+    <side name="n,s,e,bottom" color="(0,0,0)"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="s2" vrobj="basic:full">
+    <side name="w" style="scaled" texture="images/big_sign2.jpg"/>
+    <side name="n,s,e,bottom" color="(0,0,0)"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="s3" vrobj="basic:full">
+    <side name="w" style="scaled" texture="images/big_sign3.jpg"/>
+    <side name="n,s,e,bottom,top" color="(0,0,0)"/>
+</create>
+<create unit="s4" vrobj="basic:full">
+    <side name="w" style="scaled" texture="images/big_sign4.jpg"/>
+    <side name="n,s,e,bottom,top" color="(0,0,0)"/>
+</create>
+<create unit="s5" vrobj="basic2:floorhalf">
+    <param orient="270,0,270"/>
+    <side name="top,bottom" angle="180" style="tiled" texture="@basic:inside_wall_base.jpg"/>
+    <side name="n,s,e,w" texture="@basic:black_trim.jpg"/>
+</create>
+<create unit="s6" vrobj="basic2:floorhalf">
+    <param orient="90,0,270"/>
+    <side name="bottom,top" style="tiled" texture="@basic:inside_wall.jpg"/>
+    <side name="s,e,w" texture="@basic:light_trim.jpg"/>
+    <side name="n" style="tiled" angle="90" texture="@interior:woodfloor.jpg"/>
+</create>
+<!-- commerce area -->
+<create unit="Wa" vrobj="basic:curvein">
+    <param orient="0,0,90" />
+    <side name="curve" angle="270" style="stretched" texture="@basic:inside_wall_base.jpg"/>
+</create>
+<create unit="WA" vrobj="basic:curvein">
+    <param orient="0,0,90" />
+    <side name="curve" angle="270" texture="@basic:inside_wall.jpg"/>
+    <side name="e,w" style="scaled" angle="270" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="Wb" vrobj="basic:curvein">
+    <param orient="180,0,90" />
+    <side name="curve" angle="270" style="stretched" texture="@basic:inside_wall_base.jpg"/>
+</create>
+<create unit="WB" vrobj="basic:curvein">
+    <param orient="180,0,90" />
+    <side name="curve" angle="270" texture="@basic:inside_wall.jpg"/>
+</create>
+<create unit="Wc" vrobj="basic:curvein">
+    <param orient="180,0,270" />
+    <side name="curve" angle="270" style="stretched" texture="@basic:inside_wall_base.jpg"/>
+</create>
+<create unit="WC" vrobj="basic:curvein">
+    <param orient="180,0,270" />
+    <side name="curve" angle="270" texture="@basic:inside_wall.jpg"/>
+    <side name="e,w" style="scaled" angle="90" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="Wd" vrobj="basic:curvein">
+    <param orient="0,0,270" />
+    <side name="curve" angle="90" style="stretched" texture="@basic:inside_wall_base.jpg"/>
+</create>
+<create unit="WD" vrobj="basic:curvein">
+    <param orient="0,0,270" />
+    <side name="curve" angle="90" texture="@basic:inside_wall.jpg"/>
+    <side name="e,w" style="scaled" angle="90" texture="@interior:woodfloor.jpg"/>
+</create>
+<!-- railings -->
+<create unit="ra" vrobj="basic:ground">
+    <param orient="0,90"/>
+    <side name="top" faces="2" angle="180" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<create unit="rb" vrobj="basic:ground">
+    <param orient="0,270"/>
+    <side name="top" faces="2" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<create unit="rc" vrobj="basic:ground">
+    <param orient="0,0,90"/>
+    <side name="top" faces="2" angle="270" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<create unit="rd" vrobj="basic:curvein">
+    <param orient="180,0,270" />
+    <side name="n,e,w,bottom" faces="0" solid="no"/>
+    <side name="curve" angle="270" faces="2" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<create unit="re" vrobj="basic:curvein">
+    <param orient="0,0,270" />
+    <side name="n,e,w,bottom" faces="0" solid="no"/>
+    <side name="curve" angle="90" faces="2" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<create unit="rf" vrobj="basic:ground">
+    <param orient="0,0,270"/>
+    <side name="top" faces="2" angle="90" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<create unit="rg" vrobj="basic:curvein">
+    <param orient="0,0,90" />
+    <side name="n,e,w,bottom" faces="0" solid="no"/>
+    <side name="curve" angle="270" faces="2" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<create unit="rh" vrobj="basic:full">
+    <side name="top,s,e,bottom" faces="0" solid="no"/>
+    <side name="n,w" faces="2" style="scaled" texture="@basic:black_rail.gif"/>
+</create>
+<!-- Commerce signs -->
+<create unit="Ph" vrobj="basic:full">
+    <side name="w,n,s,e" texture="images/inner_sign2.jpg"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="Pj" vrobj="basic:full">
+    <side name="e" texture="images/inner_sign5.jpg"/>
+    <side name="n,s,w" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="Pi" vrobj="basic:full">
+    <side name="n,s,e,w" texture="images/upstairs.gif"/>
+</create>
+<create unit="Pk" vrobj="basic:full">
+    <side name="w,n,s,e" texture="images/poster_left.jpg"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="Pl" vrobj="basic:full">
+    <side name="w,n,s,e" texture="images/poster_right.jpg"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="Pm" vrobj="basic:full">
+    <side name="e" style="tiled" texture="@interior:brick.gif"/>
+    <side name="n,s,w" style="tiled" texture="@interior:brick.gif"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<create unit="Po" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign4.jpg"/>
+    <side name="outerframe,innerframe" style="tiled" faces="0"/>    
+    <param orient="180"/>
+    <action trigger="timer" delay="4">
+        <replace source="Pr"/>
+    </action>
+</create>
+<create unit="Pr" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign3.jpg"/>
+    <side name="outerframe,innerframe" style="tiled" faces="0"/>    
+    <param orient="180"/>
+    <action trigger="timer" delay="2">
+        <replace source="Ps"/>
+    </action>
+</create>
+<create unit="Ps" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign2.jpg"/>
+    <side name="outerframe,innerframe" style="tiled" faces="0"/>    
+    <param orient="180"/>
+    <action trigger="timer" delay="4">
+        <replace source="Po"/>
+    </action>
+</create>
+<create unit="Pq" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign1.jpg"/>
+    <side name="outerframe,innerframe" style="tiled" faces="0"/>
+    <param orient="180"/>
+</create>
+<create unit="Pn" vrobj="interior:largeframe">
+    <side name="n,s" texture="images/inner_sign3.jpg"/>
+    <side name="outerframe,innerframe" style="tiled" faces="0"/>    
+    <param orient="180"/>
+</create>
+<!-- Jean Cases -->
+<create unit="mj" vrobj="basic:half">
+    <side name="n,s,e,w,bottom" texture="images/wood_grain.gif"/>
+    <side name="top" angle="270" texture="images/jean_wall.jpg"/>
+    <param orient="0,0,90" />
+</create>
+<create unit="Mj" vrobj="basic:full">
+    <side name="n,s,w,e" texture="images/jean_wall.jpg"/>
+</create>
+<create unit="mk" vrobj="basic:full">
+    <side name="n,s,e,w" style="scaled" texture="images/jean_wall.jpg"/>
+    <side name="bottom" texture="@basic:inner_ceiling.jpg"/>
+    <side name="top" style="tiled" texture="@interior:woodfloor.jpg"/>
+</create>
+<!-- Jeans -->
+<CREATE unit="m2" vrobj="basic:spriteface">
+    <side NAME="*" TEXTURE="html/images/jeansas.gif"/>
+     <ACTION TRIGGER="click on" TEXT="Click to buy these Canvas Jeans!">
+	<HTMLPAGE PAGEURL="https://ptsource.github.io/VRGrid/assets/html/jeansa.html|Canvas Jeans|540|580"/>
+     </ACTION>
+</CREATE>
+<CREATE unit="m5" vrobj="basic:spriteface">
+    <side NAME="*" TEXTURE="html/images/jeansbs.gif"/>
+      <ACTION TRIGGER="click on" TEXT="Click to buy these Great Jeans!">
+	<HTMLPAGE PAGEURL="https://ptsource.github.io/VRGrid/assets/html/jeansb.html|Radio Jeans|540|580"/>
+     </ACTION>
+</CREATE>
+<!-- new sign -->
+<create unit="Pg" vrobj="basic:spriterevolve">
+    <side name="*" texture="images/new.vri"/>
+    <param align="bottom" speed="0.2"/>
+</create>
+<create unit="Pa" vrobj="basic:wbottomramp">
+    <param orient="0,0,90"/>
+    <side name="top" style="stretched" texture="images/poster_reece.jpg"/>
+    <side name="n,s,w,bottom" faces="0"/>
+    <action trigger="timer" delay="3..6">
+        <replace source="Pb"/>
+    </action>
+</create>
+<create unit="Pd" vrobj="basic:wbottomramp">
+    <param orient="0,0,90"/>
+    <side name="n,s,w,bottom" faces="0"/>
+    <side name="top" style="stretched" texture="images/poster_soccer.jpg"/>
+    <action trigger="timer" delay="3..6">
+        <replace source="Pe"/>
+    </action>
+</create>
+<create unit="Pb" vrobj="basic:wbottomramp">
+    <param orient="0,0,90"/>
+    <side name="n,s,w,bottom" faces="0"/>
+    <side name="top" style="stretched" texture="images/poster_jordan.jpg"/>
+    <action trigger="timer" delay="3..6">
+        <replace source="Pc"/>
+    </action>
+</create>
+<create unit="Pc" vrobj="basic:wbottomramp">
+    <param orient="0,0,90"/>
+    <side name="n,s,w,bottom" faces="0"/>
+    <side name="top" style="stretched" texture="images/poster_woods.jpg"/>
+    <action trigger="timer" delay="3..6">
+        <replace source="Pd"/>
+    </action>
+</create>
+<create unit="Pe" vrobj="basic:wbottomramp">
+    <param orient="0,0,90"/>
+    <side name="n,s,w,bottom" faces="0"/>
+    <side name="top" style="stretched" texture="images/poster_hamm.jpg"/>
+    <action trigger="timer" delay="3..6">
+        <replace source="Pf"/>
+    </action>
+</create>
+<create unit="Pf" vrobj="basic:wbottomramp">
+    <param orient="0,0,90"/>
+    <side name="n,s,w,bottom" faces="0"/>
+    <side name="top" style="stretched" texture="images/poster_jordan.jpg"/>
+    <action trigger="timer" delay="3..6">
+        <replace source="Pa"/>
+    </action>
+</create>
+<layer number="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="2">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fa fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fa fa fa fa fa fa fa fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="4">
+.. .. .. .. fc .. .. .. .. .. .. .. .. wm wm wm wm wm wm wm wm fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. .. .. .. wm .. .. .. .. .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. .. .. .. wm wm wm wm wm .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. wa .. .. wm m5 m2 m5 wm .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc wa wa wa wa wa .. wm Wa .. .. .. Wd wm .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. wa .. wm .. .. CH .. .. s5 s3 .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. wa wf wm .. .. CI .. .. s5 s4 .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. we ma wn .. .. .. .. Wc wm .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. we mb .. wl wm sc wm .. .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. we pc .. wm wm .. wm .. .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. n1 .. .. wm wm wm .. .. .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. n2 pb pd wm .. .. .. .. .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. n3 .. .. wm .. .. .. .. .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. n4 pa pe wm .. .. .. .. .. .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. wk .. wb wa wa wa wa wa wa wa .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. .. .. .. l1 l1 l1 .. .. fc .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. .. .. .. .. .. .. .. .. fc .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. .. .. .. .. .. .. .. .. fc .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. .. .. .. .. .. .. .. .. fc .. .. .. fc .. .. .. .. .. .. .. ..
+.. .. .. .. fc .. .. .. .. .. .. .. .. .. .. .. .. fc .. .. .. fc .. .. .. .. .. .. .. ..
+</layer>
+<layer number="5">
+.. .. .. .. .. .. .. .. .. wM wM wM wM wM wM wM wM wM wM wM wM .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wM wM wM wM wM wM wM wM wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wM wM wM wM wM wM wM wM wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wM wM wM wM wF wF wF wM wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. wA wA wA wA wM wM wM WA .. .. .. WD wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wA wM wM Pa .. CH .. .. s6 s1 wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wA wF wM Pd .. CI .. .. s6 s2 wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wE wF wN .. .. .. .. WC wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wE ca cb wL wM .. wq wM wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. Cf wE ca cB wM wM sd wM wM wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wE ca cb wM wM wM wM wM wM wM wM wM wM wM wM wM .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wE ca cb wM .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wE ca cB wM .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. Cf wE ca cb wM .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wK wh wB wA wA wA wA wA wA .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="6">
+.. .. .. fb fb fb fb fb fb wr wr mk mk wr wr wr wr wr wr wr wr wr wr wr wr wr .. .. .. ..
+.. .. .. fb fb fb fb fb fb mk wr .. .. wv .. .. .. .. .. .. .. wr wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb Mj .. .. .. .. m5 .. .. .. m2 .. .. .. wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb wr .. .. .. .. .. .. .. .. .. .. .. wt wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb Mj .. m2 rg rb rb rb re ra .. .. .. .. wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb Mj .. .. rc .. CH .. .. rf .. .. m5 .. wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb wr wu m5 rc .. CI .. .. rf .. .. .. .. wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb fb wr wr .. .. .. .. rd rb .. .. .. wt wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb fb wr wr wr wr .. rh .. .. .. m2 .. .. wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb fb cd wr wr ma mc .. Pq Pn Po .. .. wr wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb fb fb fb wr wr wr wr wr wr wr wr wr wr wr .. .. .. .. .. .. ..
+.. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb wr .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb wr .. .. .. .. .. .. ..
+.. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. fb fb fb fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. fb fb fb fb fb fb fb fb fb fb .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="7">
+.. .. .. .. .. .. .. .. .. wR wR wR wR wR wR Pi wR wR wR Pk Pl wR wR wR wR wR .. .. .. ..
+.. .. .. .. .. .. .. .. .. wR wR .. .. wS .. k9 K9 K8 wS .. .. wR wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. Pj .. .. .. .. .. .. .. .. .. .. .. wT wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. .. .. .. .. .. .. Ph .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wR wU .. .. .. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wR wR wR .. .. .. .. .. .. .. .. .. wT wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. wR wR wR wR Pm .. .. .. .. .. .. Pg .. wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. fb cd wR wR WF .. .. .. .. .. .. .. wR wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. wR wR wR wR wR wR wR wR Ph wR wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. wR .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="8">
+.. .. .. .. .. .. fb fb cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. .. ..
+.. .. .. .. .. .. fb fb cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. fb fb cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. fb fb cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. fb fb cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. fb fb cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. fb fb cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. fb fb cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. cd cd cc cc cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. cd cd cd cd cc cc cc cc cc cc cc cc cc cc cc cc cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="9">
+.. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd .. .. .. Cb .. .. .. .. .. .. Cf .. .. .. cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd .. .. .. Cb .. .. .. Cf .. .. .. .. .. .. cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd .. .. Cf Cg Cd Cd Cd Cd Cd Cd Cd Cd Cd Cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd Ca Ca Ca Ca Ca Ca Ca Ca Ca Ca Ca Ca Ca Ca cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd Cd Cd Cd Ce .. Cf .. .. Cf .. .. .. Cf .. cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd Cd Cd Cd Cc Cd Cd Cd Cd Cd Cd Cd Cd Cd Cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd .. .. .. Cb Cf .. .. .. .. .. .. .. .. .. cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd .. .. .. Cb .. .. Cf .. .. .. Cf .. .. .. cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd .. .. .. Cb .. .. .. .. .. .. .. .. .. .. cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd .. .. .. Cb .. .. .. .. .. .. .. .. .. .. cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="10">
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cD cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cD cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cD cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cD cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. cd cd cd cd cd cd cd cd cd cd cd cd cd cd cd .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer number="11">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<enter name="default" angle="30" location="(8,19,4)" />
+</design>
+</vrf>

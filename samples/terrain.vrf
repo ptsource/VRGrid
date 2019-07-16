@@ -1,0 +1,127 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals> 
+<title name="VRGrid Terrain Demo" />
+<lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" />
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(21,21,2)" /> 
+<sky />
+<atmosphere brightness="80%" />
+<ambience file="@terrain:waves.wav" volume="65%" playback="looped"/>
+<devel />
+</globals> 
+<design> 
+<create unit="__" vrobj="terrain:terrain">
+	<param walkable="yes" />
+	<side name="*" faces="2" texture="@terrain:sand.jpg"/>
+	<define>
+		<scale_x>21.0</scale_x>
+		<scale_y>21.0</scale_y>
+		<scale_z>21.0</scale_z>
+	</define>
+</create>
+<create unit="()" vrobj="terrain:filling">
+	<param walkable="yes" />
+	<side name="*" texture="@terrain:sand.jpg"/>
+	<define>
+		<scale_x>41.0</scale_x>
+		<scale_y>21.0</scale_y>
+		<scale_z>41.0</scale_z>
+	</define>
+</create>
+<create unit="~~" vrobj="terrain:ground">
+	<param walkable="yes" />
+	<side name="*" texture="@terrain:water.gif" clarity="20%" solid="no" />
+	<define>
+		<scale_x>21.0</scale_x>
+		<scale_y>21.0</scale_y>
+		<scale_z>21.0</scale_z>
+		<direction>1</direction>
+	</define>
+	<script trigger="timer" delay="0.1">
+		vrobj = map.get_vrobj("~~");
+		vrobj.location:y = vrobj.location:y + vrobj.direction;
+		if (vrobj.location:y gt 156) { vrobj.direction = -1; }
+		if (vrobj.location:y lt 148) { vrobj.direction = 1; }
+	</script>
+</create>
+<point_light style="static" location="(11,11,1)" brightness="100%" radius="21"  color="(0,255,0)" flood="no" position="(128,256,128)" /> 
+<import href="scripts/scaleobject.vrf" />
+<define>
+	<function name="start">
+		vrobj = map.get_vrobj("__");
+		scaleobject(vrobj);
+		vrobj.location:y = 0;
+		vrobj.location:x = 0;
+		vrobj.location:z = 0;
+		vrobj = map.get_vrobj("()");
+		scaleobject(vrobj);
+		vrobj.location:y = 128;
+		vrobj.location:x = -2560;
+		vrobj.location:z = -2560;
+		vrobj = map.get_vrobj("~~");
+		scaleobject(vrobj);
+		vrobj.location:y = 150;
+		vrobj.location:x = 0;
+		vrobj.location:z = 0;
+	</function>
+</define>
+<layer>
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<layer>
+~~ .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. __ .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. () .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+<enter name="default" location="(11,20,2)" angle="0.0" /> 
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+</design> 
+</vrf> 

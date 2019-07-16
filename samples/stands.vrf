@@ -1,0 +1,185 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+<title name="VRGrid Mixed Stands Demo"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib"/>
+<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib"/>
+<assets href="https://ptsource.github.io/VRGrid/assets/" />
+<map dimensions="(22,30,2)" />
+<sky texture="@base:clear.gif"/>
+<ground texture="images/sfloor.vri"/>
+<atmosphere brightness="90%"/>
+<stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/video.rm"/>
+<devel/>
+</globals>
+<design>
+<create unit=".," vrobj="base:ground">
+	<side name="*" texture="images/sfloor.vri" clarity="40%" />
+</create>
+<create unit="##" vrobj="base:full">
+<side name="n,e,s,w" texture="images/swall.vri"/>
+<side name="top,bottom" color="(0,100,136)"/>
+</create>
+<create unit="wA" vrobj="interior:wallcornerc">
+        <side name="n,e,w,s" texture="images/swall.vri"/>
+        <side name="bottom,bottomedge,sedge,eedge" texture="images/swall.vri" />
+	<side name="top" texture="images/sfloor.vri" clarity="40%"/>
+	<side name="e" texture="images/css3.vri"/>
+	<side name="s" texture="images/html5.vri"/>
+	<side name="sedge,eedge" texture="images/swall.vri" style="scaled" />
+	<action trigger="click on" text="Click for a responsive HTML5 popup with JQuery slideshow example">
+		<htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/slideshow.html|New Marketing Strategies|380|580"/>
+        </action>
+</create>
+<create unit="wB" vrobj="interior:wallcornerc">
+	<param orient="90,0,0"/>
+	<side name="n,e,w,s" texture="images/swall.vri"/>
+        <side name="bottom,bottomedge,sedge,eedge" texture="images/swall.vri" />
+	<side name="top" texture="images/sfloor.vri" clarity="40%"/>
+	<side name="e" texture="images/s_03_e.jpg"/>
+	<side name="s" texture="images/s_03_s.jpg"/>
+	<side name="sedge,eedge" texture="images/swall.vri" style="scaled" />
+	<action trigger="click on" text="Click for a responsive HTML5 popup with JQuery slideshow example">
+		<htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/slideshow.html|New Marketing Strategies|380|580"/>
+	</action>
+</create>
+<create unit="wC" vrobj="interior:wallcornerc">
+        <side name="n,e,w,s" texture="images/swall.vri"/>
+	<side name="bottom,bottomedge,sedge,eedge" texture="images/swall.vri" />
+	<side name="top" texture="images/sfloor.vri" clarity="40%"/>
+	<side name="e" texture="images/s_01_e.jpg"/>
+	<side name="s" texture="images/s_01_s.jpg"/>
+	<side name="sedge,eedge" texture="images/swall.vri" style="scaled" />
+	<action trigger="click on" text="Click for a responsive HTML5 popup with JQuery slideshow example">
+		<htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/slideshow.html|New Marketing Strategies|380|580"/>
+	</action>
+</create>
+<create unit="wD" vrobj="interior:wallcornerc">
+	<param orient="90,0,0"/>
+	<side name="n,e,w,s" texture="images/swall.vri"/>
+	<side name="bottom,bottomedge,sedge,eedge" texture="images/swall.vri" />
+	<side name="top" texture="images/sfloor.vri" clarity="40%"/>
+	<side name="e" texture="images/s_04_e.jpg"/>
+	<side name="s" texture="images/s_04_s.jpg"/>
+	<side name="sedge,eedge" texture="images/swall.vri" style="scaled" />
+	<action trigger="click on" text="Click for a responsive HTML5 popup with JQuery slideshow example">
+		<htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/slideshow.html|New Marketing Strategies|380|580"/>
+	</action>
+</create>
+<create unit="cc" vrobj="base:floor">
+	<side name="top,n,e,s,w" faces="0"/>
+	<side name="bottom" texture="images/sceiling.vri" style="scaled"/>
+</create>
+<create unit="02" vrobj="interior:poster">
+	<side name="posters" texture="images/android.jpg"/>
+	<param orient="90,0,0"/>
+</create>
+<create unit="03" vrobj="interior:poster">
+	<side name="posters" texture="images/youtube.jpg"/>
+	<param orient="0,0,0"/>
+</create>
+<create unit="04" vrobj="interior:poster">
+	<side name="posters" texture="images/google.jpg"/>
+	<param orient="90,0,0"/>
+</create>
+<create unit="05" vrobj="interior:poster">
+	<side name="posters" texture="images/s_02_s.jpg"/>
+	<param orient="180,0,0"/>
+</create>
+<create unit="09" vrobj="interior:poster">
+	<side name="posters" texture="images/marketing.gif"/>
+	<param orient="180,0,0"/>
+</create>
+<create unit="10" vrobj="interior:poster">
+	<side name="posters" texture="images/tech.jpg"/>
+	<param orient="270,0,0"/>
+</create>
+<create unit="bu" vrobj="interior:plasma">
+	<side name="screen" stream="bugslife" />
+</create>
+<create unit="bx" vrobj="interior:vidscreen">
+	<side name="screen" stream="bugslife" />
+</create>
+<create unit="bS" vrobj="interior:terminal">
+</create>
+<layer number="1" >
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+## 05 ., ., ., ., ., ## ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ## ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ## ## ## ## ., ., ., ., ., ., ., ., ., ., ##
+## ., ., wA ., ., ., ., 09 ., ., ., ., ., ., ., ., ., ., ., ., ##
+## 04 ., ., ., wC ., ., ., ., ., ., wD ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., 03 ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ## ## ., ., ., ., wB ., ., ## ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ## 02 ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ## ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## 05 ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., bu ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ## ## ## ## ## ## ##
+## bx ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., 09 ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## 02 ., ., ., ., ., ., ., ., wB ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., wD ., ., ., ##
+## ., ., wA ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## 04 ., ., ., ., ., ., ., ., ., ., ., ., ., 02 ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## bS ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+</layer>
+<layer number="2" >
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+</layer>
+<vrf_light style="revolve" location="(6,8,2)" brightness="80%"  radius="15" flood="yes" color="(210,210,0)" direction="(90,30)..(20, 80)" cone="90" speed="0.25"/>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+</imagemap>
+<imagemap name="fork">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
+<enter location="(10,10,1)"  name="default"/>
+</design>
+</vrf>
+
+
+
