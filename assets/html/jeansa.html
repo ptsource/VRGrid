@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canvas Jeans</title>
+<script type="text/javascript" src="js/cart.js"></script>
+<script type="text/javascript">
+	simpleCart.email = "email@email.com";
+	simpleCart.checkoutTo = PayPal;
+        simpleCart.currency = EUR;
+	simpleCart.taxRate  = 0.00;
+	simpleCart.shippingFlatRate = 15.00;
+        simpleCart.cartHeaders = ["Name" , "Size", "Price" , "decrement" , "Quantity", "increment", "remove", "Total" ];
+</script>
+<link href="css/cart.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <p class="alignRight"> Cart: <span class="simpleCart_total"></span> (<span class="simpleCart_quantity"></span> items) <a href="javascript:;" class="simpleCart_empty">empty cart</a> <br />
+    </p>
+    </div
+<div class="row">
+    <div class="simpleCart_shelfItem">
+      <h3 class="item_name">Canvas Jeans</h3>
+	    <p><img  src="images/jeansa.gif" /></p>
+      <p>Size:
+        <select name="select" class="item_size">
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+      </p>
+     <p><strong class="item_price">10.71</strong> <input type="button" class="item_add" value="add to cart" /></p>
+    </div>
+	  
+ <div id="cartTotal">
+    Sub: <span class="simpleCart_total"></span> Ship: <span class="simpleCart_shippingCost"></span> Total: <span class="simpleCart_finalTotal"></span> <a href="javascript:;" class="simpleCart_checkout">checkout</a> 
+    </div>
+    
+    </div>
+    
+  <div class="clear">&nbsp;</div>
+<script src="https://www.w3counter.com/tracker.js?id=124471"></script>
+</body>
+</html>
