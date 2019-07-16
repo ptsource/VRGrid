@@ -3,26 +3,26 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf vrfid="000005">
 <globals>
-<title name="VRGrid Effects Demo"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(27,27,3)"/>
-<sky texture="@basic:rain_clouds.gif"/>
-<ground texture="@basic:stone.gif"/>
-<atmosphere brightness="50%" color="(255,255,255)"/>
-<ambience file="@basic:rain1th.wav" volume="100%" playback="looped"/>
-<loader texture="@basic:storm.jpg"/>
-<devel/>
+    <title name="VRGrid Effects Demo"/>
+    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map dimensions="(27,27,3)"/>
+    <sky texture="@basic:rain_clouds.gif"/>
+    <ground texture="@basic:stone.gif"/>
+    <atmosphere brightness="50%" color="(255,255,255)"/>
+    <ambience file="@basic:rain1th.wav" volume="100%" playback="looped"/>
+    <loader texture="@basic:storm.jpg"/>
+    <devel/>
 </globals>
 <design>
 <create unit="##" vrobj="basic:full">
-<side name="*" texture="@basic:stone.gif"/>
+    <side name="*" texture="@basic:stone.gif"/>
 </create>
 <create unit="::" vrobj="basic:spriteface">
-<param solid="no" size="(255,255)"/>
-<side name="*" texture="@basic:rain.gif" clarity="70%"/>
+    <param solid="no" size="(255,255)"/>
+    <side name="*" texture="@basic:rain.gif" clarity="70%"/>
 </create>
-<layer number="1">
+<layer number="1" name="ground">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ..
 .. ## :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ## ..
@@ -52,7 +52,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 
-<layer number="2">
+<layer number="2" name="rainmiddle">
 :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::
 :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::
 :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::
@@ -82,7 +82,7 @@
 :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::
 </layer>
 
-<layer number="3">
+<layer number="3" name="raintop">
 :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::
 :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::
 :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::
