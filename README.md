@@ -16,7 +16,7 @@ VRGrid uses Microsoft DirectX SDK (runtimes included in the installer) , Oculus 
 
 # VRF File format
 
-The VRF format uses standard XML developed by the World Wide Web Consortium along with the Powers & Stephens parsers for XML. The design goals of XML emphasize simplicity, generality, and usability across diferent platforms. It is a textual data format with strong support via Unicode for different human languages. 
+The VRF format uses standard XML developed by the World Wide Web Consortium along with the Powers & Stephens parsers for XML. The design goals of XML emphasize simplicity, generality, and usability across diferent platforms. It is a textual data format with strong support via Unicode for different human languages.
 
 # VRI Image format
 
@@ -53,7 +53,5 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 * Memory Tracker
 * Hillcrest Labs Tracker
 * FreeTrack Tracker
-
-
 
 
