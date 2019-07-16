@@ -1,0 +1,132 @@
+body {
+   font-family: Consolas, monaco, monospace;
+   background:#fff;
+}
+
+a { text-decoration:none; color:#CC0000; }
+.alignRight { text-align:right; }
+.simpleCart_shelfItem {
+	float:center; 
+	display:inline; 
+	margin:20px 20px 20px 0;
+	width:100%;
+	line-height:100%;
+	position:relative;
+	background:#fff;
+	text-align:center;
+	-moz-border-radius:5px; 
+	border-radius:5px;
+}
+
+.simpleCart_shelfItem.last {
+	margin-right:0;
+}
+
+.simpleCart_shelfItem p { 
+	margin:10px 0 0 0; 
+	text-align:center;
+}
+
+.item_name {
+	font-weight:bold;
+	font-size:12px;
+	margin:10px 0;
+	padding:0;
+}
+
+.item_size { font-size:12px; }
+
+.item_add {
+	margin:10px 5px;
+	padding:4px; 
+	background:#0033FF;
+	color:#FFFFFF;
+	border:none;
+	-moz-border-radius:5px; border-radius:5px;
+	text-transform: uppercase; 
+	font-size:9px;
+	cursor:pointer;
+}
+
+.item_price{
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+	color:#cc0000;
+	margin:10px 5px;
+}
+.simpleCart_items {
+	display:inline;
+	width:100%;
+	background:#EEEEEE;
+	-moz-border-radius:5px; 
+	border-radius:5px;
+	padding-bottom:10px;
+}
+
+.itemContainer, .cartHeaders {
+	width:100%;
+	float:left;
+	display:inline;
+	border-bottom:1px solid #CCCCCC;
+	padding-bottom:10px;
+}
+
+.cartHeaders {
+	font-weight:bold;
+	font-size:11px;
+	color: #666666;
+}
+
+.itemContainer div, .cartHeaders div {
+	display:inline;
+	border-right:1px solid #CCCCCC;
+	margin:10px 0 0 0;
+	text-align:center;
+	width:100px;
+}
+
+div.itemName {
+	font-weight:bold;
+	width:200px;
+}
+
+div.itemTotal {
+	border-right:none;
+}
+
+
+#cartTotal {
+	font-size:12px;
+	text-align:right;
+	float:left;
+	width:100%;
+	margin:5px 0;
+}
+
+#cartTotal .simpleCart_total, .simpleCart_shippingCost, .simpleCart_finalTotal {
+	margin-right:5px;
+	padding:5px;
+	-moz-border-radius:5px; border-radius:5px;
+	background:#EEEEEE;
+	font-weight:bold;
+}
+.simpleCart_empty{
+	color:#FFFFFF;
+	background:#CC0000;
+	font-size:10px;
+	padding:5px;
+	margin-left:5px;
+	text-transform:uppercase;
+	-moz-border-radius:5px; border-radius:5px;
+}
+
+.simpleCart_checkout{
+	color:#FFFFFF;
+	background: #00CC00;
+	font-size:10px;
+	padding:5px;
+	margin-left:5px;
+	text-transform:uppercase;
+	-moz-border-radius:5px; border-radius:5px;
+}
