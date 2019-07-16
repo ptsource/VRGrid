@@ -1,0 +1,24 @@
+<vrf>
+<globals>
+<title name="Welcome to VRGrid (Devel Mode)"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/compat.vtpl"/>
+<map dimensions="(1,3,1)"/>
+<sky colour="(0,0,0)"/>
+<ground colour="(0,0,0)"/>
+</globals>
+<design>
+<define>
+	<function name="start">
+		vrf.user_can_move = false;
+		vrf.user_can_look = false;
+	</function>
+</define>
+<layer>
+..
+..
+..
+</layer>
+<popup location="(1,3,1)" radius="1" placement="center" text="You are now running in Devel Mode. This mode only accepts VTPL libs."/>
+<enter name="default" location="(1,3,1)"/>
+</design>
+</vrf>
