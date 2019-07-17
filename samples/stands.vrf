@@ -3,15 +3,15 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Mixed Stands Demo"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib"/>
-<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(22,30,2)" />
-<sky texture="@base:clear.gif"/>
-<ground texture="images/sfloor.vri"/>
-<atmosphere brightness="90%"/>
-<stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/video.rm"/>
+	<title name="VRGrid Mixed Stands Demo"/>
+	<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(22,30,2)" />
+	<sky texture="@base:clear.gif"/>
+	<ground texture="images/sfloor.vri"/>
+	<atmosphere brightness="90%"/>
+	<stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/video.rm"/>
 <devel/>
 </globals>
 <design>
@@ -104,7 +104,7 @@
 </create>
 <create unit="bS" vrobj="interior:terminal">
 </create>
-<layer number="1" >
+<layer number="1" name="walklevel">
 ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
 ## 05 ., ., ., ., ., ## ., ., ., ., ., ., ., ., ., ., ., ., ., ##
 ## ., ., ., ., ., ., ## ., ., ., ., ., ., ., ., ., ., ., ., ., ##
@@ -136,7 +136,7 @@
 ## bS ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ##
 ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
 </layer>
-<layer number="2" >
+<layer number="2" name="ceiling">
 cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
 cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
 cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
