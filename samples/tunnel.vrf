@@ -3,20 +3,20 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Tunnel Lamp Demo" />
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" />
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map  dimensions="(17,17,2)" />
-<atmosphere brightness="10%" />
-<ground/>
-<devel />
+    <title name="VRGrid Tunnel Lamp Demo" />
+    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" />
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map  dimensions="(17,17,2)" />
+    <atmosphere brightness="10%" />
+    <ground/>
+    <devel />
 </globals>
 <design>
 <create unit="LL" vrobj="basic:tunnellamp">
 </create>
 <create unit="##" vrobj="basic:full">
 </create>
-<layer number="1">
+<layer number="1" name="ground">
 LL .. .. .. .. .. .. ## ## ## .. .. .. .. .. ..
 .. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
 .. .. .. .. .. .. .. ## LL ## .. .. .. .. .. ..
@@ -35,7 +35,7 @@ LL .. .. .. .. .. .. ## ## ## .. .. .. .. .. ..
 .. .. .. .. .. .. .. ## .. ## .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
-<layer number="2">
+<layer number="2" name="walklevel">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. __ .. .. .. .. .. .. ..
