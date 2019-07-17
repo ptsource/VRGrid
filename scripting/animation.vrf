@@ -3,14 +3,14 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Scripting Example (Vertex Animation and Remove)"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/animation.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(9,9,1)" />
-<sky color="(0,0,255)"/>
-<ground texture="@basic:gtile.gif"/>
-<devel />
+	<title name="VRGrid Scripting Example (Vertex Animation and Remove)"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/utils/animation.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(9,9,1)" />
+	<sky color="(0,0,255)"/>
+	<ground texture="@basic:gtile.gif"/>
+	<devel />
 </globals>
 <design> 
 <create unit="EE" vrobj="animation:manrun">
@@ -122,18 +122,3 @@ MV .. EE .. .. .. .. .. ..
 <enter location="(1,8,1)"  name="default" angle="0,0"/>
 </design>
 </vrf>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
