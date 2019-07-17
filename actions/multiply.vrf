@@ -4,12 +4,12 @@
 <vrf>
 <globals>
     <title name="VRGrid Multiply Test"/>
-    <lib HREF="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
+    <lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
     <assets href="https://ptsource.github.io/VRGrid/assets/" />
     <map dimensions="(17,17,4)"/>
     <sky color="(0,0,255)"/>
     <ground texture="@base:gtile.gif"/>
-  <devel/>
+    <devel/>
 </globals>
 <design> 
 <create unit="##" vrobj="base:full">
