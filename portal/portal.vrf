@@ -13,7 +13,7 @@
 		vrf.user_can_look = false;
 	</function>
 </define>
-<layer>
+<layer number="1">
 ..
 ..
 ..
