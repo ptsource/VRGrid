@@ -71,6 +71,6 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<enter name="default" location="(6,10,1)" angle="20"/>
+<enter name="default" location="(2,10,1)" angle="30"/>
 </design>
 </vrf>
