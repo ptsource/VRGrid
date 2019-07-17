@@ -6,7 +6,7 @@
       <title name="VRGrid Streaming Action" />
       <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/> 
       <assets href="https://ptsource.github.io/VRGrid/assets/" />
-      <map dimensions="(7,5,2)"/>
+      <map dimensions="(7,8,2)"/>
       <sky color="(0,0,255)"/>
     	<ground texture="@basic:gtile.gif"/>
       <stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/video.rm"/>
@@ -45,6 +45,9 @@
 .. .. .. .. .. .. ..
 .. @@ .. .. .. .. ..
 .. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
 </layer>
 <layer number="2">
 .. .. 11 22 33 .. ..
@@ -52,7 +55,10 @@
 .. .. .. .. .. .. ..
 .. .. .. .. .. .. ..
 .. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
 </layer>
-<enter name="default" location="(3,5,1)" />
+<enter name="default" location="(3,8,1)" />
 </design>
 </vrf>
