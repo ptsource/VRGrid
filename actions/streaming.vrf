@@ -3,7 +3,7 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-      <title name="VRGrid Streaming Action" />
+      <title name="VRGrid Video Streaming Action" />
       <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/> 
       <assets href="https://ptsource.github.io/VRGrid/assets/" />
       <map dimensions="(7,10,2)"/>
