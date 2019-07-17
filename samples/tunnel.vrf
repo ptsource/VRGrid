@@ -4,7 +4,7 @@
 <vrf>
 <globals>
     <title name="VRGrid Tunnel Lamp Demo" />
-    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" />
+    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
     <assets href="https://ptsource.github.io/VRGrid/assets/" />
     <map  dimensions="(17,17,2)" />
     <atmosphere brightness="10%" />
