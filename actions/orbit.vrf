@@ -3,35 +3,36 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Orbit Test"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib"/>
-<map dimensions="(17,17,4)"/>
-<ground />
-<devel />
+	<title name="VRGrid Orbit Test"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+	<map dimensions="(17,17,4)"/>
+	<sky color="(0,0,255)"/>
+    	<ground texture="@base:gtile.gif"/>
+	<devel />
 </globals>
 <design> 
 <create unit="##" vrobj="basic:full">
-<param scale="(0.7,0.7,0.7)"/>
-<action trigger="click on" text="Click me to revolve" sidename="*">
-	<orbit source="#1" DISTANCE="(200.0,0.0,300.0)" speed="150"/>
-	<spin angles="(100.0,50.0,0.0)"/>
-</action>
+	<param scale="(0.7,0.7,0.7)"/>
+	<action trigger="click on" text="Click me to revolve" sidename="*">
+		<orbit source="#1" distance="(200.0,0.0,300.0)" speed="150"/>
+		<spin angles="(100.0,50.0,0.0)"/>
+	</action>
 </create>
 <create unit="#1" vrobj="basic:full">
-<param scale="(0.7,0.7,0.7)"/>
-<action trigger="click on" text="Click me to revolve" sidename="w">
-	<orbit source="#2" distance="(600.0,50.0,600.0)" speed="40"/>
-	<spin angles="(0.0,100.0,0.0)"/>
-</action>
-<action trigger="click on" text="stop" sidename="top">
-	<stoporbit/>
-</action>
+	<param scale="(0.7,0.7,0.7)"/>
+	<action trigger="click on" text="Click me to revolve" sidename="w">
+		<orbit source="#2" distance="(600.0,50.0,600.0)" speed="40"/>
+		<spin angles="(0.0,100.0,0.0)"/>
+	</action>
+	<action trigger="click on" text="stop" sidename="top">
+		<stoporbit/>
+	</action>
 </create>
 <create unit="#2" vrobj="basic2:sphere">
-<action trigger="click on" text="Click me to revolve" sidename="*">
-	<spin angles="(0.0,-75.0,0.0)"/>
-</action>
+	<action trigger="click on" text="Click me to revolve" sidename="*">
+		<spin angles="(0.0,-75.0,0.0)"/>
+	</action>
 </create>
 <layer number="1" >
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
