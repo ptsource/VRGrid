@@ -3,15 +3,16 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Talk Action"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(17,17,4)"/>
-<ground/>
-<devel />
+	<title name="VRGrid Talk Action"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/base.vlib"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(17,17,4)"/>
+	<sky color="(0,0,255)"/>
+    	<ground texture="@base:gtile.gif"/>
+	<devel />
 </globals>
 <design> 
-<create unit="##" vrobj="basic:full">
+<create unit="##" vrobj="base:full">
 <action trigger="click on" text="Click me and i will talk for you" sidename="w">
 	<talk say="Hello how are you from VRGrid"/>
 </action>
