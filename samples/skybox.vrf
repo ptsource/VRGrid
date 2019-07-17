@@ -3,16 +3,16 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Skybox Demo"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/skybox.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions = "( 10, 10, 2)"/>
-<sky texture="@basic:clear.gif" brightness="100%"/>
-<fog color="(68,68,68)" density="1%"/>
-<ground />
-<devel />
-</globals>
+    <title name="VRGrid Skybox Demo"/>
+    <lib href="https://ptsource.github.io/VRGrid/utils/skybox.vlib" required="2.8"/>
+    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map dimensions = "( 10, 10, 2)"/>
+    <sky texture="@basic:clear.gif" brightness="100%"/>
+    <fog color="(68,68,68)" density="1%"/>
+    <ground />
+    <devel />
+    </globals>
  <design>
 <create unit="44" vrobj="skybox:dusk">
 <param walkable="yes" scale="(30,30,30)" orient="down,0"/>
@@ -23,7 +23,7 @@
   unit.location:z = player.location:z-(128*30);
  </script>
 </create>
-<layer number=" 1">
+<layer number="1">
 .. .. .. .. .. .. .. .. ## ##
 .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. ..
@@ -35,7 +35,7 @@
 .. ## ## ## ## .. .. .. ## ..
 .. .. .. .. .. .. .. .. .. ..
 </layer> 
-<layer number=" 2">
+<layer number="2">
 .. .. .. .. .. .. .. .. ## ##
 .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. ..
