@@ -211,7 +211,7 @@ if (vrf.health = 0) {
 .. .. .. .. .. .. .. .. .. ..
 </layer>
 <imagemap name="github">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
 <imagemap name="tutorial">
     <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
