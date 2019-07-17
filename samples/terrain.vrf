@@ -2,15 +2,15 @@
 <!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
-<globals> 
-<title name="VRGrid Terrain Demo" />
-<lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" />
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(21,21,2)" /> 
-<sky />
-<atmosphere brightness="80%" />
-<ambience file="@terrain:waves.wav" volume="65%" playback="looped"/>
-<devel />
+<globals>
+	<title name="VRGrid Terrain Demo" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" />
+    	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+    	<map dimensions="(21,21,2)" /> 
+    	<sky color="(0,0,255)"/>
+    	<atmosphere brightness="80%" />
+    	<ambience file="@terrain:waves.wav" volume="65%" playback="looped"/>
+      	<devel />
 </globals> 
 <design> 
 <create unit="__" vrobj="terrain:terrain">
@@ -68,7 +68,7 @@
 		vrobj.location:z = 0;
 	</function>
 </define>
-<layer>
+<layer number="1" name="underground">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
@@ -91,7 +91,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
-<layer>
+<layer number="2" name="ground">
 ~~ .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
