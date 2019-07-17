@@ -3,21 +3,21 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Utils Reference" />
-<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" />
-<!-- Various Utils -->
-<lib href="https://ptsource.github.io/VRGrid/utils/animation.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/axis.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/vrgrid.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/skybox.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" />
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(15,23,3)" />
-<sky/>
-<ground/>
-<devel />
+	<title name="VRGrid Various Utils Reference" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" />
+	<!-- Various Utils -->
+	<lib href="https://ptsource.github.io/VRGrid/utils/animation.vlib" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/axis.vlib" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/vrgrid.vlib" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/skybox.vlib" />
+	<lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" />
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(15,23,3)" />
+	<sky color="(0,0,255)"/>
+	<ground texture="@base:gtile.gif"/>
+	<devel />
 </globals>
 <design>
 <!-- 3d objects -->
@@ -57,20 +57,20 @@
 </create>
 <!-- Skyboxes -->
 <create unit="s1" vrobj="skybox:dusk">
-<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
-<popup text="skybox:dusk" placement="top" trigger="rollover"/>
+	<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+	<popup text="skybox:dusk" placement="top" trigger="rollover"/>
 </create>
 <create unit="s2" vrobj="skybox:met">
-<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
-<popup text="skybox:met" placement="top" trigger="rollover"/>
+	<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+	<popup text="skybox:met" placement="top" trigger="rollover"/>
 </create>
 <create unit="s3" vrobj="skybox:ashcanyon">
-<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
-<popup text="skybox:ashcanyon" placement="top" trigger="rollover"/>
+	<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+	<popup text="skybox:ashcanyon" placement="top" trigger="rollover"/>
 </create>
 <create unit="s4" vrobj="skybox:hills">
-<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
-<popup text="skybox:hills" placement="top" trigger="rollover"/>
+	<param walkable="yes" scale="(1,1,1)" orient="down,0"/>
+	<popup text="skybox:hills" placement="top" trigger="rollover"/>
 </create>
 <!-- Terrain -->
 <create unit="a6" vrobj="terrain:filling"><popup text="terrain:filling" placement="top" trigger="rollover"/></create>
