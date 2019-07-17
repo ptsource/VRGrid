@@ -48,7 +48,7 @@
 <create unit="a3" vrobj="gametools:outcorner"><popup text="gametools:outcorner" placement="top" trigger="rollover"/></create>
 <create unit="a4" vrobj="gametools:straight"><popup text="gametools:straight" placement="top" trigger="rollover"/></create>
 <!-- Animation -->
-<create unit="g2" vrobj="animation:crow">
+<create unit="g2" vrobj="animation:bird">
 <param walkable="yes"/>
 	<action trigger="timer" delay="0.1">
 		<animate/>
