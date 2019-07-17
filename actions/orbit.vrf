@@ -8,7 +8,7 @@
 	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
 	<map dimensions="(17,17,4)"/>
 	<sky color="(0,0,255)"/>
-    	<ground texture="@base:gtile.gif"/>
+    	<ground texture="@basic:gtile.gif"/>
 	<devel />
 </globals>
 <design> 
