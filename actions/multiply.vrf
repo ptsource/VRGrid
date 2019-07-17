@@ -3,21 +3,22 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Multiply Test"/>
-<lib HREF="https://ptsource.github.io/VRGrid/utils/base.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(17,17,4)"/>
-<ground />
-<devel/>
+    <title name="VRGrid Multiply Test"/>
+    <lib HREF="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map dimensions="(17,17,4)"/>
+    <sky color="(0,0,255)"/>
+	  <ground texture="@base:gtile.gif"/>
+  <devel/>
 </globals>
 <design> 
 <create unit="##" vrobj="base:full">
-<action trigger="click on" text="Click me to add" sidename="s">
-<replace source="##" target="(+0,+1,+0)"/>
-</action>
-<action trigger="click on" text="Click me to subtract" sidename="w">
-<replace source=".." target="(+0,+0,+0)"/>
-</action>
+    <action trigger="click on" text="Click me to add" sidename="s">
+        <replace source="##" target="(+0,+1,+0)"/>
+    </action>
+    <action trigger="click on" text="Click me to subtract" sidename="w">
+        <replace source=".." target="(+0,+0,+0)"/>
+    </action>
 </create>
 <layer number="1" >
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
