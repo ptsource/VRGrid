@@ -170,10 +170,10 @@ cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
 </layer>
 <vrf_light style="revolve" location="(6,8,2)" brightness="80%"  radius="15" flood="yes" color="(210,210,0)" direction="(90,30)..(20, 80)" cone="90" speed="0.25"/>
 <imagemap name="github">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Hosted at Github" />
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
 <imagemap name="fork">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid/tree/gh-pages" text="Fork Us at Github" />
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Fork Us at Github" />
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
