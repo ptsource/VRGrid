@@ -3,22 +3,22 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<assign name="author" content="PTSource" />
-<assign name="description" content="" />
-<assign name="image" content="" />
-<title name="VRGrid Night and Day Demo"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(21,21,3)"/>
-<ground texture="@village:ground.gif"/>
-<sky texture="@basic:clouds.gif" brightness="20%"/>
-<orb texture="@village:moon.gif" position="(20,20)" brightness="60%"/>
-<atmosphere brightness="30%" color="(220,220,255)"/>
-<ambience file="@village:crickets.wav" playback="looped" volume="50%"/>
-<font name="Consolas" />
-<devel/>
+	<assign name="author" content="PTSource" />
+	<assign name="description" content="" />
+	<assign name="image" content="" />
+	<title name="VRGrid Night and Day Demo"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(21,21,3)"/>
+	<ground texture="@village:ground.gif"/>
+	<sky texture="@basic:clouds.gif" brightness="20%"/>
+	<orb texture="@village:moon.gif" position="(20,20)" brightness="60%"/>
+	<atmosphere brightness="30%" color="(220,220,255)"/>
+	<ambience file="@village:crickets.wav" playback="looped" volume="50%"/>
+	<font name="Consolas" />
+	<devel/>
 </globals>
 <design>
 <script trigger="timer" delay="1">
@@ -42,150 +42,150 @@
 	}
 </script>
 <create unit=".A" vrobj="basic2:halfdisk">
-<param orient="90,0,0"/>
+	<param orient="90,0,0"/>
 </create>
 <create unit=".C" vrobj="basic2:halfdisk">
-<param orient="180,0,0"/>
+	<param orient="180,0,0"/>
 </create>
 <create unit=".D" vrobj="basic2:halfdisk">
-<param orient="270,0,0"/>
+	<param orient="270,0,0"/>
 </create>
 <create unit=".F" vrobj="basic:column">
-<sound file="@village:water.wav" volume="75%" radius="5" playback="looped"/>
+	<sound file="@village:water.wav" volume="75%" radius="5" playback="looped"/>
 </create>
 <create unit=".G" vrobj="village:path">
-<param orient="90,0,0"/>
+	<param orient="90,0,0"/>
 </create>
 <create unit=".H" vrobj="village:pathturn">
-<param orient="180,0,0"/>
+	<param orient="180,0,0"/>
 </create>
 <create unit=".O" vrobj="village:pathturn">
-<param orient="90,0,0"/>
+	<param orient="90,0,0"/>
 </create>
 <create unit=".Q" vrobj="village:pathturn">
-<param orient="270,0,0"/>
+	<param orient="270,0,0"/>
 </create>
-<create unit=".R" vrobj="village:path">
+	<create unit=".R" vrobj="village:path">
 <param orient="180,0,0"/>
 </create>
 <create unit=".T" vrobj="village:path">
-<param orient="270,0,0"/>
+	<param orient="270,0,0"/>
 </create>
 <create unit=".U" vrobj="basic2:doorway">
-<param orient="180,0,0"/>
+	<param orient="180,0,0"/>
 </create>
 <create unit=".X" vrobj="basic2:doorway">
-<param orient="90,0,0"/>
+	<param orient="90,0,0"/>
 </create>
 <create unit=".Z" vrobj="basic2:doorway">
-<param orient="270,0,0"/>
+	<param orient="270,0,0"/>
 </create>
 <create unit=".f" vrobj="village:lamp">
-<param orient="90,0,0"/>
-<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="10"/>
+	<param orient="90,0,0"/>
+	<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="10"/>
 </create>
 <create unit=".t" vrobj="village:lamp">
-<param orient="0,0,0"/>
-<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="7.5"/>
+	<param orient="0,0,0"/>
+	<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="7.5"/>
 </create>
 <create unit=".9" vrobj="village:lamp">
-<param orient="0,0,0"/>
-<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="15"/>
+	<param orient="0,0,0"/>
+	<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="15"/>
 </create>
 <create unit=".0" vrobj="village:lamp">
-<param orient="90,0,0"/>
-<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="12.5"/>
+	<param orient="90,0,0"/>
+	<point_light style="pulsate" position="(128,256,128)" brightness="10%..20%" radius="1.25" flood="yes" color="(255,64,0)" speed="12.5"/>
 </create>
 <create unit=".(" vrobj="basic:full">
-<side name="top" texture="@basic:stone.gif"/>
-<side name="bottom" texture="@basic:stone.gif"/>
-<side name="s" texture="@basic:stone.gif"/>
-<side name="w" texture="@basic:stone.gif"/>
-<side name="n" texture="@basic:stone.gif"/>
-<side name="e" texture="@basic:stone.gif"/>
+	<side name="top" texture="@basic:stone.gif"/>
+	<side name="bottom" texture="@basic:stone.gif"/>
+	<side name="s" texture="@basic:stone.gif"/>
+	<side name="w" texture="@basic:stone.gif"/>
+	<side name="n" texture="@basic:stone.gif"/>
+	<side name="e" texture="@basic:stone.gif"/>
 </create>
 <create unit=".)" vrobj="basic:curveout">
-<side name="curve" texture="@basic:stone.gif"/>
-<side name="e" texture="@basic:stone.gif"/>
-<side name="w" texture="@basic:stone.gif"/>
-<side name="n" texture="@basic:stone.gif"/>
-<side name="bottom" texture="@basic:stone.gif"/>
+	<side name="curve" texture="@basic:stone.gif"/>
+	<side name="e" texture="@basic:stone.gif"/>
+	<side name="w" texture="@basic:stone.gif"/>
+	<side name="n" texture="@basic:stone.gif"/>
+	<side name="bottom" texture="@basic:stone.gif"/>
 </create>
 <create unit=".=" vrobj="basic:curveout">
-<side name="curve" texture="@basic:stone.gif"/>
-<side name="e" texture="@basic:stone.gif"/>
-<side name="w" texture="@basic:stone.gif"/>
-<side name="n" texture="@basic:stone.gif"/>
-<side name="bottom" texture="@basic:stone.gif"/>
-<param orient="90,0,0"/>
+	<side name="curve" texture="@basic:stone.gif"/>
+	<side name="e" texture="@basic:stone.gif"/>
+	<side name="w" texture="@basic:stone.gif"/>
+	<side name="n" texture="@basic:stone.gif"/>
+	<side name="bottom" texture="@basic:stone.gif"/>
+	<param orient="90,0,0"/>
 </create>
 <create unit=".+" vrobj="basic:curveout">
-<side name="curve" texture="@basic:stone.gif"/>
-<side name="e" texture="@basic:stone.gif"/>
-<side name="w" texture="@basic:stone.gif"/>
-<side name="n" texture="@basic:stone.gif"/>
-<side name="bottom" texture="@basic:stone.gif"/>
-<param orient="270,0,0"/>
+	<side name="curve" texture="@basic:stone.gif"/>
+	<side name="e" texture="@basic:stone.gif"/>
+	<side name="w" texture="@basic:stone.gif"/>
+	<side name="n" texture="@basic:stone.gif"/>
+	<side name="bottom" texture="@basic:stone.gif"/>
+	<param orient="270,0,0"/>
 </create>
 <create unit=".[" vrobj="basic:curveout">
-<side name="curve" texture="@basic:stone.gif"/>
-<side name="e" texture="@basic:stone.gif"/>
-<side name="w" texture="@basic:stone.gif"/>
-<side name="n" texture="@basic:stone.gif"/>
-<side name="bottom" texture="@basic:stone.gif"/>
-<param orient="180,0,0"/>
+	<side name="curve" texture="@basic:stone.gif"/>
+	<side name="e" texture="@basic:stone.gif"/>
+	<side name="w" texture="@basic:stone.gif"/>
+	<side name="n" texture="@basic:stone.gif"/>
+	<side name="bottom" texture="@basic:stone.gif"/>
+	<param orient="180,0,0"/>
 </create>
 <create unit=".]" vrobj="basic2:smallspherecorner">
-<param orient="180,0,0"/>
+	<param orient="180,0,0"/>
 </create>
 <create unit=".|" vrobj="basic:full">
-<side name="top" texture="@basic:brick.gif"/>
-<side name="bottom" texture="@basic:brick.gif"/>
-<side name="s" texture="@basic:brick.gif"/>
-<side name="w" texture="@basic:brick.gif"/>
-<side name="n" texture="@basic:brick.gif"/>
-<side name="e" texture="@basic:brick.gif"/>
+	<side name="top" texture="@basic:brick.gif"/>
+	<side name="bottom" texture="@basic:brick.gif"/>
+	<side name="s" texture="@basic:brick.gif"/>
+	<side name="w" texture="@basic:brick.gif"/>
+	<side name="n" texture="@basic:brick.gif"/>
+	<side name="e" texture="@basic:brick.gif"/>
 </create>
 <create unit=";A" vrobj="basic:halffloor">
-<side name="bottom" texture="@basic:brick.gif"/>
-<side name="diagonal" texture="@basic:brick.gif"/>
-<side name="e" texture="@basic:brick.gif"/>
-<side name="s" texture="@basic:brick.gif"/>
-<side name="top" texture="@basic:brick.gif"/>
-<param orient="90,0,0"/>
+	<side name="bottom" texture="@basic:brick.gif"/>
+	<side name="diagonal" texture="@basic:brick.gif"/>
+	<side name="e" texture="@basic:brick.gif"/>
+	<side name="s" texture="@basic:brick.gif"/>
+	<side name="top" texture="@basic:brick.gif"/>
+	<param orient="90,0,0"/>
 </create>
 <create unit=";B" vrobj="basic:halffloor">
-<side name="bottom" texture="@basic:brick.gif"/>
-<side name="diagonal" texture="@basic:brick.gif"/>
-<side name="e" texture="@basic:brick.gif"/>
-<side name="s" texture="@basic:brick.gif"/>
-<side name="top" texture="@basic:brick.gif"/>
-<param orient="180,0,0"/>
+	<side name="bottom" texture="@basic:brick.gif"/>
+	<side name="diagonal" texture="@basic:brick.gif"/>
+	<side name="e" texture="@basic:brick.gif"/>
+	<side name="s" texture="@basic:brick.gif"/>
+	<side name="top" texture="@basic:brick.gif"/>
+	<param orient="180,0,0"/>
 </create>
 <create unit=";C" vrobj="basic:ground">
 </create>
 <create unit=";D" vrobj="village:pot">
-<side name="panel1" texture="images/fountain.vri"/>
-<side name="panel2" texture="images/fountain.vri"/>
-<point_light style="static" brightness="60%" radius="3" position="(0,180,0)" flood="yes" color="(0,0,255)"/>
+	<side name="panel1" texture="images/fountain.vri"/>
+	<side name="panel2" texture="images/fountain.vri"/>
+	<point_light style="static" brightness="60%" radius="3" position="(0,180,0)" flood="yes" color="(0,0,255)"/>
 </create>
 <create unit=";E" vrobj="basic:full">
-<side name="top" texture="@basic:brick.gif"/>
-<side name="bottom" texture="@basic:brick.gif"/>
-<side name="s" texture="@basic:brick.gif"/>
-<side name="w" texture="@basic:brick.gif"/>
-<side name="n" texture="@basic:brick.gif"/>
-<side name="e" texture="@basic:brick.gif"/>
-</create>
+	<side name="top" texture="@basic:brick.gif"/>
+	<side name="bottom" texture="@basic:brick.gif"/>
+	<side name="s" texture="@basic:brick.gif"/>
+	<side name="w" texture="@basic:brick.gif"/>
+	<side name="n" texture="@basic:brick.gif"/>
+	<side name="e" texture="@basic:brick.gif"/>
+	</create>
 <create unit=";F" vrobj="basic:full">
-<side name="top" texture="@basic:brick.gif"/>
-<side name="bottom" texture="@basic:brick.gif"/>
-<side name="s" texture="@basic:brick.gif"/>
-<side name="w" texture="@basic:brick.gif"/>
-<side name="n" texture="@basic:brick.gif"/>
-<side name="e" texture="@basic:brick.gif"/>
+	<side name="top" texture="@basic:brick.gif"/>
+	<side name="bottom" texture="@basic:brick.gif"/>
+	<side name="s" texture="@basic:brick.gif"/>
+	<side name="w" texture="@basic:brick.gif"/>
+	<side name="n" texture="@basic:brick.gif"/>
+	<side name="e" texture="@basic:brick.gif"/>
 </create>
-<layer number="1">
+<layer number="1" name="ground">
 .( .( .( .( .( .( .( .( .( .( .U .( .( .( .( .( .( .( .( .( .( 
 .( .. .. ;F .. .| .. .. .. .9 ._ .t .. .. .. .. .. .. .. .. .( 
 .( .. .. 2g .8 2g .. .8 .. .. ._ .. .. .. .8 .8 .8 .8 .. .. .( 
@@ -208,7 +208,7 @@
 .( .. .. .. .. .. .. .. .. .9 ._ .t .. .| .8 .| .. .| .. .. .( 
 .( .( .( .( .( .( .( .( .( .( 2g .( .( .( .( .( .( .( .( .( .( 
 </layer>
-<layer number="2">
+<layer number="2" name="walklevel">
 .( .) .) .) .) .) .) .) .) .) .) .) .) .) .) .) .) .) .) .) .( 
 .+ .. .. ;B .. ;A .. .. .. .] .. 2o .. .. .. .. .. .. .. .. .= 
 .+ .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .= 
@@ -231,7 +231,7 @@
 .+ .. .. .. .. .. .. .. .. .. .. .. .. 2d .. 2d .. 2d .. .. .= 
 .( .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .[ .( 
 </layer>
-<layer number="3">
+<layer number="3" name="abovewalklevel">
 .Y .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .Y 
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
