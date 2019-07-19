@@ -3,13 +3,13 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>  
-<title name="VRGrid Scripting Example (Keys)"/> 
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(8,8,1)"/>
-<sky color="(0,0,255)"/>
-<ground texture="@basic:gtile.gif"/>
-<devel/>
+	<title name="VRGrid Scripting Example (Keys)"/> 
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(8,8,1)"/>
+	<sky color="(0,0,255)"/>
+	<ground texture="@basic:gtile.gif"/>
+	<devel/>
 </globals>
 <design>
 <create unit="11" vrobj="basic:full">
