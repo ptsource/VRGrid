@@ -3,15 +3,15 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf >
 <globals>
-<title name="VRGrid Scripting Example (Water effects)"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib"/>
-<lib href="https://ptsource.github.io/VRGrid/packs/garden.vlib"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(10,10,3)"/>
-<sky color="(0,0,255)"/>
-<ground/>
-<devel/>
+   <title name="VRGrid Scripting Example (Water effects)"/>
+   <lib href="https://ptsource.github.io/VRGrid/utils/base.vlib"/>
+   <lib href="https://ptsource.github.io/VRGrid/packs/garden.vlib"/>
+   <lib href="https://ptsource.github.io/VRGrid/utils/water.vlib"/>
+   <assets href="https://ptsource.github.io/VRGrid/assets/" />
+   <map dimensions="(10,10,3)"/>
+   <sky color="(0,0,255)"/>
+   <ground/>
+   <devel/>
 </globals>
 <design>
 <import href="scripts/water.vrf"/>
