@@ -3,14 +3,14 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals> 
-<title name="VRGrid Scripting Example (Dynamic texture change)" />
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
-<lib href="https://ptsource.github.io/VRGrid/packs/village.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(11,11,1)" /> 
-<sky color="(0,0,255)"/>
-<ground />
-<devel/>
+	<title name="VRGrid Scripting Example (Dynamic texture change)" />
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/village.vlib"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(11,11,1)" /> 
+	<sky color="(0,0,255)"/>
+	<ground />
+	<devel/>
 </globals> 
 <design>
 <create unit="t1" vrobj="basic:full">
