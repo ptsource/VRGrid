@@ -114,11 +114,7 @@
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
-<imagemap name="fork">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Fork Us at Github" />
-</imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
-<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
 <popup location="(14,14,1)" radius="1" placement="center" text="This sample shows how to use atmosphere and ambience to generate effects. View source for more details."/>
 <enter location="(14,14,1)" name="default"/>
 </design>
