@@ -3,15 +3,15 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Fog Demo"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/"/>
-<map dimensions="(17,17,4)"/>
-<atmosphere brightness="50%" />
-<orb brightness="50%"/>
-<fog color="(128,128,128)" density="2%"/>
-<ground texture="@base:gtile.gif" />
-<devel />
+	<title name="VRGrid Fog Demo"/>
+	<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/"/>
+	<map dimensions="(17,17,4)"/>
+	<atmosphere brightness="50%" />
+	<orb brightness="50%"/>
+	<fog color="(128,128,128)" density="2%"/>
+	<ground texture="@base:gtile.gif" />
+	<devel />
 </globals>
 <design> 
 <create unit=".e" vrobj="base:full">
