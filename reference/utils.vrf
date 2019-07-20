@@ -158,14 +158,10 @@
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
-<imagemap name="fork">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Fork Us at Github" />
-</imagemap>
 <imagemap name="vtpl">
     <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
-<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
 <popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
 <popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for various Utils libraries. It includes Terrain, Skybox, Axis, Gametools, Water and the VRGrid logo object. View source for more details."/>
 <enter location="(4,23,1)" name="default" angle="45" />
