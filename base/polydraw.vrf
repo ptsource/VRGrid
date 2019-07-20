@@ -210,14 +210,10 @@
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
-<imagemap name="fork">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Fork Us at Github" />
-</imagemap>
 <imagemap name="polydraw">
     <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:polydraw:start" text="Get PolyDraw" />
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
-<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
 <popup trigger="everywhere" texture="images/polydraw.vri" imagemap="polydraw" placement="bottom-left" brightness="100%"/>
 <popup location="(5,5,1)" radius="1" placement="center" text="This portal shows objects made with PTSource PolyDraw. PolyDraw can generate objects for VRGrid from over 50 3d formats."/>
 <enter location="(5,5,1)" name="default" angle="130"/>
