@@ -3,18 +3,18 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf vrfid="000003">
 <globals>
-<title name="VRGrid Mixed Shop Demo" />
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(30,20,11)"/>
-<loader texture="@basic:loadtile.vri" />
-<sky texture="@basic:clouds.gif" brightness="80%" />
-<atmosphere brightness="60%" color="(255,255,255)" /> 
-<orb position="(45,60)" brightness="60%" color="(255,255,204)" />
-<ambience file="@basic:ambient.wav" volume="85%" playback="looped"/> 
-<devel />
+	<title name="VRGrid Mixed Shop Demo" />
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(30,20,11)"/>
+	<loader texture="@basic:loadtile.vri" />
+	<sky texture="@basic:clouds.gif" brightness="80%" />
+	<atmosphere brightness="60%" color="(255,255,255)" /> 
+	<orb position="(45,60)" brightness="60%" color="(255,255,204)" />
+	<ambience file="@basic:ambient.wav" volume="85%" playback="looped"/> 
+	<devel />
 </globals>
 <design>
 <create unit="wa" vrobj="basic:full">
@@ -858,11 +858,7 @@
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
-<imagemap name="fork">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Fork Us at Github" />
-</imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
-<popup trigger="everywhere" texture="images/fork.vri" imagemap="fork" placement="top-left" brightness="100%"/>
 <enter name="default" angle="30" location="(8,19,4)" />
 </design>
 </vrf>
