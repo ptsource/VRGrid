@@ -50,7 +50,11 @@
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:tutorial" text="Go to full tutorial" />
+</imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
 <popup location="(5,5,1)" radius="1" placement="center" text="This shows how to use the Skybox lib to get instant skyboxes. The lib includes dozens of skyboxes avaliable see the Utils reference. View source for more details."/>
 <enter location="( 5, 5, 1)"  name="default" angle="30"/>
 </design>
