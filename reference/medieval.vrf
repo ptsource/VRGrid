@@ -64,7 +64,7 @@
 <create unit="g2" vrobj="medieval:aka1"><popup text="aka1" placement="top" trigger="rollover"/></create>
 <create unit="g3" vrobj="medieval:aka2"><popup text="aka2" placement="top" trigger="rollover"/></create>
 <create unit="g4" vrobj="medieval:aka3"><popup text="aka3" placement="top" trigger="rollover"/></create>
-<create unit="g5" vrobj="medieval:augsha"><popup text="augsha" placement="top" trigger="rollover"/></create>
+<create unit="g5" vrobj="medieval:column"><popup text="column" placement="top" trigger="rollover"/></create>
 <create unit="g6" vrobj="medieval:gandrizfull3"><popup text="gandrizfull3" placement="top" trigger="rollover"/></create>
 <create unit="g7" vrobj="medieval:kol"><popup text="kol" placement="top" trigger="rollover"/></create>
 <create unit="g8" vrobj="medieval:nramp1"><popup text="nramp1" placement="top" trigger="rollover"/></create>
