@@ -3,15 +3,15 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Art Gallery Demo"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(26,10,4)"/>
-<sky color="(0,0,0)" brightness="0%"/>
-<ambience file="@people:croudinside.wav" volume="85%" playback="looped"/>
-<devel/>
+	<title name="VRGrid Art Gallery Demo"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(26,10,4)"/>
+	<sky color="(0,0,0)" brightness="0%"/>
+	<ambience file="@people:croudinside.wav" volume="85%" playback="looped"/>
+	<devel/>
 </globals>
 <design>
 <create unit="Ii" vrobj="interior:crossbeamlamp">
@@ -53,79 +53,79 @@
 	<side name="*" texture="@interior:carpet.jpg"/>
 </create>
 <create unit="Aa" vrobj="basic:full"> 
-<side name="s" texture="images/art1.jpg"/>
+	<side name="s" texture="images/art1.jpg"/>
 </create>
 <create unit="Ab" vrobj="basic:full"> 
-<side name="s" texture="images/art2.jpg"/> 
+	<side name="s" texture="images/art2.jpg"/> 
 </create>
 <create unit="Ac" vrobj="basic:full"> 
-<side name="s" texture="images/art3.jpg"/> 
+	<side name="s" texture="images/art3.jpg"/> 
 </create>
 <create unit="Ad" vrobj="basic:full">
-<side name="w" texture="images/art4.jpg"/> 
+	<side name="w" texture="images/art4.jpg"/> 
 </create>
 <create unit="Ae" vrobj="basic:full"> 
-<side name="w" texture="images/art5.jpg"/> 
+	<side name="w" texture="images/art5.jpg"/> 
 </create>
 <create unit="Af" vrobj="basic:full"> 
-<side name="w" texture="images/art6.jpg"/> 
+	<side name="w" texture="images/art6.jpg"/> 
 </create>
 <create unit="Ag" vrobj="basic:full"> 
-<side name="n" texture="images/art7.jpg"/> 
+	<side name="n" texture="images/art7.jpg"/> 
 </create>
 <create unit="Ah" vrobj="basic:full"> 
-<side name="n" texture="images/art1.jpg"/> 
+	<side name="n" texture="images/art1.jpg"/> 
 </create>
 <create unit="Ai" vrobj="basic:full"> 
-<side name="n" texture="images/art2.jpg"/> 
+	<side name="n" texture="images/art2.jpg"/> 
 </create>
 <create unit="Aj" vrobj="basic:full"> 
-<side name="e" texture="images/art3.jpg"/> 
+	<side name="e" texture="images/art3.jpg"/> 
 </create>
 <create unit="Ak" vrobj="basic:full"> 
-<side name="e" texture="images/art4.jpg"/> 
+	<side name="e" texture="images/art4.jpg"/> 
 </create>
 <create unit="Al" vrobj="basic:full"> 
-<side name="w" texture="images/art5.jpg"/>
+	<side name="w" texture="images/art5.jpg"/>
 </create>
 <create unit="Am" vrobj="basic:full"> 
-<side name="w" texture="images/art6.jpg"/> 
+	<side name="w" texture="images/art6.jpg"/> 
 </create>
 <create unit="An" vrobj="basic:full"> 
-<side name="e" texture="images/art7.jpg"/> 
+	<side name="e" texture="images/art7.jpg"/> 
 </create>
 <create unit="Ao" vrobj="basic:full"> 
-<side name="s" texture="images/art1.jpg"/>
+	<side name="s" texture="images/art1.jpg"/>
 </create>
 <create unit="Ap" vrobj="basic:full"> 
-<side name="s" texture="images/art2.jpg"/> 
+	<side name="s" texture="images/art2.jpg"/> 
 </create>
 <create unit="Aq" vrobj="basic:full"> 
-<side name="s" texture="images/art3.jpg"/> 
+	<side name="s" texture="images/art3.jpg"/> 
 </create>
 <create unit="Ar" vrobj="basic:full"> 
-<side name="s" texture="images/art4.jpg"/> 
+	<side name="s" texture="images/art4.jpg"/> 
 </create>
 <create unit="As" vrobj="basic:full"> 
-<side name="n" texture="images/art5.jpg"/> 
+	<side name="n" texture="images/art5.jpg"/> 
 </create>
 <create unit="At" vrobj="basic:full"> 
-<side name="n" texture="images/art6.jpg"/> 
+	<side name="n" texture="images/art6.jpg"/> 
 </create>
 <create unit="Au" vrobj="basic:full"> 
-<side name="n" texture="images/art7.jpg"/> 
+	<side name="n" texture="images/art7.jpg"/> 
 </create>
 <create unit="Av" vrobj="basic:full"> 
-<side name="n" texture="images/art1.jpg"/> 
+	<side name="n" texture="images/art1.jpg"/> 
 </create>
 <create unit="Aw" vrobj="basic:full"> 
-<side name="e" texture="images/art2.jpg"/> 
+	<side name="e" texture="images/art2.jpg"/> 
 </create>
 <create unit="Ba" vrobj="basic:full"> 
-<side name="e" texture="images/art3.jpg"/> 
+	<side name="e" texture="images/art3.jpg"/> 
 </create>
 <create unit="Bb" vrobj="basic:full"> 
-<side name="e" texture="images/art4.jpg"/> 
+	<side name="e" texture="images/art4.jpg"/> 
 </create>
 <create unit="p1" vrobj="people:personsprite">
    <side name="*" texture="@people:people1.vri"/>
