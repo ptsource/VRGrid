@@ -31,11 +31,13 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 * Cloud based VRF(xml) files
 * Native VR support
 * Github hosting support for team management
+* [More than 1000 pre-made objects](https://wiki.ptsource.eu/software/vrgrid/3dobjects)
+* Generate 3d objects from more than 50 3d formats with PolyDraw
 * Integrated speech engine
-* Integrated HTML support
-* Integrated Media support
+* Integrated HTML render support
+* Integrated Media render support
 * Custom VRI Texture format
-* PHP & MYSQL Get and Post support
+* HTTP Get and Post support for database backend
 * ... and much more
 
 ## VRModes supported
