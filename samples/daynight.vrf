@@ -3,7 +3,6 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-        <assign name="title" content="VRGrid Night and Day Demo" />
 	<assign name="author" content="PTSource" />
 	<assign name="description" content="VRGrid Night and Day Demo. This sample shows a scripting example on how to change light and textures in accordance with the time." />
 	<assign name="image" content="" />
