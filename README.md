@@ -32,7 +32,7 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 * Native VR support
 * Github hosting support for team management
 * [More than 1000 pre-made objects](https://wiki.ptsource.eu/software/vrgrid/3dobjects)
-* Generate 3d objects from more than 50 3d formats with [PolyDraw](https://wiki.ptsource.eu/software/polydraw/start)
+* [Convert support from more than 50 3d formats with PolyDraw](https://wiki.ptsource.eu/software/polydraw/start)
 * Integrated speech engine
 * Integrated HTML render support
 * Integrated Media render support
