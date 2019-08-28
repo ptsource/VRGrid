@@ -31,6 +31,7 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 * Cloud based VRF(xml) files
 * Native VR support
 * Github hosting support for team management
+* [Full syntax highlighting and preview support with PTSource Developer Platform](https://wiki.ptsource.eu/software/platform/start)
 * [More than 1000 pre-made objects](https://wiki.ptsource.eu/software/vrgrid/3dobjects)
 * [Convert support from more than 50 3d formats with PTSource PolyDraw](https://wiki.ptsource.eu/software/polydraw/start)
 * Integrated speech engine
