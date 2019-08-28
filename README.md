@@ -55,4 +55,12 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 * Hillcrest Labs Tracker
 * FreeTrack Tracker
 
+## Download
+
+[![You can download here.](/images/download-here-green.svg)](https://wiki.ptsource.eu/software/downloads)
+
+## Support
+
+[![Visit homepage.](/images/homepage-here-yellowgreen.svg)](https://wiki.ptsource.eu/)
+
 
