@@ -14,8 +14,7 @@
 <design> 
 <create unit="##" vrobj="base:full">
 <action trigger="click on" text="Click me for a HTML popup" sidename="w">
-        <!--<htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/test.html|HTML Popup|400|300"/>-->
-	<htmlpage pageurl="https://www.youtube.com/watch?v=WyvN3PdUHQM|Youtube Video|560|315"/>
+        <htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/test.html|HTML Popup|400|300"/>
 </action>
 </create>
 <layer number="1" >
