@@ -1,18 +1,37 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>VRGrid Youtube</title>
-<link rel='stylesheet' href='css/video-js.css'>
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - VideoJS + Youtube</title>
+<link rel='stylesheet' href='https://vjs.zencdn.net/5.7.1/video-js.css'>
+<style>
+    button{font-size:16px;margin:20px 10px;}
+  </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
 </head>
 <body translate="no">
 <video id="vid1" class="video-js vjs-default-skin" controls width="560" height="315" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=iRusbYIyRNI"}] }'>
 </video>
 <button onclick="_vplayer.play()">play</button>
 <button onclick="_vplayer.requestFullscreen()">fullscreen</button>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
 <script src='https://vjs.zencdn.net/5.7.1/video.js'></script>
 <script id="rendered-js">
-/* The MIT License (MIT)
+      /* The MIT License (MIT)
+
+Copyright (c) 2014-2015 Benoit Tremblay <trembl.ben@gmail.com>
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -642,6 +661,7 @@ THE SOFTWARE. */
 
 
 _vplayer = videojs('vid1');
+      //# sourceURL=pen.js
     </script>
 </body>
 </html>
