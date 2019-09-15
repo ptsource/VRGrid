@@ -13,7 +13,7 @@
         effect:'fade',  // available fade, scrollUp/Down/Left/Right, zoom, zoomFade, growX, growY
         effectTime:1000,// available fast,slow,normal and any valid fx speed value
         filter:true,    // remove <br/>, empty <div>, <p> and other stuff
-        nextClick:false,      // bind content click next slide
+        nextClick:true,      // bind content click next slide
         playClick:false,      // bind content click play/stop
         playHover:false,      // bind content hover play/stop
         playHoverr:false,     // bind content hover stop/play (reverse of playHover)
