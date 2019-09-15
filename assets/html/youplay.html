@@ -1,69 +1,48 @@
-<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Youtube Player</title>
-  <script type="text/javascript" src="js/youplay.js"></script>
-  <script>
-  ;(function ($, window, document, undefined) {
-	var timeout;
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
 
-	var event_handler = function (event) {
-	  console.log('on ' + event, this);
-	};
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "http://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-	var start = function (event) {
-	  var player = this.p;
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'u1zgFlCw8Aw',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
 
-	  timeout = setInterval(function () {
-	    console.log('current time: ', player.getCurrentTime());
-	  }, 50);
-	};
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
 
-	var stop = function (event) {
-	  clearInterval(timeout);
-	};
-
-	$(function () {
-
-		$('#player-1').player({ video: 'MHHw-kEEGUo', playerVars: { start: 50 }, events: { end: stop, play: start, pause: stop } });
-
-    // $('#tube-1').tube({ player: 'player-2', user: 'CTBTO', thumbnail: 'hqdefault', autoplay: true, limit: 5, start: 3, controls: 1, hide: 1,
-    //   events: { load: event_handler, play: event_handler, pause: event_handler,
-    //   stop: event_handler, end: event_handler, ready: event_handler }, truncate: true,
-    //   templates: { description: '<p>Description:</p><p>{description}</p>' }
-    //     });
-    //
-    //     $('#tube-2').tube({ player: 'player-2', playlist: 'PL6EAA9FF571B3BFEE', autoplay: true, limit: 3,
-    //       events: { load: event_handler, play: event_handler, pause: event_handler,
-    //       stop: event_handler, end: event_handler, ready: event_handler }
-    //     });
-    //
-    //     $('#tube-3').tube({ player: 'player-1', query: 'nuclear testing', limit: 3,
-    //       events: { load: event_handler, play: event_handler, pause: event_handler,
-    //       stop: event_handler, end: event_handler, ready: event_handler }
-    //     });
-
-    $('#tube-4').tube({ player: 'player-1', list: ['lVQ1EKR1v1I', 'ylLzyHk54Z0', 'sOEAD-gfJ_M'],
-      events: { load: event_handler, play: event_handler, pause: event_handler,
-      stop: event_handler, end: event_handler, ready: event_handler }
-    });
-
-
-	});
-
-}(jQuery, this, this.document));
-  </script>
-</head>
-<body>
-
-  <div id="player-1"></div>
-  <div id="player-2"></div>
-
-	<div id="tube-1"></div>
-	<div id="tube-2"></div>
-	<div id="tube-3"></div>
-	<div id="tube-4"></div>
-
-</body>
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+  </body>
 </html>
