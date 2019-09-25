@@ -1,0 +1,646 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+   <globals>
+      <devel />
+      <title name="TW3D" />
+      <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8" />
+      <lib href="https://ptsource.github.io/VRGrid/packs/warehouse.vlib" required="2.8" />
+      <assets href="https://ptsource.github.io/VRGrid/assets/" />
+      <map dimensions="(14,25,8)" />
+      <ground texture="@warehouse:floor.gif" />
+      <atmosphere brightness="80%" />
+   </globals>
+   <design>
+      <layer number="1">
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     mm WC (F El Wl (F EC WC (F EC Wl (F EC mm
+     mm Wl (E El WC (E EC Wm (E EC Wl (E EC mm
+     mm Wl (D El Wl (D EC WC (D EC Wn (D EC mm
+     mm Wl (C El Wl (C EC WC (C EC Wl (C EC mm
+     mm WC (B EC Wl (B EC WC (B EC WC (B EC mm
+     mm Wh (A Eg Wg (A Eg Wh (A EB Wg (A EB mm
+     mm WB (@ EB WB (@ EB WB (@ EB Wg (@ EB mm
+     mm Wh (? EB Wg (? Eg Wg (? EB Wg (? EB mm
+     mm WB (; EB WB (; Eg Wg (; EB WB (; EB mm
+     mm WB (: Eg Wh (: Ei Wg (: Eg Wg (: EB mm
+     mm Wi (9 EB Wg (9 Eg Wg (9 EB WB (9 Eh mm
+     mm WB (8 Eg Wg (8 EB Wg (8 Eh Wg (8 Ei mm
+     mm Wh (7 Eh Wh (7 Eg Wg (7 EB Wg (7 EB mm
+     mm Wg (6 Eg Wh (6 EB Wg (6 EB Wh (6 Eh mm
+     mm Wg (5 Eh WB (5 Eh Wi (5 EB Wh (5 EB mm
+     mm WA (4 EA WA (4 Ef WA (4 EA Wd (4 EA mm
+     mm WA (3 Ee Wd (3 Ed Wd (3 EA WA (3 EA mm
+     mm Wf (2 Ee WA (2 EA Wd (2 EA WA (2 EA mm
+     mm We (1 Ed Wd (1 EA WA (1 EA Wd (1 Ed mm
+     mm WA (0 EA Wd (0 EA Wd (0 EA WA (0 Ed mm
+     mm !0 .. !1 !2 .. !3 !4 .. !5 !6 .. !7 mm
+     mm .. .. .. .. .. .. .. .. .. .. .. .. mm
+     mm rS rS rS rS rS rS rS rS rS rS rS rS mm
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+      </layer>
+      <layer number="2">
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     mm Wn .. Em Wl .. EC Wl .. EC Wl .. EC mm
+     mm Wm .. El Wl .. EC Wl .. EC WC .. EC mm
+     mm Wl .. El Wl .. EC Wl .. Em Wl .. El mm
+     mm Wl .. El WC .. EC Wl .. EC Wl .. EC mm
+     mm Wl .. Em Wl .. EC Wl .. EC Wl .. Em mm
+     mm Wh .. Ei Wg .. Eg Wg .. EB Wg .. EB mm
+     mm WB .. Eh Wg .. EB Wg .. Eg Wg .. EB mm
+     mm Wi .. Ei WB .. Eg Wg .. EB Wg .. Eh mm
+     mm Wh .. Eg Wg .. Eg Wg .. Eg WB .. Eh mm
+     mm Wh .. Eh Wg .. Eg Wg .. EB Wh .. Eg mm
+     mm Wh .. Eh Wi .. EB Wg .. Eh Wg .. EB mm
+     mm Wh .. Eg Wi .. Eg Wg .. EB Wg .. EB mm
+     mm Wg .. Eg Wg .. Eh Wg .. EB Wg .. EB mm
+     mm Wi .. Eg Wg .. Eh Wg .. EB Wg .. Eh mm
+     mm Wh .. Eg Wh .. Eg Wh .. Eg Wg .. Eg mm
+     mm Wf .. Ed Wd .. Ed Wd .. EA WA .. Ed mm
+     mm We .. Ef We .. Ed Wd .. Ed Wd .. Ef mm
+     mm We .. Ef Wd .. Ef Wd .. EA Wd .. EA mm
+     mm We .. Ed Wd .. EA Wd .. EA Wd .. Ee mm
+     mm Wd .. Ed Wf .. Ed Wd .. EA Wd .. Ee mm
+     mm .. .. .. .. .. .. .. .. .. .. .. .. mm
+     mm .. .. .. .. .. .. .. .. .. .. .. .. mm
+     mm .. .. .. .. .. .. .. .. .. .. .. .. mm
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     </layer>
+     <layer number="3">
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     mm Wl -- El Wl -- El Wl -- El WC -- El mm
+     mm Wl -- El Wm -- Em Wl -- El Wl -- El mm
+     mm Wl -- Em WC -- El WC -- Em Wm -- El mm
+     mm Wm -- El Wl -- Em Wm -- El Wl -- EC mm
+     mm Wl -- El Wm -- El Wl -- El Wl -- El mm
+     mm Wg -- Eg Wg -- Eg Wg -- Eg Wg -- Eg mm
+     mm Wg -- Eh Wg -- Eh Wg -- Eg WB -- Eg mm
+     mm Wg -- Eg Wg -- Eg Wg -- Eg Wg -- Eg mm
+     mm Wg -- Eh Wg -- Eh Wh -- Eg Wg -- Eg mm
+     mm Wh -- EB Wh -- Eg Wg -- EB Wg -- Eh mm
+     mm WB -- Eh Wg -- Eg Wg -- Eg Wg -- Eg mm
+     mm Wg -- Eg Wg -- Eh Wg -- Eg Wg -- Eg mm
+     mm Wg -- Eg Wg -- Eg Wg -- Eg Wh -- EB mm
+     mm Wg -- Eg Wg -- Eg Wg -- Eg Wg -- Eg mm
+     mm Wg -- Eh Wg -- Eg Wg -- Eh Wg -- Eg mm
+     mm We -- Ed WA -- Ed We -- Ee Wd -- Ed mm
+     mm Wd -- Ee Wd -- Ed Wd -- Ee Wd -- Ed mm
+     mm Wd -- Ed Wd -- Ed Wd -- Ed Wd -- Ed mm
+     mm We -- Ed Wd -- Ee Wd -- Ed Wd -- Ed mm
+     mm Wd -- Ed Wd -- Ee Wd -- Ed Wd -- Ed mm
+     mm -- -- -- -- -- -- -- -- -- -- -- -- mm
+     mm -- -- -- -- -- -- -- -- -- -- -- -- mm
+     mm -- -- -- -- -- -- -- -- -- -- -- -- mm
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     </layer>
+     <layer number="4">
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     mm Wl .. El Wn .. Em Wl .. El Wl .. El mm
+     mm Wl .. El Wl .. El Wl .. El Wl .. El mm
+     mm Wl .. El Wm .. El Wl .. Em WC .. El mm
+     mm Wm .. El Wl .. Em Wm .. El WC .. EC mm
+     mm Wl .. El Wl .. El WC .. El Wl .. El mm
+     mm Wg .. Eg Wh .. Eg Wg .. Eg Wg .. Eg mm
+     mm Wg .. Eg Wg .. Eh Wg .. Eh Wg .. Eh mm
+     mm Wg .. Eg Wh .. Eg Wg .. Eg Wh .. EB mm
+     mm Wg .. Eg Wh .. Eh WB .. Eg Wg .. Eh mm
+     mm Wh .. Eg Wg .. Eg Wh .. Eg Wg .. Eg mm
+     mm Wg .. Eg Wg .. Eg Wg .. Eg Wg .. EB mm
+     mm Wh .. Eg Wh .. Eg Wh .. Eh Wg .. Eg mm
+     mm Wg .. Eh Wg .. Eg Wg .. Eh Wh .. EB mm
+     mm Wg .. Eg Wg .. Eg Wg .. Eg Wg .. EB mm
+     mm Wg .. Eg Wg .. EB WB .. EB Wg .. Eg mm
+     mm Wd .. Ed We .. Ed Wd .. Ed Wd .. Ed mm
+     mm Wd .. Ee WA .. Ed Wd .. Ed We .. Ed mm
+     mm Wd .. Ed WA .. Ed Wd .. Ed We .. Ed mm
+     mm Wd .. Ed Wd .. Ee We .. Ed Wd .. Ed mm
+     mm Wd .. Ee Wd .. Ed Wd .. Ed Wd .. Ed mm
+     mm .. .. .. .. .. .. .. .. .. .. .. .. mm
+     mm .. .. .. .. .. .. .. .. .. .. .. .. mm
+     mm .. .. .. .. .. .. .. .. .. .. .. .. mm
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     </layer>
+     <layer number="5">
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm tt ll tt tt ll tt tt ll tt tt ll tt mm
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     </layer>
+     <layer number="6">
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm t1 ss t2 t1 ss t2 t1 ss t2 t1 ss t2 mm
+     mm mm mm mm mm mm mm mm mm mm mm mm mm mm
+     </layer>
+     <layer number="7">
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. .. .. .. ..
+     </layer>
+     <layer number="8">
+       N_ NA NB NC NP NS Na Nb nc N| .. .. ..
+       S_ SA SB SC SP SS Sa Sb Sc S| -- .. ..
+       W_ WA WB WC WP WS Wa Wb Wc W| .. .. ..
+       E_ EA EB EC EP ES Ea Eb Ec E| .. .. ..
+       N0 N1 N2 N3 N4 N5 N6 N7 N8 N9 N* N_ NI
+       S0 S1 S2 S3 S4 S5 S6 S7 S8 S9 S* S_ SI
+       W0 W1 W2 W3 W4 W5 W6 W7 W8 W9 W* W_ WI
+       E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 E* E_ EI
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       .. .. .. .. .. .. .. .. .. .. .. .. ..
+       </layer>
+      <define>
+         <function name="start">player.size:x=100;
+          player.size:z=100;
+          player.size:y=350;
+      </function>
+      </define>
+      <CREATE unit="t1" vrobj="basic:wramp">
+         <side name="*" style="stretched" texture="@warehouse:tex5.jpg" />
+         <param orient="0,180,0" />
+      </CREATE>
+      <CREATE unit="t2" vrobj="basic:eramp">
+         <side name="*" style="stretched" texture="@warehouse:tex5.jpg" />
+         <param orient="0,180,0" />
+      </CREATE>
+      <CREATE unit="ss" vrobj="basic:ground">
+         <side name="*" style="stretched" texture="@warehouse:tex5.jpg" />
+         <param orient="0,180,0" />
+      </CREATE>
+      <CREATE unit="ll" vrobj="warehouse:crossbeamlamp" />
+      <CREATE unit="tt" vrobj="warehouse:crossbeam" />
+      <CREATE unit="W|" vrobj="warehouse:soffitto">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E|" vrobj="warehouse:soffitto">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W_" vrobj="warehouse:single">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E_" vrobj="warehouse:single">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="mm" vrobj="basic:full">
+         <side name="*" style="stretched" texture="@warehouse:tex5.jpg" />
+      </CREATE>
+      <CREATE unit="WH" vrobj="warehouse:single">
+         <side name="obj" color="(255,0,0)" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="EH" vrobj="warehouse:single">
+         <side name="obj" color="(255,0,0)" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="--" vrobj="basic:ground">
+         <side name="*" style="stretched" texture="@warehouse:grate.vri" />
+      </CREATE>
+      <CREATE unit="WA" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="EA" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="WB" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="EB" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="WC" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="EC" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="WP" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="EP" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="WS" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:blue.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:blue.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="ES" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:blue.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:blue.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W0" vrobj="warehouse:vuoto">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E0" vrobj="warehouse:vuoto">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W1" vrobj="warehouse:a1">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E1" vrobj="warehouse:a1">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W2" vrobj="warehouse:a2">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E2" vrobj="warehouse:a2">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W3" vrobj="warehouse:a3">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E3" vrobj="warehouse:a3">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W4" vrobj="warehouse:a4">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E4" vrobj="warehouse:a4">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W5" vrobj="warehouse:a5">
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E5" vrobj="warehouse:a5">
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W6" vrobj="warehouse:a1">
+         <side name="1" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E6" vrobj="warehouse:a1">
+         <side name="1" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W7" vrobj="warehouse:a2">
+         <side name="2" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E7" vrobj="warehouse:a2">
+         <side name="2" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W8" vrobj="warehouse:a3">
+         <side name="3" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E8" vrobj="warehouse:a3">
+         <side name="3" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W9" vrobj="warehouse:a4">
+         <side name="4" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E9" vrobj="warehouse:a4">
+         <side name="4" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="W*" vrobj="warehouse:a5">
+         <side name="5" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="E*" vrobj="warehouse:a5">
+         <side name="5" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="WI" vrobj="si">
+         <side name="impe" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="EI" vrobj="si">
+         <side name="impe" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wa" vrobj="warehouse:single">
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+      </CREATE>
+      <CREATE unit="Ea" vrobj="warehouse:single">
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+      </CREATE>
+      <CREATE unit="Wb" vrobj="warehouse:single">
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+      </CREATE>
+      <CREATE unit="Eb" vrobj="warehouse:single">
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+      </CREATE>
+      <CREATE unit="Wc" vrobj="warehouse:single">
+         <side name="obj" style="stretched" texture="@warehouse:blue.gif" />
+      </CREATE>
+      <CREATE unit="Ec" vrobj="warehouse:single">
+         <side name="obj" style="stretched" texture="@warehouse:blue.gif" />
+      </CREATE>
+      <CREATE unit="Wd" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="Ed" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="We" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="Ee" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wf" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="Ef" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wg" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="Eg" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wh" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="Eh" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wi" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="Ei" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wl" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="El" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wm" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="Em" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="Wn" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="En" vrobj="warehouse:single">
+         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
+         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
+         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
+         <param orient="180,0,0" />
+      </CREATE>
+      <CREATE unit="!0" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:A.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="!1" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:B.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="!2" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:C.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="!3" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:D.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="!4" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:E.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="!5" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:F.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="!6" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:G.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="!7" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:H.gif" />
+         <param orient="0,0,0" />
+      </CREATE>
+      <CREATE unit="(0" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_1.gif" />
+      </CREATE>
+      <CREATE unit="(1" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_2.gif" />
+      </CREATE>
+      <CREATE unit="(2" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_3.gif" />
+      </CREATE>
+      <CREATE unit="(3" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_4.gif" />
+      </CREATE>
+      <CREATE unit="(4" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_5.gif" />
+      </CREATE>
+      <CREATE unit="(5" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_6.gif" />
+      </CREATE>
+      <CREATE unit="(6" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_7.gif" />
+      </CREATE>
+      <CREATE unit="(7" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_8.gif" />
+      </CREATE>
+      <CREATE unit="(8" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_9.gif" />
+      </CREATE>
+      <CREATE unit="(9" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_10.gif" />
+      </CREATE>
+      <CREATE unit="(:" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_11.gif" />
+      </CREATE>
+      <CREATE unit="(;" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_12.gif" />
+      </CREATE>
+      <CREATE unit="(?" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_13.gif" />
+      </CREATE>
+      <CREATE unit="(@" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_14.gif" />
+      </CREATE>
+      <CREATE unit="(A" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_15.gif" />
+      </CREATE>
+      <CREATE unit="(B" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_16.gif" />
+      </CREATE>
+      <CREATE unit="(C" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_17.gif" />
+      </CREATE>
+      <CREATE unit="(D" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_18.gif" />
+      </CREATE>
+      <CREATE unit="(E" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_19.gif" />
+      </CREATE>
+      <CREATE unit="(F" vrobj="basic:ground">
+         <side name="top" style="stretched" texture="@warehouse:_20.gif" />
+      </CREATE>
+      <IMAGEMAP NAME="multientrance">
+         <AREA SHAPE="rect" COORDS="1,1,16,16" HREF="#default" />
+         <AREA SHAPE="rect" COORDS="1,21,16,36" HREF="#ent2" />
+      </IMAGEMAP>
+      <imagemap name="github">
+         <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
+      </imagemap>
+      <imagemap name="tutorial">
+         <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:tutorial" text="Go to full tutorial" />
+      </imagemap>
+      <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%" />
+      <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%" />
+      <popup texture="@warehouse:e2_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
+      <enter location="(3,23,1)" name="default" angle="0,0" />
+      <enter location="(3,23,3)" name="ent2" angle="0,0" />
+   </design>
+</vrf>
