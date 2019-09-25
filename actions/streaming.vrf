@@ -16,27 +16,27 @@
 <create unit="@@" vrobj="basic:portal">
 </create>
 <create unit="11" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="images/tv_1_1.jpg" clarity="60%"/>
+      <side name="n,e,w,top,bottom" texture="images/tv_1_1.jpg" clarity="10%"/>
       <side name="s" stream="streamscreen" rect="0%,0%,33.3%,50%"/>
 </create>
 <create unit="22" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="images/tv_2_1.jpg" clarity="60%"/>
+      <side name="n,e,w,top,bottom" texture="images/tv_2_1.jpg" clarity="10%"/>
       <side name="s" stream="streamscreen" rect="33.3%,0%,66.6%,50%"/>
 </create>
 <create unit="33" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="images/tv_3_1.jpg" clarity="60%"/>
+      <side name="n,e,w,top,bottom" texture="images/tv_3_1.jpg" clarity="10%"/>
       <side name="s" stream="streamscreen" rect="66.6%,0%,100%,50%"/>
 </create>
 <create unit="44" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="images/tv_2_1.jpg" clarity="60%"/>
+      <side name="n,e,w,top,bottom" texture="images/tv_2_1.jpg" clarity="10%"/>
       <side name="s" stream="streamscreen" rect="0%,50%,33.3%,100%"/>
 </create>
 <create unit="55" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="images/tv_2_2.jpg" clarity="60%"/>
+      <side name="n,e,w,top,bottom" texture="images/tv_2_2.jpg" clarity="10%"/>
       <side name="s" stream="streamscreen" rect="33.3%,50%,66.6%,100%"/>
 </create>
 <create unit="66" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="images/tv_2_3.jpg" clarity="60%"/>
+      <side name="n,e,w,top,bottom" texture="images/tv_3_2.jpg" clarity="10%"/>
       <side name="s" stream="streamscreen" rect="66.6%,50%,100%,100%"/>
 </create>
 <layer number="1">
