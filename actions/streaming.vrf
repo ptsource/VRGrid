@@ -9,7 +9,7 @@
       <map dimensions="(7,10,2)"/>
       <sky color="(0,0,255)"/>
     	<ground texture="@basic:gtile.gif"/>
-      <stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/video.rm"/>
+      <stream name="streamscreen" rmurl="http://repo.ptsource.eu/rms/streamvideo.rm"/>
       <devel />
 </globals>
 <design>
@@ -17,27 +17,27 @@
 </create>
 <create unit="11" vrobj="basic:full">
       <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="60%"/>
-      <side name="s" stream="bugslife" rect="0%,0%,33.3%,50%"/>
+      <side name="s" stream="streamscreen" rect="0%,0%,33.3%,50%"/>
 </create>
 <create unit="22" vrobj="basic:full">
       <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="60%"/>
-      <side name="s" stream="bugslife" rect="33.3%,0%,66.6%,50%"/>
+      <side name="s" stream="streamscreen" rect="33.3%,0%,66.6%,50%"/>
 </create>
 <create unit="33" vrobj="basic:full">
       <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="60%"/>
-      <side name="s" stream="bugslife" rect="66.6%,0%,100%,50%"/>
+      <side name="s" stream="streamscreen" rect="66.6%,0%,100%,50%"/>
 </create>
 <create unit="44" vrobj="basic:full">
       <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="60%"/>
-      <side name="s" stream="bugslife" rect="0%,50%,33.3%,100%"/>
+      <side name="s" stream="streamscreen" rect="0%,50%,33.3%,100%"/>
 </create>
 <create unit="55" vrobj="basic:full">
       <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="60%"/>
-      <side name="s" stream="bugslife" rect="33.3%,50%,66.6%,100%"/>
+      <side name="s" stream="streamscreen" rect="33.3%,50%,66.6%,100%"/>
 </create>
 <create unit="66" vrobj="basic:full">
       <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="60%"/>
-      <side name="s" stream="bugslife" rect="66.6%,50%,100%,100%"/>
+      <side name="s" stream="streamscreen" rect="66.6%,50%,100%,100%"/>
 </create>
 <layer number="1">
 .. .. 44 55 66 .. ..
