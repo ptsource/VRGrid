@@ -3,7 +3,7 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-     <title name="VRGrid Mix Libs Demo"/>
+     <title name="VRGrid Mix Libraries Demo"/>
      <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
      <lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
      <lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" required="2.8"/>
