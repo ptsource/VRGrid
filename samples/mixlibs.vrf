@@ -156,34 +156,38 @@
 <point_light style="static" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/> 
 </create>
 <create unit="fc" vrobj="interior:chimneystack">
-<param orient="180,0"/> 
+     <param orient="180,0"/> 
 </create>
 <create unit="ew" vrobj="interior:window">
-<side name="n,s,wedge,eedge,topedge,bottomedge,inneredge" texture="@interior:stone.jpg"/>
-<param orient="270,0"/>
+     <side name="n,s,wedge,eedge,topedge,bottomedge,inneredge" texture="@interior:stone.jpg"/>
+     <param orient="270,0"/>
 </create>
 <create unit="bd" vrobj="interior:bed">
-<param orient="90,0"/> 
+     <param orient="90,0"/> 
 </create>
 <create unit="d1" vrobj="interior:door">
-<side name="walls" texture="@interior:stone.jpg"/>
-<param orient="270,0"/>
+     <side name="walls" texture="@interior:stone.jpg"/>
+     <side name="nknob,sknob,dooredges" texture="@interior:clear.gif"/>
+     <side name="ndoor,sdoor" texture="@village:door.vri"/>
+     <param orient="270,0"/>
 </create>
 <create unit="d2" vrobj="interior:dooropen">
-<side name="walls" texture="@interior:stone.jpg"/>
-<param orient="270,0"/> 
+     <side name="walls" texture="@interior:stone.jpg"/>
+     <side name="nknob,sknob,dooredges" texture="@interior:clear.gif"/>
+     <side name="ndoor,sdoor" texture="@village:door.vri"/>
+     <param orient="270,0"/> 
 </create>
 <create unit="cu" vrobj="interior:dresser">
-<param orient="180,0"/> 
+     <param orient="180,0"/> 
 </create>
 <create unit="nb" vrobj="interior:chimneystack">
-<param orient="90,0,90"/>
+     <param orient="90,0,90"/>
 </create>
 <create unit="et" vrobj="interior:chimneystack">
-<param orient="90,0"/>
+     <param orient="90,0"/>
 </create>
 <create unit="eb" vrobj="interior:chimneystack">
-<param orient="90,0"/>
+     <param orient="90,0"/>
 </create>
 <create unit="st" vrobj="interior:chimneystack">
 <param orient="0,90"/>
