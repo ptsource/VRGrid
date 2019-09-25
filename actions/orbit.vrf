@@ -119,6 +119,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(6,9,1)" radius="1" placement="center" text="This sample shows the ORBIT action usage. Parameters are (distance|speed|spin angles). Click the objects to see. View source for more details."/>
 <enter location="(6,9,3)"   name="default" angle="80"/>
 </design>
 </vrf>
