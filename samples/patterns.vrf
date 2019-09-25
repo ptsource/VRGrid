@@ -1,0 +1,163 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+	<title name="VRGrid Action Patterns Demo" />
+	<lib href="https://ptsource.github.io/VRGrid/packs/medieval.vlib"/> 
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(25,17,4)" /> 
+	<sky brightness="90%" /> 
+	<orb position="(50,50)" brightness="100%" />
+	<atmosphere brightness="40%" /> 
+	<ground texture="@medieval:wall.jpg" /> 
+	<fog color="(0,0,0)" start="1" end="8" density="5%" />
+	<devel />
+</globals>
+<design> 
+<create unit=".#" vrobj="medieval:full"> 
+	<side name="*" texture="@medieval:bigtiles.jpg" />
+	<param orient="0,0,0" walkable="yes" />
+</create>
+<create unit="c#" vrobj="medieval:full"> 
+	<side name="*" texture="@medieval:bigtiles.jpg" ANGLE="0" />
+	<param orient="0,0,0" />
+</create>
+<create unit="ca" vrobj="medieval:face"> 
+	<side name="face" texture="@medieval:face.jpg" angle="180" />
+	<side name="back" texture="@medieval:bigtiles.jpg" />
+	<param orient="180,0,0" walkable="yes" />
+	<action trigger="start" > 
+		<move pattern="(sp,1000,1000,1000), (mv,0,0,-80)" /> 
+	</action>
+	<action trigger="key down" key="c"> 
+		<move pattern="(sp,10.5,10.5,10.5), (mv,0,0,1), (sp,50.5,50.5,50.5), (mv,0,-256,0), (sp,0,0,0), (mv,0,1,0)" />
+	 </action>
+</create>
+<create unit="11" vrobj="medieval:full"> 
+	<side name="*" texture="@medieval:wall.jpg" />
+	<param scale="(1,0.3,1)" />
+</create>
+<create unit=".1" vrobj="medieval:puerta"> 
+	<side name="top,e,w,n,s,arcada" texture="@medieval:bigtiles.jpg" />
+	<side name="guardas,guardan" texture="@medieval:trim.jpg" />
+	<param orient="0,0,0" walkable="yes" scale="(1,1,1)" />
+</create>
+<create unit="12" vrobj="medieval:puerta"> 
+	<side name="top,e,w,n,s,arcada" texture="@medieval:bigtiles.jpg" />
+	<side name="guardas,guardan" texture="@medieval:trim.jpg" />
+	<param orient="0,0,0" walkable="yes" scale="(2,2,1)" />
+</create>
+<create unit=".2" vrobj="medieval:puerta"> 
+	<side name="top,e,w,n,s,arcada" texture="@medieval:bigtiles.jpg" />
+	<side NAME="guardas,guardan" texture="@medieval:trim.jpg" />
+	<param orient="90,0,0" />
+</create>
+<create unit="1#" vrobj="medieval:full"> 
+	<side name="*" texture="@medieval:bigtiles.jpg" />
+	<param orient="90,0,0" walkable="yes" scale="(3,0.1,3)" />
+</create>
+<create unit=".I" vrobj="medieval:column"> 
+	<side name="*" texture="@medieval:wall.jpg" style="scaled" />
+	<param orient="0,0,0" />
+</create>
+<create unit="yu" vrobj="medieval:bushes"> 
+	<side name="base" faces="0" />
+	<side name="bushes" texture="@medieval:bushes.gif" clarity="25%" solid="no" />
+	<param orient="0,0,0" walkable="yes" scale="(1,0.7,1)" />
+</create>
+<create unit="c1" vrobj="medieval:face"> 
+	<side name="*" texture="@medieval:face.jpg" angle="180" />
+	<param orient="180,0,0" walkable="yes" scale="(1,1,1.5)" />
+</create>
+<layer number="1"> 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. yu yu yu yu yu yu .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. yu yu yu yu yu yu .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. yu yu yu yu yu yu .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .1 .# .1 .1 .1 .# .1 .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .2 .. .. .. .I .. .. .. .2 .. .. .. .. .. .. .. .. ..
+.. .. .. yu .. .. .. .2 .. .. .I 11 .I .. .. .2 .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .2 .. .. 1# .I .. .. .. .2 .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .2 .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .1 .1 .1 .1 .1 .1 .1 .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer> 
+
+<layer number="2"> 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. ca .. ca ca ca .. ca .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# c# .# c# c# c# .# c# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .. .. .. .. .. .. .. .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .. .. .. .. .. .. .. .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .. .. .. .I .. .. .. .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .. .. .I .. .I .. .. .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .. .. .. .I .. .. .. .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .. .. .. .. .. .. .. .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .. c1 .. .. .. c1 .. .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer> 
+
+<layer number="3"> 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .. .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer> 
+
+<layer number="4"> 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer> 
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:tutorial" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter location="(13,1,1)" name="default" angle="180.0" /> 
+</design>
+</vrf> 
+
