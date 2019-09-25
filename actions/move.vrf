@@ -3,7 +3,7 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-	<title name="VRGrid Move Test"/>
+	<title name="VRGrid Move Action"/>
 	<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
 	<map dimensions="(17,17,4)"/>
