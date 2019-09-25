@@ -4,8 +4,8 @@
 <vrf>
 <globals>
      <assign name="author" content="PTSource" />
-	<assign name="description" content="VRGrid Mix Libraries Demo. This sample shows how to mix multiple libraries." />
-	<assign name="image" content="" />
+     <assign name="description" content="VRGrid Mix Libraries Demo. This sample shows how to mix multiple libraries." />
+     <assign name="image" content="" />
      <title name="VRGrid Mix Libraries Demo"/>
      <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
      <lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
