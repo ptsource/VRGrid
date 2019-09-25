@@ -71,7 +71,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(2,10,1)" radius="1" placement="center" text="This sample shows the STREAMING action usage. Parameters are (rmurl), the video . A encoder tool is provided to generate videos from MP4, FLV, MPG or 3GP. View source for more details."/>
+<popup location="(2,10,1)" radius="1" placement="center" text="This sample shows the STREAMING action usage. Parameters are (rmurl), the video URL. A encoder tool is provided to generate videos from MP4, FLV, MPG or 3GP. View source for more details."/>
 <enter name="default" location="(2,10,1)" angle="30"/>
 </design>
 </vrf>
