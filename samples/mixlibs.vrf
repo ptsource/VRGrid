@@ -89,35 +89,35 @@
 <param orient="90,180"/>
 </create>
 <create unit="n:" vrobj="basic:curvein"> 
-<side name="n,e,w,curve" texture="@interior:stone.jpg"/>
-<side name="bottom" texture="@islands:TIS03.jpg"/>
-<param orient="180,180"/>
+     <side name="n,e,w,curve" texture="@interior:stone.jpg"/>
+     <side name="bottom" texture="@islands:TIS03.jpg"/>
+     <param orient="180,180"/>
 </create> 
 <create unit="s:" vrobj="basic:curvein"> 
-<side name="n,e,w,curve" texture="@interior:stone.jpg"/> 
-<side name="bottom" texture="@islands:TIS03.jpg"/>
-<param orient="0,180"/>
+     <side name="n,e,w,curve" texture="@interior:stone.jpg"/> 
+     <side name="bottom" texture="@islands:TIS03.jpg"/>
+     <param orient="0,180"/>
 </create> 
 <create unit="E:" vrobj="basic:curvein">
-<side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-<param orient="270,180"/> 
+     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
+     <param orient="270,180"/> 
 </create> 
 <create unit="W:" vrobj="basic:curvein"> 
-<side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-<param orient="90,180"/> 
+     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
+     <param orient="90,180"/> 
 </create>
 <create unit="N:" vrobj="basic:curvein"> 
-<side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-<param orient="180,180"/> 
+     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
+     <param orient="180,180"/> 
 </create> 
 <create unit="S:" vrobj="basic:curvein"> 
-<side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-<param orient="0,180"/> 
+     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
+     <param orient="0,180"/> 
 </create>
 <create unit="uY" vrobj="basic:platform">
 </create>
 <create unit="dY" vrobj="basic:platform">
-<param orient="0,180"/>
+     <param orient="0,180"/>
 </create> 
 <create unit="._" vrobj="basic:ground">
 <side name="top" texture="@islands:TIS03.jpg"/>
