@@ -40,17 +40,17 @@
 </create>
 <create unit=".1" vrobj="medieval:arcade"> 
 	<side name="top,e,w,n,s,arcade" texture="@medieval:bigtiles.jpg" />
-	<side name="guardas,guardan" texture="@medieval:trim.jpg" />
+	<side name="as,an" texture="@medieval:trim.jpg" />
 	<param orient="0,0,0" walkable="yes" scale="(1,1,1)" />
 </create>
 <create unit="12" vrobj="medieval:arcade"> 
 	<side name="top,e,w,n,s,arcade" texture="@medieval:bigtiles.jpg" />
-	<side name="guardas,guardan" texture="@medieval:trim.jpg" />
+	<side name="as,an" texture="@medieval:trim.jpg" />
 	<param orient="0,0,0" walkable="yes" scale="(2,2,1)" />
 </create>
 <create unit=".2" vrobj="medieval:arcade"> 
 	<side name="top,e,w,n,s,arcade" texture="@medieval:bigtiles.jpg" />
-	<side NAME="guardas,guardan" texture="@medieval:trim.jpg" />
+	<side NAME="as,an" texture="@medieval:trim.jpg" />
 	<param orient="90,0,0" />
 </create>
 <create unit="1#" vrobj="medieval:full"> 
