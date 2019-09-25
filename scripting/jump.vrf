@@ -73,7 +73,7 @@
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
 <popup location="(1,1,1)" text="This sample shows usage of the 'IMPORT' tag to include extra scripts. Press Spacebar to jump thru the platform. View source for more details." placement="top"/>
-<enter name="default" location="(1,1,5)" angle="135"/>
+<enter name="default" location="(1,1,5)" angle="155"/>
 </design>
 </vrf>
 
