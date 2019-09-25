@@ -38,18 +38,18 @@
 	<side name="*" texture="@medieval:wall.jpg" />
 	<param scale="(1,0.3,1)" />
 </create>
-<create unit=".1" vrobj="medieval:puerta"> 
-	<side name="top,e,w,n,s,arcada" texture="@medieval:bigtiles.jpg" />
+<create unit=".1" vrobj="medieval:arcade"> 
+	<side name="top,e,w,n,s,arcade" texture="@medieval:bigtiles.jpg" />
 	<side name="guardas,guardan" texture="@medieval:trim.jpg" />
 	<param orient="0,0,0" walkable="yes" scale="(1,1,1)" />
 </create>
-<create unit="12" vrobj="medieval:puerta"> 
-	<side name="top,e,w,n,s,arcada" texture="@medieval:bigtiles.jpg" />
+<create unit="12" vrobj="medieval:arcade"> 
+	<side name="top,e,w,n,s,arcade" texture="@medieval:bigtiles.jpg" />
 	<side name="guardas,guardan" texture="@medieval:trim.jpg" />
 	<param orient="0,0,0" walkable="yes" scale="(2,2,1)" />
 </create>
-<create unit=".2" vrobj="medieval:puerta"> 
-	<side name="top,e,w,n,s,arcada" texture="@medieval:bigtiles.jpg" />
+<create unit=".2" vrobj="medieval:arcade"> 
+	<side name="top,e,w,n,s,arcade" texture="@medieval:bigtiles.jpg" />
 	<side NAME="guardas,guardan" texture="@medieval:trim.jpg" />
 	<param orient="90,0,0" />
 </create>
