@@ -167,14 +167,14 @@
 </create>
 <create unit="d1" vrobj="interior:door">
      <side name="walls" texture="@interior:stone.jpg"/>
-     <side name="nknob,sknob,dooredges" texture="@interior:clear.gif"/>
+      <side name="nknob,sknob,dooredges,sdoor" texture="@interior:clear.gif"/>
      <side name="ndoor,sdoor" texture="@village:door.vri" style="scaled"/>
      <param orient="270,0"/>
 </create>
 <create unit="d2" vrobj="interior:dooropen">
      <side name="walls" texture="@interior:stone.jpg"/>
-     <side name="nknob,sknob,dooredges" texture="@interior:clear.gif"/>
-     <side name="ndoor,sdoor" texture="@village:door.vri" style="scaled"/>
+     <side name="nknob,sknob,dooredges,sdoor" texture="@interior:clear.gif"/>
+     <side name="ndoor" texture="@village:door.vri" style="stretched"/>
      <param orient="270,0"/> 
 </create>
 <create unit="cu" vrobj="interior:dresser">
