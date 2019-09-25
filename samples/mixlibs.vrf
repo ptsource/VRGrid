@@ -608,7 +608,7 @@ w8 n8 w8 s8 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. s8
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%" />
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%" />
-<popup location="(15,40,1)" radius="1" placement="center" text="This sample shows how to mix multiple libraries in the same VRF. This is only a how-to since we recommend the usage of the minimum number of libraries or personalized libraries per VRF.View source for more details."/>
+<popup location="(15,40,1)" radius="1" placement="center" text="This sample shows how to mix multiple libraries in the same VRF. This is only a how-to since we recommend the usage of the minimum number of libraries possible per VRF to improve performance.View source for more details."/>
 <enter location="(15,40,1)" name="default"/>
 </design>
 </vrf>
