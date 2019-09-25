@@ -167,13 +167,15 @@
 </create>
 <create unit="d1" vrobj="interior:door">
      <side name="walls" texture="@interior:stone.jpg"/>
-     <side name="nknob,sknob,dooredges,sdoor" texture="@interior:clear.gif"/>
+     <side name="nknob,sknob,sdoor" texture="@interior:clear.gif"/>
+     <side name="dooredges" texture="@interior:blackglare.gif"/>
      <side name="ndoor" texture="@village:fence.vri" style="stretched"/>
      <param orient="270,0"/>
 </create>
 <create unit="d2" vrobj="interior:dooropen">
      <side name="walls" texture="@interior:stone.jpg"/>
-     <side name="nknob,sknob,dooredges,sdoor" texture="@interior:clear.gif"/>
+     <side name="nknob,sknob,sdoor" texture="@interior:clear.gif"/>
+     <side name="dooredges" texture="@interior:blackglare.gif"/>
      <side name="ndoor" texture="@village:fence.vri" style="stretched"/>
      <param orient="270,0"/> 
 </create>
@@ -190,42 +192,42 @@
      <param orient="90,0"/>
 </create>
 <create unit="st" vrobj="interior:chimneystack">
-<param orient="0,90"/>
+     <param orient="0,90"/>
 </create>
 <create unit="wt" vrobj="interior:chimneystack">
-<param orient="90,270,90"/>
+     <param orient="90,270,90"/>
 </create>
 <create unit="wb" vrobj="interior:chimneystack">
-<param orient="90,270,90"/>
+     <param orient="90,270,90"/>
 </create>
 <create unit="wh" vrobj="basic:half">
-<side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
+     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
 </create>
 <create unit="l}" vrobj="basic:bottomcornerramp">
-<side name="n,s,e,w,bottom" texture="@islands:grass.gif"/>
-<param orient="90,0"/> 
+     <side name="n,s,e,w,bottom" texture="@islands:grass.gif"/>
+     <param orient="90,0"/> 
 </create>
 <create unit="r}" vrobj="basic:bottomcornerramp">
-<side name="n,s,e,w,bottom" texture="@islands:grass.gif"/>
-<param orient="0,0"/> 
+     <side name="n,s,e,w,bottom" texture="@islands:grass.gif"/>
+     <param orient="0,0"/> 
 </create>
 <create unit="n8" vrobj="village:tree">
-<param orient="0,0"/>
+     <param orient="0,0"/>
 </create>
 <create unit="e8" vrobj="village:tree">
-<param orient="90,0"/> 
+     <param orient="90,0"/> 
 </create>
 <create unit="s8" vrobj="village:tree"> 
-<param orient="180,0"/> 
+     <param orient="180,0"/> 
 </create>
 <create unit="w8" vrobj="village:tree">
-<param orient="270,0"/> 
+     <param orient="270,0"/> 
 </create>
 <create unit="lp" vrobj="village:lamp">
-<point_light style="static" position="(128,128,128)" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/>
+<    point_light style="static" position="(128,128,128)" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/>
 </create>
 <create unit="a}" vrobj="basic:bottomcornerramp">
-<param orient="180,0"/>
+     <param orient="180,0"/>
 </create>
 <create unit="a{" vrobj="basic:topcornerramp">
 <param orient="180,0"/> 
