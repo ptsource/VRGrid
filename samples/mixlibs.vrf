@@ -23,70 +23,70 @@
 </globals>
 <design>
 <create unit=".#" vrobj="basic:full">
-<side name="n,s,e,w,top,bottom" texture="@interior:stone.jpg"/>
+     <side name="n,s,e,w,top,bottom" texture="@interior:stone.jpg"/>
 </create> 
 <create unit="i#" vrobj="basic:full">
-<side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit=".," vrobj="basic:ground">
-<side name="top" texture="@islands:grass.gif"/>
+     <side name="top" texture="@islands:grass.gif"/>
 </create> 
 <create unit=".h" vrobj="interior:roundtable">
 </create>
 <create unit="gk" vrobj="basic:nbottomramp">
-<side name="n,e,w,top,bottom" texture="@islands:grass.gif"/>
+     <side name="n,e,w,top,bottom" texture="@islands:grass.gif"/>
 </create> 
 <create unit="gK" vrobj="basic:ntopramp">
-<side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
+     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
 </create>
 <create unit="nK" vrobj="islands:stairs">
-<side name="e,w" texture="@interior:stone.jpg"/>
-<side name="stairtop,stairfront" texture="@islands:TIS03.jpg"/>
+     <side name="e,w" texture="@interior:stone.jpg"/>
+     <side name="stairtop,stairfront" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit="ek" vrobj="basic:ebottomramp">
-<side name="n,e,s,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="n,e,s,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit="eK" vrobj="basic:etopramp">
-<side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit="wk" vrobj="basic:wbottomramp">
-<side name="n,w,s,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="n,w,s,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit="wK" vrobj="basic:wtopramp">
-<side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit="sk" vrobj="basic:sbottomramp">
-<side name="s,e,w,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit="sK" vrobj="basic:stopramp">
-<side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create> 
 <create unit="b:" vrobj="basic:curvein">
-<side name="n,e,w,bottom,curve" texture="@interior:stone.jpg"/>
-<param orient="180,180"/> 
+     <side name="n,e,w,bottom,curve" texture="@interior:stone.jpg"/>
+     <param orient="180,180"/> 
 </create> 
 <create unit="l:" vrobj="basic:curvein">
-<param orient="270,90"/>
+     <param orient="270,90"/>
 </create> 
 <create unit="r:" vrobj="basic:curvein">
-<param orient="90,90"/>
+     <param orient="90,90"/>
 </create> 
 <create unit="e:" vrobj="basic:curvein">
-<side name="n,e,w,curve" texture="@interior:stone.jpg"/>
-<side name="bottom" texture="@islands:TIS03.jpg"/>
-<param orient="270,180"/>
+     <side name="n,e,w,curve" texture="@interior:stone.jpg"/>
+     <side name="bottom" texture="@islands:TIS03.jpg"/>
+     <param orient="270,180"/>
 </create>
 <create unit="w:" vrobj="basic:curvein">
-<side name="n,e,w,curve" texture="@interior:stone.jpg"/> 
-<side name="bottom" texture="@islands:TIS03.jpg"/>
-<param orient="90,180"/>
+     <side name="n,e,w,curve" texture="@interior:stone.jpg"/> 
+     <side name="bottom" texture="@islands:TIS03.jpg"/>
+     <param orient="90,180"/>
 </create>
 <create unit="n:" vrobj="basic:curvein"> 
      <side name="n,e,w,curve" texture="@interior:stone.jpg"/>
@@ -120,40 +120,40 @@
      <param orient="0,180"/>
 </create> 
 <create unit="._" vrobj="basic:ground">
-<side name="top" texture="@islands:TIS03.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
 </create>
 <create unit=".=" vrobj="basic:ground"> 
-<side name="top" texture="@interior:stone.jpg"/>
-<param orient="0,180"/>
+     <side name="top" texture="@interior:stone.jpg"/>
+     <param orient="0,180"/>
 </create>
 <create unit=".+" vrobj="basic:ground">
-<side name="top" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@interior:stone.jpg"/>
 </create>
 <create unit=".-" vrobj="basic:ceiling">
-<side name="top" texture="@islands:tis03.jpg"/>
-<side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:tis03.jpg"/>
+     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
 </create>
 <create unit="t-" vrobj="basic:ceiling">
-<side name="top" texture="@interior:stone.jpg"/>
-<side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-<param orient="180,0,180"/> 
+     <side name="top" texture="@interior:stone.jpg"/>
+     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <param orient="180,0,180"/> 
 </create>
 <create unit="c_" vrobj="basic:ground">
-<side name="top" texture="@basic:cement.vri"/>
+     <side name="top" texture="@basic:cement.vri"/>
 </create> 
 <create unit="g#" vrobj="basic:full">
-<side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
+     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
 </create>
 <create unit="gh" vrobj="basic:half">
-<side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
+     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
 </create>
 <create unit="nt" vrobj="basic2:quarter">
-<param orient="270,90,90"/>
-<side name="n,s,e,w,top,bottom" texture="@interior:stone.jpg"/> 
+     <param orient="270,90,90"/>
+     <side name="n,s,e,w,top,bottom" texture="@interior:stone.jpg"/> 
 </create>
 <create unit="fp" vrobj="interior:fireplace">
-<param orient="180,0"/>
-<point_light style="static" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/> 
+     <param orient="180,0"/>
+     <point_light style="static" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/> 
 </create>
 <create unit="fc" vrobj="interior:chimneystack">
      <param orient="180,0"/> 
@@ -167,16 +167,16 @@
 </create>
 <create unit="d1" vrobj="interior:door">
      <side name="walls" texture="@interior:stone.jpg"/>
-     <side name="nknob,sknob,sdoor" texture="@interior:clear.gif"/>
+     <side name="nknob,sknob" texture="@interior:clear.gif"/>
      <side name="dooredges" texture="@interior:blackglare.gif"/>
-     <side name="ndoor" texture="@village:fence.vri" style="stretched"/>
+     <side name="ndoor,sdoor" texture="@village:fence.vri" style="stretched"/>
      <param orient="270,0"/>
 </create>
 <create unit="d2" vrobj="interior:dooropen">
      <side name="walls" texture="@interior:stone.jpg"/>
      <side name="nknob,sknob,sdoor" texture="@interior:clear.gif"/>
      <side name="dooredges" texture="@interior:blackglare.gif"/>
-     <side name="ndoor" texture="@village:fence.vri" style="stretched"/>
+     <side name="ndoor,sdoor" texture="@village:fence.vri" style="stretched"/>
      <param orient="270,0"/> 
 </create>
 <create unit="cu" vrobj="interior:dresser">
@@ -224,31 +224,31 @@
      <param orient="270,0"/> 
 </create>
 <create unit="lp" vrobj="village:lamp">
-<    point_light style="static" position="(128,128,128)" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/>
+     <point_light style="static" position="(128,128,128)" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/>
 </create>
 <create unit="a}" vrobj="basic:bottomcornerramp">
      <param orient="180,0"/>
 </create>
 <create unit="a{" vrobj="basic:topcornerramp">
-<param orient="180,0"/> 
+     <param orient="180,0"/> 
 </create>
 <create unit="b}" vrobj="basic:bottomcornerramp">
-<param orient="270,0"/> 
+     <param orient="270,0"/> 
 </create>
 <create unit="b{" vrobj="basic:topcornerramp">
-<param orient="270,0"/> 
+     <param orient="270,0"/> 
 </create>
 <create unit="c}" vrobj="basic:bottomcornerramp">
-<param orient="90,0"/> 
+     <param orient="90,0"/> 
 </create>
 <create unit="c{" vrobj="basic:topcornerramp">
-<param orient="90,0"/> 
+     <param orient="90,0"/> 
 </create>
 <create unit="d}" vrobj="basic:bottomcornerramp">
-<param orient="0,0"/> 
+     <param orient="0,0"/> 
 </create>
 <create unit="d{" vrobj="basic:topcornerramp">
-<param orient="0,0"/> 
+     <param orient="0,0"/> 
 </create>
 <create unit="s#" vrobj="basic:full">
      <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
@@ -266,40 +266,40 @@
      <param solid="no"/>
 </create> 
 <create unit="ed" vrobj="basic2:doorway">
-<side name="e,w,n,s,top,bottom,inside" texture="@interior:stone.jpg"/>
-<param orient="90"/>
+     <side name="e,w,n,s,top,bottom,inside" texture="@interior:stone.jpg"/>
+     <param orient="90"/>
 </create> 
 <create unit="wd" vrobj="basic2:doorway">
-<side name="e,w,n,s,top,bottom,inside" texture="@interior:stone.jpg"/>
-<param orient="270"/>
+     <side name="e,w,n,s,top,bottom,inside" texture="@interior:stone.jpg"/>
+     <param orient="270"/>
 </create>
 <create unit="cp" vrobj="interior:computer">
 </create>
 <create unit="db" vrobj="interior:draftingtable">
 </create>
 <create unit="TV" vrobj="interior:plasma">
-<param orient="90"/>
+     <param orient="90"/>
 </create>
 <create unit="rc" vrobj="interior:lcabinet">
-<param orient="90"/>
+     <param orient="90"/>
 </create>
 <create unit="lc" vrobj="interior:rcabinet">
-<param orient="90"/>
+     <param orient="90"/>
 </create>
 <create unit="xB" vrobj="basic:bannervert">
-<param orient="0,0"/>
-<side name="frame,base" color="(0,0,0)"/>
-<sound file="@terrain:waves.wav" volume="95%" radius="5" playback="looped" />
+     <param orient="0,0"/>
+     <side name="frame,base" color="(0,0,0)"/>
+     <sound file="@terrain:waves.wav" volume="95%" radius="5" playback="looped" />
 </create>
 <create unit="xb" vrobj="basic:bannerhoriz">
-<param orient="0,0"/>
-<side name="frame,base" color="(0,0,0)"/>
-<sound file="@terrain:waves.wav" volume="100%" radius="5" playback="looped" />
+     <param orient="0,0"/>
+     <side name="frame,base" color="(0,0,0)"/>
+     <sound file="@terrain:waves.wav" volume="100%" radius="5" playback="looped" />
 </create>
 <create unit="yB" vrobj="basic:bannervert">
-<param orient="90,0"/>
-<side name="frame,base" color="(0,0,0)"/>
-<sound file="@terrain:waves.wav" volume="75%" radius="5" playback="looped" />
+     <param orient="90,0"/>
+     <side name="frame,base" color="(0,0,0)"/>
+     <sound file="@terrain:waves.wav" volume="75%" radius="5" playback="looped" />
 </create>
 
 <layer number="1">
