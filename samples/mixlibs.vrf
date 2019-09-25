@@ -167,8 +167,8 @@
 </create>
 <create unit="d1" vrobj="interior:door">
      <side name="walls" texture="@interior:stone.jpg"/>
-      <side name="nknob,sknob,dooredges,sdoor" texture="@interior:clear.gif"/>
-     <side name="ndoor,sdoor" texture="@village:door.vri" style="scaled"/>
+     <side name="nknob,sknob,dooredges,sdoor" texture="@interior:clear.gif"/>
+     <side name="ndoor" texture="@village:door.vri" style="stretched"/>
      <param orient="270,0"/>
 </create>
 <create unit="d2" vrobj="interior:dooropen">
@@ -249,17 +249,19 @@
 <param orient="0,0"/> 
 </create>
 <create unit="s#" vrobj="basic:full">
-<side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-<side name="top" texture="@islands:TIS03.jpg"/>
-<param solid="no"/>
+     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
+     <side name="top" texture="@islands:TIS03.jpg"/>
+     <param solid="no"/>
 </create>
 <create unit="RD" vrobj="interior:door">
-<side name="walls" texture="@interior:stone.jpg"/>
-<param orient="180,180" solid="no"/>
+     <side name="walls" texture="@interior:stone.jpg"/>
+     <side name="nknob,sknob,dooredges,sdoor,ndoor" texture="@interior:clear.gif"/>
+     <param orient="180,180" solid="no"/>
 </create> 
 <create unit="LD" vrobj="interior:door">
-<side name="walls" texture="@interior:stone.jpg"/>
-<param solid="no"/>
+     <side name="walls" texture="@interior:stone.jpg"/>
+     <side name="nknob,sknob,dooredges,sdoor,ndoor" texture="@interior:clear.gif"/>
+     <param solid="no"/>
 </create> 
 <create unit="ed" vrobj="basic2:doorway">
 <side name="e,w,n,s,top,bottom,inside" texture="@interior:stone.jpg"/>
