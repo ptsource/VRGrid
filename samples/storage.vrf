@@ -639,7 +639,7 @@
       </imagemap>
       <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%" />
       <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%" />
-      <popup texture="@warehouse:e2_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
+      <popup texture="@warehouse:e1_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
       <enter location="(3,23,1)" name="default" angle="0,0" />
       <enter location="(3,23,3)" name="ent2" angle="0,0" />
    </design>
