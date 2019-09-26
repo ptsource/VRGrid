@@ -83,6 +83,7 @@
 <create unit="tg" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:wood.gif"/><popup text="@medieval:wood.gif" placement="top" trigger="rollover"/></create>
 <create unit="th" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:window.gif"/><popup text="@medieval:window.gif" placement="top" trigger="rollover"/></create>
 <create unit="ti" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:stone_trim.gif"/><popup text="@medieval:stone_trim.gif" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:vitral.gif"/><popup text="@medieval:vitral.gif" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="medieval:ceiling"> 
          <side NAME="*" TEXTURE="@medieval:box.gif" STYLE="scaled"/>
@@ -143,7 +144,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ta .. tb .. tc .. td .. te .. tf .. tg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. th .. ti .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
