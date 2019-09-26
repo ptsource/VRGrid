@@ -46,6 +46,7 @@
 <create unit="br" vrobj="islands:rail"><popup text="rail" placement="top" trigger="rollover"/></create>
 <create unit="bs" vrobj="islands:railturnleft"><popup text="railturnleft" placement="top" trigger="rollover"/></create>
 <create unit="bt" vrobj="islands:railturnright"><popup text="railturnright" placement="top" trigger="rollover"/></create>
+<create unit="bx" vrobj="islands:column2"><popup text="column2" placement="top" trigger="rollover"/></create>
 <!-- textures -->
 <create unit="ta" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:board.jpg"/><popup text="board.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tb" vrobj="islands:spriteface"><side NAME="*" TEXTURE="@islands:bookshelves1.jpg"/><popup text="bookshelves1.jpg" placement="top" trigger="rollover"/></create>
@@ -109,13 +110,13 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. b8 .. bh .. bp .. .. .. .. .. .. .. ..
+.. .. b8 .. bh .. bp .. bx .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. b7 .. bg .. bo .. bO .. .. .. .. .. ..
+.. .. b7 .. bg .. bo .. bO .. b1 .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. b6 .. bf .. bn .. bN .. .. .. .. .. ..
+.. .. b6 .. bf .. bn .. bN .. bi .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. b5 .. be .. bm .. bM .. .. .. .. .. ..
+.. .. b5 .. be .. bm .. bM .. bq .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. b4 .. bd .. bl .. bL .. bt .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
@@ -123,7 +124,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. b2 .. bb .. bj .. bJ .. br .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. b1 .. .. .. bi .. .. .. bq .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
