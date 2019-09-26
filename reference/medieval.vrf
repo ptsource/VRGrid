@@ -47,7 +47,7 @@
 <create unit="e3" vrobj="medieval:45minimalina453"><popup text="45minimalina453" placement="top" trigger="rollover"/></create>
 <create unit="e4" vrobj="medieval:45nramp"><popup text="45nramp" placement="top" trigger="rollover"/></create>
 <create unit="e5" vrobj="medieval:47blukis"><popup text="47blukis" placement="top" trigger="rollover"/></create>
-<create unit="e6" vrobj="medieval:47blukis2"><popup text="47blukis2" placement="top" trigger="rollover"/></create>
+<create unit="e6" vrobj="medieval:crossbeam"><popup text="crossbeam" placement="top" trigger="rollover"/></create>
 <create unit="e7" vrobj="medieval:47jumts1mala"><popup text="47jumts1mala" placement="top" trigger="rollover"/></create>
 <create unit="e8" vrobj="medieval:47jumts1malar"><popup text="47jumts1malar" placement="top" trigger="rollover"/></create>
 <create unit="e9" vrobj="medieval:47jumts3"><popup text="47jumts3" placement="top" trigger="rollover"/></create>
