@@ -13,6 +13,14 @@
     <devel />
 </globals>
 <design>
+<script location="(1,1,1)" trigger="timer" delay="0">
+vrf.title = "C:" # player.location:column;
+vrf.title = vrf.title # " R:" # player.location:row;
+vrf.title = vrf.title # " L:" # player.location:layer;
+vrf.title = vrf.title # " X:" # player.location:x;
+vrf.title = vrf.title # " Y:" # player.location:y;
+vrf.title = vrf.title # " Z:" # player.location:z;
+</script>
 <create unit="PL" vrobj="gametools:playersprite"></create>
 <player vrobj="PL"/>
 <layer number="1" name="platform">
