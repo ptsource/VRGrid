@@ -55,7 +55,7 @@
 <create unit="f2" vrobj="medieval:47jumts3malar"><popup text="47jumts3malar" placement="top" trigger="rollover"/></create>
 <create unit="f3" vrobj="medieval:47jumts4"><popup text="47jumts4" placement="top" trigger="rollover"/></create>
 <create unit="f4" vrobj="medieval:47jumts4mala"><popup text="47jumts4mala" placement="top" trigger="rollover"/></create>
-<create unit="f5" vrobj="medieval:47jumts4malar"><popup text="47jumts4malar" placement="top" trigger="rollover"/></create>
+<create unit="f5" vrobj="medieval:largeframe"><popup text="largeframe" placement="top" trigger="rollover"/></create>
 <create unit="f6" vrobj="medieval:48mala"><popup text="48mala" placement="top" trigger="rollover"/></create>
 <create unit="f7" vrobj="medieval:48mala1"><popup text="48mala1" placement="top" trigger="rollover"/></create>
 <create unit="f8" vrobj="medieval:48mala2"><popup text="48mala2" placement="top" trigger="rollover"/></create>
