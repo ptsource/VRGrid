@@ -18,6 +18,7 @@
      <sky texture="@islands:starrysky.jpg" brightness="90%"/>
      <ground texture="@islands:grass.gif"/>
      <atmosphere brightness="50%"/>
+     <ambience file="@village:crickets.wav" playback="looped" volume="50%"/>
      <orb texture="@village:moon.gif" position="(220,20)"/>
      <devel/>
 </globals>
