@@ -1,0 +1,87 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf >
+<globals>
+	<title name="VRGrid Scripting Example (Object Rotation)" />
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" />
+	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" />
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(14, 14, 2)" />
+	<sky color="(0,0,255)"/>
+	<ground texture="@basic:gtile.gif"/>
+	<stream name="streamscreen" rmurl="http://repo.ptsource.eu/rms/trailer.rm"/>
+	<devel/>
+</globals>
+<design>
+<create unit="c#" vrobj="basic:full" >
+<side name="*" texture="@basic:wood4.jpg" />
+</create>  
+<create unit="Wz" vrobj="interior:largetv">
+<param walkable="yes"/>
+<script trigger="timer" delay="0.01">
+self.origin:x = 128;
+// Object Rotation facing the player
+if (player.location:x - 128 != self.location:x) {
+	rotation = 90 - math.deg(math.atan((player.location:z - 128 - self.location:z) / (player.location:x - 128 - self.location:x))); // Calculate the angle between the object and the player using trigonometry and adjust the angle so that north is zero degrees
+	if (player.location:x - 128 lt self.location:x) { rotation = rotation + 180; } // Adjust for angles greater than 180 degrees
+} else {
+	rotation = 0;
+	if (player.location:z - 128 lt self.location:z) { rotation = 180; }
+}
+rotation = rotation + 180;
+self.orient(rotation, 0, 0); // Set the object orientation to the angle
+}
+</script>
+<side name="screen" stream="streamscreen" />
+</create>
+
+<create unit="BD" vrobj="interior:door">
+<param orient="180, 0" />
+<side name="walls" texture="@basic:wood4.jpg" />
+</create>
+
+<layer number="1">
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. Wz .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# c# c# c# BD c# c# c# c# c# c# c# c# c#
+</layer>
+<layer  number="2">
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+c# .. .. .. .. .. .. .. .. .. .. .. .. c#
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter location="(3, 12, 1)" name="default" angle="30"/>
+</design>
+</vrf>
+
