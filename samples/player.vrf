@@ -51,6 +51,7 @@ vrf.title = vrf.title # " Z:" # player.location:z;
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(1,8,1)" radius="1" placement="center" text="This sample shows how to use the player object, also introduces a small scripting example on how to show the player location on the bottom of VRGrid. View source for more details."/>
 <enter location="(1,8,1)"  name="default" angle="0,0"/>
 </design>
 </vrf>
