@@ -77,6 +77,11 @@
 <create unit="a7" vrobj="terrain:ground"><popup text="terrain:ground" placement="top" trigger="rollover"/></create>
 <create unit="a8" vrobj="terrain:terrain"><popup text="terrain:terrain" placement="top" trigger="rollover"/></create>
 
+<!-- textures -->
+<create unit="ta" vrobj="gametools:spriteface"><side NAME="*" TEXTURE="@gametools:potofgold.vri"/><popup text="@gametools:potofgold.vri" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="gametools:spriteface"><side NAME="*" TEXTURE="@gametools:rope.vri"/><popup text="@gametools:rope.vri" placement="top" trigger="rollover"/></create>
+
+
 <create unit="--" vrobj="base:ceiling"> 
          <side NAME="*" TEXTURE="@base:box.gif" STYLE="scaled"/>
 </create>
@@ -131,7 +136,7 @@
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 </layer>
 <layer number="3">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+ta .. tb .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
