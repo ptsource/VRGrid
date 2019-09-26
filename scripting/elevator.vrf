@@ -27,7 +27,7 @@
     <create unit="$$" vrobj="basic:floor">
       <side name="top" texture="@basic:wood4.jpg" />
       <param walkable="no"/>
-        <action trigger="key down" key="e" text="Get on top of it and press "e" on it to start.">
+        <action trigger="key down" key="e" text="Get on top of it and press the e key to start.">
         <replace source="##"/>
       </action>
     </create>
