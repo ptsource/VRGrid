@@ -24,8 +24,8 @@
 	<kick>2</kick> <!--Horizontal velocity due to kick-->
 	<kicksound>0</kicksound> <!--Kick sound timer (1 = play sound)-->
 	<vkick>1</vkick> <!--Vertical velocity of kick-->
-	<team1>0</team1> <!--Team 1 Score-->
-	<team2>0</team2> <!--Team 2 Score-->
+	<box1>0</box1> <!--Box 1 Inserts-->
+	<box2>0</box2> <!--Box 2 Inserts-->
 	<function name="kickFunc">
 		vrf.velocity:y = (vrf.velocity:y + vrf.vkick);
 		if (vrf.kicksound lt 0) {
@@ -160,7 +160,7 @@
 	// Uptdate VRGrid Status Information
 	//vrf.title = "Location = (X:" # o.location:x # ", Y:" # o.location:y # ", Z:" # o.location:z # ")";
 	//vrf.title = "Velocity = (X:" # vrf.velocity:x # ", Y:" # vrf.velocity:y # ", Z:" # vrf.velocity:z # ")";
-	vrf.title = "Score = Team 1: " # vrf.team1 # " vs. Team 2: " # vrf.team2;
+	vrf.title = "Inserts = Box 1: " # vrf.box1 # " vs. Box 2: " # vrf.box2;
 	
 	// Friction
 	vrf.velocity:x = vrf.velocity:x * 0.97;
@@ -255,7 +255,7 @@
 	if (o.location:z lt 64) {
 		if (o.location:x gt 256 * 2 - 64) {
 			if (o.location:x lt 256 * 4 + 64) {
-				vrf.team2 = vrf.team2 + 1;
+				vrf.box2 = vrf.box2 + 1;
 				ambience.file = "@gametools:whistle.wav";
 				ambience.playback = "once";
 				vrf.velocity:x = 0;
@@ -270,7 +270,7 @@
 	if (o.location:z gt map.dimensions:rows * 256 - 256 - 64) {
 		if (o.location:x gt 256 * 2 - 64) {
 			if (o.location:x lt 256 * 4 + 64) {
-				vrf.team1 = vrf.team1 + 1;
+				vrf.box1 = vrf.box1 + 1;
 				ambience.file = "@gametools:whistle.wav";
 				ambience.playback = "once";
 				vrf.velocity:x = 0;
