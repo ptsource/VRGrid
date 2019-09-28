@@ -4,11 +4,9 @@
 <vrf>
 <globals>
 	<title name="VRGrid Scripting Example (Dynamic Collision)"/>
-	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
 	<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib"/>
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
 	<map dimensions="(7,15,1)"/>
-	<orb position="(0,20)"/>
 	<sky color="(0,0,255)"/>
 	<ground texture="@gametools:field.jpg"/>
 	<ambience file="@gametools:whistle.wav" playback="once"/>
@@ -40,39 +38,39 @@
 	<param walkable="yes"/>
 </create>
 
-<create unit="11" vrobj="basic:full">
+<create unit="11" vrobj="gametools:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="n,w,top" faces="2" texture="@gametools:fence.vri"/>
 </create>
 
-<create unit="22" vrobj="basic:full">
+<create unit="22" vrobj="gametools:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="n,top" faces="2" texture="@gametools:fence.vri"/>
 	<side name="s" faces="2" texture="images\goalkeeper.vri"/>
 </create>
 
-<create unit="33" vrobj="basic:full">
+<create unit="33" vrobj="gametools:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="n,e,top" faces="2" texture="@gametools:fence.vri"/>
 </create>
 
-<create unit="44" vrobj="basic:full">
+<create unit="44" vrobj="gametools:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="s,w,top" faces="2" texture="@gametools:fence.vri"/>
 </create>
 
-<create unit="55" vrobj="basic:full">
+<create unit="55" vrobj="gametools:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="s,top" faces="2" texture="@gametools:fence.vri"/>
 	<side name="n" faces="2" texture="images\goalkeeper.vri"/>
 </create>
 
-<create unit="66" vrobj="basic:full">
+<create unit="66" vrobj="gametools:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="e,s,top" faces="2" texture="@gametools:fence.vri"/>
 </create>
 
-<create unit="aa" vrobj="basic:full">
+<create unit="aa" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -82,7 +80,7 @@
 	</script>
 </create>
 
-<create unit="bb" vrobj="basic:full">
+<create unit="bb" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -92,7 +90,7 @@
 	</script>
 </create>
 
-<create unit="cc" vrobj="basic:full">
+<create unit="cc" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -102,7 +100,7 @@
 	</script>
 </create>
 
-<create unit="dd" vrobj="basic:full">
+<create unit="dd" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -112,7 +110,7 @@
 	</script>
 </create>
 
-<create unit="nn" vrobj="basic:full">
+<create unit="nn" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -122,7 +120,7 @@
 	</script>
 </create>
 
-<create unit="ee" vrobj="basic:full">
+<create unit="ee" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -131,7 +129,7 @@
 	</script>
 </create>
 
-<create unit="ss" vrobj="basic:full">
+<create unit="ss" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -140,7 +138,7 @@
 	</script>
 </create>
 
-<create unit="ww" vrobj="basic:full">
+<create unit="ww" vrobj="gametools:full">
 	<param walkable="yes"/>
 	<side name="*" faces="0" solid="no"/>
 	<script trigger="proximity">
@@ -294,7 +292,6 @@
 	}
 	vrf.kicksound = vrf.kicksound - 0.1;	
 </script>
-
 <layer number="1">
 .. .. 11 22 33 .. ..
 .. .. .. .. .. .. ..
