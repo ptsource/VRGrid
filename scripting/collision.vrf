@@ -1,0 +1,328 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+	<title name="VRGrid Scripting Example (Dynamic Collision)"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
+	<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(7,15,1)"/>
+	<orb position="(0,20)"/>
+	<sky color="(0,0,255)"/>
+	<ground texture="@gametools:field.jpg"/>
+	<ambience file="@gametools:whistle.wav" playback="once"/>
+	<devel />
+</globals>
+
+<design>
+
+<define>
+	<velocity x="0.0" y="0.0" z="0.0"/> <!--Initial Velocity-->
+	<bounce>-0.75</bounce> <!--Defines elasticity of collisions (must be negative)-->
+	<t>0</t> <!--Time-->
+	<dc>0</dc> <!--Change in distance-->
+	<dt>0</dt> <!--Total distance-->
+	<kick>2</kick> <!--Horizontal velocity due to kick-->
+	<kicksound>0</kicksound> <!--Kick sound timer (1 = play sound)-->
+	<vkick>1</vkick> <!--Vertical velocity of kick-->
+	<team1>0</team1> <!--Team 1 Score-->
+	<team2>0</team2> <!--Team 2 Score-->
+	<function name="kickFunc">
+		vrf.velocity:y = (vrf.velocity:y + vrf.vkick);
+		if (vrf.kicksound lt 0) {
+			vrf.kicksound = 1;
+		}   
+	</function>  
+</define>
+
+<create unit="oo" vrobj="gametools:football">
+	<param walkable="yes"/>
+</create>
+
+<create unit="11" vrobj="basic:full">
+	<side name="*" faces="0" solid="no"/>
+	<side name="n,w,top" faces="2" texture="@gametools:fence.vri"/>
+</create>
+
+<create unit="22" vrobj="basic:full">
+	<side name="*" faces="0" solid="no"/>
+	<side name="n,top" faces="2" texture="@gametools:fence.vri"/>
+	<side name="s" faces="2" texture="images\goalkeeper.vri"/>
+</create>
+
+<create unit="33" vrobj="basic:full">
+	<side name="*" faces="0" solid="no"/>
+	<side name="n,e,top" faces="2" texture="@gametools:fence.vri"/>
+</create>
+
+<create unit="44" vrobj="basic:full">
+	<side name="*" faces="0" solid="no"/>
+	<side name="s,w,top" faces="2" texture="@gametools:fence.vri"/>
+</create>
+
+<create unit="55" vrobj="basic:full">
+	<side name="*" faces="0" solid="no"/>
+	<side name="s,top" faces="2" texture="@gametools:fence.vri"/>
+	<side name="n" faces="2" texture="images\goalkeeper.vri"/>
+</create>
+
+<create unit="66" vrobj="basic:full">
+	<side name="*" faces="0" solid="no"/>
+	<side name="e,s,top" faces="2" texture="@gametools:fence.vri"/>
+</create>
+
+<create unit="aa" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:x = vrf.velocity:x - math.sqrt(vrf.kick);
+		vrf.velocity:z = vrf.velocity:z - math.sqrt(vrf.kick);
+		vrf.kickFunc();
+	</script>
+</create>
+
+<create unit="bb" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:x = vrf.velocity:x - math.sqrt(vrf.kick);
+		vrf.velocity:z = vrf.velocity:z + math.sqrt(vrf.kick);
+		vrf.kickFunc();
+	</script>
+</create>
+
+<create unit="cc" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:z = vrf.velocity:z + math.sqrt(vrf.kick);
+		vrf.velocity:x = vrf.velocity:x + math.sqrt(vrf.kick);
+		vrf.kickFunc();
+	</script>
+</create>
+
+<create unit="dd" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:x = vrf.velocity:x + math.sqrt(vrf.kick);
+		vrf.velocity:z = vrf.velocity:z - math.sqrt(vrf.kick);
+		vrf.kickFunc();
+	</script>
+</create>
+
+<create unit="nn" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:z = vrf.velocity:z - vrf.kick;
+		vrf.velocity:y = vrf.velocity:y + vrf.vkick;
+		vrf.kickFunc();
+	</script>
+</create>
+
+<create unit="ee" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:x = vrf.velocity:x - vrf.kick;
+		vrf.kickFunc();
+	</script>
+</create>
+
+<create unit="ss" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:z = vrf.velocity:z + vrf.kick;
+		vrf.kickFunc();
+	</script>
+</create>
+
+<create unit="ww" vrobj="basic:full">
+	<param walkable="yes"/>
+	<side name="*" faces="0" solid="no"/>
+	<script trigger="proximity">
+		vrf.velocity:x = vrf.velocity:x + vrf.kick;
+		vrf.kickFunc();
+	</script>
+</create>
+
+<script trigger="timer" delay="0.01">
+	// Get object data
+	o = map.get_vrobj("oo");
+	n = map.get_vrobj("nn");
+	e = map.get_vrobj("ee");
+	s = map.get_vrobj("ss");
+	w = map.get_vrobj("ww");
+	a = map.get_vrobj("aa");
+	b = map.get_vrobj("bb");
+	c = map.get_vrobj("cc");
+	d = map.get_vrobj("dd");
+	
+	// Uptdate VRGrid Status Information
+	//vrf.title = "Location = (X:" # o.location:x # ", Y:" # o.location:y # ", Z:" # o.location:z # ")";
+	//vrf.title = "Velocity = (X:" # vrf.velocity:x # ", Y:" # vrf.velocity:y # ", Z:" # vrf.velocity:z # ")";
+	vrf.title = "Score = Team 1: " # vrf.team1 # " vs. Team 2: " # vrf.team2;
+	
+	// Friction
+	vrf.velocity:x = vrf.velocity:x * 0.97;
+	vrf.velocity:z = vrf.velocity:z * 0.97;
+	
+	// This zeros the vertical velocity if it is very small and the cube is near the ground
+	if (vrf.velocity:y gt 0) {
+		if (vrf.velocity:y lt 0.1) {
+			if (o.location:y lt 257) {
+				vrf.velocity:y = 0;
+				o.location:y = 256;
+				n.location:y = 256;
+				e.location:y = 256;
+				s.location:y = 256;
+				w.location:y = 256;
+			}
+		}
+	}
+	
+	// Gravity
+	if (o.location:y gt 257) {
+		vrf.t = vrf.t + 0.1; // Sould be 0.01 to match delay, but doesn't look right
+		vrf.dc = 0.5 * 9.8 * vrf.t * vrf.t; // d=1/2at^2
+		vrf.dt = vrf.dt - vrf.dc; // Change in distance
+		vrf.velocity:y = vrf.velocity:y - vrf.dc; // Update vertical velocity
+	}
+	
+	// Bounce upwards if it hits the ground
+	if (o.location:y + vrf.velocity:y lt 256) {
+		vrf.velocity:y = vrf.velocity:y * -0.1;
+		vrf.t = 0;
+		o.location:y = 256;
+	} else {
+		o.location:y = o.location:y + vrf.velocity:y;
+	}
+	
+	// Move the object according to the velocity
+	o.location:x = o.location:x + vrf.velocity:x;
+	o.location:z = o.location:z + vrf.velocity:z;
+	
+	// Move the eight 'sensors' around the object
+	n.location:x = o.location:x;
+	e.location:x = o.location:x + 256;
+	s.location:x = o.location:x;
+	w.location:x = o.location:x - 256;
+	a.location:x = o.location:x + 256;
+	b.location:x = o.location:x + 256;
+	c.location:x = o.location:x - 256;
+	d.location:x = o.location:x - 256;
+
+	n.location:y = o.location:y;
+	e.location:y = o.location:y;
+	s.location:y = o.location:y;
+	w.location:y = o.location:y;
+	a.location:y = o.location:y;
+	b.location:y = o.location:y;
+	c.location:y = o.location:y;
+	d.location:y = o.location:y;
+	
+	n.location:z = o.location:z + 256;
+	e.location:z = o.location:z;
+	s.location:z = o.location:z - 256;
+	w.location:z = o.location:z;
+	a.location:z = o.location:z + 256;
+	b.location:z = o.location:z - 256;
+	c.location:z = o.location:z - 256;
+	d.location:z = o.location:z + 256;
+	
+	// Check collisions and bouce in opposite direction (vrf.bounce must be negative)
+	if (o.location:x gt map.dimensions:columns * 256 - 256) {
+		vrf.velocity:x = vrf.velocity:x * vrf.bounce;
+		vrf.velocity:y = vrf.velocity:y - vrf.velocity:x * 0.3;
+		o.location:x = map.dimensions:columns * 256 - 256;
+	}
+	if (o.location:x lt 0) {
+		vrf.velocity:x = vrf.velocity:x * vrf.bounce;
+		vrf.velocity:y = vrf.velocity:y + vrf.velocity:x * 0.3;
+		o.location:x = 0;
+	}
+	if (o.location:z gt map.dimensions:rows * 256 - 256) {
+		vrf.velocity:z = vrf.velocity:z * vrf.bounce;
+		vrf.velocity:y = vrf.velocity:y - vrf.velocity:z * 0.3;
+		o.location:z = map.dimensions:rows * 256 - 256;
+	}
+	if (o.location:z lt 0) {
+		vrf.velocity:z = vrf.velocity:z * vrf.bounce;
+		vrf.velocity:y = vrf.velocity:y + vrf.velocity:z * 0.3;
+		o.location:z = 0;
+	}
+	
+	// Check for goal, adjust score, and drop ball in center of field with zero velocity
+	if (o.location:z lt 64) {
+		if (o.location:x gt 256 * 2 - 64) {
+			if (o.location:x lt 256 * 4 + 64) {
+				vrf.team2 = vrf.team2 + 1;
+				ambience.file = "@gametools:whistle.wav";
+				ambience.playback = "once";
+				vrf.velocity:x = 0;
+				vrf.velocity:y = 0;
+				vrf.velocity:z = 0;
+				o.location:x = map.dimensions:columns / 2 * 256;
+				o.location:y = 256 * 4;
+				o.location:z = map.dimensions:rows / 2 * 256;
+			}
+		}
+	}
+	if (o.location:z gt map.dimensions:rows * 256 - 256 - 64) {
+		if (o.location:x gt 256 * 2 - 64) {
+			if (o.location:x lt 256 * 4 + 64) {
+				vrf.team1 = vrf.team1 + 1;
+				ambience.file = "@gametools:whistle.wav";
+				ambience.playback = "once";
+				vrf.velocity:x = 0;
+				vrf.velocity:y = 0;
+				vrf.velocity:z = 0;
+				o.location:x = map.dimensions:columns / 2 * 256;
+				o.location:y = 256 * 4;
+				o.location:z = map.dimensions:rows / 2 * 256;
+			}
+		}
+	}
+	
+	// Play sound of kick and decrement kick timer
+	if (vrf.kicksound = 1) {
+		ambience.file = "@gametools:kick.wav";
+		ambience.playback = "once";
+	}
+	vrf.kicksound = vrf.kicksound - 0.1;	
+</script>
+
+<layer number="1">
+.. .. 11 22 33 .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. dd nn aa .. ..
+.. .. ww oo ee .. ..
+.. .. cc ss bb .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. .. .. .. .. ..
+.. .. 44 55 66 .. ..
+</layer>
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:scripting" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter name="default" location="(4,10,1)" angle="0"/>
+</design>
+</vrf>
+
+
+
