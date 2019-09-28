@@ -48,7 +48,7 @@
 <create unit="22" vrobj="basic:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="n,top" faces="2" texture="@gametools:fence.vri"/>
-	<side name="s" faces="2" texture="images\goalkeeper.gif"/>
+	<side name="s" faces="2" texture="images\goalkeeper.vri"/>
 </create>
 
 <create unit="33" vrobj="basic:full">
@@ -64,7 +64,7 @@
 <create unit="55" vrobj="basic:full">
 	<side name="*" faces="0" solid="no"/>
 	<side name="s,top" faces="2" texture="@gametools:fence.vri"/>
-	<side name="n" faces="2" texture="images\goalkeeper.gif"/>
+	<side name="n" faces="2" texture="images\goalkeeper.vri"/>
 </create>
 
 <create unit="66" vrobj="basic:full">
