@@ -157,7 +157,7 @@
 	c = map.get_vrobj("cc");
 	d = map.get_vrobj("dd");
 	
-	// Uptdate VRGrid Status Information
+	// Update VRGrid Status Information
 	//vrf.title = "Location = (X:" # o.location:x # ", Y:" # o.location:y # ", Z:" # o.location:z # ")";
 	//vrf.title = "Velocity = (X:" # vrf.velocity:x # ", Y:" # vrf.velocity:y # ", Z:" # vrf.velocity:z # ")";
 	vrf.title = "Inserts = Box 1: " # vrf.box1 # " vs. Box 2: " # vrf.box2;
@@ -251,7 +251,7 @@
 		o.location:z = 0;
 	}
 	
-	// Check for goal, adjust score, and drop ball in center of field with zero velocity
+	// Check for insert, adjust result, and drop ball in center of field with zero velocity
 	if (o.location:z lt 64) {
 		if (o.location:x gt 256 * 2 - 64) {
 			if (o.location:x lt 256 * 4 + 64) {
