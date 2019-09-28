@@ -6,6 +6,7 @@
 <title name="VRGrid Village Lib Reference" />
 <lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" />
 <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" />
 <assets href="https://ptsource.github.io/VRGrid/assets/" />
 <map dimensions="(15,23,3)"/>
 <sky/>
@@ -67,6 +68,9 @@
 <create unit="--" vrobj="village:ceiling">
          <side NAME="*" TEXTURE="@village:box.gif" STYLE="scaled"/>
 </create>
+<create unit="PL" vrobj="gametools:playersprite">
+</create>
+<player vrobj="PL"/>
 <layer number="1">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
