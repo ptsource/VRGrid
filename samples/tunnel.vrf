@@ -8,7 +8,6 @@
     <assets href="https://ptsource.github.io/VRGrid/assets/" />
     <map  dimensions="(17,17,2)" />
     <atmosphere brightness="10%" />
-    <ambience file="sounds/amb02.wv" volume="85%" playback="looped"/>
     <ground/>
     <devel />
 </globals>
