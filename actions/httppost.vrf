@@ -3,7 +3,7 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-	<title name="VRGrid HTTP Post Action"/>
+	<title name="VRGrid HTTP Database Post Action"/>
 	<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/packs/warehouse.vlib" required="2.8"/>
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
