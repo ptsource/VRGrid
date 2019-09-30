@@ -13,7 +13,7 @@
     <devel />
 </globals>
 <design>
-<script location="(1,1,1)" trigger="timer" delay="1">
+<script location="(1,1,1)" trigger="timer" delay="0.5">
 vrf.title = "C:" # player.location:column;
 vrf.title = vrf.title # " R:" # player.location:row;
 vrf.title = vrf.title # " L:" # player.location:layer;
