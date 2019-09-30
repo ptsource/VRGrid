@@ -318,7 +318,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(4,10,1)" radius="1" placement="center" text="This sample shows how to generae dynamic collision between objects. Use the player to put the ball on he boxes. View source for more details."/> 
+<popup location="(4,10,1)" radius="1" placement="center" text="This sample shows how to generate dynamic collision between objects. Use the player to put the ball on he boxes. View source for more details."/> 
 <enter name="default" location="(4,10,1)" angle="0"/>
 </design>
 </vrf>
