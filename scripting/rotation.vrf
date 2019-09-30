@@ -81,6 +81,7 @@ c# .. .. .. .. .. .. .. .. .. .. .. .. c#
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup placement="center" text="This sample demonstrates how to make a object rotate so it always face you. Move around the TV and see that you will always see the screen. View source for more details."/> 
 <enter location="(3, 12, 1)" name="default" angle="30"/>
 </design>
 </vrf>
