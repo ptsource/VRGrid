@@ -11,11 +11,12 @@
 	<ground texture="@base:gtile.gif"/>
 	<devel />
 </globals>
-<design> 
+<design>
+<!-- VRGRID USES FULL XML COMPLIANCE SO YOU NEED TO ESCAPE INVALID CHAR WITH &amp; IF POSTING MULTIPLE VARIABLES -->
+<!-- <httppost pageurl="http://repo.ptsource.eu/rms/data.php?block=1&amp;message=Test"/> -->
 <create unit="##" vrobj="base:full">
 <action trigger="click on" text="Make a HTTP Post to PHP" sidename="w">
-        <!-- VRGRID USES FULL XML COMPLIANCE SO WE NEED TO ESCAPE INVALID CHAR WITH &amp; IN THE POST -->
-	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=1&amp;message=Test"/>
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?block=1"/>
 </action>
 </create>
 <layer number="1" >
