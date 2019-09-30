@@ -145,7 +145,7 @@
 	</script>
 </create>
 
-<script trigger="timer" delay="0.1">
+<script trigger="timer" delay="0.01">
 	// Get object data
 	o = map.get_vrobj("oo");
 	n = map.get_vrobj("nn");
