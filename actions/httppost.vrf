@@ -16,16 +16,19 @@
 <!-- VRGRID USES FULL XML COMPLIANCE SO YOU NEED TO ESCAPE INVALID CHAR WITH &amp; IF POSTING MULTIPLE VARIABLES -->
 <!-- <httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1&amp;message=Test"/> -->
 <create unit="aa" vrobj="base:full">
+<side name="*" texture="@warehouse:_1.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 1" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1"/>
 </action>
 </create>
 <create unit="bb" vrobj="base:full">
+<side name="*" texture="@warehouse:_2.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 2" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object2"/>
 </action>
 </create>
 <create unit="cc" vrobj="base:full">
+<side name="*" texture="@warehouse:_3.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 3" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object3"/>
 </action>
