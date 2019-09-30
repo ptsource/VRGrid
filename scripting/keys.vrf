@@ -50,7 +50,7 @@
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
 <popup location="(1,1,1)" radius="1" placement="center" text="This sample shows how to assign keys to 3d objects. Type 'OPEN' to open the passage. View source for more details."/>
-<enter location="(1,1,1)" name="default" angle="110"/>
+<enter location="(1,1,1)" name="default" angle="100"/>
 </design>
 </vrf>
 
