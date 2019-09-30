@@ -33,10 +33,16 @@
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object3"/>
 </action>
 </create>
+<create unit="dd" vrobj="base:full">
+<side name="*" texture="@warehouse:_4.gif" />
+<action trigger="click on" text="Make a HTTP Post to PHP from Object 4" sidename="*">
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object4"/>
+</action>
+</create>
 <create unit="rr" vrobj="base:full">
 <side name="*" texture="@warehouse:r.gif" />
 <action trigger="click on" text="Click here to view the object clicks" sidename="*">
-        <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|Click Results from VRGrid|560|600"/>
+        <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|Click Results from VRGrid|560|400"/>
 </action>
 </create>
 <layer number="1" >
@@ -47,7 +53,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. aa .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
