@@ -343,6 +343,7 @@ fg fg fg fg fg fg fg fg fg fg  <!-- 10 -->
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(9,9,1)" radius="1" placement="center" text="This sample demonstrates the usage of arrays in objects and how to use the 'water.vrf? import and lib. View source for more details."/>
 <enter name="default" location="(9,9,3)" angle="300,-5"/>
 </design>
 </vrf>
