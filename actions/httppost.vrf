@@ -4,7 +4,7 @@
 <vrf>
 <globals>
 	<title name="VRGrid HTTP Post Action"/>
-	<lib href="https://ptsource.github.io/VRGrid/utils/base.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/warehouse.vlib" required="2.8"/>
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
 	<map dimensions="(17,17,4)"/>
 	<sky color="(0,0,255)"/>
