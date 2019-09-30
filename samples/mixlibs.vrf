@@ -3,606 +3,2650 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-     <assign name="author" content="PTSource" />
-     <assign name="description" content="VRGrid Mix Libraries Demo. This sample shows how to mix multiple libraries in the same VRF." />
-     <assign name="image" content="" />
-     <title name="VRGrid Mix Libraries Demo"/>
-     <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-     <lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
-     <lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" required="2.8"/>
-     <lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
-     <lib href="https://ptsource.github.io/VRGrid/packs/islands.vlib" required="2.8"/>
-     <lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" required="2.8"/>
-     <assets href="https://ptsource.github.io/VRGrid/assets/" />
-     <map dimensions="(30,40,7)"/>
-     <sky texture="@islands:starrysky.jpg" brightness="90%"/>
-     <ground texture="@islands:grass.gif"/>
-     <atmosphere brightness="50%"/>
-     <ambience file="@village:crickets.wav" playback="looped" volume="50%"/>
-     <orb texture="@village:moon.gif" position="(220,20)"/>
-     <devel/>
+	<title name="VRGrid Mix Libraries Demo"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic3.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/house.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(35,30,13)"/>
+	<sky texture="@house:sky.jpg" brightness="70%"/>
+	<ground texture="@house:blank.gif"/>
+	<atmosphere brightness="80%"/>
+	<devel/>
 </globals>
 <design>
-<create unit=".#" vrobj="basic:full">
-     <side name="n,s,e,w,top,bottom" texture="@interior:stone.jpg"/>
-</create> 
-<create unit="i#" vrobj="basic:full">
-     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit=".," vrobj="basic:ground">
-     <side name="top" texture="@islands:grass.gif"/>
-</create> 
-<create unit=".h" vrobj="interior:roundtable">
-</create>
-<create unit="gk" vrobj="basic:nbottomramp">
-     <side name="n,e,w,top,bottom" texture="@islands:grass.gif"/>
-</create> 
-<create unit="gK" vrobj="basic:ntopramp">
-     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
-</create>
-<create unit="nK" vrobj="islands:stairs">
-     <side name="e,w" texture="@interior:stone.jpg"/>
-     <side name="stairtop,stairfront" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit="ek" vrobj="basic:ebottomramp">
-     <side name="n,e,s,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit="eK" vrobj="basic:etopramp">
-     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit="wk" vrobj="basic:wbottomramp">
-     <side name="n,w,s,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit="wK" vrobj="basic:wtopramp">
-     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit="sk" vrobj="basic:sbottomramp">
-     <side name="s,e,w,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit="sK" vrobj="basic:stopramp">
-     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create> 
-<create unit="b:" vrobj="basic:curvein">
-     <side name="n,e,w,bottom,curve" texture="@interior:stone.jpg"/>
-     <param orient="180,180"/> 
-</create> 
-<create unit="l:" vrobj="basic:curvein">
-     <param orient="270,90"/>
-</create> 
-<create unit="r:" vrobj="basic:curvein">
-     <param orient="90,90"/>
-</create> 
-<create unit="e:" vrobj="basic:curvein">
-     <side name="n,e,w,curve" texture="@interior:stone.jpg"/>
-     <side name="bottom" texture="@islands:TIS03.jpg"/>
-     <param orient="270,180"/>
-</create>
-<create unit="w:" vrobj="basic:curvein">
-     <side name="n,e,w,curve" texture="@interior:stone.jpg"/> 
-     <side name="bottom" texture="@islands:TIS03.jpg"/>
-     <param orient="90,180"/>
-</create>
-<create unit="n:" vrobj="basic:curvein"> 
-     <side name="n,e,w,curve" texture="@interior:stone.jpg"/>
-     <side name="bottom" texture="@islands:TIS03.jpg"/>
-     <param orient="180,180"/>
-</create> 
-<create unit="s:" vrobj="basic:curvein"> 
-     <side name="n,e,w,curve" texture="@interior:stone.jpg"/> 
-     <side name="bottom" texture="@islands:TIS03.jpg"/>
-     <param orient="0,180"/>
-</create> 
-<create unit="E:" vrobj="basic:curvein">
-     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-     <param orient="270,180"/> 
-</create> 
-<create unit="W:" vrobj="basic:curvein"> 
-     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-     <param orient="90,180"/> 
-</create>
-<create unit="N:" vrobj="basic:curvein"> 
-     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-     <param orient="180,180"/> 
-</create> 
-<create unit="S:" vrobj="basic:curvein"> 
-     <side name="n,e,w,curve,bottom" texture="@interior:stone.jpg"/>
-     <param orient="0,180"/> 
-</create>
-<create unit="uY" vrobj="basic:platform">
-</create>
-<create unit="dY" vrobj="basic:platform">
-     <param orient="0,180"/>
-</create> 
-<create unit="._" vrobj="basic:ground">
-     <side name="top" texture="@islands:TIS03.jpg"/>
-</create>
-<create unit=".=" vrobj="basic:ground"> 
-     <side name="top" texture="@interior:stone.jpg"/>
-     <param orient="0,180"/>
-</create>
-<create unit=".+" vrobj="basic:ground">
-     <side name="top" texture="@interior:stone.jpg"/>
-</create>
-<create unit=".-" vrobj="basic:ceiling">
-     <side name="top" texture="@islands:tis03.jpg"/>
-     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-</create>
-<create unit="t-" vrobj="basic:ceiling">
-     <side name="top" texture="@interior:stone.jpg"/>
-     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-     <param orient="180,0,180"/> 
-</create>
-<create unit="c_" vrobj="basic:ground">
-     <side name="top" texture="@basic:cement.vri"/>
-</create> 
-<create unit="g#" vrobj="basic:full">
-     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
-</create>
-<create unit="gh" vrobj="basic:half">
-     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
-</create>
-<create unit="nt" vrobj="basic2:quarter">
-     <param orient="270,90,90"/>
-     <side name="n,s,e,w,top,bottom" texture="@interior:stone.jpg"/> 
-</create>
-<create unit="fp" vrobj="interior:fireplace">
-     <param orient="180,0"/>
-     <point_light style="static" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/> 
-</create>
-<create unit="fc" vrobj="interior:chimneystack">
-     <param orient="180,0"/> 
-</create>
-<create unit="ew" vrobj="interior:window">
-     <side name="n,s,wedge,eedge,topedge,bottomedge,inneredge" texture="@interior:stone.jpg"/>
-     <param orient="270,0"/>
-</create>
-<create unit="bd" vrobj="interior:bed">
-     <param orient="90,0"/> 
-</create>
-<create unit="d1" vrobj="interior:door">
-     <side name="walls" texture="@interior:stone.jpg"/>
-     <param orient="270,0"/>
-</create>
-<create unit="d2" vrobj="interior:dooropen">
-     <side name="walls" texture="@interior:stone.jpg"/>
-     <param orient="270,0"/> 
-</create>
-<create unit="cu" vrobj="interior:dresser">
-     <param orient="180,0"/> 
-</create>
-<create unit="nb" vrobj="interior:chimneystack">
-     <param orient="90,0,90"/>
-</create>
-<create unit="et" vrobj="interior:chimneystack">
-     <param orient="90,0"/>
-</create>
-<create unit="eb" vrobj="interior:chimneystack">
-     <param orient="90,0"/>
-</create>
-<create unit="st" vrobj="interior:chimneystack">
-     <param orient="0,90"/>
-</create>
-<create unit="wt" vrobj="interior:chimneystack">
-     <param orient="90,270,90"/>
-</create>
-<create unit="wb" vrobj="interior:chimneystack">
-     <param orient="90,270,90"/>
-</create>
-<create unit="wh" vrobj="basic:half">
-     <side name="n,s,e,w,top,bottom" texture="@islands:grass.gif"/>
-</create>
-<create unit="l}" vrobj="basic:bottomcornerramp">
-     <side name="n,s,e,w,bottom" texture="@islands:grass.gif"/>
-     <param orient="90,0"/> 
-</create>
-<create unit="r}" vrobj="basic:bottomcornerramp">
-     <side name="n,s,e,w,bottom" texture="@islands:grass.gif"/>
-     <param orient="0,0"/> 
-</create>
-<create unit="n8" vrobj="village:tree">
-     <param orient="0,0"/>
-</create>
-<create unit="e8" vrobj="village:tree">
-     <param orient="90,0"/> 
-</create>
-<create unit="s8" vrobj="village:tree"> 
-     <param orient="180,0"/> 
-</create>
-<create unit="w8" vrobj="village:tree">
-     <param orient="270,0"/> 
-</create>
-<create unit="lp" vrobj="village:lamp">
-     <point_light style="static" position="(128,128,128)" brightness="100%" radius="5" flood="yes" color="(225,255,255)"/>
-</create>
-<create unit="a}" vrobj="basic:bottomcornerramp">
-     <param orient="180,0"/>
-</create>
-<create unit="a{" vrobj="basic:topcornerramp">
-     <param orient="180,0"/> 
-</create>
-<create unit="b}" vrobj="basic:bottomcornerramp">
-     <param orient="270,0"/> 
-</create>
-<create unit="b{" vrobj="basic:topcornerramp">
-     <param orient="270,0"/> 
-</create>
-<create unit="c}" vrobj="basic:bottomcornerramp">
-     <param orient="90,0"/> 
-</create>
-<create unit="c{" vrobj="basic:topcornerramp">
-     <param orient="90,0"/> 
-</create>
-<create unit="d}" vrobj="basic:bottomcornerramp">
-     <param orient="0,0"/> 
-</create>
-<create unit="d{" vrobj="basic:topcornerramp">
-     <param orient="0,0"/> 
-</create>
-<create unit="s#" vrobj="basic:full">
-     <side name="n,s,e,w,bottom" texture="@interior:stone.jpg"/>
-     <side name="top" texture="@islands:TIS03.jpg"/>
-     <param solid="no"/>
-</create>
-<create unit="RD" vrobj="interior:door">
-     <side name="walls" texture="@interior:stone.jpg"/>
-     <side name="nknob,sknob,dooredges,sdoor,ndoor" texture="@interior:clear.gif"/>
-     <param orient="180,180" solid="no"/>
-</create> 
-<create unit="LD" vrobj="interior:door">
-     <side name="walls" texture="@interior:stone.jpg"/>
-     <side name="nknob,sknob,dooredges,sdoor,ndoor" texture="@interior:clear.gif"/>
-     <param solid="no"/>
-</create> 
-<create unit="ed" vrobj="basic2:doorway">
-     <side name="e,w,n,s,top,bottom,inside" texture="@interior:stone.jpg"/>
-     <param orient="90"/>
-</create> 
-<create unit="wd" vrobj="basic2:doorway">
-     <side name="e,w,n,s,top,bottom,inside" texture="@interior:stone.jpg"/>
-     <param orient="270"/>
-</create>
-<create unit="cp" vrobj="interior:computer">
-</create>
-<create unit="db" vrobj="interior:draftingtable">
-</create>
-<create unit="TV" vrobj="interior:plasma">
-     <param orient="90"/>
-</create>
-<create unit="rc" vrobj="interior:lcabinet">
-     <param orient="90"/>
-</create>
-<create unit="lc" vrobj="interior:rcabinet">
-     <param orient="90"/>
-</create>
-<create unit="xB" vrobj="basic:bannervert">
-     <param orient="0,0"/>
-     <side name="frame,base" color="(0,0,0)"/>
-     <sound file="@terrain:waves.wav" volume="95%" radius="5" playback="looped" />
-</create>
-<create unit="xb" vrobj="basic:bannerhoriz">
-     <param orient="0,0"/>
-     <side name="frame,base" color="(0,0,0)"/>
-     <sound file="@terrain:waves.wav" volume="100%" radius="5" playback="looped" />
-</create>
-<create unit="yB" vrobj="basic:bannervert">
-     <param orient="90,0"/>
-     <side name="frame,base" color="(0,0,0)"/>
-     <sound file="@terrain:waves.wav" volume="75%" radius="5" playback="looped" />
-</create>
 
-<layer number="1">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# wK wk .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# s# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# .. wd .. i# i# i# i# .. i# i# i# i# i# i# i# i# i# .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. i# i# i# i# i# i# .. i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# .. i# i# i# i# i# i# .. i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# .. i# i# i# i# i# i# .. i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# .. .. .. .. .. .. .. .. i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# i# .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g# g#
-gK gK gK gK gK gK gK gK gK gK gK gK gK gK g# g# gK gK gK gK gK gK gK gK gK gK gK gK gK gK
-gk gk gk gk gk gk gk gk gk gk gk gk gk gh gK gK gh gk gk gk gk gk gk gk gk gk gk gk gk gk
-n8 .. .. .. .. .. .. .. .. .. .. .. l} gk gk gk gk r} .. .. .. .. .. .. .. .. .. .. .. e8
-s8 e8 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. n8 w8 
-w8 n8 w8 s8 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. s8 w8 e8 n8
+<define>
+	<layer>6</layer>
+	<goto>0</goto>
+	<delay>5</delay>
+	<keyoff>0</keyoff>
+	<ydisplace>0</ydisplace>
+	<function name="move">
+		curlevel = player.location:layer;
+		calculatey = curlevel - vrf.goto;
+		vrf.ydisplace = calculatey * 256;
+		if (curlevel = vrf.goto) { vrf.paneldefault(); vrf.delay = 1; }  else { vrf.delay = 10; }
+		if (vrf.keyoff = 0) { 
+			vrf.keyoff = 2;
+			map.set_vrobj(16,9,vrf.goto,"%1");
+		}
+		if (vrf.keyoff = 1) {
+			vrf.keyoff = 2;		
+			if (curlevel != vrf.goto) { 
+				map.set_vrobj(16,9,curlevel,"%7");
+				map.set_vrobj(16,9,vrf.goto,"%1");
+			}
+		}
+	</function>
+	<function name="panelchange">
+		if (vrf.goto = 6)  { map.set_vrobj(16,7,10,"eA"); map.set_vrobj(16,7,8,"eA"); map.set_vrobj(16,7,6,"eA"); }
+		if (vrf.goto = 8)  { map.set_vrobj(16,7,10,"eB"); map.set_vrobj(16,7,8,"eB"); map.set_vrobj(16,7,6,"eB"); }
+		if (vrf.goto = 10) { map.set_vrobj(16,7,10,"eC"); map.set_vrobj(16,7,8,"eC"); map.set_vrobj(16,7,6,"eC"); }
+	</function>
+	<function name="paneldefault">
+		map.set_vrobj(16,7,10,"e2");
+		map.set_vrobj(16,7,8,"e2");
+		map.set_vrobj(16,7,6,"e2");
+	</function>
+	<function name="fadeout">
+		if (sky.brightness gt 0) { sky.brightness = sky.brightness - 4; }
+		if (ambient_light.brightness gt 0) { ambient_light.brightness = ambient_light.brightness - 4; }
+	</function>
+</define>
+
+<imagemap name="floor">
+	<script trigger="click on" shape="rect" coords="1,1,54,36">
+		if (vrf.keyoff lt 2) { vrf.goto = 10; vrf.panelchange(); vrf.move(); }
+	</script>
+	<script trigger="click on" shape="rect" coords="1,37,54,51">
+		if (vrf.keyoff lt 2) { vrf.goto = 8; vrf.panelchange(); vrf.move(); }
+	</script>
+	<script trigger="click on" shape="rect" coords="1,52,54,100">
+		if (vrf.keyoff lt 2) { vrf.goto = 6; vrf.panelchange(); vrf.move(); }
+	</script>
+</imagemap>
+
+
+
+
+
+
+
+<!-- || Elevator stuff || -->
+<CREATE unit="e2" vrobj="house:elevatorhandle" SPDESC="handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<popup trigger="proximity" radius="1.8" texture="@house:panel2.jpg" placement="right" imagemap="floor"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="eC" vrobj="house:elevatorhandle" SPDESC="handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<popup trigger="proximity" radius="1.8" texture="@house:panel22.jpg" placement="right" imagemap="floor"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="eB" vrobj="house:elevatorhandle" SPDESC="handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<popup trigger="proximity" radius="1.8" texture="@house:panel21.jpg" placement="right" imagemap="floor"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="eA" vrobj="house:elevatorhandle" SPDESC="handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<popup trigger="proximity" radius="1.8" texture="@house:panel2B.jpg" placement="right" imagemap="floor"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+<CREATE unit="P1" vrobj="house:panel" SPDESC="call elevator">
+<PARAM ORIENT="0,0,0"/>
+<side name="panel" texture="@house:call.gif" style="stretched"/>
+	<script trigger="click on">
+	        curlevel = player.location:layer;
+	        if (vrf.keyoff = 0) {
+	        	if (curlevel != vrf.layer) { vrf.delay = 10; vrf.layer = curlevel; vrf.keyoff = 2; vrf.ydisplace = 0; map.set_vrobj(16,9,curlevel,"%1"); }
+	        	else { vrf.delay = 1; vrf.keyoff = 2; vrf.ydisplace = 0; map.set_vrobj(16,9,curlevel,"%1"); }
+			map.set_vrobj(17,10,curlevel,"P2");
+	        }
+	</script>
+</CREATE>
+
+<CREATE unit="P2" vrobj="house:panel" SPDESC="call elevator activated">
+<PARAM ORIENT="0,0,0"/>
+<side name="panel" texture="@house:call2.gif" style="stretched"/>
+	<script trigger="timer" delay="0.9">
+		curlevel = player.location:layer;
+		if (vrf.delay = 1) { map.set_vrobj(17,10,curlevel,"P1"); }
+	</script>
+	<script trigger="timer" delay="9">
+	        curlevel = player.location:layer;
+		if (vrf.delay = 10) { map.set_vrobj(17,10,curlevel,"P1"); }
+	</script>
+</CREATE>
+
+
+
+
+
+
+
+
+<CREATE unit="%%" vrobj="house:gate" SPDESC="closed elevator doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,front,back,edges,bottom,top" texture="@basic:cement.vri" style="stretched"/>
+<side name="handles" texture="@house:blank.gif" style="stretched"/>
+</CREATE>
+
+<CREATE unit="%1" vrobj="house:gate" SPDESC="closed elevator doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,front,back,edges,bottom,top" texture="@basic:cement.vri" style="stretched"/>
+<side name="handles" texture="@house:blank.gif" style="stretched"/>
+	<script trigger="timer" delay="1">
+	        curlevel = player.location:layer;
+		if (vrf.delay = 1) { map.set_vrobj(16,9,curlevel,"%2"); }
+	</script>
+	<script trigger="timer" delay="9">
+		if (vrf.delay = 10) {
+			player.location:y = player.location:y - vrf.ydisplace;
+	        	curlevel = player.location:layer;
+	        	vrf.level = curlevel;
+	        	vrf.goto = 0;
+			vrf.ydisplace = 0;
+			map.set_vrobj(16,9,curlevel,"%2");
+		}
+	</script>
+</CREATE>
+<CREATE unit="%2" vrobj="basic3:passage" SPDESC="opening elevator doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
+<side name="fill" texture="@house:blank.gif" style="stretched"/>
+	<script trigger="timer" delay="0.1">
+		vrf.paneldefault();
+	</script>
+	<ACTION trigger="timer" delay="0.3">
+		<REPLACE SOURCE="%3"/>
+	</ACTION>	
+</CREATE>
+<CREATE unit="%3" vrobj="basic3:widepassage" SPDESC="opening doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
+<side name="fill" texture="@house:blank.gif" style="stretched"/>
+	<ACTION trigger="timer" delay="0.3">
+		<REPLACE SOURCE="%4"/>
+	</ACTION>	
+</CREATE>
+
+
+<CREATE unit="%4" vrobj="basic:ground" SPDESC="opened doors">
+<PARAM ORIENT="0,0,0"/>
+<side NAME="*" faces="0"/>
+	<script trigger="timer" delay="1">
+		vrf.keyoff = 1;
+	</script>
+	<ACTION trigger="timer" delay="10">
+		<REPLACE SOURCE="%5"/>
+	</ACTION>	
+</CREATE>
+
+
+<CREATE unit="%5" vrobj="basic3:widepassage" SPDESC="closing doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
+<side name="fill" texture="@house:blank.gif" style="stretched"/>
+	<script trigger="timer" delay="0.1">
+		vrf.keyoff = 2;
+	</script>
+	<ACTION trigger="timer" delay="0.3">
+		<REPLACE SOURCE="%6"/>
+	</ACTION>	
+</CREATE>
+<CREATE unit="%6" vrobj="basic3:passage" SPDESC="closing elevator doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
+<side name="fill" texture="@house:blank.gif" style="stretched"/>
+	<script trigger="timer" delay="0.3">
+		vrf.keyoff = 0;
+	</script>
+	<ACTION trigger="timer" delay="0.3">
+		<REPLACE SOURCE="%%"/>
+	</ACTION>
+</CREATE>
+
+<CREATE unit="%7" vrobj="basic3:widepassage" SPDESC="closing doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
+<side name="fill" texture="@house:blank.gif" style="stretched"/>
+	<script trigger="timer" delay="0.1">
+		vrf.keyoff = 2;
+	</script>
+	<ACTION trigger="timer" delay="0.3">
+		<REPLACE SOURCE="%8"/>
+	</ACTION>	
+</CREATE>
+<CREATE unit="%8" vrobj="basic3:passage" SPDESC="closing elevator doors">
+<PARAM ORIENT="0,0,0"/>
+<side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
+<side name="fill" texture="@house:blank.gif" style="stretched"/>
+	<ACTION trigger="timer" delay="0.3">
+		<REPLACE SOURCE="%%"/>
+	</ACTION>
+</CREATE>
+<!-- || END of elevator stuff || -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="ns" vrobj="house:door">
+<PARAM ORIENT="180,0,0"/>
+<side name="walls,front" texture="@house:hallway.jpg" style="stretched"/>
+<side name="back" texture="@house:refrigirator4.jpg" style="tiled"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+</CREATE>
+<CREATE unit="ne" vrobj="house:door">
+<PARAM ORIENT="270,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+</CREATE>
+<CREATE unit="nw" vrobj="house:door">
+<PARAM ORIENT="90,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+</CREATE>
+<CREATE unit="nn" vrobj="house:door">
+<PARAM ORIENT="0,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+</CREATE>
+<CREATE unit="Nn" vrobj="house:door">
+<PARAM ORIENT="0,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
+</CREATE>
+
+<!-- || Open/Shut Doors || -->
+<CREATE unit="n1" vrobj="house:door">
+<PARAM ORIENT="180,0,0"/>
+<side name="walls" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="back" texture="@house:tiles.jpg" style="stretched"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="n2"/>
+	</ACTION>	
+</CREATE>
+ 
+<CREATE unit="n2" vrobj="house:dooropen">
+<PARAM ORIENT="180,0,0"/>
+<side name="walls" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="back" texture="@house:tiles.jpg" style="stretched"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="n1"/>
+	</ACTION>	
+</CREATE>
+
+
+<!-- || Open/Shut Doors || -->
+<CREATE unit="n3" vrobj="house:door">
+<PARAM ORIENT="0,0,0"/>
+<side name="walls" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="n4"/>
+	</ACTION>	
+</CREATE>
+ 
+<CREATE unit="n4" vrobj="house:dooropen">
+<PARAM ORIENT="0,0,0"/>
+<side name="walls" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="n3"/>
+	</ACTION>	
+</CREATE>
+
+
+<!-- || Open/Shut Doors || -->
+<CREATE unit="n5" vrobj="house:door">
+<PARAM ORIENT="180,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:hallway.jpg" style="stretched"/>
+<side name="back" texture="@house:refrigirator4.jpg" style="tiled"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="n6"/>
+	</ACTION>	
+</CREATE>
+ 
+<CREATE unit="n6" vrobj="house:dooropen">
+<PARAM ORIENT="180,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:hallway.jpg" style="stretched"/>
+<side name="back" texture="@house:refrigirator4.jpg" style="tiled"/>
+	<ACTION TRIGGER="timer" delay="3">
+		<REPLACE SOURCE="n5"/>
+	</ACTION>	
+</CREATE>
+
+
+<!-- || Open/Shut Doors || -->
+<CREATE unit="n7" vrobj="house:door">
+<PARAM ORIENT="0,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:hallway.jpg" style="stretched"/>
+<side name="back" texture="@house:cloth022.jpg" style="tiled"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="n8"/>
+	</ACTION>	
+</CREATE>
+ 
+<CREATE unit="n8" vrobj="house:dooropen">
+<PARAM ORIENT="0,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:hallway.jpg" style="stretched"/>
+<side name="back" texture="@house:cloth022.jpg" style="tiled"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="n7"/>
+	</ACTION>	
+</CREATE>
+
+<!-- || Open/Shut Doors || -->
+<CREATE unit="n9" vrobj="house:door">
+<PARAM ORIENT="180,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="back" texture="@house:brick037.jpg" style="tiled"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="nA"/>
+	</ACTION>	
+</CREATE>
+ 
+<CREATE unit="nA" vrobj="house:dooropen">
+<PARAM ORIENT="180,0,0"/>
+<side name="walls" texture="@house:hallway.jpg" style="stretched"/>
+<side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
+<side name="front" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="back" texture="@house:brick037.jpg" style="tiled"/>
+	<ACTION TRIGGER="timer" delay="3">
+		<REPLACE SOURCE="n9"/>
+	</ACTION>	
+</CREATE>
+
+
+<!-- || Open/Shut Doors || -->
+<CREATE unit="nB" vrobj="house:gate">
+<PARAM ORIENT="180,0,0"/>
+<side name="inneredge,front,back" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
+<side name="edges,bottom,top" texture="@house:blank.gif" style="stretched"/>
+<side name="handles" texture="@basic:blackglare.gif" style="stretched"/>
+	<ACTION TRIGGER="click on" radius="1">
+		<REPLACE SOURCE="nC"/>
+	</ACTION>	
+</CREATE>
+ 
+<CREATE unit="nC" vrobj="house:opengate">
+<PARAM ORIENT="180,0,0"/>
+<side name="inneredges,front,back" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
+<side name="edges,bottom,top" texture="@house:blank.gif" style="stretched"/>
+<side name="handles" texture="@basic:blackglare.gif" style="stretched"/>
+	<ACTION TRIGGER="timer" delay="3">
+		<REPLACE SOURCE="nB"/>
+	</ACTION>	
+</CREATE>
+
+
+
+
+
+
+<CREATE unit="C1" vrobj="interior:chair" SPDESC="chair">
+<side name="chair,seat" texture="@interior:litewood.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="C2" vrobj="interior:chair" SPDESC="chair">
+<side name="chair,seat" texture="@interior:litewood.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="C3" vrobj="interior:chair" SPDESC="chair">
+<side name="chair,seat" texture="@interior:litewood.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="C4" vrobj="interior:chair" SPDESC="chair">
+<side name="chair,seat" texture="@interior:litewood.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="C5" vrobj="interior:chair" SPDESC="chair">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+<CREATE unit="CF" vrobj="interior:coffeetable">
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+<CREATE unit="pt" vrobj="house:pot">
+<side name="panel1, panel2" texture="@house:plant.gif" style="stretched"/>
+<side name="top,bottom,pot,insidewall" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="insidebottom" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+<CREATE unit="ps" vrobj="house:toilet">
+<side name="panel1, panel2" texture="@house:blank.gif" style="stretched"/>
+<side name="top,bottom,pot,insidewall" texture="@house:refrigirator.jpg" style="stretched"/>
+<side name="insidebottom" texture="@house:refrigirator.jpg" style="stretched"/>
+<side name="toilet" texture="@house:refrigirator.jpg" style="stretched"/>
+<side name="toiletknob" texture="@house:toiletknob.jpg" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit=".h" vrobj="house:kitchentop">
+<side name="bottom,n,w,e,body" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top,back" texture="@house:kitchentop.jpg" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+<CREATE unit="!h" vrobj="house:kitchentop2">
+<side name="bottom,n,w,e,body" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top,back" texture="@house:kitchentop.jpg" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+
+<CREATE unit="hh" vrobj="house:sink2">
+<side name="bottom,e,n,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink, sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="0,0,0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="hA"/>
+</ACTION>
+</CREATE>
+<CREATE unit="hA" vrobj="house:sink2">
+<side name="bottom,e,n,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="0,0,0"/>
+<SOUND FILE="@water:water_start.wav" VOLUME="100%" PLAYBACK="once" FLOOD="no"
+	RADIUS="2" ROLLOFF="1.0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="hE"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="hB"/>
+</ACTION>
+</CREATE>
+<CREATE unit="hB" vrobj="house:sink2">
+<side name="bottom,e,n,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
+<side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="0,0,0"/>
+<SOUND FILE="@water:water_loop.wav" VOLUME="100%" PLAYBACK="looped" FLOOD="no"
+	RADIUS="2" ROLLOFF="1.0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="hE"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="hC"/>
+</ACTION>
+</CREATE>
+<CREATE unit="hC" vrobj="house:sink2">
+<side name="bottom,e,n,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@basic:water.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="0,0,0"/>
+<SOUND FILE="@water:water_loop.wav" VOLUME="100%" PLAYBACK="looped" FLOOD="no"
+	RADIUS="2" ROLLOFF="1.0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="hD"/>
+</ACTION>
+</CREATE>
+<CREATE unit="hD" vrobj="house:sink2">
+<side name="bottom,e,n,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@basic:water.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="0,0,0"/>
+<SOUND FILE="@water:water_end1.wav" VOLUME="100%" PLAYBACK="once" FLOOD="no"
+	RADIUS="2" ROLLOFF="1.0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="hC"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="hE"/>
+</ACTION>
+</CREATE>
+<CREATE unit="hE" vrobj="house:sink2">
+<side name="bottom,e,n,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
+<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="0,0,0"/>
+<SOUND FILE="@water:water_end2.wav" VOLUME="100%" PLAYBACK="once" FLOOD="no"
+	RADIUS="2" ROLLOFF="1.0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="hB"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="hh"/>
+</ACTION>
+</CREATE>
+
+
+
+<CREATE unit="hi" vrobj="house:kitchentop2">
+<side name="bottom,n,e,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="hj" vrobj="house:sink">
+<side name="bottom,e,n,w" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink, sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="90,0,0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="]a"/>
+</ACTION>
+</CREATE>
+<CREATE unit="]a" vrobj="house:sink">
+<side name="bottom,e,n,w" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="90,0,0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="hj"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="]b"/>
+</ACTION>
+</CREATE>
+<CREATE unit="]b" vrobj="house:sink">
+<side name="bottom,e,n,w" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
+<side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="90,0,0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="]e"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="]c"/>
+</ACTION>
+</CREATE>
+<CREATE unit="]c" vrobj="house:sink">
+<side name="bottom,e,n,w" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@basic:water.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="90,0,0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="]d"/>
+</ACTION>
+</CREATE>
+<CREATE unit="]d" vrobj="house:sink">
+<side name="bottom,e,n,w" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
+<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@basic:water.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="90,0,0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="]c"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="]e"/>
+</ACTION>
+</CREATE>
+<CREATE unit="]e" vrobj="house:sink">
+<side name="bottom,e,n,w" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="sink" texture="@house:faucet.jpg" style="tiled"/>
+<side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
+<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
+<PARAM ORIENT="90,0,0"/>
+<ACTION trigger="click on">
+	<REPLACE SOURCE="]b"/>
+</ACTION>
+<ACTION trigger="timer" delay="3">
+	<REPLACE SOURCE="hj"/>
+</ACTION>
+</CREATE>
+
+
+
+
+
+
+
+
+
+<CREATE unit="h1" vrobj="house:height1">
+<side name="bottom,n,s,e" texture="@interior:litewood.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="w" texture="@house:cloth022.jpg" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="rt" vrobj="house:radiotop">
+<side name="top" texture="@house:kitchentop2.jpg" style="stretched" ANGLE="270"/>
+<side name="w,bottom,n,s,e" texture="@house:cloth022.jpg" style="stretched"/>
+<side name="radiofront" texture="@house:boombox.jpg" style="stretched"/>
+<side name="radioback" texture="@house:boombody2.jpg" style="stretched"/>
+<side name="radiobody" texture="@house:boombody.jpg" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+
+<CREATE unit="kc" vrobj="house:kitchencorner">
+<side name="bottom,n,s,w,body" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="e,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="Kc" vrobj="house:kitchencorner">
+<side name="bottom,n,s,w,body" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="e,front" texture="@interior:cabinetfront.gif" style="stretched"/>
+<side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit="h2" vrobj="house:tub">
+<side name="s" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="top" texture="@house:tub1.jpg" style="stretched"/>
+<side name="curtain" texture="@house:curtain.gif" style="stretched" clarity="15%"/>
+	<action trigger="click on">
+		<replace source="h4"/>
+		<replace source="h5" target="(18,14,10)"/>
+	</action>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="h3" vrobj="house:tub">
+<side name="s" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="top" texture="@house:tub2.jpg" style="stretched"/>
+<side name="curtain" texture="@house:curtain.gif" style="stretched" clarity="15%"/>
+	<action trigger="click on">
+		<replace source="h5"/>
+		<replace source="h4" target="(17,14,10)"/>
+	</action>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+<CREATE unit="h4" vrobj="house:tub">
+<side name="s" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="top" texture="@house:tub1.jpg" style="stretched"/>
+<side name="curtain" texture="@house:curtaina.gif" style="stretched" clarity="15%"/>
+	<action trigger="click on">
+		<replace source="h2"/>
+		<replace source="h3" target="(18,14,10)"/>
+	</action>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="h5" vrobj="house:tub">
+<side name="s" texture="@house:kitchentop.jpg" style="stretched"/>
+<side name="top" texture="@house:tub2.jpg" style="stretched"/>
+<side name="curtain" texture="@house:curtainb.gif" style="stretched" clarity="15%"/>
+	<action trigger="click on">
+		<replace source="h3"/>
+		<replace source="h2" target="(17,14,10)"/>
+	</action>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="hs" vrobj="house:height1">
+<side name="bottom,n,w,e" texture="@interior:litewood.gif" style="stretched"/>
+<side name="e" texture="@house:refrigirator.jpg" style="stretched"/>
+<side name="s" texture="@house:owen.jpg" style="stretched"/>
+<side name="top" texture="@house:stove2.jpg" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+
+<CREATE unit="CO" vrobj="interior:computer">
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+<CREATE unit="B2" vrobj="interior:sofa2" SPDESC="sofa">
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="B3" vrobj="interior:sofa2" SPDESC="sofa">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+ 
+<CREATE unit="BE" vrobj="interior:sofa" SPDESC="sofa">
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+<CREATE unit="f2" vrobj="interior:largeframe" SPDESC="frame">
+<side name="n,s" texture="@house:sea.jpg" style="stretched"/>
+<side name="innerframe" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="f3" vrobj="interior:largeframe" SPDESC="frame">
+<side name="n,s" texture="@house:sea.jpg" style="stretched"/>
+<side name="innerframe" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="f4" vrobj="interior:largeframe" SPDESC="frame">
+<side name="n,s" texture="@house:sea.jpg" style="stretched"/>
+<side name="innerframe" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="fs" vrobj="interior:smallframe" SPDESC="frame">
+<side name="n,s" texture="@house:sea.jpg" style="stretched"/>
+<side name="innerframe" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit="BD" vrobj="interior:bed" SPDESC="bed">
+<side name="toplegs" texture="@house:blank.gif" style="stretched"/>
+<side name="boxspring,bottomlegs" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit="ca" vrobj="interior:rcabinet" SPDESC="cabinet">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="cb" vrobj="interior:rcabinet" SPDESC="cabinet">
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+<CREATE unit="cl" vrobj="interior:dresser" SPDESC="closet">
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="cr" vrobj="interior:dresser" SPDESC="refrigirator">
+<side name="top,body" texture="@house:refrigirator.jpg" style="tiled"/>
+<side name="rdoor" texture="@house:fridge1.jpg" style="stretched" ANGLE="180"/>
+<side name="ldoor" texture="@house:fridge2.jpg" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+<CREATE unit="TV" vrobj="interior:smalltv" SPDESC="tv">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit="TB" vrobj="interior:roundtablelight" SPDESC="table">
+<side name="sides,base,stand,top,bottom" texture="@interior:litewood.gif" style="stretched"/>
+<side name="lamp1,lamp2" texture="@interior:chandelier.gif" style="stretched"/>
+<POINT_LIGHT STYLE="static" POSITION="(128,200,128)" BRIGHTNESS="100%" RADIUS="2" FLOOD="yes" COLOR="(230,40,40)"/> 
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+
+<CREATE unit="WI" vrobj="house:wincurtain" SPDESC="window">
+<side name="n" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,wedge,eedge" texture="@house:brick037.jpg" style="tiled"/>
+<side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
+<side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="curtain" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+	<action trigger="click on">
+		<replace source="WJ"/>
+	</action>
+</CREATE>
+
+<CREATE unit="WJ" vrobj="house:wincurtain" SPDESC="window">
+<side name="n" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,wedge,eedge" texture="@house:brick037.jpg" style="tiled"/>
+<side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
+<side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="curtain" texture="@house:curtain3.gif" style="stretched" clarity="10%"/>
+<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+	<action trigger="click on">
+		<replace source="WI"/>
+	</action>
+</CREATE>
+
+<CREATE unit="Wi" vrobj="house:wincurtain" SPDESC="window">
+<side name="n" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,wedge,eedge" texture="@house:brick037.jpg" style="tiled"/>
+<side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
+<side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="curtain" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+</CREATE>
+<CREATE unit="W1" vrobj="house:wincurtain" SPDESC="window">
+<side name="s" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="n,wedge,eedge" texture="@house:brick037.jpg" style="tiled"/>
+<side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
+<side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="curtain2" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<side name="curtain" texture="@house:blank.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="W2" vrobj="house:wincurtain" SPDESC="window">
+<side name="n" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,wedge,eedge" texture="@house:brick037.jpg" style="tiled"/>
+<side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
+<side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="curtain" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="W3" vrobj="house:wincurtain" SPDESC="window">
+<side name="s" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="n,wedge,eedge" texture="@house:brick037.jpg" style="tiled"/>
+<side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
+<side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="curtain2" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<side name="curtain" texture="@house:blank.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+
+
+<CREATE unit=".A" vrobj="basic:half" SPDESC="half">
+<side name="top,bottom,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<side name="n" texture="@house:fence2.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="1A" vrobj="house:halffence2" SPDESC="half">
+<side name="fence" texture="@house:fence2.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="!A" vrobj="house:halffence2" SPDESC="half">
+<side name="fence" texture="@house:fence2.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="A!" vrobj="house:halffence2" SPDESC="half">
+<side name="fence" texture="@house:fence2.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+<CREATE unit="2A" vrobj="basic:half" SPDESC="half">
+<side name="top,bottom,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<side name="n" texture="@house:fence2.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="3A" vrobj="basic:half" SPDESC="half">
+<side name="top,bottom,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<side name="n" texture="@house:fence2.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+<CREATE unit="AA" vrobj="house:halffence" SPDESC="half3">
+<side name="top,s,e,w,n" texture="@house:bush.gif" style="stretched"/>
+<side name="bottom" texture="@basic:grassground.gif" style="stretched"/>
+<side name="fence" texture="@house:fence2.gif" style="stretched"/>
+</CREATE>
+
+<CREATE unit=".C" vrobj="basic:half" SPDESC="half">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit=".D" vrobj="basic2:quarter" SPDESC="quarter">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit=".F" vrobj="basic2:floorhalf" SPDESC="floorhalf">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit=".G" vrobj="basic2:quarter" SPDESC="quarter">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit=".H" vrobj="basic2:floorhalf" SPDESC="floorhalf">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit=".O" vrobj="basic:half" SPDESC="half">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit=".Q" vrobj="basic2:concave" SPDESC="concave">
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit="wl" vrobj="basic:floor" SPDESC="thinwall">
+<side name="bottom,n,s" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="top,e,w" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="0,270,0"/>
+</CREATE>
+<CREATE unit="w2" vrobj="basic:floor" SPDESC="thinwall">
+<side name="bottom,n,s" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="top,e,w" texture="@house:brick037.jpg" style="tiled" ANGLE="180"/>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+
+<CREATE unit=".l" vrobj="basic3:wallc" SPDESC="balcony left">
+<side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick037.jpg" style="tiled" ANGLE="90"/>
+<PARAM ORIENT="90,90,0"/>
+</CREATE>
+<CREATE unit="/r" vrobj="basic3:wallc" SPDESC="balcony left">
+<side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick037.jpg" style="tiled" ANGLE="90"/>
+<PARAM ORIENT="90,270,180"/>
+</CREATE>
+
+
+<CREATE unit=".r" vrobj="basic3:wallc" SPDESC="balcony right">
+<side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick037.jpg" style="tiled" ANGLE="270"/>
+<PARAM ORIENT="0,90,90"/>
+</CREATE>
+<CREATE unit="/l" vrobj="basic3:wallc" SPDESC="balcony right">
+<side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick037.jpg" style="tiled" ANGLE="270"/>
+<PARAM ORIENT="270,270,180"/>
+</CREATE>
+
+
+<CREATE unit="ce" vrobj="basic:floor" SPDESC="ceiling">
+<side name="bottom,n,s,top,e,w" texture="@house:refrigirator.jpg" style="tiled"/>
+<PARAM ORIENT="0,180,0"/>
+</CREATE>
+<CREATE unit="Ce" vrobj="basic3:wallc" SPDESC="balcony left">
+<side name="top,wedge,bottom,eedge,sedge" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
+<side name="n,s,top,bottomedge,bottom" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="dd" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain3.gif" style="stretched" clarity="10%"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="d1" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain3.gif" style="stretched" clarity="10%"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="270,180,270"/>
+</CREATE>
+<CREATE unit="d2" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain3.gif" style="stretched" clarity="10%"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="180,270,0"/>
+</CREATE>
+<CREATE unit="d3" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain3.gif" style="stretched" clarity="10%"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="270,0,270"/>
+</CREATE>
+
+
+
+<CREATE unit="2c" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
+<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain4.gif" style="stretched" clarity="10%"/>
+	<action trigger="click on">
+		<replace source="2+"/>
+	</action>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="2+" vrobj="house:floorlayer2" SPDESC="balcony">
+<side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
+<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain4a.gif" style="stretched" clarity="10%"/>
+	<action trigger="click on">
+		<replace source="2c"/>
+	</action>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="2d" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain3.gif" style="stretched" clarity="10%"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+	<action trigger="click on">
+		<replace source="2h"/>
+		<replace source="2g" target="(10,22,10)"/>
+	</action>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="2e" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain5.gif" style="stretched"  clarity="10%"/>
+	<action trigger="click on">
+		<replace source="2i"/>
+		<replace source="2j" target="(9,22,10)"/>		
+	</action>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="2f" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
+<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain4.gif" style="stretched" clarity="10%"/>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit="2g" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
+<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+	<action trigger="click on">
+		<replace source="2c"/>
+		<replace source="2d" target="(11,22,10)"/>		
+	</action>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="2h" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain4.gif" style="stretched" clarity="10%"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="2i" vrobj="house:floorlayer" SPDESC="wall">
+<side name="top,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="bottom" texture="@house:brick037.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain4.gif" style="stretched"  clarity="10%"/>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="2j" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
+<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+	<action trigger="click on">
+		<replace source="2f"/>
+		<replace source="2e" target="(8,22,10)"/>
+	</action>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+
+<CREATE unit="2k" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,bottom,n,s,e,w" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
+<side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="3k" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,bottom,n,s,e,w" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
+<side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<PARAM ORIENT="270,180,270"/>
+</CREATE>
+<CREATE unit="4k" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,bottom,n,s,e,w" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
+<side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<PARAM ORIENT="180,270,0"/>
+</CREATE>
+<CREATE unit="5k" vrobj="house:floorlayer" SPDESC="balcony">
+<side name="top,bottom,n,s,e,w" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
+<side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
+<PARAM ORIENT="270,0,270"/>
+</CREATE>
+
+<CREATE unit="2K" vrobj="basic:floor" SPDESC="glass">
+<side name="top,bottom" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
+<side name="n,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+
+<CREATE unit="Pn" vrobj="interior:piano" SPDESC="piano">
+<param orient="90,0,0"/>
+</CREATE>
+
+<CREATE unit="Cg" vrobj="house:cage" SPDESC="cage">
+<side name="n,s" texture="@house:cagea.gif" style="stretched"/>
+<side name="e,w" texture="@house:cageb.gif" style="stretched"/>
+<side name="top" texture="@house:cagec.gif" style="stretched"/>
+<side name="bottom" texture="@house:caged.gif" style="stretched"/>
+<side name="inside" texture="@house:gicko.gif" style="stretched"/>
+<side name="insideback" texture="@house:gickoback.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+<CREATE unit=".#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,n,s,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="#1" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,n,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="w,s" texture="@house:brick037.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="#2" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,n,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="e,s" texture="@house:brick037.jpg" style="tiled"/>
+</CREATE>
+
+<CREATE unit="3#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,e,s,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="n" texture="@house:hallway.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="4#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="n,e,s,w" texture="@house:hallway.jpg" style="stretched"/>
+</CREATE>
+
+<CREATE unit="5#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,s,n,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="e" texture="@house:tiles2.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="6#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,s,n,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="e" texture="@house:tiles.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="7#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,e,w" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="n" texture="@house:hallway.jpg" style="stretched"/>
+<side name="s" texture="@house:tiles2.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="8#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,s,n,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="w" texture="@house:tiles2.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="9#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,s,n,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="w" texture="@house:tiles.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="a#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,s,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="w,n" texture="@house:tiles.jpg" style="stretched"/>
+</CREATE>
+
+<CREATE unit="b#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,s,n,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="w" texture="@house:mirror.jpg" style="stretched"/>
+	<ACTION TRIGGER="step in" radius="2">
+		<REPLACE SOURCE="c#"/>
+	</ACTION>
+</CREATE>
+<CREATE unit="c#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,s,n,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="w" texture="@house:mirror2.jpg" style="stretched"/>
+	<ACTION TRIGGER="step out" radius="2">
+		<REPLACE SOURCE="b#"/>
+	</ACTION>
+</CREATE>
+
+<CREATE unit="d#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,n,s,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="w" texture="@house:closet.gif" style="stretched"/>
+</CREATE>
+<CREATE unit="e#" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom,w,s,e" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="n" texture="@house:closet.gif" style="stretched"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="44" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,e" texture="@house:hallway.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator4.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="45" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,w" texture="@house:hallway.jpg" style="stretched"/>
+<side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator4.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="46" vrobj="basic:full" SPDESC="wall">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,e" texture="@house:hallway.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator4.jpg" style="stretched"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="BC" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" style="tiled"/>
+<side name="top" texture="@house:carpetout.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="CC" vrobj="basic:full" SPDESC="wall">
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="CS" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin7.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="C)" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin2.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="C(" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin8.jpg" style="tiled" ANGLE="270"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="S!" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin3.jpg" style="tiled" ANGLE="270"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="S?" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:brick037.jpg" style="tiled"/>
+<side name="top" texture="@house:carpetin4.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="S." vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin5.jpg" style="stretched" ANGLE="180"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="S>" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin5.jpg" style="stretched" ANGLE="90"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="S^" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin5.jpg" style="stretched"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="S," vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin3.jpg" style="tiled" ANGLE="90"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="Ss" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin6.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="Sd" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin6.jpg" style="tiled" ANGLE="90"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+
+
+
+<CREATE unit="CD" vrobj="basic:full" SPDESC="wall">
+<side name="w,e,n" texture="@house:refrigirator2.jpg" style="tiled"/>
+<side name="top" texture="@house:carpetin.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+<side name="s" texture="@house:brick037.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="CE" vrobj="basic3:wallc" SPDESC="wall">
+<side name="s,wedge,bottomedge,eedge,sedge" texture="@house:refrigirator.jpg" style="tiled"/>
+<side name="top" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="bottom" texture="@house:curtain2.gif" style="stretched"  clarity="10%" ANGLE="180"/>
+<side name="n" texture="@house:carpetin.jpg" style="tiled"/>
+<PARAM ORIENT="0,270,0"/>
+</CREATE>
+<CREATE unit="C!" vrobj="basic3:wallc" SPDESC="wall">
+<side name="n,s,bottomedge,wedge,eedge,sedge" texture="@house:refrigirator2.jpg" style="tiled"/>
+<side name="top" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
+<side name="bottom" texture="@house:curtain2.gif" style="stretched"  clarity="10%"/>
+<PARAM ORIENT="0,270,180"/>
+</CREATE>
+
+
+
+
+<CREATE unit="C?" vrobj="basic3:wallc" SPDESC="wall">
+<side name="s,n,wedge,bottomedge,eedge,sedge,top,bottom" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="180"/>
+<PARAM ORIENT="0,90,0"/>
+</CREATE>
+<CREATE unit="??" vrobj="basic3:wallc" SPDESC="wall">
+<side name="s,n,wedge,bottomedge,eedge,sedge,top,bottom" texture="@house:carpetin2.jpg" style="tiled"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit="@@" vrobj="basic:full" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+</CREATE>
+<CREATE unit="@h" vrobj="basic:half" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+</CREATE>
+
+
+
+
+<CREATE unit="_1" vrobj="basic2:bottomstairs" SPDESC="stairs">
+<side name="w,e,back,stairfront,stairtop" texture="@basic:blackglare.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="_2" vrobj="basic2:topstairs" SPDESC="stairs">
+<side name="w,e,back,stairfront,stairtop" texture="@basic:blackglare.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+<CREATE unit="-1" vrobj="basic2:bottomstairs" SPDESC="stairs">
+<side name="w,e,back,stairfront,stairtop" texture="@basic:blackglare.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="-2" vrobj="basic2:topstairs" SPDESC="stairs">
+<side name="w,e,back,stairfront,stairtop" texture="@basic:blackglare.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+<CREATE unit=".j" vrobj="basic:wbottomramp" SPDESC="stairs">
+<side name="top,bottom,w,n,s" texture="@house:refrigirator.jpg" style="tiled"/>
+<PARAM ORIENT="180,180,0"/>
+</CREATE>
+<CREATE unit=".J" vrobj="basic:wtopramp" SPDESC="stairs">
+<side name="top,bottom,w,n,s" texture="@house:refrigirator.jpg" style="tiled"/>
+<PARAM ORIENT="180,180,0"/>
+</CREATE>
+<CREATE unit="wj" vrobj="basic:wbottomramp" SPDESC="stairs">
+<side name="top,bottom,w,n,s" texture="@house:refrigirator.jpg" style="tiled"/>
+<PARAM ORIENT="0,180,0"/>
+</CREATE>
+<CREATE unit="wJ" vrobj="basic:wtopramp" SPDESC="stairs">
+<side name="top,bottom,w,n,s" texture="@house:refrigirator.jpg" style="tiled"/>
+<PARAM ORIENT="0,180,0"/>
+</CREATE>
+<CREATE unit="SF" vrobj="basic:floor" SPDESC="stairfloor">
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="bottom" texture="@house:refrigirator.jpg" style="tiled"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
+<PARAM ORIENT="0,180,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit="F." vrobj="basic:full" SPDESC="wall">
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:refrigirator.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="LL" vrobj="house:ceilinglamp" SPDESC="ceiling lamp">
+<side name="top,bottom,w,n,s,e" texture="@house:wlight.jpg" style="stretched"/>
+<POINT_LIGHT STYLE="static" POSITION="(128,230,128)" BRIGHTNESS="100%" RADIUS="2" FLOOD="yes" COLOR="(230,40,40)"/> 
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="LD" vrobj="house:floorlamp" SPDESC="dead ceiling lamp">
+<side name="ltop,lbottom,lw,ln,ls,le" texture="@house:wlight.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="e,w" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="bottom" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="90"/>
+<PARAM ORIENT="90,180,0"/>
+</CREATE>
+<CREATE unit="LN" vrobj="house:ceilinglamp" SPDESC="ceiling lamp">
+<side name="top,bottom,w,n,s,e" texture="@house:wlight.jpg" style="stretched"/>
+<POINT_LIGHT STYLE="static" POSITION="(128,230,128)" BRIGHTNESS="100%" RADIUS="2" FLOOD="yes" COLOR="(230,40,40)"/> 
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="LF" vrobj="house:floorlamp" SPDESC="ceiling lamp">
+<side name="ltop,lbottom,lw,ln,ls,le" texture="@house:wlight.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="e,w" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="bottom" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="90"/>
+<POINT_LIGHT STYLE="static" POSITION="(128,40,128)" BRIGHTNESS="100%" RADIUS="1" FLOOD="yes" COLOR="(230,40,40)"/> 
+<PARAM ORIENT="90,180,0"/>
+</CREATE>
+<CREATE unit="LB" vrobj="house:floorlamp" SPDESC="ceiling lamp">
+<side name="ltop,lbottom,lw,ln,ls,le" texture="@house:wlight.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="e,w" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="bottom" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="90"/>
+<POINT_LIGHT STYLE="pulsate" POSITION="(128,30,128)" BRIGHTNESS="5%..30%" RADIUS="1" FLOOD="yes" COLOR="(150,80,80)" SPEED="5" /> 
+<PARAM ORIENT="90,180,0"/>
+</CREATE>
+
+
+<CREATE unit="br" vrobj="basic:full" SPDESC="wall">
+<side name="w,n,e,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="top" texture="@house:refrigirator.jpg" style="tiled"/>
+</CREATE>
+
+
+<CREATE unit="DD" vrobj="house:smalldome" SPDESC="smalldome">
+<side name="top,bottom" texture="@house:wlight.jpg" style="tiled"/>
+<POINT_LIGHT STYLE="static" POSITION="(128,20,128)" BRIGHTNESS="100%" RADIUS="2" FLOOD="yes" COLOR="(230,40,40)"/> 
+<PARAM ORIENT="0,180,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit="NS" vrobj="basic2:stairs" SPDESC="stairs">
+<side name="w,e,back,stairfront,stairtop" texture="@house:refrigirator2.jpg" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="BS" vrobj="basic:full" SPDESC="wall">
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:refrigirator.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="ST" vrobj="basic:full" SPDESC="wall">
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="s,n" texture="@house:basement4.jpg" style="stretched"/>
+<side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="Sn" vrobj="basic:full" SPDESC="wall">
+<side name="s" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="n" texture="@house:basement4.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="St" vrobj="basic:full" SPDESC="wall">
+<side name="s" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="n" texture="@house:basement4.jpg" style="stretched"/>
+<side name="w" texture="@house:basement3.jpg" style="stretched"/>
+<side name="e" texture="@house:elevator.jpg" style="stretched"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+
+
+
+
+<CREATE unit="Gb" vrobj="basic:wbottomramp" SPDESC="ground">
+<side name="w,s,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="Gt" vrobj="basic:wtopramp" SPDESC="ground">
+<side name="w,s,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+<CREATE unit="cx" vrobj="house:convex2" SPDESC="entrance">
+<side name="curve,s,n,bottom" texture="@house:refrigirator2.jpg" style="stretched"/>
+<side name="wall" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit="!1" vrobj="basic:full" SPDESC="shadowfloor">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetout2.jpg" style="tiled" ANGLE="270"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="!2" vrobj="basic:full" SPDESC="shadowfloor">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetout3.jpg" style="tiled" ANGLE="270"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="!3" vrobj="basic:full" SPDESC="shadowfloor">
+<side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetout4.jpg" style="tiled" ANGLE="270"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+
+<CREATE unit="ML" vrobj="basic:half" SPDESC="mailbox">
+<side name="w,s,e,n,bottom" texture="@basic:cement.vri" style="stretched"/>
+<side name="top" texture="@interior:computerback.gif" style="tiled"/>
+<PARAM ORIENT="270,180,90"/>
+</CREATE>
+
+<CREATE unit="EL" vrobj="basic:full" SPDESC="elevator">
+<side name="w,s,n,e" texture="@house:elevator.jpg" style="stretched"/>
+<side name="top" texture="@house:carpetin.jpg" style="tiled"/>
+<side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
+</CREATE>
+
+
+
+<CREATE unit="47" vrobj="basic:full" SPDESC="elevator3">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s,e" texture="@house:hallway.jpg" style="stretched"/>
+<side name="w" texture="@house:wallelevw.jpg" style="stretched"/>
+<side name="n" texture="@house:cloth022.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="57" vrobj="basic:full" SPDESC="elevator3">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s" texture="@house:hallway1.jpg" style="stretched"/>
+<side name="w" texture="@house:wallelevw.jpg" style="stretched"/>
+<side name="n" texture="@house:cloth022.jpg" style="stretched"/>
+</CREATE>
+<CREATE unit="67" vrobj="basic:full" SPDESC="elevator3">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s" texture="@house:hallway2.jpg" style="stretched"/>
+<side name="w" texture="@house:wallelevw.jpg" style="stretched"/>
+<side name="n" texture="@house:cloth022.jpg" style="stretched"/>
+</CREATE>
+
+
+
+
+
+
+<CREATE unit="48" vrobj="basic:full" SPDESC="elevator3">
+<side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
+<side name="s" texture="@house:hallway.jpg" style="stretched"/>
+<side name="e" texture="@house:walleleve.jpg" style="stretched"/>
+<side name="n" texture="@house:elevatorpanel.jpg" style="stretched"/>
+</CREATE>
+
+
+
+
+
+
+
+<CREATE unit="e1" vrobj="house:elevatorhandle" SPDESC="handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="e3" vrobj="house:elevatorhandle" SPDESC="handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+<CREATE unit="E1" vrobj="house:elevatorhandle2" SPDESC="corner handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="E2" vrobj="house:elevatorhandle2" SPDESC="corner handle">
+<side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+<CREATE unit="B*" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" style="tiled"/>
+<side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
+<side name="bottom" texture="@house:topelev.jpg" style="tiled"/>
+</CREATE>
+<CREATE unit="B!" vrobj="basic:full" SPDESC="wall">
+<side name="w,s,e,n" style="tiled"/>
+<side name="top" texture="@house:carpetoutelev.jpg" style="tiled"/>
+<side name="bottom" texture="@house:topelev.jpg" style="tiled"/>
+</CREATE>
+
+
+
+<CREATE unit="Pt" vrobj="house:pot">
+<side name="panel1, panel2" texture="@house:plant.gif" style="stretched"/>
+<side name="top,bottom,pot,insidewall" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="insidebottom" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="PT" vrobj="house:pot">
+<side name="panel1, panel2" texture="@house:plant.gif" style="stretched"/>
+<side name="top,bottom,pot,insidewall" texture="@interior:finishedwood.gif" style="stretched"/>
+<side name="insidebottom" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+<CREATE unit="f9" vrobj="interior:largeframe" SPDESC="frame">
+<side name="n,s" texture="@house:sea.jpg" style="stretched"/>
+<side name="innerframe" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="f8" vrobj="interior:largeframe" SPDESC="frame">
+<side name="n,s" texture="@house:sea.jpg" style="stretched"/>
+<side name="innerframe" texture="@interior:finishedwood.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="WL" vrobj="house:walls" SPDESC="thinwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="/1" vrobj="house:walls" SPDESC="westthinwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="/2" vrobj="house:walls" SPDESC="norththinwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="/3" vrobj="house:walls" SPDESC="eastthinwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="/4" vrobj="house:walls" SPDESC="eastthinwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="layer" texture="@house:blank.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+<CREATE unit="/h" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest1h.gif" style="tiled"/>
+<side name="city" texture="@house:city5h.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="/j" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest2h.gif" style="tiled"/>
+<side name="city" texture="@house:city1h.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="/k" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest3h.gif" style="tiled"/>
+<side name="city" texture="@house:city2h.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="/m" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest4h.gif" style="tiled"/>
+<side name="city" texture="@house:city6h.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="/H" vrobj="house:halfwall" SPDESC="thinwall">
+<side name="w,n,s,top,bottom" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest8.gif" style="stretched"/>
+<side name="city" texture="@house:city3h.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+<CREATE unit="\h" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest1h.gif" style="tiled"/>
+<side name="city" texture="@house:city5h.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="\j" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest2h.gif" style="tiled"/>
+<side name="city" texture="@house:city1h.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="\k" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest3h.gif" style="tiled"/>
+<side name="city" texture="@house:city2h.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="\m" vrobj="house:halfwall" SPDESC="thinhalfwall">
+<side name="top,e,w,bottom,n,s" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest4h.gif" style="tiled"/>
+<side name="city" texture="@house:city6h.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit="\H" vrobj="house:halfwall" SPDESC="thinwall">
+<side name="w,n,s,top,bottom" texture="@house:brick037.jpg" style="tiled"/>
+<side name="forest" texture="@house:forest8e.gif" style="stretched"/>
+<side name="city" texture="@house:city3h.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+<CREATE unit="+1" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city1.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="+2" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city2.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="+3" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city4.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="+4" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city3.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="+5" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city6.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="+6" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city5.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+
+<CREATE unit="-7" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city1.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="-8" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city2.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="-3" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city4.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="-4" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city3.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="-5" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city6.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="-6" vrobj="house:forestcity" SPDESC="forest">
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<side name="city" texture="@house:city5.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+
+
+<CREATE unit="=1" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city1.gif" style="stretched"/>
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="=2" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city2.gif" style="stretched"/>
+<side name="forest" texture="@house:forest2.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="=3" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city3.gif" style="stretched"/>
+<side name="forest" texture="@house:forest3.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="=4" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city4.gif" style="stretched"/>
+<side name="forest" texture="@house:forest4.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="=5" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city5.gif" style="stretched"/>
+<side name="forest" texture="@house:forest5.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="=6" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city6.gif" style="stretched"/>
+<side name="forest" texture="@house:forest6.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="=7" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city2.gif" style="stretched"/>
+<side name="forest" texture="@house:forest8.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+<CREATE unit="=8" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city5.gif" style="stretched"/>
+<side name="forest" texture="@house:forest9.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+
+<CREATE unit=")1" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city1.gif" style="stretched"/>
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")2" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city2.gif" style="stretched"/>
+<side name="forest" texture="@house:forest2.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")3" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city3.gif" style="stretched"/>
+<side name="forest" texture="@house:forest3.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")4" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city4.gif" style="stretched"/>
+<side name="forest" texture="@house:forest4.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")5" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city5.gif" style="stretched"/>
+<side name="forest" texture="@house:forest5.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")6" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city6.gif" style="stretched"/>
+<side name="forest" texture="@house:forest6.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")7" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city2.gif" style="stretched"/>
+<side name="forest" texture="@house:forest8.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")8" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:city5.gif" style="stretched"/>
+<side name="forest" texture="@house:forest9e.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+<CREATE unit=")a" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="forest" texture="@house:forest1.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")b" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="forest" texture="@house:forest2.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")c" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="forest" texture="@house:forest3.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")d" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="forest" texture="@house:forest4.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")e" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="forest" texture="@house:forest5.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+<CREATE unit=")f" vrobj="house:forestcity" SPDESC="forest">
+<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="forest" texture="@house:forest6.gif" style="stretched"/>
+<PARAM ORIENT="90,0,0"/>
+</CREATE>
+
+
+
+
+
+<CREATE unit="*a" vrobj="house:doorwaygate" SPDESC="gates">
+<side name="w,n,s,top,bottom,inside" texture="@house:brick037.jpg" style="tiled"/>
+<side name="gate" texture="@house:gate.gif" style="stretched"/>
+<PARAM ORIENT="270,0,0"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+
+<CREATE unit="[1" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree1.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[2" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree2.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[3" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree3.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[4" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree4.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[5" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree5.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[6" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree6.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[7" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree7.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[8" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:tree8.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[C" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:coral.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+<CREATE unit="[B" vrobj="house:bush" SPDESC="shrub">
+<side NAME="bush" texture="@house:bush.gif"/>
+<side NAME="ground" texture="@basic:grassground.gif"/>
+</CREATE>
+
+
+
+
+
+
+
+
+
+<CREATE unit="@R" vrobj="basic:full" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@house:road.jpg" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="@C" vrobj="basic:full" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@house:roadcurve.jpg" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+<CREATE unit="@D" vrobj="house:height3" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="@E" vrobj="house:height4" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="@F" vrobj="house:height5" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="@G" vrobj="house:height2" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="@I" vrobj="basic:full" SPDESC="ground">
+<side name="w,s,e,n,bottom,top" texture="@basic:terrain.gif" style="stretched"/>
+<PARAM ORIENT="0,0,0"/>
+</CREATE>
+<CREATE unit="@H" vrobj="basic:half" SPDESC="ground">
+<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<PARAM ORIENT="180,0,0"/>
+</CREATE>
+
+
+
+<CREATE unit="@J" vrobj="house:layer" SPDESC="whirlpool">
+<side name="layer" texture="@house:whirlpool.gif" clarity="50%"/>
+<PARAM ORIENT="0,180,0"/>
+<script trigger="timer" delay="0.1">
+	if (player.location:layer lt 5) { player.orientation:look_angle = 0; vrf.user_can_move = false; vrf.fadeout(); }
+</script>
+</CREATE>
+
+
+
+
+<CREATE unit="@K" vrobj="house:layer" SPDESC="dummy">
+<side name="layer" texture="@house:blank.gif"/>
+<PARAM ORIENT="0,0,0"/>
+<ACTION trigger="step in">
+	<REPLACE SOURCE="@L"/>
+</ACTION>
+</CREATE>
+<CREATE unit="@L" vrobj="house:layer" SPDESC="dummy">
+<side name="layer" texture="@house:blank.gif"/>
+<PARAM ORIENT="0,0,0"/>
+<script trigger="timer" delay="10">
+	player.location:x = 100;
+	player.location:y = 512;
+	player.location:z = 7550;
+</script>
+</CREATE>
+
+<layer NUMBER="1">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @K .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 
-<layer number="2">
-., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., .,
-., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., .,
-., ., .# .# .# .# nb nb nb nb .# .# .# .# nb nb .# .# .# .# nb nb nb nb .# .# .# .# ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., .# i# i# i# i# ._ ._ i# i# i# i# i# ._ ._ i# i# i# i# i# ._ ._ i# i# i# i# .# ., .,
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .# ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ fp fp fp fp ._ ._ ._ .# ., .,
-., ., .# s# s# s# i# i# i# i# i# i# i# i# ._ ._ i# i# i# i# i# i# i# i# i# i# i# .# ., .,
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ i# i# i# ._ ._ i# i# i# ._ ._ ._ ._ ._ ._ ._ ._ .# ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., .,
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ i# i# i# ._ ._ i# i# i# ._ ._ ._ ._ ._ ._ ._ ._ .# ., .,
-., ., .# i# i# i# i# i# i# i# i# i# ._ ._ ._ ._ ._ ._ i# i# i# i# i# i# i# i# i# .# ., ., 
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ i# nK ._ ._ ._ ._ nK i# ._ ._ ._ ._ ._ ._ ._ ._ .# ., ., 
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ wb ., ., 
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# TV ._ ._ ._ ._ ._ ._ ._ wb ., ., 
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ed ._ ._ ._ ._ ._ ._ wd ._ ._ ._ ._ ._ ._ ._ ._ wb ., ., 
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ wb ., ., 
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ .# ., ., 
-., ., .# i# i# i# i# i# i# i# i# i# i# i# ._ ._ i# i# i# i# i# i# i# i# i# i# i# .# ., ., 
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .# ., ., 
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., ., 
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ed ._ ._ wd ._ ._ ._ t- t- t- t- ._ ._ ._ wb ., ., 
-., ., wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb ., ., 
-., ., .# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .# ., .,
-., ., .# nb nb .# nb nb .# nb nb .# .# .# LD RD .# .# .# nb nb .# nb nb .# nb nb .# ., .,
-., ., c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ c_ ., .,
-., ., dY c_ c_ dY c_ c_ dY c_ c_ dY c_ dY c_ c_ dY c_ dY c_ c_ dY c_ c_ dY c_ c_ dY ., .,
-., ., ., ., ., ., ., ., ., ., ., ., ., ., c_ c_ ., ., ., ., ., ., ., ., ., ., ., ., ., .,
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+<layer NUMBER="2">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 
-<layer number="3">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .# .# .# .# E: .= .= W: .# .# .# .# E: W: .# .# .# .# E: .= .= W: .# .# .# .# .. ..
-.. .. N: n: n: n: .- .= .= .- n: n: n: n: E: W: n: n: n: n: .- .= .= .- n: n: n: N: .. ..
-.. .. S: s: s: s: s: .= .= s: s: s: s: s: E: W: s: s: s: s: s: .= .= s: s: s: s: S: .. ..
-.. .. .# i# i# i# i# e: w: i# i# i# i# i# e: w: i# i# i# i# i# e: w: i# i# i# i# .# .. ..
-.. .. .# .- .- .- .- .- .- .- .- .- .- i# e: w: i# .- .- .- .- .- .- .- .- .- .- .# .. ..
-.. .. N: .- .- .- .- .- .- .- .- .- .- i# e: w: i# .- .- .- .- .- .- .- .- .- .- N: .. ..
-.. .. .= .- .- .- .- .- .- .- .- .- .- i# e: w: i# .- .- .- .- .- .- .- .- .- .- .= .. ..
-.. .. .= .- .- .- .- .- .- .- .- .- .- n: e: w: n: .- .- .- .- .- .- .- .- .- .- .= .. ..
-.. .. .= .- .- .- .- .- .- .- .- .- .- s: e: w: s: .- .- .- .- .- .- .- .- .- .- .= .. ..
-.. .. S: .- .- .- .- .- .- .- .- .- .- i# e: w: i# .- .- .- .- .- .- .- .- .- .- S: .. ..
-.. .. .# .- .- .- .- .- .- .- .- .- .- i# e: w: i# .- .- .- .- .- .- .- .- .- .- .# .. ..
-.. .. .# i# i# i# i# i# i# i# i# i# i# i# e: w: i# i# i# i# i# i# i# i# i# i# i# .# .. ..
-.. .. .# .- .- .- .- .- .- .- .- i# i# i# e: w: i# i# i# .- .- .- .- .- .- .- .- .# .. ..
-.. .. N: .- .- .- .- .- .- .- .- n: n: n: e: w: n: n: n: .- .- .- .- .- .- .- .- N: .. ..
-.. .. S: .- .- .- .- .- .- .- .- s: s: s: e: w: s: s: s: .- .- .- .- .- .- .- .- S: .. ..
-.. .. .# .- .- .- .- .- .- .- .- i# i# i# e: w: i# i# i# .- .- .- .- .- .- .- .- .# .. ..
-.. .. .# i# i# i# i# i# i# i# i# i# nK IS .. .. IS nK i# i# i# i# i# i# i# i# i# .# .. .. 
-.. .. .# .- .- .- .- .- .- .- .- i# .. .. .. .. .. .. i# .- .- .- .- .- .- .- .- .# .. ..
-.. .. N: .- .- .- .- .- .- .- .- i# .. .. .. .. .. .. i# .- .- .- .- .- .- .- .- N: .. .. 
-.. .. .= .- .- .- .- .- .- .- .- i# .. .. .. .. .. .. i# .- .- .- .- .- .- .- .- .= .. ..
-.. .. .= .- .- .- .- .- .- .- .- i# .. .. .. .. .. .. i# .- .- .- .- .- .- .- .- .= .. ..
-.. .. S: .- .- .- .- .- .- .- .- i# .. .. .. .. .. .. i# .- .- .- .- .- .- .- .- S: .. .. 
-.. .. .# .- .- .- .- .- .- .- .- i# .. .. .. .. .. .. i# .- .- .- .- .- .- .- .- .# .. .. 
-.. .. .# i# i# i# i# i# i# i# i# i# i# i# .. .. i# i# i# i# i# i# i# i# i# i# i# .# .. .. 
-.. .. .# .- .- .- .- .- .- .- .- .- .- i# .. .. i# .- .- .- .- .- .- .- .- .- .- .# .. .. 
-.. .. N: .- .- .- .- .- .- .- .- .- .- i# .. .. i# .- .- .- .- .- .- .- .- .- .- N: .. .. 
-.. .. .= .- .- .- .- .- .- .- .- .- .- i# .. .. i# .- .- .- .- .- .- .- .- .- .- .= .. ..
-.. .. S: .- .- .- .- .- .- .- .- .- .- i# .. .. i# .- .- .- .- .- .- .- .- .- .- S: .. .. 
-.. .. .# .- .- .- .- .- .- .- .- .- .- i# .. .. i# .- .- .- .- .- .- .- .- .- .- .# .. ..
-.. .. .# E: W: .# E: W: .# E: W: .# .# .# .# .# .# .# .# E: W: .# E: W: .# E: W: .# .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. b: b: .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .I .. .. .I .. .. .I .. .. .I .. .I .. .. .I .. .I .. .. .I .. .. .I .. .. .I .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+<layer NUMBER="3">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 
-<layer number="4">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .# .# nb nb .# .# nb nb .# .# .# .# .# .# .# .# .# .# nb nb .# .# nb nb .# .# .. ..
-.. .. .# ._ ._ ._ ._ ._ ._ ._ ._ i# i# i# i# wK wk ._ i# ._ ._ ._ ._ cp db ._ ._ .# .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# i# i# i# i# i# s# i# ._ ._ ._ ._ ._ ._ ._ ._ ew .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# TV ._ ._ ._ ._ ._ ._ lc ew .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ bd .# .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ ed ._ ._ ._ ._ ._ ._ d1 ._ ._ ._ ._ ._ ._ ._ rc ew .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ ew .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# cu cu cu fp fp cu cu cu .# .. .. 
-.. .. .# ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# i# i# i# i# i# i# i# i# .# .. .. 
-.. .. .# i# i# i# i# i# i# i# i# i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ .# .. .. 
-.. .. .# yB ._ ._ cp cp ._ ._ yB i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. ew ._ ._ ._ ._ ._ ._ ._ ._ ed ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. .# ._ ._ ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ i# ._ ._ ._ ._ ._ ._ ._ ._ .# .. .. 
-.. .. .# i# i# i# i# i# i# i# i# i# i# i# ._ ._ i# i# i# i# i# i# ._ ._ i# i# i# .# .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. .# i# i# i# ._ ._ i# i# i# i# .. IS IS IS IS .. i# i# i# i# ._ ._ i# i# i# .# .. .. 
-.. .. .# ._ ._ ._ ._ ._ ._ ._ ._ i# .. .. .. .. .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ .# .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# .. .. .. .. .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# .. .. .. .. .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# .. .. dY dY .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ i# .. .. .. .. .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. .# ._ ._ ._ ._ ._ ._ ._ ._ i# .. .. .. .. .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ .# .. .. 
-.. .. .# i# i# i# ._ ._ i# i# i# i# i# i# .. .. i# i# i# i# i# i# ._ ._ i# i# i# .# .. .. 
-.. .. .# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .# .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# dY dY i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. wb ._ ._ ._ .h ._ .h ._ ._ ._ ._ i# .. .. i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. wb ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ i# IS IS i# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ wb .. .. 
-.. .. .# ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ L3 ._ ._ ._ .# .. ..
-.. .. .# nb nb .# nb nb .# nb nb .# .# .# ._ ._ .# .# .# nb nb .# nb nb .# nb nb .# .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .I .. .. .I .. .. .I .. .. .I .. .I .. .. .I .. .I .. .. .I .. .. .I .. .. .I .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+<layer NUMBER="4">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @I .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @I @J @I .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @I .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 
-<layer number="5">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .# .# E: W: .# .# E: W: .# .# .# .# .# .# .# .# .# .# E: W: .# .# E: W: .# .# .. ..
-.. .. .# .- .- .- .- .- .- .- .- i# i# wK wk .. .. .- i# .- .- .- .- .- .- .- .- .# .. ..
-.. .. N: .- .- .- .- .- .- .- .- i# S# S# S# S# S# S# i# .- .- .- .- .- .- .- .- ew .. ..
-.. .. .= .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- ew .. ..
-.. .. .= .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- .# .. ..
-.. .. .= .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- ew .. ..
-.. .. .= .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- ew .. ..
-.. .. S: .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- fc fc .- .- .- .# .. ..
-.. .. .# .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# i# i# i# i# i# i# i# i# .# .. ..
-.. .. .# i# i# i# i# i# i# i# i# i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- .# .. ..
-.. .. .# .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- N: .. ..
-.. .. ew .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- S: .. ..
-.. .. .# .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- .# .. ..
-.. .. .# i# i# i# i# i# i# i# i# i# i# i# e: w: i# i# i# i# i# i# e: w: i# i# i# .# .. .. 
-.. .. N: n: n: n: .- .- n: n: n: n: n: n: .- .- n: n: n: n: n: n: .- .- n: n: n: N: .. ..
-.. .. S: s: s: s: .- .- s: s: s: s: .- .- .- .- .- .- s: s: s: s: .- .- s: s: s: S: .. .. 
-.. .. .# i# i# i# e: w: i# i# i# i# .- .- .- .- .- .- i# i# i# i# e: w: i# i# i# .# .. .. 
-.. .. .# .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- .# .. .. 
-.. .. N: .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- N: .. .. 
-.. .. .= .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- .= .. ..
-.. .. .= .- .- .- .- .- .- .- .- i# .- .- .Y .Y .- .- i# .- .- .- .- .- .- .- .- .= .. ..
-.. .. S: .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- S: .. ..
-.. .. .# .- .- .- .- .- .- .- .- i# .- .- .- .- .- .- i# .- .- .- .- .- .- .- .- .# .. .. 
-.. .. .# i# i# i# e: w: i# i# i# i# i# i# .- .- i# i# i# i# i# i# e: w: i# i# i# .# .. .. 
-.. .. .# .- .- .- .- .- .- .- .- .- .- i# .- .- i# .- .- .- .- .- .- .- .- .- .- .# .. .. 
-.. .. N: .- .- .- .- .- .- .- .- .- .- i# .Y .Y i# .- .- .- .- .- .- .- .- .- .- N: .. .. 
-.. .. .= .- .- .- .- .- .- .- .- .- .- i# .- .- i# .- .- .- .- .- .- .- .- .- .- .= .. .. 
-.. .. S: .- .- .- .- .- .- .- .- .- .- i# .- .- i# .- .- .- .- .- .- .- .- .- .- S: .. .. 
-.. .. .# .- .- .- .- .- .- .- .- .- .- s: .- .- s: .- .- .- .- .- .- .- .- .- .- .# .. ..
-.. .. .# nt nt .# nt nt .# nt nt .# .# .# E: W: .# .# .# nt nt .# nt nt .# nt nt .# .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .Y .. .. .Y .. .. .Y .. .. .Y .. .Y .. .. .Y .. .Y .. .. .Y .. .. .Y .. .. .Y .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+<layer NUMBER="5">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @I .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @I .. @I .. .. .. .. .. 
+.. .. .. .. .. .. .. BS .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @I .. .. .. .. .. ..
+.. .. .. .. .. .. .. BS .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BS .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@ .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BS BS BS BS BS BS .. CC CC CC .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BS .. .. .. .. .. .. CC CC CC .. .. .. .. .. .. BC .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. BC BC .. SF SF SF SF .. .. B! .. .. SF SF SF SF .. BC BC .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. BC .. SF SF SF SF .. BC BC BC .. SF SF SF SF .. BC .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BC .. F. .. .. .. .. BC BC BC .. .. .. .. F. .. BC .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. BC .. .. .. .. .. .. .. BC .. .. .. .. .. .. .. BC .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 
-<layer number="6">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. a} .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m b} ..
-.. .l a{ .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M b{ .j ..
-.. .l .L .# .# .# .# .# .# .# .# .# .. .. .. .. .. .. .# .# .# .# .# .# .# .# .# .J .j ..
-.. .l .L .# .# .# .# .# .# .# .# .# ._ ._ ._ ._ ._ ._ .# .# .# .# .# .# .# .# .# .J .j ..
-.. .l .L .# .# .+ .+ .+ .J .j ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .l .L .+ .+ .+ .# .# .J .j ..
-.. .l .L .# .# .+ .+ .+ .J .j ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .l .L .+ .+ .+ .# .# .J .j ..
-.. .l .L .# .# .+ .+ .+ .J .j ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .l .L .+ .+ .+ .# .# .J .j ..
-.. .l .L .# .# .K .K .K d{ .j ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ .l c{ .K .K .K .# .# .J .j ..
-.. .l .L .# .# .k .k .k .k d} ._ ._ ._ ._ .+ .+ ._ ._ ._ ._ c} .k .k .k .k .# .# .J .j ..
-.. .l .L .# .# R_ R_ R_ R_ R_ ._ ._ ._ ._ .+ .+ ._ ._ ._ ._ R_ R_ R_ R_ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ ._ R_ .# .# .J .j ..
-.. .l .L .# .# R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ .# .# .J .j ..
-.. .l .L .# .# .m .m .m .m b} R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ a} .m .m .m .m .# .# .J .j ..
-.. .l .L .# .# .M .M .M b{ .j R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ .l a{ .M .M .M .# .# .J .j ..
-.. .l .L .# .# .+ .+ .+ .J .j R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ .l .L .+ .+ .+ .# .# .J .j ..
-.. .l .L .# .# .+ .+ .+ .J .j R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ .l .L .+ .+ .+ .# .# .J .j ..
-.. .l .L .# .# .+ .+ .+ .J .j R_ R_ R_ R_ R_ R_ R_ R_ R_ R_ .l .L .+ .+ .+ .# .# .J .j ..
-.. .l .L .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .J .j ..
-.. .l .L .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .# .J .j ..
-.. .l c{ .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K d{ .j ..
-.. c} .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k d} .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+<layer NUMBER="6">
+.. @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ .. .. .. .. 
+.. @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @D @E @@ @E @@ @@ .. .. .. .. 
+.. @@ @@ @@ @@ @@ @@ NS @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @D @G .. @D @@ .. .. .. .. 
+.. @@ @@ @@ @@ @@ @@ .. @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @D @E @F @H @@ @@ .. .. .. ..
+.. @@ @@ @@ @@ @@ @@ n9 @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @E @G @E @@ .. .. .. .. 
+.. @@ @@ @@ @@ br CC .. ST ST ST ST ST .. EL EL EL .. .. .. .. .. .. .. .. @@ @@ @@ @D @D @@ .. .. .. .. 
+.. @@ @@ @@ @@ br CC .. .. .. LL .. .. St E2 e2 E1 EL .. .. .. .. .. .. .. @@ @@ @@ @@ @@ @@ .. .. .. .. 
+.. @@ @@ @@ @@ br CC n5 Sn St St St St EL e3 LL e1 EL CC CC CC CC 4# ns .# .. .. .. .. .. .. .. .. .. ..
+.. @@ @@ @@ @@ br nw .. 45 .. .. .. SF 44 48 %% 47 45 SF _2 _1 .. 46 .. ne .. .. .. .. .. .. .. .. .. ..
+.. @@ @@ @@ @@ br 4# LN 45 .. -1 -2 SF 44 .. LL P1 45 SF .. .. .. 46 LN 4# .. .. .. .. .. .. .. .. .. .. 
+.. @@ @@ @@ @@ br 4# .. 45 n5 44 44 44 4# .. .. .. 45 44 44 45 n5 46 .. 4# .. .. .. .. .. .. .. .. .. ..
+.. @@ @@ @@ @@ br nw .. .. .. .. LL .. .. .. .. .. .. .. LL .. .. .. .. ne .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. br .# nn 3# 3# 3# 3# 3# 3# 4# .. 4# 7# 7# 4# 4# 4# 4# nn 4# .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. 4# Nn 4# .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 
-<layer number="7">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. a} .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m .m b} .. .. ..
-.. .. .. .l a{ .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M .M b{ .j .. .. ..
-.. .. .. .l .L .# .J .j .. .. .. .. .. .. .. .. .. .. .. .. .. .. .l .L .# .J .j .. .. ..
-.. .. .. .l .L .K d{ .j .. .. .. .. .. .. .. .. .. .. .. .. .. .. .l c{ .K .J .j .. .. ..
-.. .. .. .l .L .k .k d} .. .. .. .. .. .. .. .. .. .. .. .. .. .. c} .k .k .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .J .j .. .. ..
-.. .. .. .l .L .m .m b} .. .. .. .. .. .. .. .. .. .. .. .. .. .. a} .m .m .J .j .. .. ..
-.. .. .. .l .L .M b{ .j .. .. .. .. .. .. .. .. .. .. .. .. .. .. .l a{ .M .J .j .. .. ..
-.. .. .. .l .L .# .J .j .. .. .. .. .. .. .. .. .. .. .. .. .. .. .l .L .# .J .j .. .. ..
-.. .. .. .l c{ .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K .K d{ .j .. .. ..
-.. .. .. c} .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k .k d} .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+<layer NUMBER="7">
+/2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 .. .. .. .. 
+/1 [C .. [4 .. .. .. .. .. .. .. .. [B [5 [B [5 [B [5 [B .. .. .. .. .. .. .. .. [4 .. [C /3 .. .. .. .. 
+/1 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. /3 .. .. .. .. 
+/1 [4 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. [4 /3 .. .. .. ..
+/1 .. .. .. w2 w2 /l Ce Ce Ce Ce /r w2 w2 w2 w2 w2 w2 w2 /l Ce Ce Ce Ce /r w2 w2 .. .. .. /3 .. .. .. .. 
+/1 .. .. .. br .. CC CC .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. br [8 .. .. /3 .. .. .. .. 
+/1 .. .. [8 br .. CC CC CC CC CC CC CC .. CC CC CC .. .. .. .. .. .. .. .. .. br [8 .. .. /3 .. .. .. .. 
+/1 .. .. [8 br .. CC CC CC CC CC CC CC .. CC CC CC .. CC CC CC CC CC CC CC .. br Gb Gb Gb /3 .. .. .. ..
+/1 .. .. [8 br .. CC BC CC LF _2 _1 .. CC CC B! CC CC .. .. .. SF CC BC CC .. br @h @h @h /3 .. .. .. ..
+/1 .. .. [8 br .. CC BC CC SF .. .. .. CC BC BC BC CC .. -1 -2 LF CC BC CC .. br @h @h @h /3 .. .. .. .. 
+/1 .. .. .. br .. CC BC CC F. CC CC CC CC BC BC BC CC CC CC CC F. CC BC CC .. br @h @h @h /3 .. .. .. ..
+/1 .. .. .. br .. CC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC CC .. br @h @h @h /3 .. .. .. .. 
+/1 Gb Gb Gb br .. CC CC .. .. .. .. .. .. BC BC BC .. .. .. .. .. .. CC CC .. br Gt Gt Gt /3 .. .. .. .. 
+/1 @h @h @h br .. .. .. .. .. .. .. .. .. BC BC !1 .. .. .. .. .. .. .. .. .. .. @@ @@ @@ @@ @R @@ .. .. 
+/1 @h @h @h br .. .. .. .. .. .. .. .. .. !2 BC BC .. .. .. .. .. .. .. .. .. .. @@ @@ @@ @@ @R @@ .. ..
+/1 @h @h @h br .. .. .. .. .. .. .. .. .. BC BC !1 .. .. .. .. .. .. .. .. .. .. @@ @@ @@ @@ @R @@ .. .. 
+/1 @h @h @h br CC .. .. .. .. .. .. .. .. BC BC BC .. .. .. .. .. .. .. .. CC br @@ @@ @@ @@ @R @@ .. .. 
+/1 @h @h @h br CC .. .. .. .. .. .. .. .. BC BC BC .. .. .. .. .. .. .. .. CC br @@ @@ @@ @@ @R @@ .. .. 
+/1 Gt Gt Gt br CC .. .. .. .. .. .. .. CC BC BC BC .. .. .. .. .. .. .. .. CC br @@ @@ @@ @@ @R @@ .. .. 
+@@ @@ @@ @@ br CC .. .. .. .. .. .. .. .. !3 BC BC .. .. .. .. .. .. .. .. CC br @@ @@ @@ @@ @R @@ .. ..
+@@ @@ @@ @@ @@ .. .. .. .. .. .. .. .. .. !3 BC BC .. .. .. .. .. .. .. .. .. .. @@ @@ @@ @@ @R @@ .. .. 
+@@ @@ @@ @@ @@ .. .. CC CC CC CC .. .. .. BC BC BC .. .. .. CC CC CC CC .. .. .. @@ @@ @@ @@ @R @@ .. .. 
+@@ @@ @@ @@ @@ @@ @@ ce ce ce ce @@ @@ @@ ce ce ce @@ @@ @@ ce ce ce ce @@ @@ @@ @@ @@ @@ @@ @R @@ .. .. 
+@@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ ce ce ce @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @R @@ .. .. 
+@@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @R @R @R @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @R @@ .. ..
+@@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @C @R @R @R @R @R @R @R @R @R @R @R @R @R @R @R @R @R @@ .. .. 
+@@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @R @@ .. .. 
+@@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @R @@ .. .. 
+@@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @C @R @R @R 
+@@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ @@ .. .. .. .. ..
 </layer>
-<action trigger="step in" radius="4" location="(19,8,4)">
-<replace source="d2"/>
-</action>
-<action trigger="step out" radius="4" location="(19,8,4)">
-<replace source="d1"/>
-</action>
+
+<layer NUMBER="8">
+-4 -3 -5 -8 -7 -6 -8 -7 -4 -3 -5 -6 -5 -3 -4 -8 -7 -3 -4 -5 -7 -8 -3 -4 -5 -6 -4 -5 -3 -8 -7 .. .. .. .. 
+=3 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. )4 .. .. .. .. 
+=5 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. )3 .. .. .. .. 
+=1 .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. )5 .. .. .. ..
+=2 .. .. .. w2 W2 /l ce ce ce ce /r w2 W2 w2 w2 w2 W2 w2 /l ce ce ce ce /r W2 w2 .. .. .. )1 .. .. .. .. 
+=4 .. .. .. br .. .. d2 4k 4k d2 .. .. .. EL EL EL .. .. .. d2 4k 4k d2 .. .. br .. .. .. )6 .. .. .. .. 
+=6 .. .. 1A ce d1 .. .. .. .. .. .. .. EL E2 e2 E1 EL .. .. .. .. .. .. .. d3 ce 3A .. .. )8 .. .. .. .. 
+=5 .. .. 1A ce 3k .# ns .# CC CC CC CC EL e3 LL e1 EL CC CC CC CC 4# ns .# 5k ce 3A .. .. \j .. .. .. ..
+=4 .. .. 1A ce 3k nw .. 45 .. .. .. SF 44 48 %% 57 45 LF _2 _1 .. 46 .. ne 5k ce A! .. .. \k .. .. .. ..
+=3 .. .. 1A ce d1 4# LN 45 .. -1 -2 LF 44 .. LN P1 45 SF .. .. .. 46 LN 4# d3 ce A! .. .. \h .. .. .. .. 
+=2 .. .. .. br .. 4# .. 45 n5 44 44 44 4# .. .. .. 45 44 44 45 n5 46 .. 4# .. br .. .. .. \m .. .. .. ..
+=8 .. .. .. W1 .. nw .. .. .. .. LL .. .. .. .. .. .. .. LL .. .. .. .. ne .. W3 .. .. .. \H .. .. .. .. 
+/h .. .. .. br .. .# nn 3# 3# 3# 3# 3# 4# .. .. .. 4# 7# 4# 4# 4# 4# nn 4# .. br .. .. .. /3 .. .. /3 .. 
+/j .. .. .. br .. .# .. .. .. .. .. .. 4# f8 .. B3 4# .. .. .. .. .. .. .# .. br .. .. .. /3 .. .. /3 .. 
+/k .. .. .. W1 .. .# .. .. .. .. .. .. 4# BE .. .. 4# .. .. .. .. .. .. .# .. W3 .. .. .. /3 .. .. /3 ..
+/h .. .. .. br .. .# .. .. .. .. .. .. 4# f9 .. B3 4# .. .. .. .. .. .. .# .. br .. .. .. /3 .. .. /3 .. 
+/m .. .. 1A ce d1 .# .. .. .. .. .. .. 4# .. .. .. 4# .. .. .. .. .. .. .# d3 ce A! .. .. /3 .. [1 /3 .. 
+/H .. .. 1A ce 3k .# .. .. .. .. .. .. 4# 2K nB 2K 4# .. .. .. .. .. .. .# 5k ce A! .. [6 /3 .. .. /3 .. 
+/1 .. .. 1A ce 3k .# .. .. .. .. .. .. nw .. .. .. 4# .. .. .. .. .. .. .# 5k ce A! .. [7 /3 .. [1 /3 .. 
+/1 .. .. !A ce d1 .# .. .. .. .. .. .. 4# Pt DD ML 4# .. .. .. .. .. .. .# d3 ce A! .. [6 /3 .. .. /3 ..
+/1 .. .. .. br .. .# .. .. .. .. .. .. 4# pt .. ML 4# .. .. .. .. .. .. .# .. br .. .. [7 /3 .. [1 /3 .. 
+/1 [6 .. .. br .. .# dd 2k 2k dd .# .. 4# 2K nB 2K 4# .. .# dd 2k 2k dd .# .. br .. .. .. /3 .. .. /3 .. 
+/1 [7 .. .. wl Wi .l ce ce ce ce .r wl .l .. .. .. .r wl .l ce ce ce ce .r Wi wl .. .. .. /4 .. [1 /3 .. 
+/1 [6 .. .. .. .. .. AA AA AA AA .. .. [4 .. .. .. [4 .. .. AA AA AA AA .. .. .. .. .. .. /4 .. .. /3 .. 
+/1 [7 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. [B .. .. [B .. .. [B .. .. [B .. .. [1 /4 .. [1 /3 ..
+/1 .. .. .. .. .. .. .. .. .. .. .. .. [B .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. *a .. .. /3 .. 
+/1 .. .. .. .. .. .. .. .. .. .. .. .. .. [B .. .. [B .. .. [B .. .. [B .. .. [B .. .. [1 /4 .. [1 /3 .. 
+/1 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. /4 .. .. /3 /2 
+/1 [C [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [5 [B [C /4 .. .. .. .. 
+WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL
+</layer>
+
+<layer NUMBER="9">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. w2 W2 /l ce ce ce ce /r w2 W2 w2 w2 w2 W2 w2 /l ce ce ce ce /r W2 w2 .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .. d2 4k 4k d2 .. .. .. .. .. .. .. .. .. d2 4k 4k d2 .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. 1A ce d1 .. .. .. .. .. .. .. .. CC CC CC .. .. .. .. .. .. .. .. d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce 3k CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC 5k ce 3A .. .. .. .. .. .. ..
+.. .. .. 1A ce 3k CC BC CC LF _2 _1 .. CC CC B! CC CC .. .. .. SF CC BC CC 5k ce 3A .. .. .. .. .. .. ..
+.. .. .. 1A ce d1 CC BC CC SF .. .. .. CC BC BC BC CC .. -1 -2 LF CC BC CC d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. .. br .. CC BC CC F. CC CC CC CC BC BC BC CC CC CC CC F. CC BC CC .. br .. .. .. .. .. .. .. ..
+.. .. .. .. W1 .. CC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC BC CC .. W3 .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .. CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC 4# .. br .. .. .. )e .. .. )2 .. 
+.. .. .. .. br .. .. CC CC CC Ss CC CC CC CC CC CC CC .. .. .. .. .. .. .. .. br .. .. .. )b .. .. )3 .. 
+.. .. .. .. W1 .. .. CC CC C) CC CC CC CC CC CC CC CS .. .. .. .. .. .. .. .. W3 .. .. .. )c .. .. )4 ..
+.. .. .. .. br .. .. CC C) CS C) CC CC CC CC CC CC CC .. .. .. .. .. .. .. .. br .. .. .. )a .. .. )5 .. 
+.. .. .. 1A ce d1 .. CC CC C) CC CC CC CC S> CC CC CC .. .. .. .. .. .. .. d3 ce 3A .. .. )f .. .. )6 .. 
+.. .. .. 1A ce 3k .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. 5k ce 3A .. .. )e .. .. )1 .. 
+=4 .. .. 1A ce 3k .. CC CC CC S, CC CC CC CC CC CC CC .. .. .. .. .. .. .. 5k ce 3A .. .. )d .. .. )4 .. 
+=5 .. .. 1A ce d1 .. S! C) CC CS CC CC CC S^ CC CC CC .. .. .. .. .. .. .. d3 ce 3A .. .. )c .. .. )2 ..
+=1 .. .. .. br .. .. CS S. CC CS CC C) CC Sd CC CC CC .. CC CC CC CC CC .. .. br .. .. .. )b .. .. )5 .. 
+=2 .. .. .. br .. .. CD CE CE CD CC C( ?? S? S? S? ?? .. .# dd 2k 2k dd .. .. br .. .. .. )a .. .. )3 .. 
+=4 .. .. .. wl Wi .l ce ce ce ce .r wl Wi cx cx cx Wi wl .l ce ce ce ce .r Wi wl .. .. .. )b .. .. )6 .. 
+=6 .. .. .. .. .. .. .A .A .A .A .. .. .. .. .. .. .. .. .. .A .A .A .A .. .. .. .. .. .. )c .. .. )4 .. 
+=5 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. )a .. .. )1 ..
+=4 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. )f .. .. )5 .. 
+=3 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. )e .. .. )4 .. 
+=2 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. )d .. .. )2 -7 
+=1 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. )c .. .. .. .. 
++1 +2 +3 +4 +5 +6 +4 +1 +3 +2 +5 +6 +4 +2 +1 +3 +4 +6 +1 +2 +5 +4 +3 +1 +2 +6 +5 +4 +3 +2 +1 +4 +3 +5 +6
+</layer>
+
+<layer NUMBER="10">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. w2 W2 /l ce ce ce ce /r w2 W2 w2 w2 w2 W2 w2 /l ce ce ce ce /r W2 w2 .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .. d2 4k 4k d2 .. .. .. EL EL EL .. .. .. d2 4k 4k d2 .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. 1A ce d1 .. .. .. .. .. .. .. EL E2 e2 E1 EL .. .. .. .. .. .. .. d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce 3k .# ns .# CC CC CC CC EL e3 LL e1 EL CC CC CC CC 4# ns .# 5k ce 3A .. .. .. .. .. .. ..
+.. .. .. 1A ce 3k nw .. 45 .. .. .. SF 44 48 %% 67 45 LD _2 _1 .. 46 .. ne 5k ce 3A .. .. .. .. .. .. ..
+.. .. .. 1A ce d1 4# LN 45 .. -1 -2 LB 44 .. LN P1 45 SF .. .. .. 46 LN 4# d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. .. br .. 4# .. 45 n5 44 44 44 4# .. .. .. 45 44 44 45 n5 46 .. 4# .. br .. .. .. .. .. .. .. ..
+.. .. .. .. W1 .. nw .. .. .. .. LL .. .. .. .. .. .. .. LL .. .. .. .. ne .. W3 .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .# n7 3# 3# 3# 3# 3# 3# 3# 3# 7# 7# 7# 4# 4# 4# 4# nn 4# .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .# .. .. f3 cb .# Kc hh kc 5# h2 h3 8# .. .. .. .. .. .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. W1 .. .# .. .. C1 .. rt .h DD hi 6# DD ps 9# .. .. .. .. .. .. .. W3 .. .. .. .. .. .. .. ..
+.. .. .. .. br .. .# .. C4 TB C2 h1 .h .. hs 6# .. ]c b# .. .. .. .. .. .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. 1A ce d1 .# .. .. C3 fs .# !h .. cr 6# n1 a# 9# .. .. .. .. .. .. d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce 3k .# f2 .. .. .. .. .. .. .. DD .. d# .. .. .. .. .. .. .. 5k ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce 3k .# .. DD .. Pn .# n3 .# e# .# .# .# .. .. .. .. .. .. .. 5k ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce d1 .# BE CF .. TV .# .. f4 cl .# .. .. .. .. .. .. .. .. .. d3 ce 3A .. .. .. .. .. .. ..
+.. .. .. .. br .. .# PT B2 .. Cg .# .. .. ca .# .. .. .. .. .. .. .. .. .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .# 2e 2f 2c 2d .# CO C5 BD .# .. .. .. .# dd 2k 2k dd .# .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. wl Wi .l ce ce ce ce .r wl WI wl wl wl Wi wl .l ce ce ce ce .r Wi wl .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .A .A .A .A .. .. .. .. .. .. .. .. .. .A .A .A .A .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+
+<layer NUMBER="11">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. .. .. .. 2A 2A 2A 2A .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. w2 W2 /l ce ce ce ce /r w2 W2 w2 w2 w2 W2 w2 /l ce ce ce ce /r W2 w2 .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .. d2 4k 4k d2 .. .. .. .. .. .. .. .. .. d2 4k 4k d2 .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. 1A ce d1 .. .. .. .. .. .. .. .. CC CC CC .. .. .. .. .. .. .. .. d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce 3k CC CC CC CC CC CC CC CC CC CC CC .. CC CC CC CC CC CC CC 5k ce 3A .. .. .. .. .. .. ..
+.. .. .. 1A ce 3k CC CC CC LF _2 _1 .. CC CC B* CC CC .. .. .. SF CC CC CC 5k ce 3A .. .. .. .. .. .. ..
+.. .. .. 1A ce d1 CC CC CC SF .. .. .. CC CC CC CC CC .. -1 -2 LD CC CC CC d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. .. br .. CC CC CC F. CC CC CC CC CC CC CC CC CC CC CC F. CC CC CC .. br .. .. .. .. .. .. .. ..
+.. .. .. .. W1 .. CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC .. W3 .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .. CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC 4# .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. W1 .. .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. .. W3 .. .. .. .. .. .. .. ..
+.. .. .. .. br .. .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. 1A ce d1 .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. d3 ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce 3k .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. 5k ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce 3k .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. 5k ce 3A .. .. .. .. .. .. .. 
+.. .. .. 1A ce d1 .. CC CC CC CC CC CC CC CC CC CC CC .. .. .. .. .. .. .. d3 ce 3A .. .. .. .. .. .. ..
+.. .. .. .. br .. .. CC CC CC CC CC CC CC CC CC CC CC .. CC CC CC CC CC .. .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. br .. .. CD C! C! CD CC CC C? CC CC CC C? .. .# dd 2k 2k dd .# .. br .. .. .. .. .. .. .. .. 
+.. .. .. .. wl Wi .l ce ce ce ce .r wl Wi wl wl wl Wi wl .l ce ce ce ce .r Wi wl .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .A .A .A .A .. .. .. .. .. .. .. .. .. .A .A .A .A .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+
+<layer NUMBER="12">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. CC CC CC CC CC .. .. .. .. .. CC CC CC CC CC .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. CC LN .. .. .. CC .. .. .. CC .. .. .. LN CC .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. CC .. .. .. LN CC .. .. .. CC LN .. .. .. CC .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. CC ns CC CC CC .. .. .. .. .. CC CC CC ns CC .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
+
+<layer NUMBER="13">
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. CC CC CC CC .. .. .. .. .. CC CC CC CC .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. CC CC CC CC .. .. .. .. .. CC CC CC CC .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. CC .. .. .. .. .. .. .. .. .. .. .. CC .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
 <imagemap name="github">
 <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
@@ -611,9 +2655,9 @@ w8 n8 w8 s8 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. s8
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%" />
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%" />
-<popup location="(15,40,1)" radius="1" placement="center" text="This sample shows how to mix multiple libraries in the same VRF. This is only a how-to since we recommend the usage of the minimum number of libraries possible per VRF to improve performance.View source for more details."/>
-<enter location="(15,40,1)" name="default"/>
+<popup location="(14,21,10)" radius="1" placement="center" text="This sample shows how to mix multiple libraries, scripting and actions to achieve the maximum results in the VRF. View source for more details."/>
+<enter location="(14,21,10)" name="default" angle="225"/>
+
 </design>
 </vrf>
-
 
