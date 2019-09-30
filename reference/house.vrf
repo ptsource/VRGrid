@@ -39,7 +39,7 @@
 <create unit="bK" vrobj="house:radiotop"><popup text="house:radiotop" placement="top" trigger="rollover"/></create>
 <create unit="bL" vrobj="house:sink"><popup text="house:sink" placement="top" trigger="rollover"/></create>
 <create unit="bM" vrobj="house:sink2"><popup text="house:sink2" placement="top" trigger="rollover"/></create>
-<create unit="bN" vrobj="house:smalldome2"><popup text="house:smalldome2" placement="top" trigger="rollover"/></create>
+<create unit="bN" vrobj="house:smalldome"><popup text="house:smalldome" placement="top" trigger="rollover"/></create>
 <create unit="bO" vrobj="house:toilet"><popup text="house:toilet" placement="top" trigger="rollover"/></create>
 <create unit="bP" vrobj="house:tub"><popup text="house:tub" placement="top" trigger="rollover"/></create>
 <create unit="bq" vrobj="house:wincurtain"><popup text="house:wincurtain" placement="top" trigger="rollover"/></create>
