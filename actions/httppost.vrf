@@ -34,6 +34,7 @@
 </action>
 </create>
 <create unit="rr" vrobj="base:full">
+<side name="*" texture="@warehouse:r.gif" />
 <action trigger="click on" text="Click here to view the object clicks" sidename="*">
         <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|Click Results from VRGrid|560|600"/>
 </action>
@@ -122,7 +123,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(6,9,1)" radius="1" placement="center" text="This sample shows the HTTTPOST action usage. Parameters are (pageurl). Click the cube to see. View source for more details."/>
+<popup location="(6,9,1)" radius="1" placement="center" text="This sample shows the HTTTPOST action usage with database support. Parameters are (pageurl). Walk the map clicking on the cubes this will record the clicks on a database. View source for more details."/>
 <enter location="(6,9,3)"  name="default" angle="80"/>
 </design>
 </vrf>
