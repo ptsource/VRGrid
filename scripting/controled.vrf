@@ -370,6 +370,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(5,6,20)" radius="1" placement="center" text="This sample demonstrates how to use variable defines. Press 'p' to start the fall. View source for more details."/>
 <enter location="(5,6,20)" name="default" angle="0"/>
 </design>
 </vrf>
