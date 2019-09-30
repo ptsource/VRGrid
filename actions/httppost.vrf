@@ -13,20 +13,20 @@
 </globals>
 <design>
 <!-- VRGRID USES FULL XML COMPLIANCE SO YOU NEED TO ESCAPE INVALID CHAR WITH &amp; IF POSTING MULTIPLE VARIABLES -->
-<!-- <httppost pageurl="http://repo.ptsource.eu/rms/data.php?block=1&amp;message=Test"/> -->
+<!-- <httppost pageurl="http://repo.ptsource.eu/rms/data.php?object=1&amp;message=Test"/> -->
 <create unit="aa" vrobj="base:full">
 <action trigger="click on" text="Make a HTTP Post to PHP" sidename="w">
-	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?object=1"/>
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?object1"/>
 </action>
 </create>
 <create unit="bb" vrobj="base:full">
 <action trigger="click on" text="Make a HTTP Post to PHP" sidename="w">
-	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?object=2"/>
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?object2"/>
 </action>
 </create>
 <create unit="cc" vrobj="base:full">
 <action trigger="click on" text="Make a HTTP Post to PHP" sidename="w">
-	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?object=3"/>
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?object3"/>
 </action>
 </create>
 <layer number="1" >
