@@ -10,7 +10,7 @@
 	<lib href="https://ptsource.github.io/VRGrid/packs/islands.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" required="2.8"/>
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
-	<map dimensions="(13,25,7)"/>
+	<map dimensions="(13,25,8)"/>
 	<sky texture="@medieval:clouds.gif" brightness="100%"/>
 	<ground texture="@medieval:pebble.jpg"/>
 	<atmosphere brightness="60%"/>
@@ -909,12 +909,12 @@
 <create unit="C1" vrobj="medieval:full">
 	<side name="s,e" texture="@medieval:stone_trim.gif"/>
 	<side name="n,w" texture="@medieval:stone_trim.gif"/>
-	<side name="bottom" texture="@medieval:stone.gif"/>
+	<side name="top,bottom" texture="@medieval:stone.gif"/>
 </create>
 <create unit="C2" vrobj="medieval:full">
 	<side name="s,e" texture="@medieval:stone_trim.gif"/>
 	<side name="n,w" texture="@medieval:stone_trim.gif"/>
-	<side name="bottom" texture="@medieval:stone.gif"/>
+	<side name="top,bottom" texture="@medieval:stone.gif"/>
 </create>
 <create unit="c3" vrobj="basic2:quarter">
 	<side name="top" texture="@medieval:stone.gif" angle="270"/>
@@ -1838,13 +1838,41 @@ r# rW G5 .. .. .. .. .. ab .. .. G1 G4
 r# rW G8 .. .. G1 G2 G3 .. .. G1 G4 G5
 r# r# r# rS rs G4 G7 G5 .. .. G4 G7 G8
 </layer>
+<layer number="8">
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+</layer>
 <imagemap name="multientrance">
          <area shape="rect" coords="1,1,16,16" href="#default" />
          <area shape="rect" coords="1,21,16,36" href="#continue1" />
          <area shape="rect" coords="1,31,16,56" href="#rope" />
          <area shape="rect" coords="1,51,16,76" href="#winner" />
+         <area shape="rect" coords="1,71,16,96" href="#roof" />
 </imagemap>
-<popup texture="@medieval:e3_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
+<popup texture="@medieval:e4_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
@@ -1858,6 +1886,7 @@ r# r# r# rS rs G4 G7 G5 .. .. G4 G7 G8
 <enter location="(2,24,2)" name="death" angle="0"/>
 <enter location="(9,3,4)" name="winner" angle="240"/>
 <enter location="(7,23,5)" name="continue1" angle="90"/>
+<enter location="(7,16,8)" name="roof" angle="200,-30"/>
 
 </design>
 </vrf>
