@@ -47,6 +47,16 @@
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object4"/>
 </action>
 </create>
+
+<!-- This POST uses 2 after | so it asks for confirmation before sending he data from VRGrid -->
+<create unit="ff" vrobj="base:full">
+<side name="*" texture="@warehouse:_5.gif" />
+<action trigger="click on" text="Make a HTTP Post to PHP from Object 5" sidename="*">
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object5|2"/>
+</action>
+</create>
+
+
 <create unit="rr" vrobj="base:full">
 <side name="*" texture="@warehouse:r.gif" />
 <action trigger="click on" text="Click here to view the object clicks" sidename="*">
@@ -55,7 +65,7 @@
 </create>
 <layer number="1" >
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. ff .. .. .. .. .. .. .. .. .. 
 .. .. cc .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
