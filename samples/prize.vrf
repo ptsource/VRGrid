@@ -461,23 +461,6 @@
 	<side name="*" texture="@medieval:stone.gif"/>
 	<side name="n" texture="@medieval:stone.gif"/>
 </create>
-<create unit="kt" vrobj="basic:full">
-	<side name="top" texture="@medieval:stone.gif" faces="2"/>
-	<side name="n,s,e,w,bottom" faces="0" solid="no"/>
-	<point_light style="static" radius="2"/>
-</create>
-<create unit="ku" vrobj="basic:half">
-	<side name="top" texture="@medieval:stone.gif" faces="2"/>
-	<side name="n" texture="@medieval:stone.gif" faces="2" angle="180" style="scaled"/>
-	<side name="s,e,w,bottom" faces="0" solid="no"/>
-	<param orient="0,270"/>
-</create>
-<create unit="kv" vrobj="basic:half">
-	<side name="top" texture="@medieval:stone.gif" faces="2" angle="180"/>
-	<side name="s" texture="@medieval:stone.gif" faces="2" style="scaled"/>
-	<side name="n,e,w,bottom" faces="0" solid="no"/>
-	<param orient="0,90"/>
-</create>
 <create unit="kF" vrobj="basic:full">
 	<side name="*" texture="@medieval:stone.gif"/>
 	<side name="e" texture="@medieval:stone.gif" angle="270"/>
@@ -551,9 +534,9 @@ c1 c5 c1 cs cs cs c1 c0 c1
 <layer number="3">
 kl kl kN kN kM kO kO kl kl
 kl kK .. .. .. .. .. .. kl
-kD kv .. .. .. .. .. .. v1
-kE kt .. .. .. .. .. .. v2
-kF ku .. .. .. .. .. .. v3
+kD .. .. .. .. .. .. .. v1
+kE .. .. .. .. .. .. .. v2
+kF .. .. .. .. .. .. .. v3
 kk kJ CJ .. .. .. CK .. kl
 c2 kr kr d4 d4 d4 kr kr c2
 c1 c2 c1 .. .. .. c1 c2 c1
