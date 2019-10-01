@@ -289,9 +289,6 @@
 <create unit="21" vrobj="medieval:ground">
 	<side name="*" faces="0"/>
 	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue2"/>
-	<action trigger="timer" delay="2">
-	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=death"/>
-	</action>
 	<sound file="@gametools:death.wav" radius="1" playback="once"/>
 </create>
 <create unit="#3" vrobj="medieval:ground">
@@ -334,26 +331,16 @@
 <create unit="31" vrobj="medieval:ground">
 	<side name="*" faces="0"/>
 	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue3"/>
-	<action trigger="timer" delay="2">
-	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=death"/>
-	</action>
 	<sound file="@gametools:death.wav" radius="1" playback="once"/>
 </create>
 <create unit="#4" vrobj="medieval:ground">
 	<side name="*" faces="0"/>
 	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue4"/>
-	<action trigger="proximity">
-	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=death"/>
-		<replace source="-4" target="(3,11,3)"/><!-- Help entrance -->
-	</action>
 	<sound file="@gametools:death.wav" radius="1" playback="once"/>
 </create>
 <create unit="#5" vrobj="medieval:ground">
 	<side name="*" faces="0"/>
 	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue5"/>
-	<action trigger="timer" delay="2">
-	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=death"/>
-	</action>
 	<sound file="@gametools:death.wav" radius="1" playback="once"/>
 </create>
 <create unit="S2" vrobj="gametools:spritefacet">
