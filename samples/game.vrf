@@ -123,37 +123,6 @@
 <create unit="!r" vrobj="medieval:full">
 	<side name="*" faces="0"/>
 	<popup trigger="everywhere" texture="@medieval:clear.gif" placement="center"/>
-	<action trigger="timer" delay="3">
-		<replace source="!d"/>
-	</action>
-</create>
-<create unit="!d" vrobj="medieval:full">
-	<side name="*" faces="0"/>
-	<popup trigger="everywhere" text="created by Rainer 'Lemming' Kaufmann in February 2000" placement="center"/>
-	<action trigger="timer" delay="3">
-		<replace source="!e"/>
-	</action>
-</create>
-<create unit="!e" vrobj="medieval:full">
-	<side name="*" faces="0"/>
-	<popup trigger="everywhere" text="Thanks to Frankie 'Gargoyle' Perry for the trees" placement="center"/>
-	<action trigger="timer" delay="3">
-		<replace source="!f"/>
-	</action>
-</create>
-<create unit="!f" vrobj="medieval:full">
-	<side name="*" faces="0"/>
-	<popup trigger="everywhere" text="and to Stefan Guenther for some sound works" placement="center"/>
-	<action trigger="timer" delay="3">
-		<replace source="!g"/>
-	</action>
-</create>
-<create unit="!g" vrobj="medieval:full">
-	<side name="*" faces="0"/>
-	<popup trigger="everywhere" text="Special thanks to Flatland and Eidos Interactive" placement="center"/>
-	<action trigger="timer" delay="3">
-		<replace source="!h"/>
-	</action>
 </create>
 <create unit="!h" vrobj="medieval:full">
 	<side name="*" faces="0"/>
