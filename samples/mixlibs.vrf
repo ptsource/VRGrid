@@ -2662,7 +2662,7 @@ WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%" />
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%" />
-<popup location="(16,28,8)" radius="1" placement="center" text="This sample shows how to mix multiple libraries, scripting and actions to achieve the maximum results in the VRF. View source for more details."/>
+<popup location="(16,28,8)" radius="1" placement="center" text="This sample shows how to mix multiple libraries, use scripting, actions and texturing to achieve good results in the VRF. View source for more details."/>
 <enter location="(14,21,10)" name="bedroom" angle="225"/>
 <enter location="(16,12,10)" name="elevator" angle="0"/>
 <enter location="(16,16,8)" name="hall" angle="180"/>
