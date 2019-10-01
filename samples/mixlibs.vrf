@@ -2117,23 +2117,23 @@
 <side NAME="ground" texture="@basic:grassground.gif"/>
 </CREATE>
 <CREATE unit="[5" vrobj="house:bush" SPDESC="shrub">
-<side NAME="bush" texture="@house:tree5.gif"/>
+<side NAME="bush" texture="@house:tree1.gif"/>
 <side NAME="ground" texture="@basic:grassground.gif"/>
 </CREATE>
 <CREATE unit="[6" vrobj="house:bush" SPDESC="shrub">
-<side NAME="bush" texture="@house:tree6.gif"/>
+<side NAME="bush" texture="@house:tree2.gif"/>
 <side NAME="ground" texture="@basic:grassground.gif"/>
 </CREATE>
 <CREATE unit="[7" vrobj="house:bush" SPDESC="shrub">
-<side NAME="bush" texture="@house:tree7.gif"/>
+<side NAME="bush" texture="@house:tree3.gif"/>
 <side NAME="ground" texture="@basic:grassground.gif"/>
 </CREATE>
 <CREATE unit="[8" vrobj="house:bush" SPDESC="shrub">
-<side NAME="bush" texture="@house:tree8.gif"/>
+<side NAME="bush" texture="@house:tree5.gif"/>
 <side NAME="ground" texture="@basic:grassground.gif"/>
 </CREATE>
 <CREATE unit="[C" vrobj="house:bush" SPDESC="shrub">
-<side NAME="bush" texture="@house:coral.gif"/>
+<side NAME="bush" texture="@house:tree6.gif"/>
 <side NAME="ground" texture="@basic:grassground.gif"/>
 </CREATE>
 <CREATE unit="[B" vrobj="house:bush" SPDESC="shrub">
