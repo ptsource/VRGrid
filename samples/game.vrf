@@ -22,7 +22,7 @@
 	<side name="top" texture="@gametools:curtain.jpg"/>
 	<param orient="90,0,270"/>
 	<action trigger="click on" text="Watch the video!">
-		<exit href="video.vrf"/>
+		<exit href="https://ptsource.github.io/VRGrid/samples/prize.vrf"/>
 	</action>
 </create>
 <create unit="!t" vrobj="medieval:full">
