@@ -127,16 +127,6 @@
 <create unit="!h" vrobj="medieval:full">
 	<side name="*" faces="0"/>
 	<popup trigger="everywhere" text=" " placement="center"/>
-	<action trigger="timer" delay="1">
-		<replace source="!i"/>
-	</action>
-</create>
-<create unit="!i" vrobj="medieval:full">
-	<side name="*" faces="0"/>
-	<popup trigger="everywhere" text="Dedicated to the Vastland Builder Group" placement="center" textcolor="(255,204,0)"/>
-	<action trigger="timer" delay="5">
-		<replace source=".."/>
-	</action>
 </create>
 
 
