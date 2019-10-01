@@ -15,24 +15,32 @@
 <design>
 <!-- VRGRID USES FULL XML COMPLIANCE SO YOU NEED TO ESCAPE INVALID CHAR WITH &amp; IF POSTING MULTIPLE VARIABLES -->
 <!-- <httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1&amp;message=Test"/> -->
+
+<!-- This POST uses 1 after | so it displays a data sent message in the status bar of VRGrid -->
 <create unit="aa" vrobj="base:full">
 <side name="*" texture="@warehouse:_1.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 1" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1|1"/>
 </action>
 </create>
+
+<!-- This POST uses 0 after | so it sends the date silently with no message -->
 <create unit="bb" vrobj="base:full">
 <side name="*" texture="@warehouse:_2.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 2" sidename="*">
-	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object2"/>
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object2|0"/>
 </action>
 </create>
+
+<!-- This POST uses 1 after | so it displays a data sent message in the status bar of VRGrid -->
 <create unit="cc" vrobj="base:full">
 <side name="*" texture="@warehouse:_3.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 3" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object3|1"/>
 </action>
 </create>
+
+<!-- This POST does not use the send type marker so it sends the date silently with no message -->
 <create unit="dd" vrobj="base:full">
 <side name="*" texture="@warehouse:_4.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 4" sidename="*">
@@ -129,7 +137,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(6,9,1)" radius="1" placement="center" text="This sample shows the HTTPPOST action usage with database support. Parameters are (pageurl). Walk the map clicking on the cubes this will record the clicks on a database, view the results clicking on the R cube. View source for more details."/>
+<popup location="(6,9,1)" radius="1" placement="center" text="This sample shows the HTTPPOST action usage with database support. Parameters are (pageurl|marker). Walk the map clicking on the cubes this will record the clicks on a database, view the results clicking on the R cube. View source for more details."/>
 <enter location="(6,9,3)"  name="default" angle="80"/>
 </design>
 </vrf>
