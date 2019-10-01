@@ -258,9 +258,6 @@
 <create unit="#1" vrobj="medieval:ground">
 	<side name="*" faces="0"/>
 	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue1"/>
-	<action trigger="timer" delay="2">
-	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=death"/>
-	</action>
 	<sound file="@gametools:death.wav" radius="1" playback="once"/>
 </create>
 <create unit="#2" vrobj="medieval:ground">
