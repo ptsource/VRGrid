@@ -48,7 +48,7 @@
 </action>
 </create>
 
-<!-- This POST uses 2 after | so it asks for confirmation before sending he data from VRGrid -->
+<!-- This POST uses 2 after | so it asks for confirmation before sending the data from VRGrid -->
 <create unit="ff" vrobj="base:full">
 <side name="*" texture="@warehouse:_5.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 5" sidename="*">
