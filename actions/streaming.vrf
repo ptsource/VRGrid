@@ -16,27 +16,28 @@
 <create unit="@@" vrobj="basic:portal">
 </create>
 <create unit="v1" vrobj="basic:full">
-<side name="s" stream="video" rect="0%,0%,33.3%,50%"/>
+      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
+      <side name="s" stream="video" rect="0%,0%,33.3%,50%"/>
 </create>
-
 <create unit="v2" vrobj="basic:full">
-<side name="s" stream="video" rect="33.3%,0%,66.6%,50%"/>
+      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
+      <side name="s" stream="video" rect="33.3%,0%,66.6%,50%"/>
 </create>
-
 <create unit="v3" vrobj="basic:full">
-<side name="s" stream="video" rect="66.6%,0%,100%,50%"/>
+      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
+      <side name="s" stream="video" rect="66.6%,0%,100%,50%"/>
 </create>
-
 <create unit="v4" vrobj="basic:full">
-<side name="s" stream="video" rect="0%,50%,33.3%,100%"/>
+      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
+      <side name="s" stream="video" rect="0%,50%,33.3%,100%"/>
 </create>
-
 <create unit="v5" vrobj="basic:full">
-<side name="s" stream="video" rect="33.3%,50%,66.6%,100%"/>
+      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
+      <side name="s" stream="video" rect="33.3%,50%,66.6%,100%"/>
 </create>
-
 <create unit="v6" vrobj="basic:full">
-<side name="s" stream="video" rect="66.6%,50%,100%,100%"/>
+      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
+      <side name="s" stream="video" rect="66.6%,50%,100%,100%"/>
 </create>
 
 
