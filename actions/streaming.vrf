@@ -9,38 +9,38 @@
       <map dimensions="(7,10,2)"/>
       <sky color="(0,0,255)"/>
     	<ground texture="@basic:gtile.gif"/>
-      <stream name="streamscreen" rmurl="http://repo.ptsource.eu/rms/trailer.rm"/>
+      <stream name="video" rmurl="http://repo.ptsource.eu/rms/trailer.rm"/>
       <devel />
 </globals>
 <design>
 <create unit="@@" vrobj="basic:portal">
 </create>
-<create unit="11" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
-      <side name="s" stream="streamscreen" rect="0%,0%,33.3%,50%"/>
+<create unit="v1" vrobj="basic:half">
+	<side name="top" stream="video" rect="0%,0%,33.3%,50%"/>
+	<param orient="90,0,270"/>
 </create>
-<create unit="22" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
-      <side name="s" stream="streamscreen" rect="33.3%,0%,66.6%,50%"/>
+<create unit="v2" vrobj="basic:half">
+	<side name="top" stream="video" rect="33.3%,0%,66.6%,50%"/>
+	<param orient="90,0,270"/>
 </create>
-<create unit="33" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
-      <side name="s" stream="streamscreen" rect="66.6%,0%,100%,50%"/>
+<create unit="v3" vrobj="basic:half">
+	<side name="top" stream="video" rect="66.6%,0%,100%,50%"/>
+	<param orient="90,0,270"/>
 </create>
-<create unit="44" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
-      <side name="s" stream="streamscreen" rect="0%,50%,33.3%,100%"/>
+<create unit="v4" vrobj="basic:half">
+	<side name="top" stream="video" rect="0%,50%,33.3%,100%"/>
+	<param orient="90,0,270"/>
 </create>
-<create unit="55" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
-      <side name="s" stream="streamscreen" rect="33.3%,50%,66.6%,100%"/>
+<create unit="v5" vrobj="basic:half">
+	<side name="top" stream="video" rect="33.3%,50%,66.6%,100%"/>
+	<param orient="90,0,270"/>
 </create>
-<create unit="66" vrobj="basic:full">
-      <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
-      <side name="s" stream="streamscreen" rect="66.6%,50%,100%,100%"/>
+<create unit="v6" vrobj="basic:half">
+	<side name="top" stream="video" rect="66.6%,50%,100%,100%"/>
+	<param orient="90,0,270"/>
 </create>
 <layer number="1">
-.. .. 44 55 66 .. ..
+.. .. v4 v5 v6 .. ..
 .. .. .. .. .. .. ..
 .. .. .. .. .. .. ..
 .. @@ .. .. .. .. ..
@@ -52,7 +52,7 @@
 .. .. .. .. .. .. ..
 </layer>
 <layer number="2">
-.. .. 11 22 33 .. ..
+.. .. v1 v2 v3 .. ..
 .. .. .. .. .. .. ..
 .. .. .. .. .. .. ..
 .. .. .. .. .. .. ..
