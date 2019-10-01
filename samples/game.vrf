@@ -1,0 +1,1908 @@
+<!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
+<!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
+<!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<vrf>
+<globals>
+	<title name="VRGrid Simple Game Demo"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/medieval.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/packs/islands.vlib" required="2.8"/>
+	<lib href="https://ptsource.github.io/VRGrid/utils/gametools.vlib" required="2.8"/>
+	<assets href="https://ptsource.github.io/VRGrid/assets/" />
+	<map dimensions="(13,25,7)"/>
+	<sky texture="@medieval:clouds.gif" brightness="100%"/>
+	<ground texture="@medieval:pebble.jpg"/>
+	<atmosphere brightness="60%"/>
+	<orb position="(180,60)" texture="@medieval:sun.gif" brightness="100%"/>
+</globals>
+<design>
+<import href="scripts/jumpkey.vrf" />
+<create unit="v0" vrobj="medieval:half">
+	<side name="top" texture="@gametools:curtain.jpg"/>
+	<param orient="90,0,270"/>
+	<action trigger="click on" text="Watch the video!">
+		<exit href="video.vrf"/>
+	</action>
+</create>
+<create unit="!t" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="proximity" radius="3" texture="@medieval:clear.gif" placement="center"/>
+	<action trigger="timer" delay="7">
+		<replace source=".."/>
+	</action>
+</create>
+<!-- Results Sprite -->
+<create unit="!R" vrobj="gametools:spriterevolve">
+	<side name="*" texture="@gametools:score.gif"/>
+	<action trigger="click on" text="Click here to see your results" sidename="*">
+        <htmlpage pageurl="http://repo.ptsource.eu/rms/results.php|Game Score Results|560|400"/>
+    </action>
+</create>
+<!-- Gold -->
+<create unit="!p" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="One pot of gold for you" placement="center"/>
+	<action trigger="timer" delay="2">
+	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=gold"/>
+		<replace source=".."/>
+	</action>
+</create>
+<!-- Gold -->
+<create unit="!P" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="One pot of gold for you" placement="center"/>
+	<action trigger="timer" delay="2">
+	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=gold"/>
+		<replace source="!q"/>
+	</action>
+</create>
+<create unit="!q" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="Congratulations! You made it!" textcolor="(255,204,0)" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source="!k"/>
+	</action>
+</create>
+<create unit="!k" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="Get your prize! Watch the video!" textcolor="(255,204,0)" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source="!Q"/>
+	</action>
+</create>
+<create unit="!Q" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="Use the blue logo to replay from start" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="!a" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="You opened the front door" placement="center"/>
+	<action trigger="timer" delay="2">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="!A" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="You closed the front door" placement="center"/>
+	<action trigger="timer" delay="2">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="!b" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="You opened the side door" placement="center"/>
+	<action trigger="timer" delay="2">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="!B" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="You closed the side door" placement="center"/>
+	<action trigger="timer" delay="2">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="!c" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="You opened the gate" placement="center"/>
+	<action trigger="timer" delay="2">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="!C" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="You closed the gate" placement="center"/>
+	<action trigger="timer" delay="2">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="!r" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" texture="@medieval:clear.gif" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source="!d"/>
+	</action>
+</create>
+<create unit="!d" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="created by Rainer 'Lemming' Kaufmann in February 2000" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source="!e"/>
+	</action>
+</create>
+<create unit="!e" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="Thanks to Frankie 'Gargoyle' Perry for the trees" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source="!f"/>
+	</action>
+</create>
+<create unit="!f" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="and to Stefan Guenther for some sound works" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source="!g"/>
+	</action>
+</create>
+<create unit="!g" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="Special thanks to Flatland and Eidos Interactive" placement="center"/>
+	<action trigger="timer" delay="3">
+		<replace source="!h"/>
+	</action>
+</create>
+<create unit="!h" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text=" " placement="center"/>
+	<action trigger="timer" delay="1">
+		<replace source="!i"/>
+	</action>
+</create>
+<create unit="!i" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<popup trigger="everywhere" text="Dedicated to the Vastland Builder Group" placement="center" textcolor="(255,204,0)"/>
+	<action trigger="timer" delay="5">
+		<replace source=".."/>
+	</action>
+</create>
+
+
+<!-- Invisibles -->
+<create unit="!#" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+</create>
+<create unit="!!" vrobj="medieval:full">
+	<side name="*" faces="0" solid="no"/>
+	<sound file="@gametools:secret.wav" radius="2" playback="once" flood="yes"/>
+</create>
+<create unit="!:" vrobj="medieval:full">
+	<side name="*" faces="0" solid="no"/>
+	<sound file="@gametools:secret.wav" radius="1" playback="once" flood="yes"/>
+</create>
+
+<!-- Help System -->
+<imagemap name="help1">
+	<action shape="rect" coords="10,10,40,40" text="Hint: How to use the rope">
+		<replace source="H1" target="(4,25,1)"/>	
+	</action>
+</imagemap>
+<imagemap name="help2">
+	<action shape="rect" coords="10,10,40,40" text="Hint: The boulder trap">
+		<replace source="H2" target="(4,25,1)"/>	
+	</action>
+</imagemap>
+<imagemap name="help3">
+	<action shape="rect" coords="10,10,40,40" text="Hint: The crashing platforms">
+		<replace source="H3" target="(4,25,1)"/>	
+	</action>
+</imagemap>
+<create unit="H1" vrobj="medieval:full">
+	<popup trigger="everywhere" text="THE ROPE: Stand in the middle, then click on the handle above you to get over to the other side!"/>
+	<action trigger="timer" delay="5">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="H2" vrobj="medieval:full">
+	<popup trigger="everywhere" text="THE BOULDER TRAP: Step forward to trigger the trap, then step back until the boulder has passed!"/>
+	<action trigger="timer" delay="5">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="H3" vrobj="medieval:full">
+	<popup trigger="everywhere" text="THE CRASHING PLATFORMS: Run over to the exit before the platforms crash down under your feet!"/>
+	<action trigger="timer" delay="5">
+		<replace source="HR"/>
+	</action>
+</create>
+<create unit="HR" vrobj="medieval:full">
+	<popup trigger="everywhere" text="HOW TO RUN: Use the CTRL key to run. If you're not fast enough, try decreasing the viewing distance in the options menu to gain speed."/>
+	<action trigger="timer" delay="5">
+		<replace source=".."/>
+	</action>
+</create>
+
+
+<!-- Die and Continue System -->
+<create unit="!S" vrobj="medieval:full">
+	<side name="*" color="(0,0,0)"/>
+</create>
+<create unit="!s" vrobj="medieval:half">
+	<side name="*" color="(0,0,0)"/>
+	<side name="top" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<imagemap name="continue1">
+	<area shape="rect" coords="0,0,180,60" href="#continue1"/>
+</imagemap>
+<imagemap name="continue2">
+	<action shape="rect" coords="0,0,180,60">
+		<replace source="#2"/>
+	</action>
+	<area shape="rect" coords="0,0,180,60" href="#continue2"/>
+</imagemap>
+<imagemap name="continue3">
+	<action shape="rect" coords="0,0,180,60">
+		<replace source="#3"/>
+	</action>
+	<area shape="rect" coords="0,0,180,60" href="#continue3"/>
+</imagemap>
+<imagemap name="continue4">
+	<area shape="rect" coords="0,0,180,60" href="#continue4"/>
+</imagemap>
+<imagemap name="continue5">
+	<area shape="rect" coords="0,0,180,60" href="#continue5"/>
+</imagemap>
+<create unit="#1" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue1"/>
+	<sound file="@gametools:death.wav" radius="1" playback="once"/>
+</create>
+<create unit="#2" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<action trigger="proximity">
+		<replace source="R0" target="(10,2,2)"/><!-- dummy location -->
+		<replace source=".." target="(10,2,1)"/><!-- start location -->
+		<replace source=".." target="(10,3,1)"/>
+		<replace source=".." target="(10,4,1)"/>
+		<replace source=".." target="(10,5,1)"/>
+		<replace source=".." target="(10,6,1)"/>
+		<replace source=".." target="(10,7,1)"/>
+		<replace source=".." target="(10,8,1)"/>
+		<replace source=".." target="(10,9,1)"/>
+		<replace source=".." target="(10,10,1)"/>
+		<replace source=".." target="(10,11,1)"/>
+		<replace source="T1" target="(10,12,1)"/><!-- trigger location -->
+		<replace source=".." target="(10,13,1)"/>
+		<replace source=".." target="(10,14,1)"/>
+		<replace source=".." target="(10,15,1)"/><!-- stop location -->
+		<replace source="Ct" target="(9,12,1)"/>
+		<replace source="-2" target="(11,12,1)"/><!-- Help Entrance -->
+		<replace source="21"/>
+	</action>
+</create>
+<create unit="21" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue2"/>
+	<sound file="@gametools:death.wav" radius="1" playback="once"/>
+</create>
+<create unit="#3" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<action trigger="proximity">
+		<replace source="s1" target="(2,3,1)"/>
+		<replace source="s1" target="(3,3,1)"/>
+		<replace source="s1" target="(4,3,1)"/>
+		<replace source="s1" target="(2,4,1)"/>
+		<replace source="s1" target="(3,4,1)"/>
+		<replace source="s1" target="(2,5,1)"/>
+		<replace source="s1" target="(2,6,1)"/>
+		<replace source="s1" target="(3,6,1)"/>
+		<replace source="s1" target="(3,7,1)"/>
+		<replace source="s1" target="(3,8,1)"/>
+		<replace source=".=" target="(2,3,2)"/>
+		<replace source=".=" target="(3,3,2)"/>
+		<replace source=".=" target="(4,3,2)"/>
+		<replace source=".=" target="(2,4,2)"/>
+		<replace source=".=" target="(3,4,2)"/>
+		<replace source=".=" target="(2,5,2)"/>
+		<replace source=".=" target="(2,6,2)"/>
+		<replace source=".=" target="(3,6,2)"/>
+		<replace source=".=" target="(3,7,2)"/>
+		<replace source=".=" target="(3,8,2)"/>
+		<replace source="T=" target="(2,3,3)"/>
+		<replace source="T=" target="(3,3,3)"/>
+		<replace source="T=" target="(4,3,3)"/>
+		<replace source="T=" target="(2,4,3)"/>
+		<replace source="T=" target="(3,4,3)"/>
+		<replace source="T=" target="(2,5,3)"/>
+		<replace source="T=" target="(2,6,3)"/>
+		<replace source="T=" target="(3,6,3)"/>
+		<replace source="T=" target="(3,7,3)"/>
+		<replace source="T=" target="(3,8,3)"/>
+		<replace source="-3" target="(5,3,3)"/><!-- Help entrance -->
+		<replace source="31"/>
+	</action>
+</create>
+<create unit="31" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue3"/>
+	<sound file="@gametools:death.wav" radius="1" playback="once"/>
+</create>
+<create unit="#4" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue4"/>
+	<action trigger="proximity">
+		<replace source="-4" target="(3,11,3)"/><!-- Help entrance -->
+	</action>
+	<sound file="@gametools:death.wav" radius="1" playback="once"/>
+</create>
+<create unit="#5" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<popup trigger="proximity" radius="2" texture="@gametools:youdied.gif" imagemap="continue5"/>
+	<sound file="@gametools:death.wav" radius="1" playback="once"/>
+</create>
+<create unit="S2" vrobj="gametools:spritefacet">
+	<side name="*" texture="@gametools:potofgold.vri"/>
+	<param size="(128,128)" solid="no"/>
+	<point_light style="pulsate" radius="2" position="(128,128,128)" brightness="50%..100%" color="(255,196,0)" speed="2"/>
+	<action trigger="proximity" radius="1">
+		<replace source="!p" target="(4,25,1)"/>
+		<replace source="#2" target="(2,24,2)"/>
+		<replace source="_2"/>
+	</action>
+</create>
+<create unit="_2" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<enter name="continue2" angle="270"/>
+	<sound file="@gametools:continue.wav" radius="1" playback="once"/>
+</create>
+<create unit="-2" vrobj="medieval:ground"><!-- Help entrance -->
+	<side name="*" faces="0"/>
+	<enter name="continue2" angle="270"/>
+	<popup texture="@gametools:lifesaver.vri" placement="bottom-left" imagemap="help2"/>
+</create>
+<create unit="|2" vrobj="medieval:ground"><!-- Help entrance -->
+	<side name="*" faces="0"/>
+	<enter name="continue2" angle="270"/>
+</create>
+<create unit="S3" vrobj="gametools:spritefacet">
+	<side name="*" texture="@gametools:potofgold.vri"/>
+	<param size="(128,128)" solid="no"/>
+	<point_light style="pulsate" radius="2" position="(128,128,128)" brightness="50%..100%" color="(255,196,0)" speed="2"/>
+	<action trigger="proximity" radius="1">
+		<replace source="!p" target="(4,25,1)"/>
+		<replace source="#3" target="(2,24,2)"/>
+		<replace source="_3"/>
+	</action>
+</create>
+<create unit="_3" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<enter name="continue3" angle="270"/>
+	<sound file="@gametools:continue.wav" radius="1" playback="once"/>
+</create>
+<create unit="-3" vrobj="medieval:ground"><!-- Help entrance -->
+	<side name="*" faces="0"/>
+	<enter name="continue3" angle="270"/>
+	<popup texture="@gametools:lifesaver.vri" placement="bottom-left" imagemap="help3"/>
+</create>
+<create unit="|3" vrobj="medieval:ground"><!-- non Help entrance -->
+	<side name="*" faces="0"/>
+	<enter name="continue3" angle="270"/>
+</create>
+<create unit="S4" vrobj="gametools:spritefacet">
+	<side name="*" texture="@gametools:potofgold.vri"/>
+	<param size="(128,128)" solid="no"/>
+	<point_light style="pulsate" radius="2" position="(128,128,128)" brightness="50%..100%" color="(255,196,0)" speed="2"/>
+	<action trigger="proximity" radius="1">
+		<replace source="!p" target="(4,25,1)"/>
+		<replace source="#4" target="(2,24,2)"/>
+		<replace source="|3" target="(5,3,3)"/><!-- non help entrance -->
+		<replace source="_4"/>
+	</action>
+</create>
+<create unit="_4" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<enter name="continue4" angle="90"/>
+	<sound file="@gametools:continue.wav" radius="1" playback="once"/>
+</create>
+<create unit="|4" vrobj="medieval:ground"><!-- non Help entrance -->
+	<side name="*" faces="0"/>
+	<enter name="continue4" angle="90"/>
+</create>
+<create unit="S5" vrobj="gametools:spritefacet">
+	<side name="*" texture="@gametools:potofgold.vri"/>
+	<param size="(128,128)" solid="no"/>
+	<point_light style="pulsate" radius="2" position="(128,128,128)" brightness="50%..100%" color="(255,196,0)" speed="2"/>
+	<action trigger="proximity" radius="1">
+		<replace source="!P" target="(4,25,1)"/>
+		<replace source="#5" target="(2,24,2)"/>
+		<replace source="|4" target="(3,11,3)"/><!-- non help entrance -->
+		<replace source="_5"/>
+	</action>
+</create>
+<create unit="_5" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<enter name="continue5" angle="0"/>
+</create>
+
+<create unit="SP" vrobj="gametools:spritefacet">
+	<side name="*" texture="@gametools:potofgold.vri"/>
+	<param size="(128,128)" solid="no"/>
+	<point_light style="pulsate" radius="2" position="(128,128,128)" brightness="50%..100%" color="(255,204,0)" speed="2"/>
+	<action trigger="click on" text="Get your prize!">
+		<REPLACE TARGET="(10,2,4)" SOURCE="xx" />
+	</action>
+</create>
+
+
+<create unit="xx" vrobj="medieval:full">
+	<side name="*" faces="0" solid="no"/>
+	<POPUP TEXTURE="images/prize.gif" PLACEMENT="center" TRIGGER="everywhere" />
+</create>	
+	
+
+<create unit="SR" vrobj="medieval:spriterevolve">
+	<side name="*" texture="@gametools:replay.gif"/>
+	<param size="(128,128)" solid="no"/>
+	<point_light style="pulsate" radius="2" position="(128,128,128)" brightness="50%..100%" color="(0,0,255)" speed="2"/>
+	<action trigger="click on" text="Replay from start!">
+		<exit href="#default"/>
+		<!-- Set title -->
+		<replace source="!t" target="(4,25,5)"/>
+		<!-- Set Continue 1 -->
+		<replace source="#1" target="(2,24,2)"/>
+		<!-- Reset Boulder Trap -->
+		<replace source="R0" target="(10,2,2)"/><!-- dummy location -->
+		<replace source=".." target="(10,2,1)"/><!-- start location -->
+		<replace source=".." target="(10,3,1)"/>
+		<replace source=".." target="(10,4,1)"/>
+		<replace source=".." target="(10,5,1)"/>
+		<replace source=".." target="(10,6,1)"/>
+		<replace source=".." target="(10,7,1)"/>
+		<replace source=".." target="(10,8,1)"/>
+		<replace source=".." target="(10,9,1)"/>
+		<replace source=".." target="(10,10,1)"/>
+		<replace source=".." target="(10,11,1)"/>
+		<replace source="T1" target="(10,12,1)"/><!-- trigger location -->
+		<replace source=".." target="(10,13,1)"/>
+		<replace source=".." target="(10,14,1)"/>
+		<replace source=".." target="(10,15,1)"/><!-- stop location -->
+		<!-- Reset Pitfall Trap -->
+		<replace source="s1" target="(2,3,1)"/>
+		<replace source="s1" target="(3,3,1)"/>
+		<replace source="s1" target="(4,3,1)"/>
+		<replace source="s1" target="(2,4,1)"/>
+		<replace source="s1" target="(3,4,1)"/>
+		<replace source="s1" target="(2,5,1)"/>
+		<replace source="s1" target="(2,6,1)"/>
+		<replace source="s1" target="(3,6,1)"/>
+		<replace source="s1" target="(3,7,1)"/>
+		<replace source="s1" target="(3,8,1)"/>
+		<replace source=".=" target="(2,3,2)"/>
+		<replace source=".=" target="(3,3,2)"/>
+		<replace source=".=" target="(4,3,2)"/>
+		<replace source=".=" target="(2,4,2)"/>
+		<replace source=".=" target="(3,4,2)"/>
+		<replace source=".=" target="(2,5,2)"/>
+		<replace source=".=" target="(2,6,2)"/>
+		<replace source=".=" target="(3,6,2)"/>
+		<replace source=".=" target="(3,7,2)"/>
+		<replace source=".=" target="(3,8,2)"/>
+		<replace source="T=" target="(2,3,3)"/>
+		<replace source="T=" target="(3,3,3)"/>
+		<replace source="T=" target="(4,3,3)"/>
+		<replace source="T=" target="(2,4,3)"/>
+		<replace source="T=" target="(3,4,3)"/>
+		<replace source="T=" target="(2,5,3)"/>
+		<replace source="T=" target="(2,6,3)"/>
+		<replace source="T=" target="(3,6,3)"/>
+		<replace source="T=" target="(3,7,3)"/>
+		<replace source="T=" target="(3,8,3)"/>
+		<!-- Close Front Door -->
+		<replace source="d2" target="(9,12,5)"/>
+		<!-- Close Side Door -->
+		<replace source="d3" target="(8,13,5)"/>
+		<!-- Close Gate -->
+		<replace source="d4" target="(8,7,4)"/>
+		<replace source="d4" target="(9,7,4)"/>
+		<replace source="d4" target="(10,7,4)"/>
+		<replace source="d4" target="(8,7,5)"/>
+		<replace source="d4" target="(9,7,5)"/>
+		<replace source="d4" target="(10,7,5)"/>
+		<!-- Reset Levers -->
+		<replace source="L1" target="(12,11,1)"/>
+		<replace source="L2" target="(5,2,3)"/>
+		<replace source="L3" target="(4,11,3)"/>
+		<!-- Set Continue Points -->
+		<replace source="S2" target="(11,12,1)"/>
+		<replace source="S3" target="(5,3,3)"/>
+		<replace source="S4" target="(3,11,3)"/>
+		<replace source="S5" target="(9,5,4)"/>
+	</action>
+</create>
+
+<!-- Levers -->
+<create unit="L1" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="0"/>
+	<param orient="0,270"/>
+	<action trigger="click on">
+		<replace source="d3" target="(9,12,5)"/>
+		<replace source="!a" target="(4,25,1)"/>
+		<replace source="l1"/>
+	</action>
+</create>
+<create unit="l1" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="180"/>
+	<param orient="0,270"/>
+	<action trigger="click on">
+		<replace source="d2" target="(9,12,5)"/>
+		<replace source="!A" target="(4,25,1)"/>
+		<replace source="m1"/>
+	</action>
+	<sound file="@gametools:gunclip.wav" radius="5" playback="once"/>
+</create>
+<create unit="m1" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="0"/>
+	<param orient="0,270"/>
+	<action trigger="click on">
+		<replace source="d3" target="(9,12,5)"/>
+		<replace source="!a" target="(4,25,1)"/>
+		<replace source="l1"/>
+	</action>
+	<sound file="@gametools:gunclip.wav" radius="5" playback="once"/>
+</create>
+<create unit="L2" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="0"/>
+	<param orient="0,270"/>
+	<action trigger="click on">
+		<replace source="d2" target="(8,13,5)"/>
+		<replace source="!b" target="(4,25,1)"/>
+		<replace source="l2"/>
+	</action>
+</create>
+<create unit="l2" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="180"/>
+	<param orient="0,270"/>
+	<action trigger="click on">
+		<replace source="d3" target="(8,13,5)"/>
+		<replace source="!B" target="(4,25,1)"/>
+		<replace source="m2"/>
+	</action>
+	<sound file="@gametools:gunclip.wav" radius="5" playback="once"/>
+</create>
+<create unit="m2" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="0"/>
+	<param orient="0,270"/>
+	<action trigger="click on">
+		<replace source="d2" target="(8,13,5)"/>
+		<replace source="!b" target="(4,25,1)"/>
+		<replace source="l2"/>
+	</action>
+	<sound file="@gametools:gunclip.wav" radius="5" playback="once"/>
+</create>
+<create unit="L3" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="90"/>
+	<param orient="0,0,270"/>
+	<action trigger="click on">
+		<replace source=".." target="(8,7,4)"/>
+		<replace source=".." target="(9,7,4)"/>
+		<replace source=".." target="(10,7,4)"/>
+		<replace source="d5" target="(8,7,5)"/>
+		<replace source="d5" target="(9,7,5)"/>
+		<replace source="d5" target="(10,7,5)"/>
+		<replace source="!c" target="(4,25,1)"/>
+		<replace source="l3"/>
+	</action>
+</create>
+<create unit="l3" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="270"/>
+	<param orient="0,0,270"/>
+	<action trigger="click on">
+		<replace source="d4" target="(8,7,4)"/>
+		<replace source="d4" target="(9,7,4)"/>
+		<replace source="d4" target="(10,7,4)"/>
+		<replace source="d4" target="(8,7,5)"/>
+		<replace source="d4" target="(9,7,5)"/>
+		<replace source="d4" target="(10,7,5)"/>
+		<replace source="!C" target="(4,25,1)"/>
+		<replace source="m3"/>
+	</action>
+	<sound file="@gametools:gunclip.wav" radius="5" playback="once"/>
+</create>
+<create unit="m3" vrobj="medieval:ground">
+	<side name="top" texture="@medieval:lever.gif" style="scaled" angle="90"/>
+	<param orient="0,0,270"/>
+	<action trigger="click on">
+		<replace source=".." target="(8,7,4)"/>
+		<replace source=".." target="(9,7,4)"/>
+		<replace source=".." target="(10,7,4)"/>
+		<replace source="d5" target="(8,7,5)"/>
+		<replace source="d5" target="(9,7,5)"/>
+		<replace source="d5" target="(10,7,5)"/>
+		<replace source="!c" target="(4,25,1)"/>
+		<replace source="l3"/>
+	</action>
+	<sound file="@gametools:gunclip.wav" radius="5" playback="once"/>
+</create>
+<create unit="w~" vrobj="medieval:sound">
+	<sound file="@medieval:waterfall.wav" radius="25" playback="looped" volume="100%"/>
+</create>
+<create unit="wf" vrobj="medieval:half">
+	<side name="top" texture="@medieval:water.gif" style="scaled" angle="270" faces="2" clarity="50%"/>
+	<side name="bottom" texture="@medieval:water.gif" style="scaled" angle="90" faces="2" clarity="50%"/>
+	<side name="n" texture="@medieval:water.gif" style="scaled" angle="90" faces="2" clarity="50%"/>
+	<side name="e,w,s" faces="0"/>
+	<param orient="0,0,90" solid="no"/>
+</create>
+<create unit="wg" vrobj="medieval:half">
+	<side name="top" texture="@medieval:water.gif" style="scaled" angle="270" faces="2" clarity="50%"/>
+	<side name="bottom" texture="@medieval:water.gif" style="scaled" angle="90" faces="2" clarity="50%"/>
+	<side name="s" texture="@medieval:water.gif" style="scaled" angle="270" faces="2" clarity="50%"/>
+	<side name="e,w,n" faces="0"/>
+	<param orient="0,0,90" solid="no"/>
+</create>
+<create unit="wF" vrobj="basic2:cornercolumn">
+	<side name="curve,top" texture="@medieval:water.gif" style="scaled" angle="270" faces="2" clarity="50%"/>
+	<side name="bottom,n,w" faces="0"/>
+	<param orient="0,90"/>
+</create>
+<create unit="wG" vrobj="basic2:cornercolumn">
+	<side name="curve,bottom" texture="@medieval:water.gif" style="scaled" angle="270" faces="2" clarity="50%"/>
+	<side name="top,n,w" faces="0"/>
+	<param orient="0,90"/>
+</create>
+<create unit="we" vrobj="medieval:eramp">
+	<side name="*" texture="@medieval:stone.gif"/>
+</create>
+<create unit="wE" vrobj="medieval:full">
+	<side name="top,bottom,s" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="n,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="e" texture="@medieval:stone.gif" faces="2"/>
+</create>
+<create unit="wh" vrobj="medieval:half">
+	<side name="top,bottom,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="s,e" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="n" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+</create>
+<create unit="wH" vrobj="medieval:half">
+	<side name="top,bottom,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="n,e" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="s" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+</create>
+<create unit="w#" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" faces="2" clarity="50%"/>
+	<side name="n,s,e,w" texture="@medieval:water.gif" style="tiled" faces="2" clarity="80%"/>
+</create>
+<create unit="wa" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" faces="2" clarity="50%"/>
+	<side name="n,e,w" texture="@medieval:water.gif" style="tiled" faces="2" clarity="80%"/>
+	<side name="s" faces="0"/>
+</create>
+<create unit="wb" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" faces="2" clarity="50%"/>
+	<side name="e,w" texture="@medieval:water.gif" style="tiled" faces="2" clarity="80%"/>
+	<side name="n,s" faces="0"/>
+</create>
+<create unit="wc" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" faces="2" clarity="50%"/>
+	<side name="s,e,w" texture="@medieval:water.gif" style="tiled" faces="2" clarity="80%"/>
+	<side name="n" faces="0"/>
+</create>
+<create unit="w_" vrobj="medieval:ground">
+	<side name="*" texture="@medieval:water.gif" style="tiled" faces="2" clarity="50%" solid="no"/>
+</create>
+
+<!-- Deadly Water Sequence-->
+<create unit="w1" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="s,e,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="n" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<action trigger="step in">
+		<replace source="w2"/>
+	</action>
+</create>
+<create unit="w2" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="s,e,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="n" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<action trigger="timer" delay="2">
+		<replace source="w3"/>
+	</action>
+</create>
+<create unit="w3" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="s,e,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="n" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<exit href="#death"/>
+	<action trigger="timer" delay="1">
+		<replace source="w1"/>
+	</action>
+</create>
+<create unit="W1" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="n,e,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="s" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<action trigger="step in">
+		<replace source="W2"/>
+	</action>
+</create>
+<create unit="W2" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="n,e,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="s" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<action trigger="timer" delay="2">
+		<replace source="W3"/>
+	</action>
+</create>
+<create unit="W3" vrobj="medieval:full">
+	<side name="top,bottom" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<side name="n,e,w" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="80%"/>
+	<side name="s" texture="@medieval:water.gif" style="tiled" solid="no" faces="2" clarity="50%"/>
+	<exit href="#death"/>
+	<action trigger="timer" delay="2">
+		<replace source="W1"/>
+	</action>
+</create>
+
+
+<!-- Entrance Door -->
+<create unit="d1" vrobj="medieval:half">
+	<side name="*" texture="@medieval:grate.vri" style="scaled" angle="270"/>
+	<param orient="0,0,90"/>
+</create>
+
+<!-- Gate -->
+<create unit="d4" vrobj="medieval:floor">
+	<side name="top,bottom" texture="@medieval:stone.gif" faces="2" style="scaled"/>
+	<side name="n,s,e,w" texture="@medieval:stone.gif" faces="2"/>
+	<param orient="180,90"/>
+</create>
+<create unit="d5" vrobj="basic2:floorhalf">
+	<side name="top,bottom" texture="@medieval:stone.gif" faces="2" style="scaled" angle="180"/>
+	<side name="n,e,w" texture="@medieval:stone.gif" faces="2"/>
+	<side name="s" faces="0"/>
+	<param orient="180,90"/>
+</create>
+
+
+<!-- Rocks -->
+<create unit="r#" vrobj="medieval:full">
+	<side name="bottom,n,s,e,w" texture="@medieval:rockface.gif" style="scaled"/>
+	<side name="top" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="rw" vrobj="medieval:wramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="rr" vrobj="medieval:full">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="rN" vrobj="basic:etopramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,270"/>
+</create>
+<create unit="rS" vrobj="basic:etopramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,90"/>
+</create>
+<create unit="rW" vrobj="basic:etopramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="rn" vrobj="basic:sbottomramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,270"/>
+</create>
+<create unit="rs" vrobj="basic:nbottomramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,90"/>
+</create>
+<create unit="rh" vrobj="medieval:half">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<side name="n" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,270"/>
+</create>
+<create unit="rH" vrobj="medieval:half">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<side name="s" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,90"/>
+</create>
+<create unit="Rn" vrobj="basic:nbottomramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="Rw" vrobj="basic2:bottomwedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="RV" vrobj="basic2:bottomwedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="270"/>
+</create>
+<create unit="Rv" vrobj="basic2:bottomwedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="180"/>
+</create>
+<create unit="rv" vrobj="basic2:bottomwedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="90"/>
+</create>
+<create unit="rA" vrobj="basic2:wedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="90,180"/>
+</create>
+<create unit="rB" vrobj="basic2:wedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,0,180"/>
+</create>
+<create unit="rC" vrobj="basic:nramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,180"/>
+</create>
+<create unit="rD" vrobj="medieval:wramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,0,180"/>
+</create>
+<create unit="rE" vrobj="medieval:half">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="rF" vrobj="basic:wtopramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="rG" vrobj="basic:wbottomramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="rJ" vrobj="medieval:half">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="RJ" vrobj="medieval:half">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<sound file="@medieval:waterfall.wav" radius="4" playback="looped" volume="100%"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="rK" vrobj="medieval:half">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<side name="bottom" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,180"/>
+</create>
+<create unit="rL" vrobj="basic:etopramp">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,0,180"/>
+</create>
+<create unit="rM" vrobj="basic2:wedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="0,180"/>
+</create>
+<create unit="rO" vrobj="basic2:wedge">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<param orient="270,180"/>
+</create>
+<create unit="rP" vrobj="medieval:full">
+	<side name="top" texture="@medieval:rockface.gif" style="scaled"/>
+	<side name="n,s,e,w" texture="@medieval:floor_stone.gif" style="scaled"/>
+</create>
+<create unit="rQ" vrobj="medieval:full">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<side name="n" texture="@medieval:floor_stone.gif" style="scaled"/>
+</create>
+<CREATE unit="G1" vrobj="islands:island3"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="G2" vrobj="islands:island2"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="G3" vrobj="islands:island1"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="G4" vrobj="islands:island7"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="G5" vrobj="islands:island4"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="G6" vrobj="islands:island15"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="G7" vrobj="islands:island14"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="G8" vrobj="islands:island12"><PARAM orient="0,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="g6" vrobj="islands:island3"><PARAM orient="90,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="g7" vrobj="islands:island2"><PARAM orient="90,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<CREATE unit="g8" vrobj="islands:island1"><PARAM orient="90,0,180"/><side NAME="*" TEXTURE="@medieval:leaves.vri" STYLE="scaled" ANGLE="0"/></CREATE>
+<create unit="g#" vrobj="medieval:full">
+	<side name="n,s,e,w" texture="@medieval:stone.gif"/>
+	<side name="top,bottom" texture="@medieval:leaves.vri"/>
+</create>
+<create unit="g(" vrobj="medieval:full">
+	<side name="n,s,e,w" texture="@medieval:stone.gif"/>
+	<side name="top" texture="@medieval:leaves.vri"/>
+	<side name="bottom" texture="@medieval:stone.gif"/>
+</create>
+<create unit="g/" vrobj="medieval:eramp">
+	<side name="top,e" texture="@medieval:stone.gif" angle="90"/>
+	<side name="n,s" texture="@medieval:leaves.vri"/>
+	<param orient="0,90"/>
+</create>
+<create unit="gg" vrobj="medieval:full">
+	<side name="e" texture="@medieval:stone.gif" faces="2" solid="yes"/>
+	<side name="bottom" texture="@medieval:water.gif" style="tiled" faces="2" clarity="50%" solid="no"/>
+	<side name="n,s,w,top" faces="0" solid="no"/>
+</create>
+<create unit="Gs" vrobj="medieval:full">
+	<side name="*" texture="@medieval:rockface.gif"/>
+	<side name="s" texture="@medieval:stone.gif"/>
+</create>
+<create unit="g1" vrobj="basic2:cornercolumn">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" projection="west"/>
+	<param orient="180"/>
+</create>
+<create unit="g2" vrobj="basic2:cornercolumn">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" projection="north"/>
+	<param orient="270"/>
+</create>
+<create unit="g3" vrobj="basic2:cornercolumn">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" projection="east"/>
+	<param orient="0"/>
+</create>
+<create unit="g4" vrobj="basic2:cornercolumn">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" projection="west"/>
+	<param orient="90"/>
+</create>
+<create unit="g5" vrobj="basic2:cornercolumn">
+	<side name="*" texture="@medieval:stone.gif" angle="180" style="scaled" projection="east"/>
+	<param orient="270"/>
+</create>
+
+<!-- castle walls -->
+
+<create unit="c1" vrobj="medieval:full">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif"/>
+	<side name="n,w" texture="@medieval:stone.gif"/>
+</create>
+<create unit="c2" vrobj="medieval:full">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif"/>
+	<side name="n,w" texture="@medieval:stone.gif"/>
+</create>
+<create unit="C1" vrobj="medieval:full">
+	<side name="s,e" texture="@medieval:stone_trim.gif"/>
+	<side name="n,w" texture="@medieval:stone_trim.gif"/>
+	<side name="bottom" texture="@medieval:stone.gif"/>
+</create>
+<create unit="C2" vrobj="medieval:full">
+	<side name="s,e" texture="@medieval:stone_trim.gif"/>
+	<side name="n,w" texture="@medieval:stone_trim.gif"/>
+	<side name="bottom" texture="@medieval:stone.gif"/>
+</create>
+<create unit="c3" vrobj="basic2:quarter">
+	<side name="top" texture="@medieval:stone.gif" angle="270"/>
+	<side name="n" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<side name="s" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<param orient="90,270"/>
+</create>
+<create unit="C3" vrobj="basic2:quarter">
+	<side name="top" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<side name="n" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<side name="s" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<param orient="90,270"/>
+</create>
+<create unit="c4" vrobj="basic2:quarter">
+	<side name="top" texture="@medieval:stone.gif" angle="90"/>
+	<side name="n" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<side name="s" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<param orient="270,270"/>
+</create>
+<create unit="C4" vrobj="basic2:quarter">
+	<side name="top" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<side name="n" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<side name="s" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<param orient="270,270"/>
+</create>
+<create unit="c5" vrobj="basic2:quarter">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<side name="n,w" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="c6" vrobj="medieval:half">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<side name="n,w" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<param orient="0,0,270"/>
+</create>
+<create unit="c0" vrobj="basic2:quarter">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<side name="n,w" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<param orient="0,0,270"/>
+</create>
+<create unit="c7" vrobj="medieval:half">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<side name="n,w" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="c8" vrobj="basic2:quarter">
+	<side name="top" texture="@medieval:shield.gif" angle="270"/>
+	<side name="bottom" texture="@medieval:shield.gif" angle="0"/>
+	<side name="n" texture="@medieval:shield.gif" angle="90"/>
+	<side name="s" texture="@medieval:shield.gif" angle="270"/>
+	<param orient="90,270"/>
+</create>
+<create unit="c9" vrobj="basic2:quarter">
+	<side name="top" texture="@medieval:shield.gif" angle="90"/>
+	<side name="bottom" texture="@medieval:shield.gif" angle="180"/>
+	<side name="n" texture="@medieval:shield.gif" angle="270"/>
+	<side name="s" texture="@medieval:shield.gif" angle="90"/>
+	<param orient="270,270"/>
+</create>
+<create unit="ca" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="0,270"/>
+</create>
+<create unit="cA" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="0,270"/>
+</create>
+<create unit="cb" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="180,90"/>
+</create>
+<create unit="cB" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="180,90"/>
+</create>
+<create unit="cc" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="90,0,270"/>
+</create>
+<create unit="cC" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="90,0,270"/>
+</create>
+<create unit="cd" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="270,0,90"/>
+</create>
+<create unit="cD" vrobj="basic2:floorhalf">
+	<side name="n,s" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="w" texture="@medieval:stone_trim.gif" style="scaled" angle="270"/>
+	<side name="e" texture="@medieval:stone_trim.gif" style="scaled" angle="90"/>
+	<side name="top" texture="@medieval:stone_trim.gif" style="scaled"/>
+	<param orient="270,0,90"/>
+</create>
+<create unit="ce" vrobj="basic:ebottomramp">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:rockface.gif"/>
+</create>
+<create unit="cE" vrobj="basic:etopramp">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:rockface.gif"/>
+</create>
+<create unit="cw" vrobj="basic:wbottomramp">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:rockface.gif"/>
+</create>
+<create unit="cW" vrobj="basic:wtopramp">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:rockface.gif"/>
+</create>
+<create unit="cf" vrobj="islands:column2">
+	<side name="base,sphere,top,bottom,pedestal" texture="@medieval:shield.gif" style="scaled"/>
+	<side name="columns" texture="@medieval:rockface.gif"/>
+</create>
+<create unit="cg" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="n" texture="@medieval:stone.gif" style="scaled"/>
+</create>
+<create unit="ci" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+</create>
+<create unit="ch" vrobj="medieval:half">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="cS" vrobj="basic2:topstairs">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="stairtop" texture="@medieval:rockface.gif"/>
+	<param orient="180"/>
+</create>
+<create unit="cs" vrobj="basic2:bottomstairs">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="stairtop" texture="@medieval:stone.gif"/>
+	<param orient="180"/>
+</create>
+<create unit="cj" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="cJ" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+	<side name="bottom" texture="@medieval:grate.vri"/>
+</create>
+<create unit="Cj" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@islands:straw.jpg"/>
+	<side name="bottom" texture="@medieval:grate.vri"/>
+</create>
+<create unit="ck" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="cK" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+	<side name="bottom" texture="@medieval:grate.vri"/>
+</create>
+<create unit="cl" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="90"/>
+</create>
+<create unit="cm" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="180"/>
+</create>
+<create unit="cn" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="270"/>
+	<side name="bottom" texture="@medieval:grate.vri"/>
+</create>
+<create unit="co" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="cO" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+	<side name="bottom" texture="@medieval:grate.vri"/>
+</create>
+<create unit="cp" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="90"/>
+</create>
+<create unit="cq" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="180"/>
+</create>
+<create unit="cQ" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="180"/>
+	<side name="bottom" texture="@medieval:grate.vri"/>
+</create>
+<create unit="cr" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="270"/>
+</create>
+<create unit="cR" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:stone.gif" angle="270"/>
+	<side name="bottom" texture="@medieval:grate.vri"/>
+</create>
+<create unit="ct" vrobj="medieval:full">
+	<side name="n,e,w,top,bottom" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="s" texture="@medieval:window.gif" style="scaled"/>
+</create>
+<create unit="cu" vrobj="medieval:full">
+	<side name="n,e,w,top,bottom" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="s" texture="@medieval:window.gif" style="scaled"/>
+</create>
+<create unit="cv" vrobj="medieval:full">
+	<side name="top" texture="@medieval:rockface.gif"/>
+	<side name="bottom" texture="@medieval:stone.gif"/>
+	<side name="w,e" texture="@medieval:window.gif"/>
+	<side name="n,s" texture="@medieval:stone.gif"/>
+</create>
+<create unit="cV" vrobj="medieval:half">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="bottom" texture="@medieval:window.gif" angle="180"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+	<param orient="90,0,270"/>
+</create>
+<create unit="cy" vrobj="medieval:full">
+	<side name="e,top,bottom" texture="@medieval:stone.gif" faces="2"/>
+	<side name="w" texture="@medieval:stone.gif" faces="2"/>
+	<side name="n" texture="@medieval:window.gif" faces="2"/>
+	<side name="s" texture="@medieval:stone.gif" faces="2"/>
+</create>
+<create unit="cx" vrobj="basic2:concave">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="curve" texture="@medieval:stone.gif" style="scaled"/>
+	<param orient="0,180"/>
+</create>
+<create unit="cz" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif"/>
+</create>
+<create unit="CA" vrobj="basic2:pipecurve">
+	<side name="*" texture="@medieval:water.gif" angle="270" clarity="50%"/>
+</create>
+<create unit="CB" vrobj="basic2:pipecurve">
+	<side name="*" texture="@medieval:water.gif" angle="270" clarity="50%"/>
+	<param orient="180"/>
+</create>
+<create unit="c#" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif"/>
+	<side name="top" texture="@medieval:floor_stone.gif"/>
+</create>
+<create unit="cH" vrobj="medieval:half">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:grate.vri"/>
+	<side name="bottom" texture="@medieval:stone.gif"/>
+	<param orient="0,180"/>
+</create>
+<create unit="c-" vrobj="medieval:ceiling">
+	<side name="n,s,e,w" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="bottom" texture="@medieval:grate.vri" style="scaled"/>
+	<side name="top" texture="@medieval:floor_stone.gif" style="scaled"/>
+</create>
+<create unit="c+" vrobj="basic2:floorhalf">
+	<side name="n,s,e,w" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<side name="top" texture="@medieval:grate.vri" style="scaled"/>
+	<side name="bottom" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<param orient="0,0,180"/>
+</create>
+<create unit="c=" vrobj="medieval:ceiling">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+</create>
+<create unit="Ct" vrobj="medieval:full">
+	<side name="*" texture="@medieval:shield.gif"/>
+</create>
+<create unit="CT" vrobj="medieval:full">
+	<side name="*" texture="@medieval:shield.gif"/>
+	<sound file="@gametools:boulder.wav" radius="3" playback="looped"/>
+</create>
+<create unit="Cs" vrobj="basic2:stairs">
+	<side name="*" texture="@medieval:floor_stone.gif" style="tiled"/>
+	<side name="stairtop" texture="@medieval:floor_stone.gif" style="tiled"/>
+	<param orient="180"/>
+</create>
+<create unit="CW" vrobj="basic2:stairs">
+	<side name="*" texture="@medieval:stone.gif" style="tiled"/>
+	<param orient="270"/>
+</create>
+<create unit="CN" vrobj="basic2:stairs">
+	<side name="*" texture="@medieval:stone.gif" style="tiled"/>
+</create>
+<create unit="C#" vrobj="medieval:full">
+	<side name="n,s" texture="@medieval:floor_stone.gif"/>
+	<side name="e,top,bottom" texture="@medieval:stone.gif"/>
+	<side name="w" texture="@medieval:stone.gif"/>
+</create>
+<create unit="CC" vrobj="medieval:full">
+	<side name="n,s" texture="@medieval:floor_stone.gif"/>
+	<side name="e,bottom" texture="@medieval:stone.gif"/>
+	<side name="w" texture="@medieval:stone.gif"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="CD" vrobj="medieval:full">
+	<side name="n,s,e,w,bottom" texture="@medieval:floor_stone.gif"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="CE" vrobj="medieval:full">
+	<side name="n,s,e,w,bottom" texture="@medieval:floor_stone.gif"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="CF" vrobj="medieval:full">
+	<side name="*" texture="@medieval:floor_stone.gif"/>
+	<side name="top" texture="@medieval:stone.gif"/>
+</create>
+<create unit="CG" vrobj="medieval:full">
+	<side name="*" texture="@medieval:bones.gif"/>
+</create>
+<create unit="CH" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif"/>
+	<side name="nbars,sbars,topbars,bottombars" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="CI" vrobj="basic2:quarter">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<side name="n,w" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<param orient="0,0,270"/>
+</create>
+<create unit="CJ" vrobj="basic2:quarter">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<side name="n,w" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<param orient="180,0,270"/>
+</create>
+<create unit="CK" vrobj="basic2:quarter">
+	<side name="s,e,top,bottom" texture="@medieval:stone.gif" angle="90" style="scaled"/>
+	<side name="n,w" texture="@medieval:stone.gif" angle="270" style="scaled"/>
+	<param orient="180,0,90"/>
+</create>
+<create unit="CL" vrobj="medieval:half">
+	<side name="s,e,top,bottom" texture="@medieval:floor_stone.gif" angle="90" style="scaled"/>
+	<side name="n,w" texture="@medieval:floor_stone.gif" angle="270" style="scaled"/>
+	<param orient="0,0,270"/>
+</create>
+<create unit="CM" vrobj="medieval:floor">
+	<side name="n,s,e,w" texture="@medieval:wood.gif"/>
+	<side name="top" texture="@medieval:bones.gif" style="scaled" angle="180"/>
+</create>
+<create unit="CO" vrobj="medieval:floor">
+	<side name="n,s,e,w,bottom" faces="0"/>
+	<side name="top" texture="@medieval:bones.gif" angle="90" faces="2" style="scaled"/>
+	<param orient="0,0,270"/>
+</create>
+<create unit="ka" vrobj="medieval:crossbeam">
+	<side name="beams" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="0,180"/>
+</create>
+<create unit="kb" vrobj="basic2:convex">
+	<side name="curve" texture="@medieval:clear.gif" style="scaled" projection="top"/>
+	<param orient="0,270"/>
+</create>
+<create unit="kc" vrobj="basic:platform">
+	<side name="n,s,e,w" texture="@medieval:stone.gif" style="scaled" angle="180"/>
+	<side name="columntop" texture="@medieval:stone.gif"/>
+	<side name="column" texture="@medieval:stone.gif" angle="180"/>
+	<side name="under" texture="@medieval:flowers.vri"/>
+	<param orient="0,180"/>
+</create>
+<create unit="kC" vrobj="basic:platform">
+	<side name="n,s,e,w" texture="@medieval:stone.gif" style="scaled" angle="180"/>
+	<side name="columntop" texture="@medieval:stone.gif"/>
+	<side name="column" texture="@medieval:stone.gif" angle="180"/>
+	<side name="under" texture="@medieval:flowers.vri" angle="270"/>
+	<param orient="0,180"/>
+</create>
+<create unit="kd" vrobj="basic:platform">
+	<side name="n,s,e,w,under" texture="@medieval:leaves.vri" style="scaled"/>
+	<side name="columntop" texture="@medieval:stone.gif"/>
+	<side name="column" texture="@medieval:stone.gif" angle="180"/>
+</create>
+<create unit="ke" vrobj="medieval:floor">
+	<side name="n,s,e,w" texture="@medieval:stone.gif" style="scaled" angle="180"/>
+	<side name="top" texture="@medieval:flowers.vri"/>
+</create>
+<create unit="kf" vrobj="basic2:convex">
+	<side name="curve" texture="@medieval:stone_trim.gif" style="scaled" projection="top"/>
+	<param orient="0,270"/>
+</create>
+<create unit="kg" vrobj="medieval:largeframe">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" angle="90"/>
+	<side name="s" texture="@medieval:floor_stone.gif" style="stretched" angle="90"/>
+	<param orient="90,90"/>
+	<action trigger="click on">
+		<replace source="!r" target="(4,25,1)"/>
+	</action>
+</create>
+<create unit="kh" vrobj="medieval:largeframe">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" angle="270"/>
+	<side name="s" texture="@medieval:floor_stone.gif" style="stretched" angle="270"/>
+	<param orient="270,90"/>
+	<action trigger="click on">
+		<replace source="!r" target="(4,25,1)"/>
+	</action>
+</create>
+<create unit="ki" vrobj="medieval:largeframe">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" angle="90"/>
+	<side name="s" texture="@medieval:stone.gif" style="stretched" angle="180"/>
+	<param orient="90,90"/>
+</create>
+<create unit="kj" vrobj="medieval:largeframe">
+	<side name="*" texture="@medieval:stone.gif" style="scaled" angle="270"/>
+	<side name="s" texture="@medieval:stone.gif" style="stretched" angle="0"/>
+	<param orient="270,90"/>
+</create>
+<create unit="kk" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif"/>
+</create>
+<create unit="kl" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+</create>
+<create unit="km" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="bottom" texture="@medieval:stone.gif"/>
+</create>
+<create unit="kn" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone_trim.gif"/>
+	<side name="e" texture="@medieval:stone.gif"/>
+</create>
+<create unit="ko" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif" angle="180"/>
+</create>
+<create unit="kp" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif" angle="180"/>
+</create>
+<create unit="kq" vrobj="medieval:floor">
+	<side name="*" texture="@medieval:stone.gif" style="scaled"/>
+	<side name="bottom" texture="@medieval:stone.gif" style="scaled" angle="90"/>
+</create>
+<create unit="kr" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="n" texture="@medieval:stone.gif" angle="180"/>
+</create>
+<create unit="ks" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="n" texture="@medieval:stone.gif"/>
+</create>
+<create unit="kt" vrobj="medieval:full">
+	<side name="top" texture="@medieval:stone.gif" faces="2"/>
+	<side name="n,s,e,w,bottom" faces="0" solid="no"/>
+	<point_light style="static" radius="2"/>
+</create>
+<create unit="ku" vrobj="medieval:half">
+	<side name="top" texture="@medieval:stone.gif" faces="2"/>
+	<side name="n" texture="@medieval:stone.gif" faces="2" angle="180" style="scaled"/>
+	<side name="s,e,w,bottom" faces="0" solid="no"/>
+	<param orient="0,270"/>
+</create>
+<create unit="kv" vrobj="medieval:half">
+	<side name="top" texture="@medieval:stone.gif" faces="2" angle="180"/>
+	<side name="s" texture="@medieval:stone.gif" faces="2" style="scaled"/>
+	<side name="n,e,w,bottom" faces="0" solid="no"/>
+	<param orient="0,90"/>
+</create>
+<create unit="kw" vrobj="medieval:half">
+	<side name="top" texture="@medieval:stone.gif" faces="2" angle="270"/>
+	<side name="w" texture="@medieval:stone.gif" faces="2" angle="270" style="scaled"/>
+	<side name="n,s,e,bottom" faces="0" solid="no"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="kx" vrobj="basic2:cornercolumn">
+	<side name="curve" texture="@medieval:stone.gif" faces="2" style="scaled" projection="east"/>
+	<side name="top" texture="@medieval:stone.gif" faces="2" style="scaled"/>
+	<side name="n,w,bottom" faces="0" solid="no"/>
+</create>
+<create unit="ky" vrobj="basic2:cornercolumn">
+	<side name="curve" texture="@medieval:stone.gif" faces="2" style="scaled" projection="south"/>
+	<side name="top" texture="@medieval:stone.gif" faces="2" style="scaled"/>
+	<side name="n,w,bottom" faces="0" solid="no"/>
+	<param orient="270"/>
+</create>
+<create unit="kz" vrobj="islands:column2">
+	<side name="*" texture="@basic2:yellowmetal.gif"/>
+	<side name="sphere" texture="@basic2:redmetal.gif"/>
+	<param orient="0,180"/>
+</create>
+<create unit="kA" vrobj="basic2:dome">
+	<side name="*" texture="@medieval:stone.gif" faces="2" style="scaled" projection="top"/>
+	<side name="bottom" faces="0"/>
+</create>
+<create unit="kF" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif" angle="270"/>
+</create>
+<create unit="kD" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif" angle="270" style="scaled" projection="west"/>
+</create>
+<create unit="kE" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif" angle="90"/>
+</create>
+<create unit="kG" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif" angle="90"/>
+</create>
+<create unit="kH" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif" angle="90" style="scaled" projection="west"/>
+</create>
+<create unit="kI" vrobj="medieval:full">
+	<side name="*" texture="@medieval:stone.gif"/>
+	<side name="e" texture="@medieval:stone.gif" angle="270"/>
+</create>
+<create unit="kJ" vrobj="basic2:floorhalf">
+	<side name="top,s" texture="@gametools:curtain.jpg" angle="270"/>
+	<side name="n" texture="@gametools:curtain.jpg" angle="90"/>
+	<param orient="0,0,90"/>
+</create>
+<create unit="kK" vrobj="basic2:floorhalf">
+	<side name="top,s" texture="@gametools:curtain.jpg" angle="90"/>
+	<side name="n" texture="@gametools:curtain.jpg" angle="270"/>
+	<param orient="180,0,90"/>
+</create>
+<create unit="kM" vrobj="medieval:full">
+	<side name="s" texture="@medieval:vitral.gif"/>
+</create>
+<create unit="kN" vrobj="medieval:full">
+	<side name="s" texture="@medieval:vitral.gif"/>
+</create>
+<create unit="kO" vrobj="medieval:full">
+	<side name="s" texture="@medieval:vitral.gif" style="scaled" projection="north"/>
+</create>
+<create unit="kP" vrobj="islands:column2">
+	<side name="*" texture="@medieval:stone.gif" faces="2"/>
+	<side name="columns" texture="@basic2:redmetal.gif" faces="2"/>
+	<side name="base,bottom" texture="@medieval:stone.gif"/>
+	<param orient="0,180"/>
+</create>
+<create unit="kQ" vrobj="basic2:dome">
+	<side name="top" texture="@medieval:stone.gif" faces="2" style="scaled" projection="top"/>
+	<side name="bottom" faces="0"/>
+	<param orient="0,180"/>
+</create>
+
+
+<!-- Bridge -->
+
+<create unit="b1" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif" faces="2"/>
+	<side name="nbars,sbars,topbars,bottombars" faces="0" solid="no"/>
+</create>
+<create unit="b2" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif" faces="2"/>
+	<side name="nbars,sbars,topbars,bottombars" faces="0" solid="no"/>
+	<param orient="180"/>
+</create>
+<create unit="b3" vrobj="basic:etopramp">
+	<side name="top" texture="@medieval:ladder.gif" faces="2"/>
+	<side name="n,s,e,w,bottom" faces="0" solid="no"/>
+</create>
+<create unit="b4" vrobj="basic:etopramp">
+	<side name="top" texture="@medieval:ladder.gif" faces="2"/>
+	<side name="n,s,e,w,bottom" faces="0" solid="no"/>
+</create>
+<create unit="b5" vrobj="medieval:half">
+	<side name="top" texture="@medieval:ladder.gif" faces="2"/>
+	<side name="n,s,e,w,bottom" faces="0" solid="no"/>
+</create>
+<create unit="b6" vrobj="basic:sbottomramp">
+	<side name="top" texture="@medieval:ladder.gif" faces="2"/>
+	<side name="s,e,w,bottom" faces="0" solid="no"/>
+	<param orient="0,270" solid="no"/>
+</create>
+<create unit="b7" vrobj="basic:nbottomramp">
+	<side name="top" texture="@medieval:ladder.gif" faces="2"/>
+	<side name="n,e,w,bottom" faces="0" solid="no"/>
+	<param orient="0,90" solid="no"/>
+</create>
+
+<!-- wooden towers -->
+
+<create unit="an" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif"/>
+	<side name="nbars,sbars,topbars,bottombars" texture="@medieval:wood.gif" angle="90"/>
+</create>
+<create unit="as" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif"/>
+	<side name="nbars,sbars,topbars,bottombars" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="180"/>
+</create>
+<create unit="ae" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif"/>
+	<side name="nbars,sbars,topbars,bottombars" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="90"/>
+</create>
+<create unit="aw" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif"/>
+	<side name="nbars,sbars,topbars,bottombars" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="270"/>
+</create>
+<create unit="at" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif"/>
+	<side name="nbars,sbars,topbars,bottombars" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="0,270"/>
+</create>
+<create unit="ab" vrobj="basic2:grate">
+	<side name="insidepoles,outsidepoles,npoles,spoles,toppoles,bottompoles" texture="@medieval:wood.gif"/>
+	<side name="nbars,sbars,topbars,bottombars" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="0,90"/>
+</create>
+<create unit="aE" vrobj="basic2:stairs">
+	<side name="*" texture="@medieval:wood.gif" angle="90"/>
+	<param orient="90"/>
+</create>
+
+
+
+
+<create unit="RO" vrobj="medieval:ground">
+	<side name="*" texture="@gametools:rope.vri" style="scaled"/>
+	<param orient="0,180"/>
+</create>
+<create unit="Ro" vrobj="medieval:ground">
+	<side name="*" texture="@gametools:rope.vri" style="scaled"/>
+</create>
+<create unit="RG" vrobj="medieval:ground">
+	<side name="*" texture="@gametools:grabrope.gif" style="scaled"/>
+	<param orient="0,180"/>
+	<action trigger="click on">
+
+		<exit href="#rope"/>
+
+	</action>
+	<sound file="@gametools:chain.wav" radius="1" playback="looped"/>
+	<popup texture="@gametools:lifesaver.vri" placement="bottom-left" imagemap="help1"/><!-- Help Popup -->
+</create>
+<create unit="R0" vrobj="basic2:sphere">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+</create>
+<create unit="R1" vrobj="basic2:sphere">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled"/>
+	<action trigger="location" target="(10,15,1)">
+		<replace source="Ct" target="(9,12,1)"/>
+		<replace source="|2" target="(11,12,1)"/>
+		<replace source="R0"/>
+	</action>
+	<action trigger="timer" delay=".2">
+		<replace source="Q1" target="(0,+1,0)"/>
+		<replace source="q1"/>
+	</action>
+</create>
+<create unit="Q1" vrobj="basic2:dome">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled" angle="90"/>
+	<param orient="0,270"/>
+	<action trigger="timer" delay=".2">
+		<replace source="X1" target="(0,-1,0)"/>
+		<replace source="R1"/>
+	</action>
+</create>
+<create unit="q1" vrobj="basic2:dome">
+	<side name="*" texture="@medieval:rockface.gif" style="scaled" angle="90"/>
+	<param orient="0,90"/>
+</create>
+
+<!-- trap trigger (#1) (place in line of rock movement) -->
+<create unit="T1" vrobj="medieval:ground">
+	<side name="*" faces="0"/>
+	<action trigger="step in" radius=".7">
+		<replace source=".." target="(10,2,2)"/><!-- dummy location -->
+		<replace source="R1" target="(10,2,1)"/><!-- start location -->
+		<replace source="CT" target="(9,12,1)"/><!-- sound -->
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="X1" vrobj="medieval:ground">
+	<side name="*" faces="0" solid="no"/>
+	<action trigger="proximity">
+		<exit href="#death"/>	
+	</action>
+	<action trigger="timer" delay=".5">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit=".=" vrobj="islands:curvepath4">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+</create>
+<create unit="T=" vrobj="medieval:full">
+	<side name="*" faces="0"/>
+	<param solid="no"/>
+	<action trigger="step in" radius=".7">
+		<replace source="?=" target="(0,0,-1)"/>
+		<replace source=".."/>
+	</action>
+</create>
+<create unit="?=" vrobj="islands:curvepath4">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<action trigger="timer" delay=".5">
+		<replace source=",=" target="(0,0,-1)"/>
+		<replace source="!="/>
+	</action>
+</create>
+<create unit="!=" vrobj="medieval:full">
+	<side name="*" faces="0" solid="no"/>
+	<sound file="@gametools:platform.wav" radius="5" playback="once"/>
+	<action trigger="timer" delay="3">
+		<replace source=".."/>
+	</action>
+</create>
+<create unit=",=" vrobj="islands:curvepath4">
+	<side name="*" texture="@medieval:floor_stone.gif" style="scaled"/>
+	<param orient="0,180"/>
+</create>
+<layer number="1">
+c# c# c# c# c# c# c# c# c# c# c# .. ..
+c# c# c# c# c# .. CL c# c# .. c# .. ..
+c# c# c# c# c# c# CL .. .. .. c# .. ..
+c# c# c# c# c# c# CL Cs c# .. c# .. ..
+c# c# c# c# c# c# CL c# c# .. c# .. ..
+c# c# c# c# c# c# CL c# c# .. c# .. ..
+c# c# c# c# c# c# CL c# c# .. c# .. ..
+c# c# c# c# c# c# !: CM c# .. c# .. ..
+c# c# c# c# c# c# .. CO c# .. c# .. ..
+c# c# c# c# c# c# CM CM c# .. c# c# c#
+c# c# c# c# c# c# c# c# c# .. c# L1 c#
+c# c# c# c# c# c# c# c# Ct T1 S2 .. c#
+c# c# c# c# c# c# c# c# c# .. c# .. c#
+c# c# c# c# c# c# c# c# c# .. c# c# c#
+c# c# c# c# c# c# c# c# c# .. c# c# c#
+c# c# c# c# c# c# c# c# c# c# c# c# c#
+c# c# c# c# c# c# c# c# c# c# c# c# c#
+c# c# c# r# r# r# r# r# r# r# r# r# r#
+r# r# r# r# r# r# r# r# r# r# r# r# r#
+r# w1 w1 w1 w1 w1 w1 w1 w1 w1 w1 w1 we
+r# W1 W1 W1 W1 W1 W1 W1 W1 W1 W1 W1 we
+r# r# r# r# r# r# r# r# r# r# r# w1 r#
+!S !S !S r# r# r# r# rr rr rr rw w1 r#
+!S !S !S r# r# r# r# rr rr rw W1 W1 r#
+!S !S !S r# r# r# r# r# r# r# r# r# r#
+</layer>
+
+<layer number="2">
+c# c# c# c# c# c# c# c# c# c# c# .. ..
+c# .. .. .. c- c# c# c# c# R0 c# .. ..
+c# .= .= .= c# c# c# .. cH cH c# .. ..
+c# .= .= .. .. c# c# .. c# cH c# .. ..
+c# .= .. .. .. c# c# Cs c# cH c# .. ..
+c# .= .= .. .. c# c# c# c# cH c# .. ..
+c# .. .= .. .. c# c# c# c# cH c# .. ..
+c# .. .= .. .. c# c- c- c# cH c# .. ..
+c# c# c# c# c# c# c- c- c# cH c# .. ..
+c# c# c# c# c# c# c- c- c# cH c# c# c#
+c# c# c# c# c# c# c# c# c# cH c# cH c#
+c# c# c# c# c- c- c- .. c# cH cH cH c#
+c# c# c# c# c- c# c# Cs c# cH c# .. c#
+c# c- c- c- c- c# c# c# c# cH c# c# c#
+c# c- c# c# c- c# c# c# c# cH c# c# c#
+c# c- c# c# c- c- c- c- c# c# c# .. c#
+c# c- c# c# c# c# c# c- c- c- c- c- c#
+rP c+ c# r# r# r# r# c# c# c# c# c# c#
+rr rQ r# rN rN r# rN rN rN r# rN rN g#
+rr wf .. .. .. .. .. .. .. .. .. .. gg
+rr wg .. .. .. .. .. .. .. .. .. .. gg
+rr r# r# rS rS rS r# rS rS rS r# rS g#
+rr !S r# r# r# r# r# Rw rv Rn w_ rB r#
+!S #1 !S r# rF rE rE RV .. w_ rA rC r#
+r# !S r# r# r# r# r# r# r# r# r# r# r#
+</layer>
+
+<layer number="3">
+c# c# c# c# c# c# c# c# .. .. .. .. ..
+c# .. .. .. L2 ck co co co co co cl ..
+c# T= T= T= S3 cn cQ cJ cj cj cj cp cj
+c# T= T= .. .. Cj Cj cR cj cj cj cp cj
+c# T= .. .. .. cK cO cJ cj cj cj cp cj
+c# T= T= .. .. cn cQ cQ cq cq cq cm ..
+c# .. T= .. .. CE CC cr cj cp CC CC CF
+c# .. T= .. .. CD c1 c2 .. c2 c1 c2 CF
+c# C# .. C# c# C# wa c1 .. c1 wa c1 CF
+c# c2 .. c2 c1 c2 wb c2 .. c2 wb c2 CF
+c# c1 S4 L3 c2 c1 wc c1 .. c1 wc c1 CF
+c# c2 .. c2 c1 c2 c1 c- c1 c2 c1 c2 c1
+c# c1 .. .. ce cE c2 c- c2 c1 c2 .. c2
+c1 CN c1 c2 c1 c2 c1 c- c1 c2 c1 c2 c1
+c2 .. c2 c1 c- c- c- c- c- c1 c2 c1 c2
+c1 c- c- c- c- c2 c1 c2 c- c2 c1 .. c1
+r# c1 c2 c1 c2 r# .. .. .. c1 c2 c1 c2
+rJ rh r# r# r# r# .. r# r# c2 c1 r# r#
+rJ r# rN rh rh rN CH rh rh rN rh rh g#
+RJ wf .. .. .. .. .. .. .. .. .. G1 g#
+rJ wg .. .. .. .. .. .. .. .. .. G6 g#
+rJ r# rS rH rH rs rS rH rH rH rS rH g#
+rJ rE r# r# r# r# r# rO .. .. rD r# r#
+r# !s rE rG .. rC rM .. !! rD r# r# r#
+r# r# r# r# r# r# r# r# r# r# r# r# r#
+</layer> 
+
+<layer number="4">
+CF CF CF CF c2 ko ko ko ko ko ko ko ko
+CF cH cH cH kp kK .. .. .. .. .. SP ko
+CF cH cH cH kG kz .. .. .. .. .. .. v0
+CF cH cH cH kI !R .. .. .. .. .. .. v0
+CF cH cH cH kH kz .. .. S5 .. .. .. v0
+CF cH cH cH kp kJ CJ .. .. .. CK SR ko
+CF cH cH cH kp c8 c6 d4 d4 d4 c7 c9 ko
+CF cH cH cH c1 c5 c1 cs cs cs c1 c0 c1
+CF CF C# CF CW c6 !# ch ch ch !# c7 c6
+c1 CF C# C# c1 c2 CB ch ch ch CA c2 c6
+c2 CN C# C# C# c1 !# c1 cS c1 !# c1 c6
+c1 .. C# w# c1 c2 c1 c2 r# c2 c1 c2 c6
+c2 c= c2 c1 .. .. ce cE r# cW cw c6 c6
+c1 c= c1 c2 c1 c2 c1 c2 r# c2 c1 c2 c6
+c2 c= cv r# r# r# r# r# r# r# cv .. c6
+c1 c2 cv r# r# r# r# r# r# r# cv .. c2
+r# r# r# r# r# r# r# r# r# r# r# cv c1
+r# r# r# r# r# r# r# r# r# r# r# r# r#
+r# r# rh rn rn b5 rn rn rh rn rn g7 g#
+r# wf .. .. .. b5 .. .. .. .. .. g6 g#
+r# wg w~ .. .. b5 .. .. .. .. .. g8 g#
+r# r# g5 rs rs b5 rH rs rs rs rs g7 g#
+rL rK r# r# r# r# r# r# r# r# r# r# r#
+r# rK rK rK r# r# r# r# r# r# r# r# r#
+r# r# r# r# r# r# r# r# r# r# r# r# r#
+</layer>
+
+<layer number="5">
+.. .. .. .. kl kl kN kN kM kO kO kl kl
+.. .. .. .. kl kK .. .. .. .. .. kL kl
+c2 c1 c2 c1 kD kv ky .. .. .. .. .. v0
+c1 kC kb kc kE kt kw .. kQ .. .. .. v0
+c2 kj .. ki kF ku kx .. .. .. .. .. v0
+c1 kh .. kg kk kJ CJ .. .. .. CK .. kl
+c2 kj .. ki c2 kr kr d4 d4 d4 kr kr c2
+c1 kC !! CJ c1 c2 c1 .. .. .. c1 c2 c1
+c2 .. .. .. .. cV !# .. .. .. !# cv c2
+c1 .. .. CI c1 cg .. .. .. .. .. ci c1
+c2 .. ke ke c2 cv !# cf .. cf !# cv c2
+c1 .. ke .. c1 c2 c1 c2 .. c2 c1 c2 c1
+c2 c1 c2 c1 .. .. .. .. .. .. .. c1 c2
+g# g# g# ct cu ct c1 c2 .. c2 c1 c2 c1
+g# g# g3 .. .. .. c2 c1 .. c1 c2 c1 c2
+g# g# g2 .. .. .. c3 c3 .. c4 c4 g( g(
+r# r# g3 Rv RV .. .. .. .. .. .. g6 g(
+r# r# r# Rn Rw .. .. .. .. .. Rv RV g#
+r# r# rn .. .. .. .. .. .. .. .. g8 g#
+r# wf .. .. .. .. .. .. .. .. .. g7 G5
+r# wg .. .. .. .. .. .. .. .. .. g6 G7
+r# Gs g2 .. .. .. .. .. as .. .. .. g#
+g# g4 g3 !R .. .. .. aE at aw .. g1 g#
+d1 .. g/ r# g# g2 .. .. an .. g1 g# g#
+g# g# r# !t r# g# g# g# g# g# g# g# g#
+</layer>
+
+<layer number="6">
+.. .. .. .. km km km km km km km km km
+.. .. .. .. km kK .. .. .. .. .. .. km
+C2 C1 C2 C1 kn .. .. .. .. .. .. .. km
+C1 kd kf kd kn kA .. .. kP .. .. .. km
+C2 ka ka ka kn .. .. .. .. .. .. .. km
+C1 ka ka ka kn kJ CJ .. .. .. CK .. km
+C2 ka ka ka C2 ks ks c1 c2 c1 ks ks C2
+C1 kd ka ka C1 c2 c1 c2 c1 c2 c1 c2 C1
+C2 ka ka ka C2 C1 cd cA ca cA cc C1 C2
+C1 ka ka ka C1 C2 cD .. .. .. cC C2 C1
+C2 ka ka ka C2 C1 cd .. .. .. cc C1 C2
+C1 ka ka ka C1 C2 c1 cy cx cy c1 C2 C1
+C2 C1 C2 C1 c2 c1 c2 c1 cx c1 c2 g# g#
+g# g# g# C2 C1 C2 c1 c2 cx c2 c1 g# g#
+g# G4 G5 cA ca cA c2 c1 cx c1 c2 g8 g#
+g# G7 G5 .. .. .. C3 C3 .. C4 C4 g7 g#
+g# g2 G8 .. .. .. .. .. RO .. .. g7 g#
+r# rW .. .. .. .. .. .. .. .. .. g7 g4
+r# r# .. .. .. .. .. .. RO .. .. g6 G7
+r# wf .. .. .. .. .. .. RO .. .. .. ..
+r# wg .. .. .. .. .. .. RO .. .. .. ..
+r# r# G3 .. .. .. .. .. RG .. .. G1 G2
+g# g# G5 .. G1 G3 .. .. RT aw .. G4 g#
+g# g# G8 rS G4 G2 G2 G3 an G1 G2 g# g#
+r# r# r# r# r# g# g# G5 G1 G2 g# g# g#
+</layer>
+
+<layer number="7">
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. kq kq kq kq kq kq kq ..
+G1 G2 G2 G2 G3 kq kq kq kq kq kq kq ..
+G4 G7 G5 G7 G5 kq kq kq kq kq kq kq ..
+G6 G7 G6 G7 G8 kq kq kq kq kq kq kq ..
+.. .. .. .. .. kq kq kq kq kq kq kq ..
+G1 G2 G3 .. .. .. .. .. .. .. .. .. ..
+G4 G5 G5 .. .. .. .. .. .. .. .. .. ..
+G6 G7 G8 .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. cB cb cB cb cB .. ..
+G1 G2 G3 .. .. cC C2 C1 C2 C1 C2 cD ..
+G4 G2 G5 .. .. cc C1 C2 C1 C2 C1 cd G2
+G4 G7 G5 .. .. cC C2 C1 C2 C1 C2 G7 G7
+G6 G7 G8 .. .. cc C1 C2 C1 C2 C1 cd g7
+G2 G3 .. .. .. cC C2 C1 C2 C1 C2 cD g7
+G7 G5 .. .. .. .. cA ca cA ca cA .. g7
+rW G8 .. .. .. .. .. .. Ro .. .. .. G6
+r# rW .. .. .. .. .. .. .. .. .. .. ..
+wh wF .. .. .. .. .. .. .. .. .. .. ..
+wH wG .. .. .. .. .. .. .. .. .. .. ..
+r# rW G3 .. .. .. .. .. .. .. .. .. ..
+r# rW G5 .. .. .. .. .. ab .. .. G1 G4
+r# rW G8 .. .. G1 G2 G3 .. .. G1 G4 G5
+r# r# r# rS rs G4 G7 G5 .. .. G4 G7 G8
+</layer>
+<imagemap name="multientrance">
+         <area shape="rect" coords="1,1,16,16" href="#default" />
+         <area shape="rect" coords="1,21,16,36" href="#continue1" />
+         <area shape="rect" coords="1,31,16,56" href="#rope" />
+         <area shape="rect" coords="1,51,16,76" href="#winner" />
+</imagemap>
+<popup texture="@medieval:e3_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
+<imagemap name="github">
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
+</imagemap>
+<imagemap name="tutorial">
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:actions" text="Go to full tutorial" />
+</imagemap>
+<popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
+<popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<enter location="(8,24,5)" name="default" angle="90"/>
+<enter location="(9,18,5)" name="rope" angle="0"/>
+<enter location="(2,24,2)" name="death" angle="0"/>
+<enter location="(9,3,4)" name="winner" angle="240"/>
+<enter location="(7,23,5)" name="continue1" angle="90"/>
+
+</design>
+</vrf>
+
