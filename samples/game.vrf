@@ -73,7 +73,6 @@
 </create>
 <create unit="!Q" vrobj="medieval:full">
 	<side name="*" faces="0"/>
-	<popup trigger="everywhere" text="Use the blue logo to replay from start" placement="center"/>
 	<action trigger="timer" delay="3">
 		<replace source=".."/>
 	</action>
