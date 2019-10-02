@@ -1481,11 +1481,11 @@
 
 
 <CREATE unit="@@" vrobj="basic:full" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 </CREATE>
 <CREATE unit="@h" vrobj="basic:half" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 </CREATE>
 
@@ -1652,12 +1652,12 @@
 
 
 <CREATE unit="Gb" vrobj="basic:wbottomramp" SPDESC="ground">
-<side name="w,s,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 <CREATE unit="Gt" vrobj="basic:wtopramp" SPDESC="ground">
-<side name="w,s,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
@@ -2150,41 +2150,41 @@
 
 
 <CREATE unit="@R" vrobj="basic:full" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@house:road.jpg" style="stretched"/>
 <PARAM ORIENT="180,0,0"/>
 </CREATE>
 <CREATE unit="@C" vrobj="basic:full" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@house:roadcurve.jpg" style="stretched"/>
 <PARAM ORIENT="180,0,0"/>
 </CREATE>
 <CREATE unit="@D" vrobj="house:height3" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@E" vrobj="house:height4" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@F" vrobj="house:height5" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@G" vrobj="house:height2" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@I" vrobj="basic:full" SPDESC="ground">
-<side name="w,s,e,n,bottom,top" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom,top" texture="@basic:dirt.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@H" vrobj="basic:half" SPDESC="ground">
-<side name="w,s,e,n,bottom" texture="@basic:terrain.gif" style="stretched"/>
+<side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@basic:grassground.gif" style="stretched"/>
 <PARAM ORIENT="180,0,0"/>
 </CREATE>
@@ -2669,4 +2669,3 @@ WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL WL
 <enter location="(16,28,8)" name="default" angle="0"/>
 </design>
 </vrf>
-
