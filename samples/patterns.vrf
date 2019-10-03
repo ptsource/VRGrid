@@ -11,7 +11,7 @@
 	<orb position="(50,50)" brightness="100%" />
 	<atmosphere brightness="40%" /> 
 	<ground texture="@medieval:wall.jpg" /> 
-	<fog color="(0,0,0)" start="1" end="8" density="5%" />
+	<fog color="(68,68,68)" start="1" end="8" density="2%" />
 	<devel />
 </globals>
 <design> 
