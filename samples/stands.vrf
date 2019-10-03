@@ -177,6 +177,7 @@ cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(10,10,1)" radius="1" placement="center" text="This sample shows how to use different javascript effects in html popups. View source for more details."/>
 <enter location="(10,10,1)"  name="default"/>
 </design>
 </vrf>
