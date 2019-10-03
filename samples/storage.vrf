@@ -229,12 +229,6 @@
        .. .. .. .. .. .. .. .. .. .. .. .. ..
        .. .. .. .. .. .. .. .. .. .. .. .. ..
        </layer>
-      <define>
-         <function name="start">player.size:x=100;
-          player.size:z=100;
-          player.size:y=350;
-      </function>
-      </define>
       <CREATE unit="t1" vrobj="basic:wramp">
          <side name="*" style="stretched" texture="@warehouse:tex5.jpg" />
          <param orient="0,180,0" />
