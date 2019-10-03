@@ -11,7 +11,7 @@
 	<orb position="(50,50)" brightness="100%" />
 	<atmosphere brightness="40%" /> 
 	<ground texture="@medieval:wall.jpg" /> 
-	<fog color="(68,68,68)" start="1" end="8" density="2%" />
+	<fog color="(68,68,68)" start="1" end="8" density="1%" />
 	<devel />
 </globals>
 <design> 
@@ -20,7 +20,7 @@
 	<param orient="0,0,0" walkable="yes" />
 </create>
 <create unit="c#" vrobj="medieval:full"> 
-	<side name="*" texture="@medieval:bigtiles.jpg" ANGLE="0" />
+	<side name="*" texture="@medieval:bigtiles.jpg" angle="0" />
 	<param orient="0,0,0" />
 </create>
 <create unit="ca" vrobj="medieval:face"> 
