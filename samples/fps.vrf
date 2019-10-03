@@ -144,7 +144,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(13,26,1)" radius="1" placement="center" text="This sample shows how to use the gametools library to generate game actions. View source for more details."/>
-<enter location="(13,26,1)" name="default" angle="0,2" />
+<popup location="(13,26,1)" radius="1" placement="center" text="This sample shows how to use the gametools library to generate game actions, it also uses the scope to change the VRGrid cursor. View source for more details."/>
+<enter location="(13,26,1)" name="default" angle="0,5" />
 </design>
 </vrf>
