@@ -122,6 +122,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(11,20,2)" radius="1" placement="center" text="This sample shows how to use the terrain library to generate animated terrain fills. View source for more details."/>
 <enter name="default" location="(11,20,2)" angle="0.0" />
 </design> 
 </vrf> 
