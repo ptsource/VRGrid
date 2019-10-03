@@ -13,6 +13,14 @@
       <atmosphere brightness="80%" />
    </globals>
    <design>
+   <script location="(1,1,1)" trigger="timer" delay="0.5">
+vrf.title = "C:" # player.location:column;
+vrf.title = vrf.title # " R:" # player.location:row;
+vrf.title = vrf.title # " L:" # player.location:layer;
+vrf.title = vrf.title # " X:" # player.location:x;
+vrf.title = vrf.title # " Y:" # player.location:y;
+vrf.title = vrf.title # " Z:" # player.location:z;
+</script>
       <layer number="1">
      mm mm mm mm mm mm mm mm mm mm mm mm mm mm
      mm WC (F El Wl (F EC WC (F EC Wl (F EC mm
