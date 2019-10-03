@@ -640,7 +640,7 @@
       <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%" />
       <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%" />
       <popup texture="@warehouse:e1_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
-      <popup location="(3,23,1)" radius="2" placement="center" text="This sample shows how use side menu imagemaps to toggle around multiple locations. View source for more details."/>
+      <popup location="(3,23,1)" radius="1" color="(0,0,0)" placement="center" text="This sample shows how use side menu imagemaps to toggle around multiple locations. View source for more details."/>
       <enter location="(3,23,1)" name="default" angle="0" />
       <enter location="(3,23,3)" name="ent2" angle="0" />
    </design>
