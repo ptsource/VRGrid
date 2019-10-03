@@ -13,15 +13,7 @@
       <atmosphere brightness="80%" />
    </globals>
    <design>
-   <script location="(1,1,1)" trigger="timer" delay="0.5">
-vrf.title = "C:" # player.location:column;
-vrf.title = vrf.title # " R:" # player.location:row;
-vrf.title = vrf.title # " L:" # player.location:layer;
-vrf.title = vrf.title # " X:" # player.location:x;
-vrf.title = vrf.title # " Y:" # player.location:y;
-vrf.title = vrf.title # " Z:" # player.location:z;
-</script>
-      <layer number="1">
+   <layer number="1">
      mm mm mm mm mm mm mm mm mm mm mm mm mm mm
      mm WC (F El Wl (F EC WC (F EC Wl (F EC mm
      mm Wl (E El WC (E EC Wm (E EC Wl (E EC mm
@@ -47,8 +39,8 @@ vrf.title = vrf.title # " Z:" # player.location:z;
      mm .. .. .. .. .. .. .. .. .. .. .. .. mm
      mm rS rS rS rS rS rS rS rS rS rS rS rS mm
      mm mm mm mm mm mm mm mm mm mm mm mm mm mm
-      </layer>
-      <layer number="2">
+   </layer>
+   <layer number="2">
      mm mm mm mm mm mm mm mm mm mm mm mm mm mm
      mm Wn .. Em Wl .. EC Wl .. EC Wl .. EC mm
      mm Wm .. El Wl .. EC Wl .. EC WC .. EC mm
@@ -436,111 +428,57 @@ vrf.title = vrf.title # " Z:" # player.location:z;
          <side name="obj" style="stretched" texture="@warehouse:blue.gif" />
       </CREATE>
       <CREATE unit="Wd" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="Ed" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="We" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="Ee" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="Wf" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="Ef" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="Wg" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="Eg" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="Wh" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="Eh" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="Wi" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="Ei" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="Wl" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="El" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:green.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="Wm" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="Em" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="Wn" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="En" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
-         <side name="obj" style="stretched" texture="@warehouse:red.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="!0" vrobj="basic:ground">
