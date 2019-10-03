@@ -210,6 +210,7 @@ R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
+<popup location="(11,9,2" radius="1" placement="center" text="This sample shows how to create themed environments populated with sprites. View source for more details."/>
 <enter location="(11,9,2)" name="default"/>
 </design>
 </vrf>
