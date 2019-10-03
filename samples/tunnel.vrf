@@ -67,7 +67,7 @@ LL .. .. .. .. .. .. ## ## ## .. .. .. .. .. ..
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(11,20,2)" radius="1" placement="center" text="This sample shows how to use light effects in VRF´S and objects. View source for more details."/>
+<popup location="(9,10,1)" radius="1" placement="center" text="This sample shows how to use colored light effects in VRF´S and objects. View source for more details."/>
 <enter location="(9,10,1)" name="default" angle="0,0" />
 </design>
 </vrf>
