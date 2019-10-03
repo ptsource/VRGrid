@@ -1880,7 +1880,7 @@ r# r# r# rS rs G4 G7 G5 .. .. G4 G7 G8
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(8,24,5)" radius="1" placement="center" text="This sample shows a small game with a MySQL database for multiuser support, score increment and reward. Lets see how much gold you can gather. View source for more details."/>
+<popup location="(8,24,5)" radius="1" placement="center" text="This sample shows a small game with a database for multiuser support, score increment and reward. Lets see how much gold you can gather. View source for more details."/>
 <enter location="(8,24,5)" name="default" angle="90"/>
 <enter location="(9,18,5)" name="rope" angle="0"/>
 <enter location="(2,24,2)" name="death" angle="0"/>
