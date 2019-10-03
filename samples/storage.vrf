@@ -270,53 +270,33 @@
          <side name="*" style="stretched" texture="@warehouse:grate.vri" />
       </CREATE>
       <CREATE unit="WA" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="EA" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="WB" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="EB" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:yellow.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:yellow.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="WC" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="EC" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:red.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:red.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="WP" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="EP" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:green.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:green.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="WS" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:blue.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:blue.gif" />
          <param orient="0,0,0" />
       </CREATE>
       <CREATE unit="ES" vrobj="warehouse:single">
-         <side name="bar" style="stretched" texture="@warehouse:blue.gif" />
-         <side name="ripiano" style="stretched" texture="@warehouse:blue.gif" />
          <param orient="180,0,0" />
       </CREATE>
       <CREATE unit="W0" vrobj="warehouse:vuoto">
@@ -563,7 +543,7 @@
       <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%" />
       <popup texture="@warehouse:e1_small.gif" placement="top-left" trigger="everywhere" location="(1,1,1)" imagemap="multientrance" />
       <popup location="(3,23,1)" radius="1" placement="center" text="This sample shows how to use menu imagemaps to toggle arond diferent locations . View source for more details."/>
-      <enter location="(3,23,1)" name="default" angle="20" />
-      <enter location="(3,23,3)" name="ent2" angle="0" />
+      <enter location="(3,23,1)" name="default" angle="0,0" />
+      <enter location="(3,23,3)" name="ent2" angle="0,0" />
    </design>
 </vrf>
