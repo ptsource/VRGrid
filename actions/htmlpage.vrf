@@ -16,11 +16,16 @@
 <action trigger="click on" text="Click me for a HTML popup" sidename="w">
         <htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/test.html|HTML Popup|560|400"/>
 </action>
+
+<create unit="AA" vrobj="base:full">
+<action trigger="click on" text="Click me for a HTML popup" sidename="w">
+        <htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/test.html"/>
+</action>
 </create>
 <layer number="1" >
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+AA .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
