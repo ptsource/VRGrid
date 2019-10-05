@@ -13,13 +13,13 @@
 </globals>
 <design> 
 <create unit="##" vrobj="base:full">
-<action trigger="click on" text="Click me for a HTML popup" sidename="w">
+<action trigger="click on" text="Click me for a HTML popup">
         <htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/test.html|HTML Popup|560|400"/>
 </action>
 </create>
 
 <create unit="AA" vrobj="base:full">
-<action trigger="click on" text="Click me for a HTML popup" sidename="w">
+<action trigger="click on" text="Click me for a HTML popup">
         <htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/test.html"/>
 </action>
 </create>
