@@ -106,7 +106,6 @@
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
 <popup location="(6,9,1)" radius="1" placement="center" text="This sample shows the MOVE action usage. Parameters are (pattern). Click the cube to see. View source for more details."/>
 <enter location="(6,9,3)"   name="default" angle="85"/>
-<chat />
 </design>
 </vrf>
 
