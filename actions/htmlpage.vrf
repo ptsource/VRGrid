@@ -26,7 +26,7 @@
 
 <create unit="CC" vrobj="base:full">
 <action trigger="click on" text="Click me for a HTML popup">
-        <htmlpage />
+        <chat />
 </action>
 </create>
 
