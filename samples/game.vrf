@@ -36,7 +36,7 @@
 <create unit="!R" vrobj="gametools:spriterevolve">
 	<side name="*" texture="@gametools:score.gif"/>
 	<action trigger="click on" text="Click here to see your results" sidename="*">
-        <htmlpage pageurl="http://repo.ptsource.eu/rms/results.php|Game Score Results|560|400"/>
+        <htmlpage pageurl="http://repo.ptsource.eu/rms/results.php|Game Results|560|400"/>
     </action>
 </create>
 <!-- Gold -->
@@ -1889,4 +1889,3 @@ r# r# r# rS rs G4 G7 G5 .. .. G4 G7 G8
 <enter location="(7,16,8)" name="roof" angle="200,-30"/>
 </design>
 </vrf>
-
