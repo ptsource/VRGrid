@@ -8,8 +8,8 @@
 <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
 <assets href="https://ptsource.github.io/VRGrid/assets/" />
 <map dimensions="(15,23,3)"/>
-<sky texture="images/grid.jpg"/>
-<ground texture="images/grid.jpg"/>
+<sky/>
+<ground/>
 <ambience file="@people:welcome.wav" playback="once"/>
 <devel />
 </globals>
