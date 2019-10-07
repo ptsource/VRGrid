@@ -73,11 +73,11 @@
 <create unit="zd" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:halfmoon.gif"/><popup text="@village:halfmoon.gif" placement="top" trigger="rollover"/></create>
 <create unit="ze" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:hotsun.gif"/><popup text="@village:hotsun.gif" placement="top" trigger="rollover"/></create>
 <create unit="zf" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:red.gif"/><popup text="@village:red.gif" placement="top" trigger="rollover"/></create>
-
-
-
-
-
+<create unit="zg" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:rooftexts.jpg"/><popup text="@village:rooftexts.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zh" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:rust.jpg"/><popup text="@village:rust.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zi" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:shiny.jpg"/><popup text="@village:shiny.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zj" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:wood.jpg"/><popup text="@village:wood.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zl" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:window.vri"/><popup text="@village:window.vri" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="village:ceiling">
          <side NAME="*" TEXTURE="@village:box.gif" STYLE="scaled"/>
@@ -144,7 +144,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tx .. za .. zb .. zc .. zd .. ze .. zf ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zg .. zh .. zi .. zj .. zl .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
