@@ -87,6 +87,12 @@
 <create unit="tp" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:glass.jpg"/><popup text="@interior:glass.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tq" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:grill.gif"/><popup text="@interior:grill.gif" placement="top" trigger="rollover"/></create>
 <create unit="tr" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:leather.jpg"/><popup text="@interior:leather.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:liquid.gif"/><popup text="@interior:liquid.gif" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:litewood.gif"/><popup text="@interior:litewood.gif" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:mwindow.vri"/><popup text="@interior:mwindow.vri" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:picture.gif"/><popup text="@interior:picture.gif" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:pillow.gif"/><popup text="@interior:pillow.gif" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:redleather.jpg"/><popup text="@interior:redleather.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="interior:ceiling"> 
          <side NAME="*" TEXTURE="@interior:box.gif" STYLE="scaled"/>
@@ -150,9 +156,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. th .. ti .. tj .. tl .. tm .. tn .. to ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tp .. tq .. tr .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
