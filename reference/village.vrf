@@ -62,6 +62,10 @@
 <create unit="tr" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:terrain2.jpg"/><popup text="@village:terrain2.jpg" placement="top" trigger="rollover"/></create>
 <create unit="ts" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:oldwood.jpg"/><popup text="@village:oldwood.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tt" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:rust.jpg"/><popup text="@village:rust.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:bush.vri"/><popup text="@village:bush.vri" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:bushes.gif"/><popup text="@village:bushes.gif" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:door.vri"/><popup text="@village:door.vri" placement="top" trigger="rollover"/></create>
+
 
 
 <create unit="--" vrobj="village:ceiling">
@@ -125,9 +129,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. th .. ti .. tj .. tl .. tm .. ta .. to ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tp .. tq .. tr .. ts .. tt .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
