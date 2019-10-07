@@ -42,6 +42,8 @@
 <create unit="bO" vrobj="village:gateopen"><popup text="village:gateopen" placement="top" trigger="rollover"/></create>
 <create unit="bs" vrobj="village:wallbush"><popup text="village:wallbush" placement="top" trigger="rollover"/></create>
 <create unit="bT" vrobj="village:tree1"><popup text="village:tree1" placement="top" trigger="rollover"/></create>
+<create unit="bX" vrobj="village:building"><popup text="village:building" placement="top" trigger="rollover"/></create>
+
 <!-- textures -->
 <create unit="ta" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:bmetal.jpg"/><popup text="@village:bmetal.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tb" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:box.jpg"/><popup text="@village:box.jpg" placement="top" trigger="rollover"/></create>
@@ -75,7 +77,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. bX .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
