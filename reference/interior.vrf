@@ -81,6 +81,9 @@
 <create unit="ti" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:carpet.jpg"/><popup text="@interior:carpet.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tj" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:chandelier.gif"/><popup text="@interior:chandelier.gif" placement="top" trigger="rollover"/></create>
 <create unit="tl" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:door.gif"/><popup text="@interior:door.gif" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:drawer.gif"/><popup text="@interior:drawer.gif" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:finishedwood.gif"/><popup text="@interior:finishedwood.gif" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:firey.gif"/><popup text="@interior:firey.gif" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="interior:ceiling"> 
          <side NAME="*" TEXTURE="@interior:box.gif" STYLE="scaled"/>
@@ -142,7 +145,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ta .. tb .. tc .. te .. td .. tf .. tg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. th .. ti .. tj .. tl .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
