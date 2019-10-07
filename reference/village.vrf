@@ -67,6 +67,15 @@
 <create unit="tu" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:bush.vri"/><popup text="@village:bush.vri" placement="top" trigger="rollover"/></create>
 <create unit="tv" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:bushes.gif"/><popup text="@village:bushes.gif" placement="top" trigger="rollover"/></create>
 <create unit="tx" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:door.vri"/><popup text="@village:door.vri" placement="top" trigger="rollover"/></create>
+<create unit="za" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:fence.vri"/><popup text="@village:fence.vri" placement="top" trigger="rollover"/></create>
+<create unit="zb" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:flowers.vri"/><popup text="@village:flowers.vri" placement="top" trigger="rollover"/></create>
+<create unit="zc" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:grass.jpg"/><popup text="@village:grass.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zd" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:halfmoon.gif"/><popup text="@village:halfmoon.gif" placement="top" trigger="rollover"/></create>
+<create unit="ze" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:hotsun.gif"/><popup text="@village:hotsun.gif" placement="top" trigger="rollover"/></create>
+<create unit="zf" vrobj="village:spriteface"><side NAME="*" TEXTURE="@village:red.gif"/><popup text="@village:red.gif" placement="top" trigger="rollover"/></create>
+
+
+
 
 
 
@@ -133,7 +142,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tx .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. za .. zb .. zc .. zd .. ze .. zf ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
