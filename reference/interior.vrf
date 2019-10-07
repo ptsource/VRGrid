@@ -93,6 +93,12 @@
 <create unit="tu" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:picture.gif"/><popup text="@interior:picture.gif" placement="top" trigger="rollover"/></create>
 <create unit="tv" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:pillow.gif"/><popup text="@interior:pillow.gif" placement="top" trigger="rollover"/></create>
 <create unit="tx" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:redleather.jpg"/><popup text="@interior:redleather.jpg" placement="top" trigger="rollover"/></create>
+<create unit="za" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:redsheet.gif"/><popup text="@interior:redsheet.gif" placement="top" trigger="rollover"/></create>
+<create unit="zb" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:screen.gif"/><popup text="@interior:screen.gif" placement="top" trigger="rollover"/></create>
+<create unit="zc" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:sheets.gif"/><popup text="@interior:sheets.gif" placement="top" trigger="rollover"/></create>
+<create unit="zd" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:shiny.jpg"/><popup text="@interior:shiny.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ze" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:stainless.jpg"/><popup text="@interior:stainless.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zf" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:stone.jpg"/><popup text="@interior:stone.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="interior:ceiling"> 
          <side NAME="*" TEXTURE="@interior:box.gif" STYLE="scaled"/>
@@ -158,9 +164,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tx .. tz .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. za .. zb .. zc .. zd .. ze ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zf .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
