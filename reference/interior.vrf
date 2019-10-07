@@ -105,6 +105,8 @@
 <create unit="zj" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:whitesheet.gif"/><popup text="@interior:whitesheet.gif" placement="top" trigger="rollover"/></create>
 <create unit="zl" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:window.vri"/><popup text="@interior:window.vri" placement="top" trigger="rollover"/></create>
 <create unit="zm" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:woodfloor.jpg"/><popup text="@interior:woodfloor.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zn" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:woodtexture.jpg"/><popup text="@interior:woodtexture.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zo" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:woodtexture1.jpg"/><popup text="@interior:woodtexture1.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="interior:ceiling"> 
          <side NAME="*" TEXTURE="@interior:box.gif" STYLE="scaled"/>
@@ -174,7 +176,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. zf .. zg .. zh .. zi .. zj .. zl .. zm ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zn .. zo .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
