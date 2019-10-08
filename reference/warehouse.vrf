@@ -108,6 +108,9 @@
 <create unit="zv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:5.gif"/><popup text="@warehouse:5.gif" placement="top" trigger="rollover"/></create>
 <create unit="zx" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:6.gif"/><popup text="@warehouse:6.gif" placement="top" trigger="rollover"/></create>
 <create unit="zz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:7.gif"/><popup text="@warehouse:7.gif" placement="top" trigger="rollover"/></create>
+<create unit="ya" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:8.gif"/><popup text="@warehouse:8.gif" placement="top" trigger="rollover"/></create>
+<create unit="yb" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:9.gif"/><popup text="@warehouse:9.gif" placement="top" trigger="rollover"/></create>
+<create unit="yc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:10.gif"/><popup text="@warehouse:10.gif" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -184,9 +187,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. za .. zb .. zc .. zd .. ze .. zf .. zg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. zh .. zi .. zj .. zl .. zm .. zn .. .. ..
+.. zh .. zi .. zj .. zl .. zm .. zn .. ya ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. yb .. yc .. .. .. .. .. .. ..
 @@ .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
 
