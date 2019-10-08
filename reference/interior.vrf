@@ -3,15 +3,15 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Interior Lib Reference" />
-<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
-<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(15,23,3)" />
-<sky/>
-<ground/>
-<ambience file="@people:welcome.wav" playback="once"/>
-<devel />
+         <title name="VRGrid Interior Lib Reference" />
+         <lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+         <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
+         <assets href="https://ptsource.github.io/VRGrid/assets/" />
+         <map dimensions="(15,23,3)" />
+         <sky/>
+         <ground/>
+         <ambience file="@people:welcome.wav" playback="once"/>
+         <devel />
 </globals>
 <design>
 <!-- 3d objects -->
