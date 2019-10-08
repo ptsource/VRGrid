@@ -120,6 +120,18 @@
 <create unit="yj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:g.gif"/><popup text="@warehouse:g.gif" placement="top" trigger="rollover"/></create>
 <create unit="yl" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:h.gif"/><popup text="@warehouse:h.gif" placement="top" trigger="rollover"/></create>
 <create unit="ym" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:i.gif"/><popup text="@warehouse:i.gif" placement="top" trigger="rollover"/></create>
+<create unit="yn" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:l.gif"/><popup text="@warehouse:l.gif" placement="top" trigger="rollover"/></create>
+<create unit="yo" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:m.gif"/><popup text="@warehouse:m.gif" placement="top" trigger="rollover"/></create>
+<create unit="yp" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:n.gif"/><popup text="@warehouse:n.gif" placement="top" trigger="rollover"/></create>
+<create unit="yq" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:o.gif"/><popup text="@warehouse:o.gif" placement="top" trigger="rollover"/></create>
+<create unit="yr" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:p.gif"/><popup text="@warehouse:p.gif" placement="top" trigger="rollover"/></create>
+<create unit="ys" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:q.gif"/><popup text="@warehouse:q.gif" placement="top" trigger="rollover"/></create>
+<create unit="yt" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:r.gif"/><popup text="@warehouse:r.gif" placement="top" trigger="rollover"/></create>
+<create unit="yu" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:s.gif"/><popup text="@warehouse:s.gif" placement="top" trigger="rollover"/></create>
+<create unit="yv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:t.gif"/><popup text="@warehouse:t.gif" placement="top" trigger="rollover"/></create>
+<create unit="yx" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:u.gif"/><popup text="@warehouse:u.gif" placement="top" trigger="rollover"/></create>
+<create unit="yz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:v.gif"/><popup text="@warehouse:v.gif" placement="top" trigger="rollover"/></create>
+<create unit="wa" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:i.gif"/><popup text="@warehouse:z.gif" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -232,9 +244,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. yd .. ye .. yf .. yg .. yh .. yi .. yj ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. yl .. ym .. .. .. .. .. .. .. .. .. .. ..
+.. yl .. ym .. yn .. yo .. yp .. yq .. yr ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ys .. yt .. yu .. yv .. yx .. yz .. wa ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
