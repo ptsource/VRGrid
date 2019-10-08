@@ -3,13 +3,13 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Warehouse Lib Reference" />
-<lib href="https://ptsource.github.io/VRGrid/packs/warehouse.vlib" />
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(15,23,5)"/>
-<sky/>
-<ground/>
-<devel />
+         <title name="VRGrid Warehouse Lib Reference" />
+         <lib href="https://ptsource.github.io/VRGrid/packs/warehouse.vlib" />
+         <assets href="https://ptsource.github.io/VRGrid/assets/" />
+         <map dimensions="(15,23,5)"/>
+         <sky/>
+         <ground/>
+         <devel />
 </globals>
 <design>
 <!-- 3d objects -->
@@ -135,7 +135,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-@@ .. .. .. .. .. .. .. .. .. .. .. .. .. @@
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
 
 <layer number="2">
@@ -172,7 +172,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tx .. tz .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. zx .. zz .. zp .. zq .. zr ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ua .. ub .. uc .. ud .. ue .. uf .. ug ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
@@ -180,14 +180,14 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. up .. uq .. ur .. us .. ut .. uu .. uv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. ux .. uz .. .. .. .. .. .. .. .. .. .. ..
+.. ux .. uz .. zs .. zt .. zu .. zv .. zo ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. za .. zb .. zc .. zd .. ze .. zf .. zg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. zh .. zi .. zj .. zl .. zm .. zn .. zo ..
+.. zh .. zi .. zj .. zl .. zm .. zn .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. zp .. zq .. zr .. zs .. zt .. zu .. zv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. zx .. zz .. .. .. .. .. .. .. .. .. .. @@
+@@ .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
 
 <layer number="4">
@@ -254,8 +254,8 @@
 <enter location="(15,22,3)" name="roof" />
 <enter location="(15,22,5)" name="top" />
 <exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
-<exit location="(1,23,1)" href="#top" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(1,23,3)" href="#top" trigger="click on, step on" text="Lets go see the textures"/>
 <exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
-<exit location="(15,23,5)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+<exit location="(15,23,5)" href="#roof" trigger="click on, step on" text="Lets go see the 3d objects" />
 </design>
 </vrf>
