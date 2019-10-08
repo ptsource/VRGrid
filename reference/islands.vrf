@@ -3,13 +3,13 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Islands Lib Reference" />
-<lib href="https://ptsource.github.io/VRGrid/packs/islands.vlib" />
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(15,23,3)" />
-<sky/>
-<ground/>
-<devel />
+         <title name="VRGrid Islands Lib Reference" />
+         <lib href="https://ptsource.github.io/VRGrid/packs/islands.vlib" />
+         <assets href="https://ptsource.github.io/VRGrid/assets/" />
+         <map dimensions="(15,23,3)" />
+         <sky/>
+         <ground/>
+         <devel />
 </globals>
 <design>
 <!-- 3d objects -->
