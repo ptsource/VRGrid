@@ -3,16 +3,16 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Village Lib Reference" />
-<lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(15,23,3)"/>
-<sky/>
-<ground/>
-<ambience file="@people:welcome.wav" playback="once"/>
-<devel />
-</globals>
+         <title name="VRGrid Village Lib Reference" />
+         <lib href="https://ptsource.github.io/VRGrid/packs/village.vlib" />
+         <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
+         <assets href="https://ptsource.github.io/VRGrid/assets/" />
+         <map dimensions="(15,23,3)"/>
+         <sky/>
+         <ground/>
+         <ambience file="@people:welcome.wav" playback="once"/>
+         <devel />
+         </globals>
 <design>
 <!-- 3d objects -->
 <create unit="b1" vrobj="village:house1"><popup text="village:house1" placement="top" trigger="rollover"/></create>
