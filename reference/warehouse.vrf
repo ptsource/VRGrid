@@ -113,6 +113,8 @@
 <create unit="yc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:10.gif"/><popup text="@warehouse:10.gif" placement="top" trigger="rollover"/></create>
 <create unit="yd" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:a.gif"/><popup text="@warehouse:a.gif" placement="top" trigger="rollover"/></create>
 <create unit="ye" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:b.gif"/><popup text="@warehouse:b.gif" placement="top" trigger="rollover"/></create>
+<create unit="yf" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:c.gif"/><popup text="@warehouse:c.gif" placement="top" trigger="rollover"/></create>
+<create unit="yg" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:d.gif"/><popup text="@warehouse:d.gif" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -223,7 +225,7 @@
 
 <layer number="5">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. yd .. ye .. .. .. .. .. .. .. .. .. .. ..
+.. yd .. ye .. yf .. yg .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
