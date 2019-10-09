@@ -6,7 +6,6 @@
 	<title name="VRGrid Mix Libraries Demo"/>
 	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
-	<lib href="https://ptsource.github.io/VRGrid/libs/basic3.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/packs/house.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib" required="2.8"/>
@@ -143,7 +142,7 @@
 		}
 	</script>
 </CREATE>
-<CREATE unit="%2" vrobj="basic3:passage" SPDESC="opening elevator doors">
+<CREATE unit="%2" vrobj="house:passage" SPDESC="opening elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@house:cement.vri" style="stretched"/>
 <side name="fill" texture="@house:clear.gif" style="stretched"/>
@@ -154,7 +153,7 @@
 		<REPLACE SOURCE="%3"/>
 	</ACTION>	
 </CREATE>
-<CREATE unit="%3" vrobj="basic3:widepassage" SPDESC="opening doors">
+<CREATE unit="%3" vrobj="house:widepassage" SPDESC="opening doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@house:cement.vri" style="stretched"/>
 <side name="fill" texture="@house:clear.gif" style="stretched"/>
@@ -176,7 +175,7 @@
 </CREATE>
 
 
-<CREATE unit="%5" vrobj="basic3:widepassage" SPDESC="closing doors">
+<CREATE unit="%5" vrobj="house:widepassage" SPDESC="closing doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@house:cement.vri" style="stretched"/>
 <side name="fill" texture="@house:clear.gif" style="stretched"/>
@@ -187,7 +186,7 @@
 		<REPLACE SOURCE="%6"/>
 	</ACTION>	
 </CREATE>
-<CREATE unit="%6" vrobj="basic3:passage" SPDESC="closing elevator doors">
+<CREATE unit="%6" vrobj="house:passage" SPDESC="closing elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@house:cement.vri" style="stretched"/>
 <side name="fill" texture="@house:clear.gif" style="stretched"/>
@@ -199,7 +198,7 @@
 	</ACTION>
 </CREATE>
 
-<CREATE unit="%7" vrobj="basic3:widepassage" SPDESC="closing doors">
+<CREATE unit="%7" vrobj="house:widepassage" SPDESC="closing doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@house:cement.vri" style="stretched"/>
 <side name="fill" texture="@house:clear.gif" style="stretched"/>
@@ -210,7 +209,7 @@
 		<REPLACE SOURCE="%8"/>
 	</ACTION>	
 </CREATE>
-<CREATE unit="%8" vrobj="basic3:passage" SPDESC="closing elevator doors">
+<CREATE unit="%8" vrobj="house:passage" SPDESC="closing elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@house:cement.vri" style="stretched"/>
 <side name="fill" texture="@house:clear.gif" style="stretched"/>
@@ -970,21 +969,21 @@
 <PARAM ORIENT="0,90,0"/>
 </CREATE>
 
-<CREATE unit=".l" vrobj="basic3:wallc" SPDESC="balcony left">
+<CREATE unit=".l" vrobj="house:wallc" SPDESC="balcony left">
 <side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick036.jpg" style="tiled" ANGLE="90"/>
 <PARAM ORIENT="90,90,0"/>
 </CREATE>
-<CREATE unit="/r" vrobj="basic3:wallc" SPDESC="balcony left">
+<CREATE unit="/r" vrobj="house:wallc" SPDESC="balcony left">
 <side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick036.jpg" style="tiled" ANGLE="90"/>
 <PARAM ORIENT="90,270,180"/>
 </CREATE>
 
 
-<CREATE unit=".r" vrobj="basic3:wallc" SPDESC="balcony right">
+<CREATE unit=".r" vrobj="house:wallc" SPDESC="balcony right">
 <side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick036.jpg" style="tiled" ANGLE="270"/>
 <PARAM ORIENT="0,90,90"/>
 </CREATE>
-<CREATE unit="/l" vrobj="basic3:wallc" SPDESC="balcony right">
+<CREATE unit="/l" vrobj="house:wallc" SPDESC="balcony right">
 <side name="n,s,top,bottom,bottomedge,wedge,eedge,sedge" texture="@house:brick036.jpg" style="tiled" ANGLE="270"/>
 <PARAM ORIENT="270,270,180"/>
 </CREATE>
@@ -994,7 +993,7 @@
 <side name="bottom,n,s,top,e,w" texture="@house:refrigirator.jpg" style="tiled"/>
 <PARAM ORIENT="0,180,0"/>
 </CREATE>
-<CREATE unit="Ce" vrobj="basic3:wallc" SPDESC="balcony left">
+<CREATE unit="Ce" vrobj="house:wallc" SPDESC="balcony left">
 <side name="top,wedge,bottom,eedge,sedge" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
 <side name="n,s,top,bottomedge,bottom" texture="@house:brick036.jpg" style="tiled"/>
 <PARAM ORIENT="180,0,0"/>
@@ -1320,14 +1319,14 @@
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
 <side name="s" texture="@house:brick036.jpg" style="tiled"/>
 </CREATE>
-<CREATE unit="CE" vrobj="basic3:wallc" SPDESC="wall">
+<CREATE unit="CE" vrobj="house:wallc" SPDESC="wall">
 <side name="s,wedge,bottomedge,eedge,sedge" texture="@house:refrigirator.jpg" style="tiled"/>
 <side name="top" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="bottom" texture="@house:curtain2.gif" style="stretched"  clarity="10%" ANGLE="180"/>
 <side name="n" texture="@house:carpetin.jpg" style="tiled"/>
 <PARAM ORIENT="0,270,0"/>
 </CREATE>
-<CREATE unit="C!" vrobj="basic3:wallc" SPDESC="wall">
+<CREATE unit="C!" vrobj="house:wallc" SPDESC="wall">
 <side name="n,s,bottomedge,wedge,eedge,sedge" texture="@house:refrigirator2.jpg" style="tiled"/>
 <side name="top" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="bottom" texture="@house:curtain2.gif" style="stretched"  clarity="10%"/>
@@ -1337,11 +1336,11 @@
 
 
 
-<CREATE unit="C?" vrobj="basic3:wallc" SPDESC="wall">
+<CREATE unit="C?" vrobj="house:wallc" SPDESC="wall">
 <side name="s,n,wedge,bottomedge,eedge,sedge,top,bottom" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="180"/>
 <PARAM ORIENT="0,90,0"/>
 </CREATE>
-<CREATE unit="??" vrobj="basic3:wallc" SPDESC="wall">
+<CREATE unit="??" vrobj="house:wallc" SPDESC="wall">
 <side name="s,n,wedge,bottomedge,eedge,sedge,top,bottom" texture="@house:carpetin2.jpg" style="tiled"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
