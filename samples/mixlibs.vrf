@@ -5,7 +5,6 @@
 <globals>
 	<title name="VRGrid Mix Libraries Demo"/>
 	<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib" required="2.8"/>
-	<lib href="https://ptsource.github.io/VRGrid/libs/basic2.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/packs/house.vlib" required="2.8"/>
 	<lib href="https://ptsource.github.io/VRGrid/utils/water.vlib" required="2.8"/>
@@ -448,13 +447,6 @@
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 
-
-
-
-
-
-
-
 <CREATE unit="hh" vrobj="house:sink2">
 <side name="bottom,e,n,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
 <side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
@@ -560,26 +552,12 @@
 	<REPLACE SOURCE="hh"/>
 </ACTION>
 </CREATE>
-
-
-
 <CREATE unit="hi" vrobj="house:kitchentop2">
 <side name="bottom,n,e,w,body,back" texture="@interior:finishedwood.gif" style="stretched"/>
 <side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
-
-
-
-
-
-
-
-
-
-
-
 <CREATE unit="hj" vrobj="house:sink">
 <side name="bottom,e,n,w" texture="@interior:finishedwood.gif" style="stretched"/>
 <side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
@@ -704,10 +682,6 @@
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
-
-
-
-
 <CREATE unit="h2" vrobj="house:tub">
 <side name="s" texture="@house:kitchentop.jpg" style="stretched"/>
 <side name="top" texture="@house:tub1.jpg" style="stretched"/>
@@ -816,9 +790,6 @@
 <side name="ldoor" texture="@house:fridge2.jpg" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
-
-
-
 <CREATE unit="TV" vrobj="interior:smalltv" SPDESC="tv">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
@@ -889,12 +860,6 @@
 <side name="curtain" texture="@house:clear.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
-
-
-
-
-
-
 <CREATE unit=".A" vrobj="house:half" SPDESC="half">
 <side name="top,bottom,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <side name="n" texture="@house:fence2.gif" style="stretched"/>
@@ -934,19 +899,19 @@
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
-<CREATE unit=".D" vrobj="basic2:quarter" SPDESC="quarter">
+<CREATE unit=".D" vrobj="house:quarter" SPDESC="quarter">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
-<CREATE unit=".F" vrobj="basic2:floorhalf" SPDESC="floorhalf">
+<CREATE unit=".F" vrobj="house:floorhalf" SPDESC="floorhalf">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
-<CREATE unit=".G" vrobj="basic2:quarter" SPDESC="quarter">
+<CREATE unit=".G" vrobj="house:quarter" SPDESC="quarter">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
-<CREATE unit=".H" vrobj="basic2:floorhalf" SPDESC="floorhalf">
+<CREATE unit=".H" vrobj="house:floorhalf" SPDESC="floorhalf">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
@@ -954,7 +919,7 @@
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
-<CREATE unit=".Q" vrobj="basic2:concave" SPDESC="concave">
+<CREATE unit=".Q" vrobj="house:concave" SPDESC="concave">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
@@ -1360,20 +1325,20 @@
 
 
 
-<CREATE unit="_1" vrobj="basic2:bottomstairs" SPDESC="stairs">
+<CREATE unit="_1" vrobj="house:bottomstairs" SPDESC="stairs">
 <side name="w,e,back,stairfront,stairtop" texture="@house:blackglare.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
-<CREATE unit="_2" vrobj="basic2:topstairs" SPDESC="stairs">
+<CREATE unit="_2" vrobj="house:topstairs" SPDESC="stairs">
 <side name="w,e,back,stairfront,stairtop" texture="@house:blackglare.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 
-<CREATE unit="-1" vrobj="basic2:bottomstairs" SPDESC="stairs">
+<CREATE unit="-1" vrobj="house:bottomstairs" SPDESC="stairs">
 <side name="w,e,back,stairfront,stairtop" texture="@house:blackglare.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
-<CREATE unit="-2" vrobj="basic2:topstairs" SPDESC="stairs">
+<CREATE unit="-2" vrobj="house:topstairs" SPDESC="stairs">
 <side name="w,e,back,stairfront,stairtop" texture="@house:blackglare.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
@@ -1457,18 +1422,12 @@
 <side name="w,n,e,s" texture="@house:brick036.jpg" style="tiled"/>
 <side name="top" texture="@house:refrigirator.jpg" style="tiled"/>
 </CREATE>
-
-
 <CREATE unit="DD" vrobj="house:smalldome" SPDESC="smalldome">
 <side name="top,bottom" texture="@house:wlight.jpg" style="tiled"/>
 <POINT_LIGHT STYLE="static" POSITION="(128,20,128)" BRIGHTNESS="100%" RADIUS="2" FLOOD="yes" COLOR="(230,40,40)"/> 
 <PARAM ORIENT="0,180,0"/>
 </CREATE>
-
-
-
-
-<CREATE unit="NS" vrobj="basic2:stairs" SPDESC="stairs">
+<CREATE unit="NS" vrobj="house:stairs" SPDESC="stairs">
 <side name="w,e,back,stairfront,stairtop" texture="@house:refrigirator2.jpg" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
@@ -1516,18 +1475,11 @@
 <side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
-
-
-
 <CREATE unit="cx" vrobj="house:convex2" SPDESC="entrance">
 <side name="curve,s,n,bottom" texture="@house:refrigirator2.jpg" style="stretched"/>
 <side name="wall" texture="@house:brick036.jpg" style="tiled"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
-
-
-
-
 <CREATE unit="!1" vrobj="house:full" SPDESC="shadowfloor">
 <side name="w,s,e,n" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:carpetout2.jpg" style="tiled" ANGLE="270"/>
