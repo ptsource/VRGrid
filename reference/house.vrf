@@ -55,14 +55,17 @@
 <create unit="ae" vrobj="house:stairs"><popup text="house:stairs" placement="top" trigger="rollover"/></create>
 <create unit="af" vrobj="house:quarter"><popup text="house:quarter" placement="top" trigger="rollover"/></create>
 <create unit="ag" vrobj="house:floorhalf"><popup text="house:floorhalf" placement="top" trigger="rollover"/></create>
+<create unit="ah" vrobj="house:concave"><popup text="house:concave" placement="top" trigger="rollover"/></create>
+<create unit="ai" vrobj="house:topstairs"><popup text="house:topstairs" placement="top" trigger="rollover"/></create>
+<create unit="aj" vrobj="house:bottomstairs"><popup text="house:bottomstairs" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="house:ceiling"> 
          <side NAME="*" TEXTURE="@house:box.gif" STYLE="scaled"/>
 </create>
 <layer number="1">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+ai .. .. .. .. .. .. .. .. .. .. .. .. .. aj
 .. .. bn .. bB .. bA .. br .. bi .. bh .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+ah .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. ab .. ac .. ad .. ae .. af .. ag .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
