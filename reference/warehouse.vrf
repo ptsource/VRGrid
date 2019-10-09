@@ -143,6 +143,11 @@
 <create unit="wd" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:blue.gif"/><popup text="@warehouse:blue.gif" placement="top" trigger="rollover"/></create>
 <create unit="we" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:box1.jpg"/><popup text="@warehouse:box1.jpg" placement="top" trigger="rollover"/></create>
 <create unit="wf" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:box2.jpg"/><popup text="@warehouse:box2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="wg" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:box3.gif"/><popup text="@warehouse:box3.gif" placement="top" trigger="rollover"/></create>
+<create unit="wh" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:brown.gif"/><popup text="@warehouse:brown.gif" placement="top" trigger="rollover"/></create>
+<create unit="wi" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:cyan.gif"/><popup text="@warehouse:cyan.gif" placement="top" trigger="rollover"/></create>
+<create unit="wj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:ghostfloor.gif"/><popup text="@warehouse:ghostfloor.gif" placement="top" trigger="rollover"/></create>
+<create unit="wl" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:grate.vri"/><popup text="@warehouse:grate.vri" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -259,9 +264,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ys .. yt .. yu .. yv .. yx .. yz .. wa ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. wb .. wc .. wd .. we .. wf .. .. .. .. ..
+.. wb .. wc .. wd .. we .. wf .. wg .. wh ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. wi .. wj .. wl .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
