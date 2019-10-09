@@ -70,12 +70,6 @@
 	</script>
 </imagemap>
 
-
-
-
-
-
-
 <!-- || Elevator stuff || -->
 <CREATE unit="e2" vrobj="house:elevatorhandle" SPDESC="handle">
 <side name="handle" texture="@house:elevatorhandle.jpg" style="stretched"/>
@@ -124,13 +118,6 @@
 	</script>
 </CREATE>
 
-
-
-
-
-
-
-
 <CREATE unit="%%" vrobj="house:gate" SPDESC="closed elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,front,back,edges,bottom,top" texture="@basic:cement.vri" style="stretched"/>
@@ -177,7 +164,7 @@
 </CREATE>
 
 
-<CREATE unit="%4" vrobj="basic:ground" SPDESC="opened doors">
+<CREATE unit="%4" vrobj="house:ground" SPDESC="opened doors">
 <PARAM ORIENT="0,0,0"/>
 <side NAME="*" faces="0"/>
 	<script trigger="timer" delay="1">
@@ -232,29 +219,6 @@
 	</ACTION>
 </CREATE>
 <!-- || END of elevator stuff || -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <CREATE unit="ns" vrobj="house:door">
 <PARAM ORIENT="180,0,0"/>
@@ -958,7 +922,7 @@
 
 
 
-<CREATE unit=".A" vrobj="basic:half" SPDESC="half">
+<CREATE unit=".A" vrobj="house:half" SPDESC="half">
 <side name="top,bottom,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <side name="n" texture="@house:fence2.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
@@ -976,12 +940,12 @@
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 
-<CREATE unit="2A" vrobj="basic:half" SPDESC="half">
+<CREATE unit="2A" vrobj="house:half" SPDESC="half">
 <side name="top,bottom,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <side name="n" texture="@house:fence2.gif" style="stretched"/>
 <PARAM ORIENT="180,0,0"/>
 </CREATE>
-<CREATE unit="3A" vrobj="basic:half" SPDESC="half">
+<CREATE unit="3A" vrobj="house:half" SPDESC="half">
 <side name="top,bottom,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <side name="n" texture="@house:fence2.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
@@ -989,11 +953,11 @@
 
 <CREATE unit="AA" vrobj="house:halffence" SPDESC="half3">
 <side name="top,s,e,w,n" texture="@house:bush.gif" style="stretched"/>
-<side name="bottom" texture="@basic:grassground.gif" style="stretched"/>
+<side name="bottom" texture="@house:grassground.gif" style="stretched"/>
 <side name="fence" texture="@house:fence2.gif" style="stretched"/>
 </CREATE>
 
-<CREATE unit=".C" vrobj="basic:half" SPDESC="half">
+<CREATE unit=".C" vrobj="house:half" SPDESC="half">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
@@ -1013,7 +977,7 @@
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
-<CREATE unit=".O" vrobj="basic:half" SPDESC="half">
+<CREATE unit=".O" vrobj="house:half" SPDESC="half">
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
@@ -1482,11 +1446,11 @@
 
 <CREATE unit="@@" vrobj="basic:full" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 </CREATE>
-<CREATE unit="@h" vrobj="basic:half" SPDESC="ground">
+<CREATE unit="@h" vrobj="house:half" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 </CREATE>
 
 
@@ -1653,12 +1617,12 @@
 
 <CREATE unit="Gb" vrobj="basic:wbottomramp" SPDESC="ground">
 <side name="w,s,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 <CREATE unit="Gt" vrobj="basic:wtopramp" SPDESC="ground">
 <side name="w,s,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 
@@ -1693,7 +1657,7 @@
 </CREATE>
 
 
-<CREATE unit="ML" vrobj="basic:half" SPDESC="mailbox">
+<CREATE unit="ML" vrobj="house:half" SPDESC="mailbox">
 <side name="w,s,e,n,bottom" texture="@basic:cement.vri" style="stretched"/>
 <side name="top" texture="@interior:computerback.gif" style="tiled"/>
 <PARAM ORIENT="270,180,90"/>
@@ -2081,73 +2045,52 @@
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
-
-
-
-
 <CREATE unit="*a" vrobj="house:doorwaygate" SPDESC="gates">
 <side name="w,n,s,top,bottom,inside" texture="@house:brick036.jpg" style="tiled"/>
 <side name="gate" texture="@house:gate.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 
-
-
-
-
-
-
-
-
-
 <CREATE unit="[1" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree1.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[2" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree2.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[3" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree3.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[4" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree4.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[5" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree1.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[6" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree2.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[7" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree3.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[8" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree5.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[C" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:tree6.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
 <CREATE unit="[B" vrobj="house:bush" SPDESC="shrub">
 <side NAME="bush" texture="@house:bush.gif"/>
-<side NAME="ground" texture="@basic:grassground.gif"/>
+<side NAME="ground" texture="@house:grassground.gif"/>
 </CREATE>
-
-
-
-
-
-
-
-
 
 <CREATE unit="@R" vrobj="basic:full" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
@@ -2161,31 +2104,31 @@
 </CREATE>
 <CREATE unit="@D" vrobj="house:height3" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@E" vrobj="house:height4" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@F" vrobj="house:height5" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@G" vrobj="house:height2" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="@I" vrobj="basic:full" SPDESC="ground">
 <side name="w,s,e,n,bottom,top" texture="@basic:dirt.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
-<CREATE unit="@H" vrobj="basic:half" SPDESC="ground">
+<CREATE unit="@H" vrobj="house:half" SPDESC="ground">
 <side name="w,s,e,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
-<side name="top" texture="@basic:grassground.gif" style="stretched"/>
+<side name="top" texture="@house:grassground.gif" style="stretched"/>
 <PARAM ORIENT="180,0,0"/>
 </CREATE>
 
@@ -2198,9 +2141,6 @@
 	if (player.location:layer lt 5) { player.orientation:look_angle = 0; vrf.user_can_move = false; vrf.fadeout(); }
 </script>
 </CREATE>
-
-
-
 
 <CREATE unit="@K" vrobj="house:layer" SPDESC="dummy">
 <side name="layer" texture="@house:clear.gif"/>
