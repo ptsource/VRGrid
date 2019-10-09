@@ -45,6 +45,9 @@
 <create unit="bO" vrobj="house:toilet"><popup text="house:toilet" placement="top" trigger="rollover"/></create>
 <create unit="bP" vrobj="house:tub"><popup text="house:tub" placement="top" trigger="rollover"/></create>
 <create unit="bq" vrobj="house:wincurtain"><popup text="house:wincurtain" placement="top" trigger="rollover"/></create>
+<create unit="br" vrobj="house:full"><popup text="house:full" placement="top" trigger="rollover"/></create>
+<create unit="bs" vrobj="house:ground"><popup text="house:ground" placement="top" trigger="rollover"/></create>
+<create unit="bt" vrobj="house:floor"><popup text="house:floor" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="house:ceiling"> 
          <side NAME="*" TEXTURE="@house:box.gif" STYLE="scaled"/>
@@ -54,7 +57,7 @@
 .. .. b8 .. bB .. bA .. b1 .. bi .. bh .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. b6 .. bf .. bn .. bN .. b7 .. bg .. ..
+.. .. b6 .. br .. bn .. bN .. b7 .. bg .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. b5 .. bo .. bp .. bP .. bO .. be .. ..
@@ -66,7 +69,7 @@
 .. .. b4 .. bd .. bm .. bM .. bb .. bJ .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. bl .. bL .. .. .. .. .. ..
+.. .. bt .. bf .. bl .. bL .. bs .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
