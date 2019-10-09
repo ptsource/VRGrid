@@ -137,7 +137,12 @@
 <create unit="yv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:t.gif"/><popup text="@warehouse:t.gif" placement="top" trigger="rollover"/></create>
 <create unit="yx" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:u.gif"/><popup text="@warehouse:u.gif" placement="top" trigger="rollover"/></create>
 <create unit="yz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:v.gif"/><popup text="@warehouse:v.gif" placement="top" trigger="rollover"/></create>
-<create unit="wa" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:i.gif"/><popup text="@warehouse:z.gif" placement="top" trigger="rollover"/></create>
+<create unit="wa" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:z.gif"/><popup text="@warehouse:z.gif" placement="top" trigger="rollover"/></create>
+<create unit="wb" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:blackglare.gif"/><popup text="@warehouse:blackglare.gif" placement="top" trigger="rollover"/></create>
+<create unit="wc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:blink.gif"/><popup text="@warehouse:blink.gif" placement="top" trigger="rollover"/></create>
+<create unit="wd" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:blue.gif"/><popup text="@warehouse:blue.gif" placement="top" trigger="rollover"/></create>
+<create unit="we" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:box1.jpg"/><popup text="@warehouse:box1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="wf" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:box2.jpg"/><popup text="@warehouse:box2.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -254,7 +259,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ys .. yt .. yu .. yv .. yx .. yz .. wa ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. wb .. wc .. wd .. we .. wf .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
