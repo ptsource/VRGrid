@@ -5,10 +5,12 @@
 <globals>
          <title name="VRGrid Warehouse Lib Reference" />
          <lib href="https://ptsource.github.io/VRGrid/packs/warehouse.vlib" />
+         <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
          <assets href="https://ptsource.github.io/VRGrid/assets/" />
          <map dimensions="(15,23,5)"/>
          <sky/>
          <ground/>
+         <ambience file="@people:welcome.wav" playback="once"/>
          <devel />
 </globals>
 <design>
