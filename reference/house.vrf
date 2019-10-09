@@ -52,6 +52,9 @@
 <create unit="ab" vrobj="house:passage"><popup text="house:passage" placement="top" trigger="rollover"/></create>
 <create unit="ac" vrobj="house:widepassage"><popup text="house:widepassage" placement="top" trigger="rollover"/></create>
 <create unit="ad" vrobj="house:half"><popup text="house:half" placement="top" trigger="rollover"/></create>
+<create unit="ae" vrobj="house:stairs"><popup text="house:stairs" placement="top" trigger="rollover"/></create>
+<create unit="af" vrobj="house:quarter"><popup text="house:quarter" placement="top" trigger="rollover"/></create>
+<create unit="ag" vrobj="house:floorhalf"><popup text="house:floorhalf" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="house:ceiling"> 
          <side NAME="*" TEXTURE="@house:box.gif" STYLE="scaled"/>
@@ -61,7 +64,7 @@
 .. .. bn .. bB .. bA .. br .. bi .. bh .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. ab .. ac .. ad .. .. .. .. .. .. .. ..
+.. .. ab .. ac .. ad .. ae .. af .. ag .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. b5 .. bo .. bp .. bP .. bO .. be .. ..
