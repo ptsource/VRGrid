@@ -4,7 +4,8 @@
 <vrf>
 <globals>
 <title name="VRGrid House Lib Reference" />
-<lib href="https://ptsource.github.io/VRGrid/packs/house.vlib" />
+<lib href="https://ptsource.github.io/VRGrid/packs/house.vlib" required="2.8"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
 <assets href="https://ptsource.github.io/VRGrid/assets/" />
 <map dimensions="(15,23,3)" />
 <sky/>
