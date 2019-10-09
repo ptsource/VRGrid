@@ -13,7 +13,7 @@
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
 	<map dimensions="(35,30,13)"/>
 	<sky texture="@house:sky.jpg" brightness="70%"/>
-	<ground texture="@house:blank.gif"/>
+	<ground texture="@house:clear.gif"/>
 	<atmosphere brightness="80%"/>
 	<devel/>
 </globals>
@@ -134,13 +134,13 @@
 <CREATE unit="%%" vrobj="house:gate" SPDESC="closed elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,front,back,edges,bottom,top" texture="@basic:cement.vri" style="stretched"/>
-<side name="handles" texture="@house:blank.gif" style="stretched"/>
+<side name="handles" texture="@house:clear.gif" style="stretched"/>
 </CREATE>
 
 <CREATE unit="%1" vrobj="house:gate" SPDESC="closed elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,front,back,edges,bottom,top" texture="@basic:cement.vri" style="stretched"/>
-<side name="handles" texture="@house:blank.gif" style="stretched"/>
+<side name="handles" texture="@house:clear.gif" style="stretched"/>
 	<script trigger="timer" delay="1">
 	        curlevel = player.location:layer;
 		if (vrf.delay = 1) { map.set_vrobj(16,9,curlevel,"%2"); }
@@ -159,7 +159,7 @@
 <CREATE unit="%2" vrobj="basic3:passage" SPDESC="opening elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
-<side name="fill" texture="@house:blank.gif" style="stretched"/>
+<side name="fill" texture="@house:clear.gif" style="stretched"/>
 	<script trigger="timer" delay="0.1">
 		vrf.paneldefault();
 	</script>
@@ -170,7 +170,7 @@
 <CREATE unit="%3" vrobj="basic3:widepassage" SPDESC="opening doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
-<side name="fill" texture="@house:blank.gif" style="stretched"/>
+<side name="fill" texture="@house:clear.gif" style="stretched"/>
 	<ACTION trigger="timer" delay="0.3">
 		<REPLACE SOURCE="%4"/>
 	</ACTION>	
@@ -192,7 +192,7 @@
 <CREATE unit="%5" vrobj="basic3:widepassage" SPDESC="closing doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
-<side name="fill" texture="@house:blank.gif" style="stretched"/>
+<side name="fill" texture="@house:clear.gif" style="stretched"/>
 	<script trigger="timer" delay="0.1">
 		vrf.keyoff = 2;
 	</script>
@@ -203,7 +203,7 @@
 <CREATE unit="%6" vrobj="basic3:passage" SPDESC="closing elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
-<side name="fill" texture="@house:blank.gif" style="stretched"/>
+<side name="fill" texture="@house:clear.gif" style="stretched"/>
 	<script trigger="timer" delay="0.3">
 		vrf.keyoff = 0;
 	</script>
@@ -215,7 +215,7 @@
 <CREATE unit="%7" vrobj="basic3:widepassage" SPDESC="closing doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
-<side name="fill" texture="@house:blank.gif" style="stretched"/>
+<side name="fill" texture="@house:clear.gif" style="stretched"/>
 	<script trigger="timer" delay="0.1">
 		vrf.keyoff = 2;
 	</script>
@@ -226,7 +226,7 @@
 <CREATE unit="%8" vrobj="basic3:passage" SPDESC="closing elevator doors">
 <PARAM ORIENT="0,0,0"/>
 <side name="inneredge,topedge,bottomedge,wedge,s,n,eedge" texture="@basic:cement.vri" style="stretched"/>
-<side name="fill" texture="@house:blank.gif" style="stretched"/>
+<side name="fill" texture="@house:clear.gif" style="stretched"/>
 	<ACTION trigger="timer" delay="0.3">
 		<REPLACE SOURCE="%%"/>
 	</ACTION>
@@ -402,7 +402,7 @@
 <CREATE unit="nB" vrobj="house:gate">
 <PARAM ORIENT="180,0,0"/>
 <side name="inneredge,front,back" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
-<side name="edges,bottom,top" texture="@house:blank.gif" style="stretched"/>
+<side name="edges,bottom,top" texture="@house:clear.gif" style="stretched"/>
 <side name="handles" texture="@basic:blackglare.gif" style="stretched"/>
 	<ACTION TRIGGER="click on" radius="1">
 		<REPLACE SOURCE="nC"/>
@@ -412,7 +412,7 @@
 <CREATE unit="nC" vrobj="house:opengate">
 <PARAM ORIENT="180,0,0"/>
 <side name="inneredges,front,back" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
-<side name="edges,bottom,top" texture="@house:blank.gif" style="stretched"/>
+<side name="edges,bottom,top" texture="@house:clear.gif" style="stretched"/>
 <side name="handles" texture="@basic:blackglare.gif" style="stretched"/>
 	<ACTION TRIGGER="timer" delay="3">
 		<REPLACE SOURCE="nB"/>
@@ -460,7 +460,7 @@
 </CREATE>
 
 <CREATE unit="ps" vrobj="house:toilet">
-<side name="panel1, panel2" texture="@house:blank.gif" style="stretched"/>
+<side name="panel1, panel2" texture="@house:clear.gif" style="stretched"/>
 <side name="top,bottom,pot,insidewall" texture="@house:refrigirator.jpg" style="stretched"/>
 <side name="insidebottom" texture="@house:refrigirator.jpg" style="stretched"/>
 <side name="toilet" texture="@house:refrigirator.jpg" style="stretched"/>
@@ -497,8 +497,8 @@
 <side name="s,front" texture="@interior:cabinetfront.gif" style="stretched"/>
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <side name="sink, sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
-<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="water" texture="@house:clear.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="0,0,0"/>
 <ACTION trigger="click on">
@@ -512,7 +512,7 @@
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
 <side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="0,0,0"/>
 <SOUND FILE="@water:water_start.wav" VOLUME="100%" PLAYBACK="once" FLOOD="no"
@@ -531,7 +531,7 @@
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
 <side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="0,0,0"/>
 <SOUND FILE="@water:water_loop.wav" VOLUME="100%" PLAYBACK="looped" FLOOD="no"
@@ -565,7 +565,7 @@
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
-<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="water" texture="@house:clear.gif" style="stretched" clarity="80%"/>
 <side name="waterbottom" texture="@basic:water.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="0,0,0"/>
@@ -584,8 +584,8 @@
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
-<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="water" texture="@house:clear.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="0,0,0"/>
 <SOUND FILE="@water:water_end2.wav" VOLUME="100%" PLAYBACK="once" FLOOD="no"
@@ -622,8 +622,8 @@
 <side name="s" texture="@interior:cabinetfront.gif" style="stretched"/>
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <side name="sink, sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
-<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="water" texture="@house:clear.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="90,0,0"/>
 <ACTION trigger="click on">
@@ -637,7 +637,7 @@
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
 <side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="90,0,0"/>
 <ACTION trigger="click on">
@@ -654,7 +654,7 @@
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
 <side name="water" texture="@BASIC:water.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="90,0,0"/>
 <ACTION trigger="click on">
@@ -684,7 +684,7 @@
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@house:faucet.jpg" style="tiled"/>
-<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
+<side name="water" texture="@house:clear.gif" style="stretched" clarity="80%"/>
 <side name="waterbottom" texture="@basic:water.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="90,0,0"/>
@@ -701,8 +701,8 @@
 <side name="top" texture="@house:kitchentop.jpg" style="stretched"/>
 <side name="sink" texture="@house:faucet.jpg" style="tiled"/>
 <side name="sinkbottom" texture="@basic:water.gif" style="tiled"/>
-<side name="water" texture="@house:blank.gif" style="stretched" clarity="80%"/>
-<side name="waterbottom" texture="@house:blank.gif" style="tiled" clarity="65%"/>
+<side name="water" texture="@house:clear.gif" style="stretched" clarity="80%"/>
+<side name="waterbottom" texture="@house:clear.gif" style="tiled" clarity="65%"/>
 <side name="faucet" texture="@house:faucet.jpg" style="stretched" ANGLE="180"/>
 <PARAM ORIENT="90,0,0"/>
 <ACTION trigger="click on">
@@ -854,7 +854,7 @@
 </CREATE>
 
 <CREATE unit="BD" vrobj="interior:bed" SPDESC="bed">
-<side name="toplegs" texture="@house:blank.gif" style="stretched"/>
+<side name="toplegs" texture="@house:clear.gif" style="stretched"/>
 <side name="boxspring,bottomlegs" texture="@interior:finishedwood.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
@@ -899,7 +899,7 @@
 <side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
 <side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="curtain" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
-<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+<side name="curtain2" texture="@house:clear.gif" style="stretched"/>
 	<action trigger="click on">
 		<replace source="WJ"/>
 	</action>
@@ -911,7 +911,7 @@
 <side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
 <side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="curtain" texture="@house:curtain3.gif" style="stretched" clarity="10%"/>
-<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+<side name="curtain2" texture="@house:clear.gif" style="stretched"/>
 	<action trigger="click on">
 		<replace source="WI"/>
 	</action>
@@ -923,7 +923,7 @@
 <side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
 <side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="curtain" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
-<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+<side name="curtain2" texture="@house:clear.gif" style="stretched"/>
 </CREATE>
 <CREATE unit="W1" vrobj="house:wincurtain" SPDESC="window">
 <side name="s" texture="@house:cloth022.jpg" style="tiled"/>
@@ -931,7 +931,7 @@
 <side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
 <side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="curtain2" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
-<side name="curtain" texture="@house:blank.gif" style="stretched"/>
+<side name="curtain" texture="@house:clear.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
 <CREATE unit="W2" vrobj="house:wincurtain" SPDESC="window">
@@ -940,7 +940,7 @@
 <side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
 <side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="curtain" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
-<side name="curtain2" texture="@house:blank.gif" style="stretched"/>
+<side name="curtain2" texture="@house:clear.gif" style="stretched"/>
 <PARAM ORIENT="180,0,0"/>
 </CREATE>
 <CREATE unit="W3" vrobj="house:wincurtain" SPDESC="window">
@@ -949,7 +949,7 @@
 <side name="inneredge" texture="@basic:blackglare.gif" style="stretched"/>
 <side name="fill" texture="@house:litewood.gif" style="stretched" clarity="50%"/>
 <side name="curtain2" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
-<side name="curtain" texture="@house:blank.gif" style="stretched"/>
+<side name="curtain" texture="@house:clear.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
@@ -959,7 +959,7 @@
 
 
 <CREATE unit=".A" vrobj="basic:half" SPDESC="half">
-<side name="top,bottom,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<side name="top,bottom,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <side name="n" texture="@house:fence2.gif" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
@@ -977,12 +977,12 @@
 </CREATE>
 
 <CREATE unit="2A" vrobj="basic:half" SPDESC="half">
-<side name="top,bottom,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<side name="top,bottom,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <side name="n" texture="@house:fence2.gif" style="stretched"/>
 <PARAM ORIENT="180,0,0"/>
 </CREATE>
 <CREATE unit="3A" vrobj="basic:half" SPDESC="half">
-<side name="top,bottom,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<side name="top,bottom,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <side name="n" texture="@house:fence2.gif" style="stretched"/>
 <PARAM ORIENT="270,0,0"/>
 </CREATE>
@@ -1126,7 +1126,7 @@
 
 <CREATE unit="2c" vrobj="house:floorlayer" SPDESC="balcony">
 <side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
-<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="bottom,n,s" texture="@house:clear.gif" style="stretched"/>
 <side name="w" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="layer" texture="@house:curtain4.gif" style="stretched" clarity="10%"/>
 	<action trigger="click on">
@@ -1136,7 +1136,7 @@
 </CREATE>
 <CREATE unit="2+" vrobj="house:floorlayer2" SPDESC="balcony">
 <side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
-<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="bottom,n,s" texture="@house:clear.gif" style="stretched"/>
 <side name="w" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="layer" texture="@house:curtain4a.gif" style="stretched" clarity="10%"/>
 	<action trigger="click on">
@@ -1166,7 +1166,7 @@
 </CREATE>
 <CREATE unit="2f" vrobj="house:floorlayer" SPDESC="balcony">
 <side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
-<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="bottom,n,s" texture="@house:clear.gif" style="stretched"/>
 <side name="w" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="layer" texture="@house:curtain4.gif" style="stretched" clarity="10%"/>
 <PARAM ORIENT="0,90,0"/>
@@ -1177,7 +1177,7 @@
 
 <CREATE unit="2g" vrobj="house:floorlayer" SPDESC="balcony">
 <side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
-<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="bottom,n,s" texture="@house:clear.gif" style="stretched"/>
 <side name="w" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
 	<action trigger="click on">
@@ -1201,7 +1201,7 @@
 </CREATE>
 <CREATE unit="2j" vrobj="house:floorlayer" SPDESC="balcony">
 <side name="top,e" texture="@house:litewood.gif" style="stretched" clarity="65%"/>
-<side name="bottom,n,s" texture="@house:blank.gif" style="stretched"/>
+<side name="bottom,n,s" texture="@house:clear.gif" style="stretched"/>
 <side name="w" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="layer" texture="@house:curtain2.gif" style="stretched" clarity="10%"/>
 	<action trigger="click on">
@@ -1234,7 +1234,7 @@
 
 <CREATE unit="2K" vrobj="basic:floor" SPDESC="glass">
 <side name="top,bottom" texture="@house:litewood.gif" style="stretched" clarity="80%"/>
-<side name="n,s,e,w" texture="@house:blank.gif" style="stretched"/>
+<side name="n,s,e,w" texture="@house:clear.gif" style="stretched"/>
 <PARAM ORIENT="0,90,0"/>
 </CREATE>
 
@@ -1827,7 +1827,7 @@
 </CREATE>
 <CREATE unit="/4" vrobj="house:walls" SPDESC="eastthinwall">
 <side name="top,e,w,bottom,n,s" texture="@house:brick036.jpg" style="tiled"/>
-<side name="layer" texture="@house:blank.gif" style="stretched"/>
+<side name="layer" texture="@house:clear.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
@@ -2051,32 +2051,32 @@
 </CREATE>
 
 <CREATE unit=")a" vrobj="house:forestcity" SPDESC="forest">
-<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="city" texture="@house:clear.gif" style="stretched"/>
 <side name="forest" texture="@house:forest1.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 <CREATE unit=")b" vrobj="house:forestcity" SPDESC="forest">
-<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="city" texture="@house:clear.gif" style="stretched"/>
 <side name="forest" texture="@house:forest2.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 <CREATE unit=")c" vrobj="house:forestcity" SPDESC="forest">
-<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="city" texture="@house:clear.gif" style="stretched"/>
 <side name="forest" texture="@house:forest3.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 <CREATE unit=")d" vrobj="house:forestcity" SPDESC="forest">
-<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="city" texture="@house:clear.gif" style="stretched"/>
 <side name="forest" texture="@house:forest4.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 <CREATE unit=")e" vrobj="house:forestcity" SPDESC="forest">
-<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="city" texture="@house:clear.gif" style="stretched"/>
 <side name="forest" texture="@house:forest5.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 <CREATE unit=")f" vrobj="house:forestcity" SPDESC="forest">
-<side name="city" texture="@house:blank.gif" style="stretched"/>
+<side name="city" texture="@house:clear.gif" style="stretched"/>
 <side name="forest" texture="@house:forest6.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
@@ -2203,14 +2203,14 @@
 
 
 <CREATE unit="@K" vrobj="house:layer" SPDESC="dummy">
-<side name="layer" texture="@house:blank.gif"/>
+<side name="layer" texture="@house:clear.gif"/>
 <PARAM ORIENT="0,0,0"/>
 <ACTION trigger="step in">
 	<REPLACE SOURCE="@L"/>
 </ACTION>
 </CREATE>
 <CREATE unit="@L" vrobj="house:layer" SPDESC="dummy">
-<side name="layer" texture="@house:blank.gif"/>
+<side name="layer" texture="@house:clear.gif"/>
 <PARAM ORIENT="0,0,0"/>
 <script trigger="timer" delay="10">
 	player.location:x = 100;
