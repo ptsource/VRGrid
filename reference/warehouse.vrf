@@ -160,6 +160,11 @@
 <create unit="wv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex2.jpg"/><popup text="@warehouse:tex2.jpg" placement="top" trigger="rollover"/></create>
 <create unit="wx" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex3.jpg"/><popup text="@warehouse:tex3.jpg" placement="top" trigger="rollover"/></create>
 <create unit="wz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex4.jpg"/><popup text="@warehouse:tex4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="za" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex5.jpg"/><popup text="@warehouse:tex5.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zb" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex6.jpg"/><popup text="@warehouse:tex6.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex7.jpg"/><popup text="@warehouse:tex7.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zd" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex8.jpg"/><popup text="@warehouse:tex8.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ze" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex9.jpg"/><popup text="@warehouse:tex9.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -238,7 +243,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. zh .. zi .. zj .. zl .. zm .. zn .. ya ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. yb .. yc .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 @@ .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
 
@@ -282,7 +287,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. wq .. wr .. ws .. wt .. wu .. wx .. wz ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. za .. zb .. yb .. yc .. zc .. zd .. ze ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
