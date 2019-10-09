@@ -165,6 +165,13 @@
 <create unit="zc" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex7.jpg"/><popup text="@warehouse:tex7.jpg" placement="top" trigger="rollover"/></create>
 <create unit="zd" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex8.jpg"/><popup text="@warehouse:tex8.jpg" placement="top" trigger="rollover"/></create>
 <create unit="ze" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex9.jpg"/><popup text="@warehouse:tex9.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zf" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:turquoise.gif"/><popup text="@warehouse:turquoise.gif" placement="top" trigger="rollover"/></create>
+<create unit="zg" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:wall.gif"/><popup text="@warehouse:wall.gif" placement="top" trigger="rollover"/></create>
+<create unit="zh" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:white.gif"/><popup text="@warehouse:white.gif" placement="top" trigger="rollover"/></create>
+<create unit="zi" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:window.jpg"/><popup text="@warehouse:window.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:wood.gif"/><popup text="@warehouse:wood.gif placement="top" trigger="rollover"/></create>
+<create unit="zl" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:yellow.gif"/><popup text="@warehouse:yellow.gif" placement="top" trigger="rollover"/></create>
+<create unit="zm" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:time.gif"/><popup text="@warehouse:time.gif" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -289,7 +296,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. za .. zb .. yb .. yc .. zc .. zd .. ze ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zf .. zg .. zh .. zi .. zj .. zl .. zm ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
