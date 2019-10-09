@@ -153,6 +153,13 @@
 <create unit="wo" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:meshred.gif"/><popup text="@warehouse:meshred.gif" placement="top" trigger="rollover"/></create>
 <create unit="wp" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:metal.gif"/><popup text="@warehouse:metal.gif" placement="top" trigger="rollover"/></create>
 <create unit="wq" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:portagiu.gif"/><popup text="@warehouse:portagiu.gif" placement="top" trigger="rollover"/></create>
+<create unit="wr" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:red.gif"/><popup text="@warehouse:red.gif" placement="top" trigger="rollover"/></create>
+<create unit="ws" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:shiny.jpg"/><popup text="@warehouse:shiny.jpg" placement="top" trigger="rollover"/></create>
+<create unit="wt" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:stainless.jpg"/><popup text="@warehouse:stainless.jpg" placement="top" trigger="rollover"/></create>
+<create unit="wu" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex1.jpg"/><popup text="@warehouse:tex1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="wv" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex2.jpg"/><popup text="@warehouse:tex2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="wx" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex3.jpg"/><popup text="@warehouse:tex3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="wz" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:tex4.jpg"/><popup text="@warehouse:tex4.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="warehouse:ceiling">
          <side NAME="*" TEXTURE="@warehouse:box.gif" STYLE="scaled"/>
@@ -273,7 +280,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. wi .. wj .. wl .. wm .. wn .. wo .. wp ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. wq .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. wq .. wr .. ws .. wt .. wu .. wx .. wz ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
