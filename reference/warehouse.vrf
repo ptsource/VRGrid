@@ -169,7 +169,7 @@
 <create unit="zg" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:wall.gif"/><popup text="@warehouse:wall.gif" placement="top" trigger="rollover"/></create>
 <create unit="zh" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:white.gif"/><popup text="@warehouse:white.gif" placement="top" trigger="rollover"/></create>
 <create unit="zi" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:window.jpg"/><popup text="@warehouse:window.jpg" placement="top" trigger="rollover"/></create>
-<create unit="zj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:wood.gif"/><popup text="@warehouse:wood.gif placement="top" trigger="rollover"/></create>
+<create unit="zj" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:wood.gif"/><popup text="@warehouse:wood.gif" placement="top" trigger="rollover"/></create>
 <create unit="zl" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:yellow.gif"/><popup text="@warehouse:yellow.gif" placement="top" trigger="rollover"/></create>
 <create unit="zm" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:time.gif"/><popup text="@warehouse:time.gif" placement="top" trigger="rollover"/></create>
 
