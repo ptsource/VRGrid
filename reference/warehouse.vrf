@@ -38,6 +38,10 @@
 <create unit="bp" vrobj="warehouse:singleImpe"><popup text="warehouse:singleImpe" placement="top" trigger="rollover"/></create>
 <create unit="bJ" vrobj="warehouse:soffitto"><popup text="warehouse:soffitto" placement="top" trigger="rollover"/></create>
 <create unit="bK" vrobj="warehouse:vuoto"><popup text="warehouse:vuoto" placement="top" trigger="rollover"/></create>
+<create unit="BA" vrobj="warehouse:wallcorner"><popup text="warehouse:wallcorner" placement="top" trigger="rollover"/></create>
+<create unit="BB" vrobj="warehouse:wallcornerc"><popup text="warehouse:wallcornerc" placement="top" trigger="rollover"/></create>
+<create unit="BC" vrobj="warehouse:wallfull"><popup text="warehouse:wallfull" placement="top" trigger="rollover"/></create>
+<create unit="BD" vrobj="warehouse:window"><popup text="warehouse:window" placement="top" trigger="rollover"/></create>
 <!-- textures -->
 <create unit="ta" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_1.gif"/><popup text="@warehouse:_1.gif" placement="top" trigger="rollover"/></create>
 <create unit="tb" vrobj="warehouse:spriteface"><side NAME="*" TEXTURE="@warehouse:_2.gif"/><popup text="@warehouse:_2.gif" placement="top" trigger="rollover"/></create>
@@ -139,7 +143,7 @@
 <layer number="1">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. BA .. BB .. BC .. BD .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
