@@ -1112,8 +1112,8 @@
 <side name="e,w" texture="@house:cageb.gif" style="stretched"/>
 <side name="top" texture="@house:cagec.gif" style="stretched"/>
 <side name="bottom" texture="@house:caged.gif" style="stretched"/>
-<side name="inside" texture="@house:gicko.gif" style="stretched"/>
-<side name="insideback" texture="@house:gickoback.gif" style="stretched"/>
+<side name="inside" texture="@house:cagee.gif" style="stretched"/>
+<side name="insideback" texture="@house:cagee.gif" style="stretched"/>
 <PARAM ORIENT="90,0,0"/>
 </CREATE>
 
