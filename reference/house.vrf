@@ -125,6 +125,8 @@
 <create unit="zr" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:wlight.jpg"/><popup text="@warehouse:wlight.jpg" placement="top" trigger="rollover"/></create>
 <create unit="zs" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:dirt.gif"/><popup text="@warehouse:dirt.gif" placement="top" trigger="rollover"/></create>
 <create unit="zt" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:starrysky.jpg"/><popup text="@warehouse:starrysky.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zu" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:portal.gif"/><popup text="@warehouse:portal.gif" placement="top" trigger="rollover"/></create>
+
 
 
 <create unit="--" vrobj="house:ceiling"> 
@@ -190,7 +192,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tx .. tz .. .. .. .. .. zp .. zq .. zr ..
+.. tx .. tz .. zu .. .. .. zp .. zq .. zr ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ua .. ub .. uc .. ud .. ue .. uf .. ug ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
