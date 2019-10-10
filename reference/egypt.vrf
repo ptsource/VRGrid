@@ -99,6 +99,13 @@
 <create unit="ah" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone03b.gif"/><popup text="@egypt:stone03b.gif" placement="top" trigger="rollover"/></create>
 <create unit="ai" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone04b.gif"/><popup text="@egypt:stone04b.gif" placement="top" trigger="rollover"/></create>
 <create unit="aj" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone05b.gif"/><popup text="@egypt:stone05b.gif" placement="top" trigger="rollover"/></create>
+<create unit="al" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone06b.gif"/><popup text="@egypt:stone06b.gif" placement="top" trigger="rollover"/></create>
+<create unit="am" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone07b.gif"/><popup text="@egypt:stone07b.gif" placement="top" trigger="rollover"/></create>
+<create unit="an" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone08b.gif"/><popup text="@egypt:stone08b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ao" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone09b.gif"/><popup text="@egypt:stone09b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ap" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone10b.gif"/><popup text="@egypt:stone10b.gif" placement="top" trigger="rollover"/></create>
+<create unit="aq" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone11b.gif"/><popup text="@egypt:stone11b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ar" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone12b.gif"/><popup text="@egypt:stone12b.gif" placement="top" trigger="rollover"/></create>
 <create unit="--" vrobj="egypt:ceiling"> 
          <side NAME="*" TEXTURE="@egypt:box.gif" STYLE="scaled"/>
 </create>
@@ -164,9 +171,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tx .. tz .. aa .. ab .. ac .. ad .. ae ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. af .. ag .. ah .. ai .. aj .. .. .. .. ..
+.. af .. ag .. ah .. ai .. aj .. al .. am ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. an .. ao .. ap .. aq .. ar .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
