@@ -107,6 +107,30 @@
 <create unit="aq" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone11b.gif"/><popup text="@egypt:stone11b.gif" placement="top" trigger="rollover"/></create>
 <create unit="ar" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone12b.gif"/><popup text="@egypt:stone12b.gif" placement="top" trigger="rollover"/></create>
 <create unit="as" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone13b.gif"/><popup text="@egypt:stone13b.gif" placement="top" trigger="rollover"/></create>
+<create unit="at" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:v128-01dr.gif"/><popup text="@egypt:v128-01dr.gif" placement="top" trigger="rollover"/></create>
+<create unit="au" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:v128-02dr.gif"/><popup text="@egypt:v128-02dr.gif" placement="top" trigger="rollover"/></create>
+<create unit="av" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:v128-03dr.gif"/><popup text="@egypt:v128-03dr.gif" placement="top" trigger="rollover"/></create>
+<create unit="ax" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:v128-04gr.gif"/><popup text="@egypt:v128-04gr.gif" placement="top" trigger="rollover"/></create>
+<create unit="az" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall.jpg"/><popup text="@egypt:wall.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ya" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall_stone_gradient.gif"/><popup text="@egypt:wall_stone_gradient.gif" placement="top" trigger="rollover"/></create>
+<create unit="yb" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall_stone1_drips.gif"/><popup text="@egypt:wall_stone1_drips.gif" placement="top" trigger="rollover"/></create>
+<create unit="yc" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall_stone1_gradient.gif"/><popup text="@egypt:wall_stone1_gradient.gif" placement="top" trigger="rollover"/></create>
+<create unit="yd" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall_stone1_plain.gif"/><popup text="@egypt:wall_stone1_plain.gif" placement="top" trigger="rollover"/></create>
+<create unit="ye" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall_stone2_drips.gif"/><popup text="@egypt:wall_stone2_drips.gif" placement="top" trigger="rollover"/></create>
+<create unit="yf" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall_stone2_plain.gif"/><popup text="@egypt:wall_stone2_plain.gif" placement="top" trigger="rollover"/></create>
+<create unit="yg" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall1.jpg"/><popup text="@egypt:wall1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="yh" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall2.jpg"/><popup text="@egypt:wall2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="yi" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall3.jpg"/><popup text="@egypt:wall3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="yj" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall4.jpg"/><popup text="@egypt:wall4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="yl" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:wall5.jpg"/><popup text="@egypt:wall5.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ym" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:water.gif"/><popup text="@egypt:water.gif" placement="top" trigger="rollover"/></create>
+<create unit="yn" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:window.jpg"/><popup text="@egypt:window.jpg" placement="top" trigger="rollover"/></create>
+<create unit="yo" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:woodmgrid2b.gif"/><popup text="@egypt:woodmgrid2b.gif" placement="top" trigger="rollover"/></create>
+<create unit="yp" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:woodplanks.gif"/><popup text="@egypt:woodplanks.gif" placement="top" trigger="rollover"/></create>
+
+
+
+
 <create unit="--" vrobj="egypt:ceiling"> 
          <side NAME="*" TEXTURE="@egypt:box.gif" STYLE="scaled"/>
 </create>
@@ -174,13 +198,13 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. af .. ag .. ah .. ai .. aj .. al .. am ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. an .. ao .. ap .. aq .. ar .. as .. .. ..
+.. an .. ao .. ap .. aq .. ar .. as .. at ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. au .. av .. ax .. az .. ya .. yb .. yc ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. yd .. ye .. yf .. yg .. yh .. yi .. yj ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. yl .. ym .. yn .. yo .. yp .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
