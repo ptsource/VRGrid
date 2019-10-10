@@ -66,30 +66,32 @@
 <create unit="g6" vrobj="egypt:sarcophagus"><popup text="egypt:sarcophagus" placement="top" trigger="rollover"/></create>
 
 <!-- textures -->
-<create unit="ta" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone2.gif"/><popup text="base_stone2.gif" placement="top" trigger="rollover"/></create>
-<create unit="tb" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone2_moss.gif"/><popup text="base_stone2_moss.gif" placement="top" trigger="rollover"/></create>
-<create unit="tc" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone3.gif"/><popup text="base_stone3.gif" placement="top" trigger="rollover"/></create>
-<create unit="td" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_heiroglyphs.gif"/><popup text="deco_heiroglyphs.gif" placement="top" trigger="rollover"/></create>
-<create unit="te" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel.gif"/><popup text="deco_panel.gif" placement="top" trigger="rollover"/></create>
-<create unit="tf" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel_half.gif"/><popup text="deco_panel_half.gif" placement="top" trigger="rollover"/></create>
-<create unit="tg" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel_half_statue.gif"/><popup text="deco_panel_half_statue.gif" placement="top" trigger="rollover"/></create>
-<create unit="th" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:halfmoon.gif"/><popup text="halfmoon.gif" placement="top" trigger="rollover"/></create>
-<create unit="ti" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:hotsun.gif"/><popup text="hotsun.gif" placement="top" trigger="rollover"/></create>
-<create unit="tj" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:moon.gif"/><popup text="moon.gif" placement="top" trigger="rollover"/></create>
-<create unit="tl" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand1.jpg"/><popup text="sand1.jpg" placement="top" trigger="rollover"/></create>
-<create unit="tm" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand2.jpg"/><popup text="sand2.jpg" placement="top" trigger="rollover"/></create>
-<create unit="tn" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand3.jpg"/><popup text="sand3.jpg" placement="top" trigger="rollover"/></create>
-<create unit="to" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sun.gif"/><popup text="sun.gif" placement="top" trigger="rollover"/></create>
-<create unit="tp" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:trim_darktiles.gif"/><popup text="trim_darktiles.gif" placement="top" trigger="rollover"/></create>
-<create unit="tq" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:trim_glyphband1.gif"/><popup text="trim_glyphband1.gif" placement="top" trigger="rollover"/></create>
-<create unit="tr" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block01b.gif"/><popup text="block01b.gif" placement="top" trigger="rollover"/></create>
-<create unit="ts" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block02b.gif"/><popup text="block02b.gif" placement="top" trigger="rollover"/></create>
-<create unit="tt" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block04b.gif"/><popup text="block04b.gif" placement="top" trigger="rollover"/></create>
-<create unit="tu" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:grate2b.gif"/><popup text="grate2b.gif" placement="top" trigger="rollover"/></create>
-<create unit="tv" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:jump.gif"/><popup text="jump.gif" placement="top" trigger="rollover"/></create>
-<create unit="tx" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:jumppad1bb.gif"/><popup text="jumppad1bb.gif" placement="top" trigger="rollover"/></create>
-<create unit="tz" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:plate.gif"/><popup text="plate.gif" placement="top" trigger="rollover"/></create>
-
+<create unit="ta" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone2.gif"/><popup text="@egypt:base_stone2.gif" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone2_moss.gif"/><popup text="@egypt:base_stone2_moss.gif" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:base_stone3.gif"/><popup text="@egypt:base_stone3.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_heiroglyphs.gif"/><popup text="@egypt:deco_heiroglyphs.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel.gif"/><popup text="@egypt:deco_panel.gif" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel_half.gif"/><popup text="@egypt:deco_panel_half.gif" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:deco_panel_half_statue.gif"/><popup text="@egypt:deco_panel_half_statue.gif" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:halfmoon.gif"/><popup text="@egypt:halfmoon.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:hotsun.gif"/><popup text="@egypt:hotsun.gif" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:moon.gif"/><popup text="@egypt:moon.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand1.jpg"/><popup text="@egypt:sand1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand2.jpg"/><popup text="@egypt:sand2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sand3.jpg"/><popup text="@egypt:sand3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:sun.gif"/><popup text="@egypt:sun.gif" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:trim_darktiles.gif"/><popup text="@egypt:trim_darktiles.gif" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:trim_glyphband1.gif"/><popup text="@egypt:trim_glyphband1.gif" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block01b.gif"/><popup text="@egypt:block01b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block02b.gif"/><popup text="@egypt:block02b.gif" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:block04b.gif"/><popup text="@egypt:block04b.gif" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:grate2b.gif"/><popup text="@egypt:grate2b.gif" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:jump.gif"/><popup text="@egypt:jump.gif" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:jumppad1bb.gif"/><popup text="@egypt:jumppad1bb.gif" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:plate.gif"/><popup text="@egypt:plate.gif" placement="top" trigger="rollover"/></create>
+<create unit="aa" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:dirt.jpg"/><popup text="@egypt:dirt.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ab" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:relief03b.gif"/><popup text="@egypt:relief03b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ac" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:shroud.jpg"/><popup text="@egypt:shroud.jpg" placement="top" trigger="rollover"/></create>
 <create unit="--" vrobj="egypt:ceiling"> 
          <side NAME="*" TEXTURE="@egypt:box.gif" STYLE="scaled"/>
 </create>
@@ -153,7 +155,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tx .. tz .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. aa .. ab .. ac .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
@@ -186,4 +188,3 @@
 <exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
 </design>
 </vrf>
-
