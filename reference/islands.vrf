@@ -183,18 +183,18 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
 <imagemap name="github">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="@islands:Hosted at Github" />
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
 <imagemap name="vtpl">
-    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="@islands:Get VTPL" />
+    <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
-<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="@islands:This is the reference for the Islands library. This library contains 53 objects and 72 textures. Current version of this lib is 2.8. View source for more details."/>
+<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Islands library. This library contains 53 objects and 72 textures. Current version of this lib is 2.8. View source for more details."/>
 <enter location="(4,23,1)" name="default" angle="45" />
 <enter location="(15,22,1)" name="floor" />
 <enter location="(15,22,3)" name="roof" />
-<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="@islands:Lets go see the textures"/>
-<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="@islands:Lets go see the 3d objects" />
+<exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
 </design>
 </vrf>
