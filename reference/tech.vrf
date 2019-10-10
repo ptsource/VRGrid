@@ -14,7 +14,7 @@
 </globals>
 <design>
 <create unit="aa" vrobj="tech:full"><side name="*" texture="@tech:clear.gif"/></create>
-<create unit="bb" vrobj="tech:full"><side name="*" texture="@tech:grid.gif"/></create>
+<create unit="bb" vrobj="tech:full"><side name="*" texture="@tech:tgrid.jpg"/></create>
 <create unit="cc" vrobj="tech:full"><side name="*" texture="@tech:clear.gif"/></create>
 <create unit="dd" vrobj="tech:full"><side name="*" color="(255,255,255)" faces="2" solid="yes" clarity="100%"/></create>
 <!--3d Objects-->
