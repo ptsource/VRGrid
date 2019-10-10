@@ -221,7 +221,7 @@
 <CREATE unit="ns" vrobj="house:door">
 <PARAM ORIENT="180,0,0"/>
 <side name="walls,front" texture="@house:hallway.jpg" style="stretched"/>
-<side name="back" texture="@house:refrigirator4.jpg" style="tiled"/>
+<side name="back" texture="@house:refrigirator3.jpg" style="tiled"/>
 <side name="ndoor,sdoor,dooredges" texture="@interior:litewood.gif" style="stretched"/>
 </CREATE>
 <CREATE unit="ne" vrobj="house:door">
@@ -295,7 +295,7 @@
 <side name="walls" texture="@house:hallway.jpg" style="stretched"/>
 <side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
 <side name="front" texture="@house:hallway.jpg" style="stretched"/>
-<side name="back" texture="@house:refrigirator4.jpg" style="tiled"/>
+<side name="back" texture="@house:refrigirator3.jpg" style="tiled"/>
 	<ACTION TRIGGER="click on" radius="1">
 		<REPLACE SOURCE="n6"/>
 	</ACTION>	
@@ -306,7 +306,7 @@
 <side name="walls" texture="@house:hallway.jpg" style="stretched"/>
 <side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
 <side name="front" texture="@house:hallway.jpg" style="stretched"/>
-<side name="back" texture="@house:refrigirator4.jpg" style="tiled"/>
+<side name="back" texture="@house:refrigirator3.jpg" style="tiled"/>
 	<ACTION TRIGGER="timer" delay="3">
 		<REPLACE SOURCE="n5"/>
 	</ACTION>	
@@ -341,7 +341,7 @@
 <PARAM ORIENT="180,0,0"/>
 <side name="walls" texture="@house:hallway.jpg" style="stretched"/>
 <side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
-<side name="front" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="front" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="back" texture="@house:brick036.jpg" style="tiled"/>
 	<ACTION TRIGGER="click on" radius="1">
 		<REPLACE SOURCE="nA"/>
@@ -352,7 +352,7 @@
 <PARAM ORIENT="180,0,0"/>
 <side name="walls" texture="@house:hallway.jpg" style="stretched"/>
 <side name="ndoor,sdoor,dooredges" texture="@house:litewood.gif" style="stretched"/>
-<side name="front" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="front" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="back" texture="@house:brick036.jpg" style="tiled"/>
 	<ACTION TRIGGER="timer" delay="3">
 		<REPLACE SOURCE="n9"/>
@@ -1191,20 +1191,20 @@
 <CREATE unit="44" vrobj="house:full" SPDESC="wall">
 <side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="s,e" texture="@house:hallway.jpg" style="stretched"/>
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator3.jpg" style="stretched"/>
 </CREATE>
 <CREATE unit="45" vrobj="house:full" SPDESC="wall">
 <side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="s,w" texture="@house:hallway.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
-<side name="n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator3.jpg" style="stretched"/>
 </CREATE>
 <CREATE unit="46" vrobj="house:full" SPDESC="wall">
 <side name="top,bottom" texture="@house:cloth022.jpg" style="tiled"/>
 <side name="s,e" texture="@house:hallway.jpg" style="stretched"/>
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator3.jpg" style="stretched"/>
 </CREATE>
 <CREATE unit="BC" vrobj="house:full" SPDESC="wall">
 <side name="w,s,e,n" style="tiled"/>
@@ -1212,8 +1212,8 @@
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
 </CREATE>
 <CREATE unit="CC" vrobj="house:full" SPDESC="wall">
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:carpetin.jpg" style="tiled"/>
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
@@ -1359,8 +1359,8 @@
 <PARAM ORIENT="0,180,0"/>
 </CREATE>
 <CREATE unit="SF" vrobj="house:floor" SPDESC="stairfloor">
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="bottom" texture="@house:refrigirator.jpg" style="tiled"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
@@ -1368,8 +1368,8 @@
 </CREATE>
 
 <CREATE unit="F." vrobj="house:full" SPDESC="wall">
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:refrigirator.jpg" style="tiled"/>
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
@@ -1382,8 +1382,8 @@
 </CREATE>
 <CREATE unit="LD" vrobj="house:floorlamp" SPDESC="dead ceiling lamp">
 <side name="ltop,lbottom,lw,ln,ls,le" texture="@house:wlight.jpg" style="stretched"/>
-<side name="n" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="e,w" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="e,w" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="bottom" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="90"/>
@@ -1396,8 +1396,8 @@
 </CREATE>
 <CREATE unit="LF" vrobj="house:floorlamp" SPDESC="ceiling lamp">
 <side name="ltop,lbottom,lw,ln,ls,le" texture="@house:wlight.jpg" style="stretched"/>
-<side name="n" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="e,w" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="e,w" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="bottom" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="90"/>
@@ -1406,8 +1406,8 @@
 </CREATE>
 <CREATE unit="LB" vrobj="house:floorlamp" SPDESC="ceiling lamp">
 <side name="ltop,lbottom,lw,ln,ls,le" texture="@house:wlight.jpg" style="stretched"/>
-<side name="n" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="e,w" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="n" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="e,w" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="bottom" texture="@house:refrigirator.jpg" style="tiled" ANGLE="90"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled" ANGLE="90"/>
@@ -1430,29 +1430,29 @@
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 <CREATE unit="BS" vrobj="house:full" SPDESC="wall">
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="s,n" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
+<side name="s,n" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:refrigirator.jpg" style="tiled"/>
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
 </CREATE>
 <CREATE unit="ST" vrobj="house:full" SPDESC="wall">
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="s,n" texture="@house:basement.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
 </CREATE>
 <CREATE unit="Sn" vrobj="house:full" SPDESC="wall">
-<side name="s" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="n" texture="@house:basement.jpg" style="stretched"/>
-<side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
+<side name="w" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
 </CREATE>
 <CREATE unit="St" vrobj="house:full" SPDESC="wall">
-<side name="s" texture="@house:refrigirator4.jpg" style="stretched"/>
+<side name="s" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="n" texture="@house:basement.jpg" style="stretched"/>
 <side name="w" texture="@house:basement.jpg" style="stretched"/>
 <side name="e" texture="@house:elevator.jpg" style="stretched"/>
