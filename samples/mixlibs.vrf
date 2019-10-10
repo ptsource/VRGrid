@@ -664,8 +664,6 @@
 <side name="top" texture="@house:kitchentop2.jpg" style="stretched" ANGLE="270"/>
 <side name="w,bottom,n,s,e" texture="@house:cloth022.jpg" style="stretched"/>
 <side name="radiofront" texture="@house:boombox.jpg" style="stretched"/>
-<side name="radioback" texture="@house:boombody2.jpg" style="stretched"/>
-<side name="radiobody" texture="@house:boombody.jpg" style="stretched"/>
 <PARAM ORIENT="0,0,0"/>
 </CREATE>
 
