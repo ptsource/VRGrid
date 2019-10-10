@@ -92,6 +92,13 @@
 <create unit="aa" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:dirt.jpg"/><popup text="@egypt:dirt.jpg" placement="top" trigger="rollover"/></create>
 <create unit="ab" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:relief03b.gif"/><popup text="@egypt:relief03b.gif" placement="top" trigger="rollover"/></create>
 <create unit="ac" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:shroud.jpg"/><popup text="@egypt:shroud.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ad" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:solidgrate1b.gif"/><popup text="@egypt:solidgrate1b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ae" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:starrysky.jpg"/><popup text="@egypt:starrysky.jpg" placement="top" trigger="rollover"/></create>
+<create unit="af" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone01b.gif"/><popup text="@egypt:stone01b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ag" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone02b.gif"/><popup text="@egypt:stone02b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ah" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone03b.gif"/><popup text="@egypt:stone03b.gif" placement="top" trigger="rollover"/></create>
+<create unit="ai" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone04b.gif"/><popup text="@egypt:stone04b.gif" placement="top" trigger="rollover"/></create>
+<create unit="aj" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone05b.gif"/><popup text="@egypt:stone05b.gif" placement="top" trigger="rollover"/></create>
 <create unit="--" vrobj="egypt:ceiling"> 
          <side NAME="*" TEXTURE="@egypt:box.gif" STYLE="scaled"/>
 </create>
@@ -155,9 +162,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tx .. tz .. aa .. ab .. ac .. .. .. .. ..
+.. tx .. tz .. aa .. ab .. ac .. ad .. ae ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. af .. ag .. ah .. ai .. aj .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
