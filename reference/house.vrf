@@ -59,6 +59,72 @@
 <create unit="ai" vrobj="house:topstairs"><popup text="house:topstairs" placement="top" trigger="rollover"/></create>
 <create unit="aj" vrobj="house:bottomstairs"><popup text="house:bottomstairs" placement="top" trigger="rollover"/></create>
 
+<!-- textures -->
+<create unit="ta" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:basement3.jpg"/><popup text="@warehouse:basement3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:basement4.jpg"/><popup text="@warehouse:basement4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:blackglare.gif"/><popup text="@warehouse:blackglare.gif" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:call.gif"/><popup text="@warehouse:call.gif" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:call2.gif"/><popup text="@warehouse:call2.gif" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:boombox.jpg"/><popup text="@warehouse:boombox.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:brick036.jpg"/><popup text="@warehouse:brick036.jpg" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:brick041.jpg"/><popup text="@warehouse:brick041.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:bush.gif"/><popup text="@warehouse:bush.gif" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:cagea.gif"/><popup text="@warehouse:cagea.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:cageb.gif"/><popup text="@warehouse:cageb.gif" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:cagec.gif"/><popup text="@warehouse:cagec.gif" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:caged.gif"/><popup text="@warehouse:caged.gif" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:carpetin.jpg"/><popup text="@warehouse:carpetin.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:carpetout.jpg"/><popup text="@warehouse:carpetout.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:carpetoutelev.jpg"/><popup text="@warehouse:carpetoutelev.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:city1.gif"/><popup text="@warehouse:city1.gif" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:closet.gif"/><popup text="@warehouse:closet.gif" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:cloth022.jpg"/><popup text="@warehouse:cloth022.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:curtain.gif"/><popup text="@warehouse:curtain.gif" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:curtain2.gif"/><popup text="@warehouse:curtain2.gif" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:curtain3.gif"/><popup text="@warehouse:curtain3.gif" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:curtain4.gif"/><popup text="@warehouse:curtain4.gif" placement="top" trigger="rollover"/></create>
+<create unit="ua" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:elevator.jpg"/><popup text="@warehouse:elevator.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ub" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:elevatorhandle.jpg"/><popup text="@warehouse:elevatorhandle.jpg" placement="top" trigger="rollover"/></create>
+<create unit="uc" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:elevatorpanel.jpg"/><popup text="@warehouse:elevatorpanel.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ud" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:faucet.jpg"/><popup text="@warehouse:faucet.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ue" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:fence2.gif"/><popup text="@warehouse:fence2.gif" placement="top" trigger="rollover"/></create>
+<create unit="uf" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:finishedwood.gif"/><popup text="@warehouse:finishedwood.gif" placement="top" trigger="rollover"/></create>
+<create unit="ug" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:forest1.gif"/><popup text="@warehouse:forest1.gif" placement="top" trigger="rollover"/></create>
+<create unit="uh" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:fridge1.jpg"/><popup text="@warehouse:fridge1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ui" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:fridge2.jpg"/><popup text="@warehouse:fridge2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="uj" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:gate.gif"/><popup text="@warehouse:gate.gif" placement="top" trigger="rollover"/></create>
+<create unit="ul" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:grassground.gif"/><popup text="@warehouse:grassground.gif" placement="top" trigger="rollover"/></create>
+<create unit="um" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:hallway.jpg"/><popup text="@warehouse:hallway.jpg" placement="top" trigger="rollover"/></create>
+<create unit="un" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:kitchentop.jpg"/><popup text="@warehouse:kitchentop.jpg" placement="top" trigger="rollover"/></create>
+<create unit="uo" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:litewood.gif"/><popup text="@warehouse:litewood.gif" placement="top" trigger="rollover"/></create>
+<create unit="up" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:mirror.jpg"/><popup text="@warehouse:mirror.jpg" placement="top" trigger="rollover"/></create>
+<create unit="uq" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:owen.jpg"/><popup text="@warehouse:owen.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ur" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:plant.gif"/><popup text="@warehouse:plant.gif" placement="top" trigger="rollover"/></create>
+<create unit="us" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:refrigirator.jpg"/><popup text="@warehouse:refrigirator.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ut" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:road.jpg"/><popup text="@warehouse:road.jpg" placement="top" trigger="rollover"/></create>
+<create unit="uu" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:sea.jpg"/><popup text="@warehouse:sea.jpg" placement="top" trigger="rollover"/></create>
+<create unit="uv" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:sky.jpg"/><popup text="@warehouse:sky.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ux" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:stove2.jpg"/><popup text="@warehouse:stove2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="uz" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tiles.jpg"/><popup text="@warehouse:tiles.jpg" placement="top" trigger="rollover"/></create>
+<create unit="za" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tiles2.jpg"/><popup text="@warehouse:tiles2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zb" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:toiletknob.jpg"/><popup text="@warehouse:toiletknob.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zc" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:topelev.jpg"/><popup text="@warehouse:topelev.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zd" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tree1.gif"/><popup text="@warehouse:tree1.gif" placement="top" trigger="rollover"/></create>
+<create unit="ze" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tree2.gif"/><popup text="@warehouse:tree2.gif" placement="top" trigger="rollover"/></create>
+<create unit="zf" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tree3.gif"/><popup text="@warehouse:tree3.gif" placement="top" trigger="rollover"/></create>
+<create unit="zg" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tree4.gif"/><popup text="@warehouse:tree4.gif" placement="top" trigger="rollover"/></create>
+<create unit="zh" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tree5.gif"/><popup text="@warehouse:tree5.gif" placement="top" trigger="rollover"/></create>
+<create unit="zi" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tree6.gif"/><popup text="@warehouse:tree6.gif" placement="top" trigger="rollover"/></create>
+<create unit="zj" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tub1.jpg"/><popup text="@warehouse:tub1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zl" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:tub2.jpg"/><popup text="@warehouse:tub2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zm" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:turquoise.gif"/><popup text="@warehouse:turquoise.gif" placement="top" trigger="rollover"/></create>
+<create unit="zn" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:walleleve.jpg"/><popup text="@warehouse:walleleve.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zo" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:wallelevw.jpg"/><popup text="@warehouse:wallelevw.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zp" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:water.gif"/><popup text="@warehouse:water.gif" placement="top" trigger="rollover"/></create>
+<create unit="zq" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:whirlpool.gif"/><popup text="@warehouse:whirlpool.gif" placement="top" trigger="rollover"/></create>
+<create unit="zr" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:wlight.jpg"/><popup text="@warehouse:wlight.jpg" placement="top" trigger="rollover"/></create>
+
+
 <create unit="--" vrobj="house:ceiling"> 
          <side NAME="*" TEXTURE="@house:box.gif" STYLE="scaled"/>
 </create>
@@ -116,29 +182,30 @@
 
 <layer number="3">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. .. .. .. .. zp .. zq .. zr ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ua .. ub .. uc .. ud .. ue .. uf .. ug ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. uh .. ui .. uj .. ul .. um .. un .. uo ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. up .. uq .. ur .. us .. ut .. uu .. uv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ux .. uz .. .. .. .. .. .. .. .. .. zo ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. za .. zb .. zc .. zd .. ze .. zf .. zg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. zh .. zi .. zj .. zl .. zm .. zn .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
+
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
@@ -149,9 +216,9 @@
 <popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
 <popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the House library. This library contains 53 objects and 150 textures. Current version of this lib is 2.8. View source for more details."/>
 <enter location="(4,23,1)" name="default" angle="45" />
-<enter location="(15,22,1)" name="floor" />
-<enter location="(15,22,3)" name="roof" />
+<enter location="(15,22,1)" name="floor" /> 
+<enter location="(15,22,3)" name="roof" /> 
 <exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
-<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
+<exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" /> 
 </design>
 </vrf>
