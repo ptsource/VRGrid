@@ -60,7 +60,7 @@
 <create unit="aj" vrobj="house:bottomstairs"><popup text="house:bottomstairs" placement="top" trigger="rollover"/></create>
 
 <!-- textures -->
-<create unit="ta" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:basement.jpg"/><popup text="@warehouse:basement3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ta" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:basement.jpg"/><popup text="@warehouse:basement.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tc" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:blackglare.gif"/><popup text="@warehouse:blackglare.gif" placement="top" trigger="rollover"/></create>
 <create unit="td" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:call.gif"/><popup text="@warehouse:call.gif" placement="top" trigger="rollover"/></create>
 <create unit="te" vrobj="house:spriteface"><side NAME="*" TEXTURE="@house:call2.gif"/><popup text="@warehouse:call2.gif" placement="top" trigger="rollover"/></create>
