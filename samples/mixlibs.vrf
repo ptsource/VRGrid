@@ -1438,14 +1438,14 @@
 </CREATE>
 <CREATE unit="ST" vrobj="house:full" SPDESC="wall">
 <side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
-<side name="s,n" texture="@house:basement4.jpg" style="stretched"/>
+<side name="s,n" texture="@house:basement.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
 </CREATE>
 <CREATE unit="Sn" vrobj="house:full" SPDESC="wall">
 <side name="s" texture="@house:refrigirator4.jpg" style="stretched"/>
-<side name="n" texture="@house:basement4.jpg" style="stretched"/>
+<side name="n" texture="@house:basement.jpg" style="stretched"/>
 <side name="w" texture="@house:refrigirator5.jpg" style="stretched"/>
 <side name="e" texture="@house:refrigirator3.jpg" style="stretched"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
@@ -1453,16 +1453,12 @@
 </CREATE>
 <CREATE unit="St" vrobj="house:full" SPDESC="wall">
 <side name="s" texture="@house:refrigirator4.jpg" style="stretched"/>
-<side name="n" texture="@house:basement4.jpg" style="stretched"/>
-<side name="w" texture="@house:basement3.jpg" style="stretched"/>
+<side name="n" texture="@house:basement.jpg" style="stretched"/>
+<side name="w" texture="@house:basement.jpg" style="stretched"/>
 <side name="e" texture="@house:elevator.jpg" style="stretched"/>
 <side name="top" texture="@house:refrigirator2.jpg" style="tiled"/>
 <side name="bottom" texture="@house:refrigirator2.jpg" style="tiled"/>
 </CREATE>
-
-
-
-
 <CREATE unit="Gb" vrobj="basic:wbottomramp" SPDESC="ground">
 <side name="w,s,n,bottom" texture="@basic:dirt.gif" style="stretched"/>
 <side name="top" texture="@house:grassground.gif" style="stretched"/>
