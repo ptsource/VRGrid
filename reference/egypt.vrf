@@ -106,6 +106,7 @@
 <create unit="ap" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone10b.gif"/><popup text="@egypt:stone10b.gif" placement="top" trigger="rollover"/></create>
 <create unit="aq" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone11b.gif"/><popup text="@egypt:stone11b.gif" placement="top" trigger="rollover"/></create>
 <create unit="ar" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone12b.gif"/><popup text="@egypt:stone12b.gif" placement="top" trigger="rollover"/></create>
+<create unit="as" vrobj="egypt:spriteface"><side NAME="*" TEXTURE="@egypt:stone13b.gif"/><popup text="@egypt:stone13b.gif" placement="top" trigger="rollover"/></create>
 <create unit="--" vrobj="egypt:ceiling"> 
          <side NAME="*" TEXTURE="@egypt:box.gif" STYLE="scaled"/>
 </create>
@@ -173,7 +174,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. af .. ag .. ah .. ai .. aj .. al .. am ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. an .. ao .. ap .. aq .. ar .. .. .. .. ..
+.. an .. ao .. ap .. aq .. ar .. as .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
