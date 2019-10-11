@@ -18,35 +18,35 @@
 <create unit="cc" vrobj="tech:full"><side name="*" texture="@tech:clear.gif"/></create>
 <create unit="dd" vrobj="tech:full"><side name="*" color="(255,255,255)" faces="2" solid="yes" clarity="100%"/></create>
 <!--3d Objects-->
-<create unit=".b" vrobj="tech:mid"><popup text="mid" placement="top" trigger="rollover"/></create>
-<create unit=".c" vrobj="tech:midedge"><popup text="midedge" placement="top" trigger="rollover"/></create>
-<create unit=".f" vrobj="tech:midcorner"><popup text="midcorner" placement="top" trigger="rollover"/></create>
-<create unit=".d" vrobj="tech:middoor"><popup text="middoor" placement="top" trigger="rollover"/></create>
-<create unit=".e" vrobj="tech:middooropen"><popup text="middooropen" placement="top" trigger="rollover"/></create>
-<create unit=".k" vrobj="tech:ssdoor"><param orient="up,90"/><popup text="ssdoor" placement="top" trigger="rollover"/></create>
-<create unit=".l" vrobj="tech:ssdooropen"><param orient="up,90"/><popup text="middooropen" placement="top" trigger="rollover"/></create>
-<create unit=".g" vrobj="tech:canteen"><param orient="up,90"/><popup text="canteen" placement="top" trigger="rollover"/></create>
-<create unit=".h" vrobj="tech:canteenopen"><param orient="up,90"/><popup text="canteenopen" placement="top" trigger="rollover"/></create>
-<create unit=".i" vrobj="tech:fence"><param orient="up,90"/><popup text="fence" placement="top" trigger="rollover"/></create>
-<create unit=".j" vrobj="tech:nfence"><param orient="up,90"/><popup text="nfence" placement="top" trigger="rollover"/></create>
-<create unit=".m" vrobj="tech:tboxclose"><param orient="up,180"/><popup text="tboxclose" placement="top" trigger="rollover"/></create>
-<create unit=".n" vrobj="tech:tboxopen"><param orient="up,90"/><popup text="tboxopenn" placement="top" trigger="rollover"/></create>
-<create unit=".o" vrobj="tech:nbotramcol"><param orient="up,180"/><popup text="nbotramcol" placement="top" trigger="rollover"/></create>
-<create unit=".p" vrobj="tech:ntopramcol"><param orient="up,180"/><popup text="ntopramcol" placement="top" trigger="rollover"/></create>
-<create unit=".q" vrobj="tech:halfxcol"><param orient="up,180"/><popup text="halfxcol" placement="top" trigger="rollover"/></create>
-<create unit=".w" vrobj="tech:nbotrampipe"><param orient="up,180"/><popup text="nbotrampipe" placement="top" trigger="rollover"/></create>
-<create unit=".x" vrobj="tech:ntoprampipe"><param orient="up,180"/><popup text="ntoprampipe" placement="top" trigger="rollover"/></create>
-<create unit=".y" vrobj="tech:halfxpipe"><param orient="up,180"/><popup text="halfxpipe" placement="top" trigger="rollover"/></create>
-<create unit=".r" vrobj="tech:torch"><popup text="torch" placement="top" trigger="rollover"/></create>
-<create unit=".s" vrobj="tech:watduct"><param orient="up,270"/><popup text="watduct" placement="top" trigger="rollover"/></create>
-<create unit=".t" vrobj="tech:benchx2"><popup text="benchx2" placement="top" trigger="rollover"/></create>
-<create unit=".u" vrobj="tech:console"><popup text="console" placement="top" trigger="rollover"/></create>
-<create unit=".v" vrobj="tech:gchairx2"><popup text="gchairx2" trigger="rollover"/></create>
-<create unit=".a" vrobj="tech:pot"><popup text="pot" placement="top" trigger="rollover"/></create>
-<create unit="sa" vrobj="tech:panelc"><popup text="panelc" placement="top" trigger="rollover"/></create>
-<create unit="sb" vrobj="tech:panel"><popup text="panel" placement="top" trigger="rollover"/></create>
-<create unit="sc" vrobj="tech:5plane"><popup text="5plane" placement="top" trigger="rollover"/></create>
-<create unit="sd" vrobj="tech:freestandingbanner"><popup text="freestandingbanner" placement="top" trigger="rollover"/></create>
+<create unit=".b" vrobj="tech:mid"><popup text="tech:mid" placement="top" trigger="rollover"/></create>
+<create unit=".c" vrobj="tech:midedge"><popup text="tech:midedge" placement="top" trigger="rollover"/></create>
+<create unit=".f" vrobj="tech:midcorner"><popup text="tech:midcorner" placement="top" trigger="rollover"/></create>
+<create unit=".d" vrobj="tech:middoor"><popup text="tech:middoor" placement="top" trigger="rollover"/></create>
+<create unit=".e" vrobj="tech:middooropen"><popup text="tech:middooropen" placement="top" trigger="rollover"/></create>
+<create unit=".k" vrobj="tech:ssdoor"><param orient="up,90"/><popup text="tech:ssdoor" placement="top" trigger="rollover"/></create>
+<create unit=".l" vrobj="tech:ssdooropen"><param orient="up,90"/><popup text="tech:middooropen" placement="top" trigger="rollover"/></create>
+<create unit=".g" vrobj="tech:canteen"><param orient="up,90"/><popup text="tech:canteen" placement="top" trigger="rollover"/></create>
+<create unit=".h" vrobj="tech:canteenopen"><param orient="up,90"/><popup text="tech:canteenopen" placement="top" trigger="rollover"/></create>
+<create unit=".i" vrobj="tech:fence"><param orient="up,90"/><popup text="tech:fence" placement="top" trigger="rollover"/></create>
+<create unit=".j" vrobj="tech:nfence"><param orient="up,90"/><popup text="tech:nfence" placement="top" trigger="rollover"/></create>
+<create unit=".m" vrobj="tech:tboxclose"><param orient="up,180"/><popup text="tech:tboxclose" placement="top" trigger="rollover"/></create>
+<create unit=".n" vrobj="tech:tboxopen"><param orient="up,90"/><popup text="tech:tboxopenn" placement="top" trigger="rollover"/></create>
+<create unit=".o" vrobj="tech:nbotramcol"><param orient="up,180"/><popup text="tech:nbotramcol" placement="top" trigger="rollover"/></create>
+<create unit=".p" vrobj="tech:ntopramcol"><param orient="up,180"/><popup text="tech:ntopramcol" placement="top" trigger="rollover"/></create>
+<create unit=".q" vrobj="tech:halfxcol"><param orient="up,180"/><popup text="tech:halfxcol" placement="top" trigger="rollover"/></create>
+<create unit=".w" vrobj="tech:nbotrampipe"><param orient="up,180"/><popup text="tech:nbotrampipe" placement="top" trigger="rollover"/></create>
+<create unit=".x" vrobj="tech:ntoprampipe"><param orient="up,180"/><popup text="tech:ntoprampipe" placement="top" trigger="rollover"/></create>
+<create unit=".y" vrobj="tech:halfxpipe"><param orient="up,180"/><popup text="tech:halfxpipe" placement="top" trigger="rollover"/></create>
+<create unit=".r" vrobj="tech:torch"><popup text="tech:torch" placement="top" trigger="rollover"/></create>
+<create unit=".s" vrobj="tech:watduct"><param orient="up,270"/><popup text="tech:watduct" placement="top" trigger="rollover"/></create>
+<create unit=".t" vrobj="tech:benchx2"><popup text="tech:benchx2" placement="top" trigger="rollover"/></create>
+<create unit=".u" vrobj="tech:console"><popup text="tech:console" placement="top" trigger="rollover"/></create>
+<create unit=".v" vrobj="tech:gchairx2"><popup text="tech:gchairx2" trigger="rollover"/></create>
+<create unit=".a" vrobj="tech:shrine"><popup text="tech:pot" placement="top" trigger="rollover"/></create>
+<create unit="sa" vrobj="tech:panelc"><popup text="tech:panelc" placement="top" trigger="rollover"/></create>
+<create unit="sb" vrobj="tech:panel"><popup text="tech:panel" placement="top" trigger="rollover"/></create>
+<create unit="sc" vrobj="tech:5plane"><popup text="tech:5plane" placement="top" trigger="rollover"/></create>
+<create unit="sd" vrobj="tech:freestandingbanner"><popup text="tech:freestandingbanner" placement="top" trigger="rollover"/></create>
 <create unit="--" vrobj="tech:ceiling">
          <side NAME="*" TEXTURE="@tech:box.gif" style="scaled"/>
 </create>
@@ -123,7 +123,7 @@ aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 </layer>
 <imagemap name="github">
-    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="tech:Hosted at Github" />
 </imagemap>
 <imagemap name="vtpl">
     <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/doku.php?id=software:vrgrid:3dobjects" text="Get VTPL" />
@@ -133,4 +133,3 @@ aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa
 <enter location="(10,10,2)" name="default"/>
 </design>
 </vrf>
-
