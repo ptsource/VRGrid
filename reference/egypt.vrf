@@ -10,6 +10,7 @@
 <map dimensions="(15,23,3)" />
 <sky/>
 <ground/>
+<ambience file="@people:welcome.wav" playback="once"/>
 <devel />
 </globals>
 <design>
