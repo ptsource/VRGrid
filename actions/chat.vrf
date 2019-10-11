@@ -13,30 +13,19 @@
 </globals>
 <design> 
 <create unit="##" vrobj="base:full">
-<action trigger="click on" text="Click me and i will popup the mini chat for you">
-	<chat type="mini"/>
-</action>
-</create>
-
-<create unit="BB" vrobj="base:full">
 <action trigger="click on" text="Click me and i will popup the mini chat for you with a custom room">
 	<chat type="mini|MyRoom"/>
 </action>
 </create>
 
-<create unit="AA" vrobj="base:full">
-<action trigger="click on" text="Click me and i will popup the large chat for you">
-	<chat type="large"/>
-</action>
-</create>
 <layer number="1" >
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
-.. AA .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. BB .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. ## .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
