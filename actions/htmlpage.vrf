@@ -20,7 +20,7 @@
 
 <create unit="AA" vrobj="base:full">
 <action trigger="click on" text="Click me for a HTML popup">
-        <htmlpage pageurl="about:blank"/>
+        <htmlpage pageurl="https://ptsource.github.io/VRGrid/assets/html/test.html"/>
 </action>
 </create>
 
