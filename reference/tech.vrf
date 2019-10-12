@@ -13,10 +13,6 @@
 <devel/>
 </globals>
 <design>
-<create unit="aa" vrobj="tech:full"><side name="*" texture="@tech:clear.gif"/></create>
-<create unit="bb" vrobj="tech:full"><side name="*" texture="@tech:tgrid.jpg"/></create>
-<create unit="cc" vrobj="tech:full"><side name="*" texture="@tech:clear.gif"/></create>
-<create unit="dd" vrobj="tech:full"><side name="*" color="(255,255,255)" faces="2" solid="yes" clarity="100%"/></create>
 <!--3d Objects-->
 <create unit=".b" vrobj="tech:mid"><popup text="tech:mid" placement="top" trigger="rollover"/></create>
 <create unit=".c" vrobj="tech:midedge"><popup text="tech:midedge" placement="top" trigger="rollover"/></create>
@@ -24,7 +20,7 @@
 <create unit=".d" vrobj="tech:middoor"><popup text="tech:middoor" placement="top" trigger="rollover"/></create>
 <create unit=".e" vrobj="tech:middooropen"><popup text="tech:middooropen" placement="top" trigger="rollover"/></create>
 <create unit=".k" vrobj="tech:ssdoor"><param orient="up,90"/><popup text="tech:ssdoor" placement="top" trigger="rollover"/></create>
-<create unit=".l" vrobj="tech:ssdooropen"><param orient="up,90"/><popup text="tech:middooropen" placement="top" trigger="rollover"/></create>
+<create unit=".l" vrobj="tech:ssdooropen"><param orient="up,90"/><popup text="tech:ssdooropen" placement="top" trigger="rollover"/></create>
 <create unit=".g" vrobj="tech:canteen"><param orient="up,90"/><popup text="tech:canteen" placement="top" trigger="rollover"/></create>
 <create unit=".h" vrobj="tech:canteenopen"><param orient="up,90"/><popup text="tech:canteenopen" placement="top" trigger="rollover"/></create>
 <create unit=".i" vrobj="tech:fence"><param orient="up,90"/><popup text="tech:fence" placement="top" trigger="rollover"/></create>
@@ -50,77 +46,73 @@
 <create unit="--" vrobj="tech:ceiling">
          <side NAME="*" TEXTURE="@tech:box.gif" style="scaled"/>
 </create>
+
 <layer number="1">
-aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa
-aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. aa  
-aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. aa 
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa  
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa 
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa  
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa 
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa  
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa 
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa  
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa 
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa  
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa 
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa  
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa 
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa  
-aa .. .. bb bb bb bb bb bb bb bb bb bb bb bb bb bb .. .. aa 
-aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. aa  
-aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. aa 
-aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa  
-
-
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. sa .. .b .. .c .. .f .. .d .. .e .. .o .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. sc .. .t .. .. .. .. .. .. .i .. .k .. .. .. .. .. 
+.. .. .. .. .. .. .v .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .u .. .. .. .. .. .. .j .. .l .. .. .. .. ..  
+.. .. .. sb .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .a .. .. .. .. .. .. .. .m .. .g .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .n .. .. .. .. .. .. .. 
+.. .. .. .r .. .s .. .. .. .. .. .. .. .. .h .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .y .. .x .. .w .. .q .. .p .. sd .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@  
 </layer>
 
 <layer number="2">
-aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa
-aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. aa  
-aa .. dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd .. aa 
-aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. dd .. aa  
-aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. dd .. aa  
-aa .. dd sa .. .b .. .c .. .f .. .d .. .e .. .o .. dd .. aa  
-aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. dd .. aa  
-aa .. dd sc .. .t .. .. .. .. .. .. .i .. .k .. .. dd .. aa 
-aa .. dd .. .. .. .v .. .. .. .. .. .. .. .. .. .. dd .. aa  
-aa .. dd .. .. .u .. .. .. .. .. .. .j .. .l .. .. dd .. aa  
-aa .. dd sb .. .. .. .. .. .. .. .. .. .. .. .. .. dd .. aa  
-aa .. dd .. .a .. .. .. .. .. .. .. .m .. .g .. .. dd .. aa  
-aa .. dd .. .. .. .. .. .. .. .. .. .n .. .. .. .. dd .. aa 
-aa .. dd .r .. .s .. .. .. .. .. .. .. .. .h .. .. dd .. aa  
-aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. dd .. aa  
-aa .. dd .. .y .. .x .. .w .. .q .. .p .. sd .. .. dd .. aa  
-aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
-aa .. dd dd dd dd dd dd dd dd dd dd dd dd dd dd .. .. .. .. 
-aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa .. .. .. @@  
-
-
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 </layer>
-
 <layer number="3">
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- @@
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. @@
 </layer>
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="tech:Hosted at Github" />
@@ -130,10 +122,10 @@ aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa .. .. .. @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
-<enter location="(10,10,2)" name="default"/>
-<enter location="(20,20,2)" name="floor" /> 
-<enter location="(20,20,3)" name="roof" /> 
-<exit location="(20,20,2)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<enter location="(4,20,1)" name="default" angle="45"/>
+<enter location="(20,19,1)" name="floor" /> 
+<enter location="(20,19,3)" name="roof" /> 
+<exit location="(20,20,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
 <exit location="(20,20,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" /> 
 </design>
 </vrf>
