@@ -92,10 +92,10 @@ aa .. dd .. .. .. .. .. .. .. .. .. .n .. .. .. .. dd .. aa
 aa .. dd .r .. .s .. .. .. .. .. .. .. .. .h .. .. dd .. aa  
 aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. dd .. aa  
 aa .. dd .. .y .. .x .. .w .. .q .. .p .. sd .. .. dd .. aa  
-aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. dd .. aa  
-aa .. dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd .. aa 
-aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. aa 
-aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa  
+aa .. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+aa .. dd dd dd dd dd dd dd dd dd dd dd dd dd dd .. .. .. .. 
+aa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa .. .. .. @@  
 
 
 </layer>
@@ -120,7 +120,7 @@ aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --   
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- @@
 </layer>
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="tech:Hosted at Github" />
@@ -131,5 +131,9 @@ aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa aa
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
 <enter location="(10,10,2)" name="default"/>
+<enter location="(20,20,2)" name="floor" /> 
+<enter location="(20,20,3)" name="roof" /> 
+<exit location="(20,20,2)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
+<exit location="(20,20,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" /> 
 </design>
 </vrf>
