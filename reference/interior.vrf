@@ -4,7 +4,7 @@
 <vrf>
 <globals>
          <title name="VRGrid Interior Lib Reference" />
-         <lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
+         <lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.9"/>
          <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
          <assets href="https://ptsource.github.io/VRGrid/assets/" />
          <map dimensions="(15,23,3)" />
@@ -68,6 +68,7 @@
 <create unit="bD" vrobj="interior:portposter"><popup text="interior:portposter" placement="top" trigger="rollover"/></create>
 <create unit="bE" vrobj="interior:cornerposter"><popup text="interior:cornerposter" placement="top" trigger="rollover"/></create>
 <create unit="bF" vrobj="interior:wallcornerc"><popup text="interior:wallcornerc" placement="top" trigger="rollover"/></create>
+<create unit="bG" vrobj="interior:bedb"><popup text="interior:bedb" placement="top" trigger="rollover"/></create>
 
 <!-- textures -->
 <create unit="ta" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:blackcushion.gif"/><popup text="@interior:blackcushion.gif" placement="top" trigger="rollover"/></create>
@@ -114,7 +115,7 @@
 <layer number="1">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. bF .. bE .. bD .. bC .. bI .. ..
+.. .. bG .. bF .. bE .. bD .. bC .. bI .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. b! .. bB .. bA .. b1 .. bi .. bZ .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
