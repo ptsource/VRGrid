@@ -10,7 +10,7 @@
    <assets href="https://ptsource.github.io/VRGrid/assets/" />
    <map dimensions="(10,10,3)"/>
    <sky color="(0,0,255)"/>
-   <ground/>
+   <ground texture="@base:gtile.gif"/>
    <devel/>
 </globals>
 <design>
