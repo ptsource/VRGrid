@@ -18,9 +18,8 @@
 
 <!-- This POST uses 1 after | so it displays a data sent message in the status bar of VRGrid -->
 <create unit="aa" vrobj="base:full">
-<param solid="no" />
 <side name="*" texture="@warehouse:_1.gif" />
-<action trigger="step in" text="Make a HTTP Post to PHP from Object 1" sidename="*">
+<action trigger="click on" text="Make a HTTP Post to PHP from Object 1" sidename="*">
 	 <httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1|1"/>
 </action>
 </create>
@@ -43,8 +42,9 @@
 
 <!-- This POST does not use the send type marker so it sends the date silently with no message -->
 <create unit="dd" vrobj="base:full">
+<param solid="no" />
 <side name="*" texture="@warehouse:_4.gif" />
-<action trigger="click on" text="Make a HTTP Post to PHP from Object 4" sidename="*">
+<action trigger="step in" text="Make a HTTP Post to PHP from Object 4" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object4"/>
 </action>
 </create>
