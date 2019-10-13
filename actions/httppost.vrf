@@ -17,9 +17,9 @@
 <!-- <httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1&amp;message=Test"/> -->
 
 <!-- This POST uses 1 after | so it displays a data sent message in the status bar of VRGrid -->
-<create unit="aa" vrobj="base:full">
+<create unit="aa" vrobj="base:full" solid="no">
 <side name="*" texture="@warehouse:_1.gif" />
-<action trigger="click on" text="Make a HTTP Post to PHP from Object 1" sidename="*">
+<action trigger="step on" text="Make a HTTP Post to PHP from Object 1" sidename="*">
 	 <httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1|1"/>
 </action>
 </create>
