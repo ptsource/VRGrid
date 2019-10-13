@@ -14,7 +14,7 @@
    <devel/>
 </globals>
 <design>
-!-- We include the water functions in the script located in the assets folder  -->
+<!-- We include the water functions in the script located in the assets folder  -->
 <include href="water.vrf"/>
 <define>
    <function name="start">
