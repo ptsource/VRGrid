@@ -28,7 +28,7 @@
 <create unit="bb" vrobj="base:full">
 <side name="*" texture="@warehouse:_2.gif" />
 <action trigger="click on" text="Click to make a HTTP Post to PHP from Object 2" sidename="*">
-	<httppost pageurl="http://repo.ptsource.eu/rms/datai.php?id=object2|0"/>
+	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object2|0"/>
 </action>
 </create>
 
