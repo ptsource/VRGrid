@@ -60,7 +60,7 @@
 <create unit="rr" vrobj="base:full">
 <side name="*" texture="@warehouse:r.gif" />
 <action trigger="click on" text="Click here to view the object clicks" sidename="*">
-        <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|Click Results from VRGrid|560|400"/>
+        <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|ClickResults|560|400"/>
 </action>
 </create>
 <layer number="1" >
