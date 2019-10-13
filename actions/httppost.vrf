@@ -61,7 +61,7 @@
 <create unit="rr" vrobj="base:full">
 <side name="*" texture="@warehouse:r.gif" />
 <action trigger="click on" text="Click here to view the objects count" sidename="*">
-        <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|ClickResults|560|400"/>
+        <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|Click Object Results|560|400"/>
 </action>
 </create>
 <layer number="1" >
