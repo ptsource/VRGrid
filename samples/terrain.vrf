@@ -48,7 +48,8 @@
 	</script>
 </create>
 <point_light style="static" location="(11,11,1)" brightness="100%" radius="21"  color="(0,255,0)" flood="no" position="(128,256,128)" /> 
-<import href="scripts/scaleobject.vrf" />
+<!-- We add dynamic scale capabilities by including the scaleobject functions in the script located in the assets folder  -->
+<include href="scaleobject.vrf" />
 <define>
 	<function name="start">
 		vrobj = map.get_vrobj("__");
