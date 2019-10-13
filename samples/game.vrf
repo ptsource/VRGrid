@@ -17,7 +17,8 @@
 	<orb position="(180,60)" texture="@medieval:sun.gif" brightness="100%"/>
 </globals>
 <design>
-<import href="scripts/jumpkey.vrf" />
+<!-- We add jump capabilities by pressing the space key by including the jumpkey functions in the script located in the assets folder  -->
+<include href="jumpkey.vrf" />
 <create unit="v0" vrobj="medieval:half">
 	<side name="top" texture="@gametools:curtain.jpg"/>
 	<param orient="90,0,270"/>
