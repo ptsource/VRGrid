@@ -27,7 +27,7 @@
 <!-- This POST uses 0 after | so it sends the date silently with no message -->
 <create unit="bb" vrobj="base:full">
 <side name="*" texture="@warehouse:_2.gif" />
-<action trigger="click on" text="Make a HTTP Post to PHP from Object 2" sidename="*">
+<action trigger="click on" text="Click to make a HTTP Post to PHP from Object 2" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object2|0"/>
 </action>
 </create>
@@ -35,7 +35,7 @@
 <!-- This POST uses 1 after | so it displays a data sent message in the status bar of VRGrid -->
 <create unit="cc" vrobj="base:full">
 <side name="*" texture="@warehouse:_3.gif" />
-<action trigger="click on" text="Make a HTTP Post to PHP from Object 3" sidename="*">
+<action trigger="click on" text="Click to make a HTTP Post to PHP from Object 3" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object3|1"/>
 </action>
 </create>
@@ -44,7 +44,7 @@
 <create unit="dd" vrobj="base:full">
 <param solid="no" />
 <side name="*" texture="@warehouse:_4.gif" />
-<action trigger="step in" text="Make a HTTP Post to PHP from Object 4" sidename="*">
+<action trigger="step in" text="Step in to make a HTTP Post to PHP from Object 4" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object4"/>
 </action>
 </create>
@@ -52,7 +52,7 @@
 <!-- This POST uses 2 after | so it asks for confirmation before sending the data from VRGrid -->
 <create unit="ff" vrobj="base:full">
 <side name="*" texture="@warehouse:_5.gif" />
-<action trigger="click on" text="Make a HTTP Post to PHP from Object 5" sidename="*">
+<action trigger="click on" text="Click to make a HTTP Post to PHP from Object 5" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object5|2"/>
 </action>
 </create>
@@ -60,7 +60,7 @@
 
 <create unit="rr" vrobj="base:full">
 <side name="*" texture="@warehouse:r.gif" />
-<action trigger="click on" text="Click here to view the object clicks" sidename="*">
+<action trigger="click on" text="Click here to view the objects count" sidename="*">
         <htmlpage pageurl="http://repo.ptsource.eu/rms/view.php|ClickResults|560|400"/>
 </action>
 </create>
@@ -72,8 +72,8 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. aa .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. dd .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. dd .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. rr .. .. .. ..
