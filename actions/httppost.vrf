@@ -43,7 +43,7 @@
 <!-- This POST does not use the send type marker so it sends the date silently with no message -->
 <create unit="dd" vrobj="base:full">
 <param solid="no" />
-<side name="*" texture="@warehouse:_4.gif" />
+<side name="*" texture="@warehouse:4.gif" />
 <action trigger="step in" text="Step in to make a HTTP Post to PHP from Object 4" sidename="*">
 	<httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object4"/>
 </action>
