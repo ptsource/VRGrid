@@ -13,7 +13,8 @@
 </globals>
 <design> 
 <create unit="##" vrobj="base:full">
-<action trigger="click on" text="Click me and i will talk for you" sidename="w">
+<param solid="no" />
+<action trigger="step in" text="Click me and i will talk for you">
 	<talk say="Hello how are you from VRGrid"/>
 </action>
 </create>
@@ -31,7 +32,7 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. ## .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
