@@ -13,7 +13,8 @@
 	<devel/>
 </globals>
 <design>
-<import href="scripts/jumpkey.vrf" />
+<!-- We include the jumpkey functions in the script located in the assets folder  -->
+<include href="jumpkey.vrf" />
 <create unit="@@" vrobj="basic:portal">
 	<action trigger="step in">
 		<exit href="https://ptsource.github.io/VRGrid/base/base.vrf"/>
@@ -72,7 +73,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(1,1,1)" text="This sample shows usage of the 'IMPORT' tag to include extra scripts. Press Spacebar to jump thru the platform. View source for more details." placement="top"/>
+<popup location="(1,1,1)" text="This sample shows usage of the 'include' tag to include extra scripts. Press Spacebar to jump thru the platform. View source for more details." placement="top"/>
 <enter name="default" location="(1,1,5)" angle="155"/>
 </design>
 </vrf>

@@ -14,7 +14,8 @@
    <devel/>
 </globals>
 <design>
-<import href="scripts/water.vrf"/>
+!-- We include the water functions in the script located in the assets folder  -->
+<include href="water.vrf"/>
 <define>
    <function name="start">
       vrobj = map.get_vrobj("X4");
@@ -343,7 +344,7 @@ fg fg fg fg fg fg fg fg fg fg  <!-- 10 -->
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(9,9,3)" radius="1" placement="center" text="This sample demonstrates the usage of arrays in objects and how to use the 'water.vrf? import and lib. View source for more details."/>
+<popup location="(9,9,3)" radius="1" placement="center" text="This sample demonstrates the usage of arrays in objects and the usage of the water include and lib include and lib. View source for more details."/>
 <enter name="default" location="(9,9,3)" angle="300,-5"/>
 </design>
 </vrf>
