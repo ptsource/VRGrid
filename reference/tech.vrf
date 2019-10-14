@@ -5,11 +5,12 @@
 <globals>
 <title name="VRGrid Tech Lib Reference"/>
 <lib href="https://ptsource.github.io/VRGrid/packs/tech.vlib"/>
+<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib"/>
 <assets href="https://ptsource.github.io/VRGrid/assets/" />
 <map dimensions="(20,20,3)"/>
 <sky/>
 <ground />
-<atmosphere brightness="100%"/>
+<ambience file="@people:welcome.wav" playback="once"/>
 <devel/>
 </globals>
 <design>
