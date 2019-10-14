@@ -43,6 +43,10 @@
 <create unit="sb" vrobj="tech:panel"><popup text="tech:panel" placement="top" trigger="rollover"/></create>
 <create unit="sc" vrobj="tech:5plane"><popup text="tech:5plane" placement="top" trigger="rollover"/></create>
 <create unit="sd" vrobj="tech:freestandingbanner"><popup text="tech:freestandingbanner" placement="top" trigger="rollover"/></create>
+<!--Textures-->
+<create unit="ta" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:ceiling.jpg"/><popup text="@tech:ceiling.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:clock.jpg"/><popup text="@tech:clock.jpg" placement="top" trigger="rollover"/></create>
+
 <create unit="--" vrobj="tech:ceiling">
          <side NAME="*" TEXTURE="@tech:box.gif" style="scaled"/>
 </create>
@@ -93,7 +97,7 @@
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 </layer>
 <layer number="3">
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. ta .. tb .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
