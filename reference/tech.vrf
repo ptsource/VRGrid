@@ -62,6 +62,12 @@
 <create unit="tq" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:metaltile.jpg"/><popup text="@tech:metaltile.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tr" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:neon.jpg"/><popup text="@tech:neon.jpg" placement="top" trigger="rollover"/></create>
 <create unit="ts" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:panel.jpg"/><popup text="@tech:panel.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:panel1.jpg"/><popup text="@tech:panel1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:rusty.jpg"/><popup text="@tech:rusty.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:tilemetal.jpg"/><popup text="@tech:tilemetal.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:top.jpg"/><popup text="@tech:top.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:tubes.jpg"/><popup text="@tech:tubes.jpg" placement="top" trigger="rollover"/></create>
+
 
 <create unit="--" vrobj="tech:ceiling">
          <side NAME="*" TEXTURE="@tech:box.gif" style="scaled"/>
@@ -113,12 +119,12 @@
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 </layer>
 <layer number="3">
-.. ta .. tb .. tb .. tc .. td .. te .. tf .. tg .. th .. ..
+.. ta .. tb .. ts .. tc .. td .. te .. tf .. tg .. th .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. ti .. tj .. tl .. tm .. tn .. to .. tp .. tq .. tr .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
-.. ts .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. tt .. tu .. tv .. tx .. tz .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
