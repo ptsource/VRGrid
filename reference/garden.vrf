@@ -52,6 +52,27 @@
 <create unit="bX" vrobj="garden:bricksanddoor"><popup text="garden:bricksanddoor" placement="top" trigger="rollover"/></create>
 <create unit="bZ" vrobj="garden:lumenaria"><popup text="garden:lumenaria" placement="top" trigger="rollover"/></create>
 
+<!-- textures -->
+<create unit="ta" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:blackmarble.jpg"/><popup text="@garden:blackmarble.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tb" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:brownpillar.jpg"/><popup text="@garden:brownpillar.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:brownbrick.vri"/><popup text="@garden:brownbrick.vri" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:darkwood.jpg"/><popup text="@garden:darkwood.jpg" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:fire.gif"/><popup text="@garden:fire.gif" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:glass.jpg"/><popup text="@garden:glass.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:grass.jpg"/><popup text="@garden:grass.jpg" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:grassground.gif"/><popup text="@garden:grassground.gif" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:marble.jpg"/><popup text="@garden:marble.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:red.gif"/><popup text="@garden:red.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:rock.jpg"/><popup text="@garden:rock.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:space.vri"/><popup text="@garden:space.vri" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:stone.jpg"/><popup text="@garden:stone.jpg" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:stone1.jpg"/><popup text="@garden:stone1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:tarnishedmetal.jpg"/><popup text="@garden:tarnishedmetal.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:water.gif"/><popup text="@garden:water.gif" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:water1.gif"/><popup text="@garden:water1.gif" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:whitepillar.jpg"/><popup text="@garden:whitepillar.jpg" placement="top" trigger="rollover"/></create>
+
+
 <create unit="--" vrobj="garden:ceiling">
          <side NAME="*" TEXTURE="@garden:box.gif" STYLE="scaled"/>
 </create>
@@ -109,24 +130,24 @@
 
 <layer number="3">
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ta .. tb .. tc .. td .. te .. tf .. tg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. TT .. tj .. tl .. tm .. tn .. to .. tp ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. th .. tq .. tr .. ts .. tt .. tu .. tv ..
+.. tp .. tq .. tr .. ts .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tg .. tx .. tz .. t1 .. t2 .. t3 .. t4 ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tf .. t5 .. t6 .. t7 .. t8 .. t9 .. T1 ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. te .. T2 .. T3 .. T4 .. T5 .. T6 .. T7 ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. td .. T8 .. T9 .. TA .. TB .. TC .. TD ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tc .. TE .. TF .. TG .. TH .. TI .. TJ ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tb .. TL .. TM .. TN .. TO .. TP .. TQ ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. ta .. TR .. TS .. ti .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
