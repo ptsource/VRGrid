@@ -54,6 +54,14 @@
 <create unit="th" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:floor2.jpg"/><popup text="@tech:floor2.jpg" placement="top" trigger="rollover"/></create>
 <create unit="ti" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:floor3.jpg"/><popup text="@tech:floor3.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tj" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:galaxies.jpg"/><popup text="@tech:galaxies.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:glass.jpg"/><popup text="@tech:glass.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:insideroof.jpg"/><popup text="@tech:insideroof.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:lamp.jpg"/><popup text="@tech:lamp.jpg" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:liquidmetal.jpg"/><popup text="@tech:liquidmetal.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:metalstrip.jpg"/><popup text="@tech:metalstrip.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:metaltile.jpg"/><popup text="@tech:metaltile.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:neon.jpg"/><popup text="@tech:neon.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:panel.jpg"/><popup text="@tech:panel.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="tech:ceiling">
          <side NAME="*" TEXTURE="@tech:box.gif" style="scaled"/>
@@ -107,9 +115,9 @@
 <layer number="3">
 .. ta .. tb .. tb .. tc .. td .. te .. tf .. tg .. th .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
-.. ti .. tj .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ti .. tj .. tl .. tm .. tn .. to .. tp .. tq .. tr .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. ts .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
