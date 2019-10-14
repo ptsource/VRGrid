@@ -46,6 +46,14 @@
 <!--Textures-->
 <create unit="ta" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:ceiling.jpg"/><popup text="@tech:ceiling.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tb" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:clock.jpg"/><popup text="@tech:clock.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tc" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:door.jpg"/><popup text="@tech:door.jpg" placement="top" trigger="rollover"/></create>
+<create unit="td" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:door1.jpg"/><popup text="@tech:door1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="te" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:doorgate.jpg"/><popup text="@tech:doorgate.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tf" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:floor.jpg"/><popup text="@tech:floor.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tg" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:floor1.jpg"/><popup text="@tech:floor1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="th" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:floor2.jpg"/><popup text="@tech:floor2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ti" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:floor3.jpg"/><popup text="@tech:floor3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tj" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:galaxies.jpg"/><popup text="@tech:galaxies.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="tech:ceiling">
          <side NAME="*" TEXTURE="@tech:box.gif" style="scaled"/>
@@ -97,9 +105,9 @@
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 </layer>
 <layer number="3">
-.. ta .. tb .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+.. ta .. tb .. tb .. tc .. td .. te .. tf .. tg .. th .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. ti .. tj .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
