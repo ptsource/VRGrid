@@ -67,6 +67,19 @@
 <create unit="tv" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:tilemetal.jpg"/><popup text="@tech:tilemetal.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tx" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:top.jpg"/><popup text="@tech:top.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tz" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:tubes.jpg"/><popup text="@tech:tubes.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xa" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall.jpg"/><popup text="@tech:wall.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xb" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall1.jpg"/><popup text="@tech:wall1.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xc" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall2.jpg"/><popup text="@tech:wall2.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xd" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall3.jpg"/><popup text="@tech:wall3.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xe" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall4.jpg"/><popup text="@tech:wall4.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xf" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall5.jpg"/><popup text="@tech:wall5.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xg" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall6.jpg"/><popup text="@tech:wall6.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xh" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall7.jpg"/><popup text="@tech:wall7.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xi" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall8.jpg"/><popup text="@tech:wall8.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xj" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall9.jpg"/><popup text="@tech:wall9.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xl" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall10.jpg"/><popup text="@tech:wall10.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xm" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:wall11.jpg"/><popup text="@tech:wall11.jpg" placement="top" trigger="rollover"/></create>
+<create unit="xn" vrobj="tech:spriteface"><side NAME="*" TEXTURE="@tech:whitemarble.gif"/><popup text="@tech:whitemarble.gif" placement="top" trigger="rollover"/></create>
 
 
 <create unit="--" vrobj="tech:ceiling">
@@ -123,9 +136,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. ti .. tj .. tl .. tm .. tn .. to .. tp .. tq .. tr .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
-.. tt .. tu .. tv .. tx .. tz .. .. .. .. .. .. .. .. .. ..
+.. tt .. tu .. tv .. tx .. tz .. xa .. xb .. xc .. xd .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. xe .. xf .. xg .. xh .. xi .. xj .. xl .. xm .. xn .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
