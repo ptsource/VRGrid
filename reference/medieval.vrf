@@ -84,6 +84,24 @@
 <create unit="th" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:window.gif"/><popup text="@medieval:window.gif" placement="top" trigger="rollover"/></create>
 <create unit="ti" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:stone_trim.gif"/><popup text="@medieval:stone_trim.gif" placement="top" trigger="rollover"/></create>
 <create unit="tj" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:vitral.gif"/><popup text="@medieval:vitral.gif" placement="top" trigger="rollover"/></create>
+<create unit="tl" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:bigtiles.jpg"/><popup text="@medieval:bigtiles.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tm" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:bushes.gif"/><popup text="@medieval:bushes.gif" placement="top" trigger="rollover"/></create>
+<create unit="tn" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:face.jpg"/><popup text="@medieval:face.jpg" placement="top" trigger="rollover"/></create>
+<create unit="to" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:fire.gif"/><popup text="@medieval:fire.gif" placement="top" trigger="rollover"/></create>
+<create unit="tp" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:floor_stone.gif"/><popup text="@medieval:floor_stone.gif" placement="top" trigger="rollover"/></create>
+<create unit="tq" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:flowers.vri"/><popup text="@medieval:flowers.vri" placement="top" trigger="rollover"/></create>
+<create unit="tr" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:ladder.gif"/><popup text="@medieval:ladder.gif" placement="top" trigger="rollover"/></create>
+<create unit="ts" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:leaves.vri"/><popup text="@medieval:leaves.vri" placement="top" trigger="rollover"/></create>
+<create unit="tt" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:lever.gif"/><popup text="@medieval:lever.gif" placement="top" trigger="rollover"/></create>
+<create unit="tu" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:marble_black.gif"/><popup text="@medieval:marble_black.gif" placement="top" trigger="rollover"/></create>
+<create unit="tv" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:moon.gif"/><popup text="@medieval:moon.gif" placement="top" trigger="rollover"/></create>
+<create unit="tx" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:pebble.jpg"/><popup text="@medieval:pebble.jpg" placement="top" trigger="rollover"/></create>
+<create unit="tz" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:rockface.gif"/><popup text="@medieval:rockface.gif" placement="top" trigger="rollover"/></create>
+<create unit="za" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:shield.gif"/><popup text="@medieval:shield.gif" placement="top" trigger="rollover"/></create>
+<create unit="zb" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:sun.gif"/><popup text="@medieval:sun.gif" placement="top" trigger="rollover"/></create>
+<create unit="zc" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:tiles.jpg"/><popup text="@medieval:tiles.jpg" placement="top" trigger="rollover"/></create>
+<create unit="zd" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:trim.jpg"/><popup text="@medieval:trim.jpg" placement="top" trigger="rollover"/></create>
+<create unit="ze" vrobj="medieval:spriteface"><side NAME="*" TEXTURE="@medieval:wall.jpg"/><popup text="@medieval:wall.jpg" placement="top" trigger="rollover"/></create>
 
 <create unit="--" vrobj="medieval:ceiling"> 
          <side NAME="*" TEXTURE="@medieval:box.gif" STYLE="scaled"/>
@@ -144,11 +162,11 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. ta .. tb .. tc .. td .. te .. tf .. tg ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. th .. ti .. tj .. .. .. .. .. .. .. .. ..
+.. th .. ti .. tj .. tl .. tm .. tn .. to ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. tx .. tz .. za .. zb .. zc .. zd .. ze ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
@@ -173,11 +191,11 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
-<enter location="(4,23,1)" name="default" angle="0" />
+<popup location="(4,23,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Medieval library. This library contains 75 objects and 50 textures. Current version of this lib is 2.8. View source for more details."/>
+<enter location="(4,23,1)" name="default" angle="45" />
 <enter location="(15,22,1)" name="floor" />
 <enter location="(15,22,3)" name="roof" />
 <exit location="(15,23,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
 <exit location="(15,23,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" />
 </design>
 </vrf>
-
