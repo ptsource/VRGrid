@@ -107,7 +107,7 @@
 <layer number="3">
 .. ta .. tb .. tb .. tc .. td .. te .. tf .. tg .. th .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
-.. ti .. tj .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..  
+.. ti .. tj .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..   
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
@@ -134,8 +134,9 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/vtpl.vri" imagemap="vtpl" placement="bottom-left" brightness="100%"/>
+<popup location="(4,20,1)" radius="1" color="(0,113,0)" placement="center" text="This is the reference for the Tech library. This library contains 35 objects and 50 textures. Current version of this lib is 2.8. View source for more details."/>
 <enter location="(4,20,1)" name="default" angle="45"/>
-<enter location="(20,19,1)" name="floor" /> 
+<enter location="(20,19,1)" name="floor" />
 <enter location="(20,19,3)" name="roof" /> 
 <exit location="(20,20,1)" href="#roof" trigger="click on, step on" text="Lets go see the textures"/>
 <exit location="(20,20,3)" href="#floor" trigger="click on, step on" text="Lets go see the 3d objects" /> 
