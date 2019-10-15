@@ -15,7 +15,7 @@
 	<lib href="https://ptsource.github.io/VRGrid/utils/terrain.vlib" />
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
 	<map dimensions="(15,23,3)" />
-	<sky color=(195,88,48)/>
+	<sky color="(195,88,48)" />
 	<ground texture="@base:gtile.gif"/>
 	<devel />
 </globals>
