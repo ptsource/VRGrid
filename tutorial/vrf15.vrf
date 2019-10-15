@@ -6,7 +6,7 @@
 <title name="Tutorial 15 - Using Includes"/>
 <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
 <assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(9,9,1)" /> 
+<map dimensions="(9,9,2)" /> 
 <sky texture="images/clouds.gif" brightness="90%" /> 
 <ground texture="images/dirt.gif" /> 
 <atmosphere brightness="100%" /> 
@@ -18,14 +18,25 @@
 <layer number="1"> 
      ## ## ## .. .. .. ## ## ## 
      ## .. .. .. .. .. .. .. ##
-     ## ## .. .. .. .. .. .. ##
-     ## ## .. .. .. .. .. .. ## 
-     ## KK .. .. .. .. .. .. ##  
-     ## hh .. .. .. .. .. .. ## 
-     ## kk .. .. .. .. .. .. ## 
+     ## .. .. .. .. .. .. .. ##
+     ## .. .. .. .. .. .. .. ## 
+     ## .. .. .. .. .. .. .. ##  
+     ## .. .. .. .. .. .. .. ## 
+     ## .. .. .. .. .. .. .. ## 
      ## .. .. .. .. .. .. .. ## 
      ## ## ## ## ## ## ## ## ##
 </layer> 
+<layer number="2"> 
+     .. .. .. .. .. .. .. .. .. 
+     .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. .. 
+     .. .. .. .. .. .. .. .. .. 
+     .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. ..
+     .. .. .. .. .. .. .. .. ..
+</layer>
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
