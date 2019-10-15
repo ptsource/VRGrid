@@ -16,7 +16,7 @@
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
 	<map dimensions="(15,23,3)" />
 	<sky texture="@base:grid.gif"/>
-	<ground texture="@base:grid.gif"/>
+	<ground texture="@base:gtile.gif"/>
 	<devel />
 </globals>
 <design>
