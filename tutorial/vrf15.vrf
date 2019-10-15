@@ -12,7 +12,9 @@
 <atmosphere brightness="100%" /> 
 <devel />
 </globals> 
-<design> 
+<design>
+<!-- We add jump capabilities by pressing the space key by including the jumpkey functions in the script located in the assets folder  -->
+<include href="jumpkey.vrf" />
 <layer number="1"> 
      ## ## ## .. .. .. ## ## ## 
      ## .. .. .. .. .. .. .. ##
