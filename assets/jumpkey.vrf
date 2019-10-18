@@ -7,7 +7,6 @@
 	<ceilinglevel>0</ceilinglevel>
 	<lastlevel>264</lastlevel>
 </define>
-
 <script trigger="timer" delay="0">
 
 	// Determine Ground Level
