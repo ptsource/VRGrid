@@ -1,27 +1,23 @@
 <include>
 <define>
-	<function name="scaleobject" params="vrobj">
-		vertex_list = vrobj.get_vertices();
-		for n = 0 to vrobj.vertices {
-			vertex_list.set(
-				n, 
-				vrobj.vertex[n]:x * vrobj.scale_x, 
-				vrobj.vertex[n]:y * vrobj.scale_y,
-				vrobj.vertex[n]:z * vrobj.scale_z	);
-		}
-		vrobj.origin:x = vrobj.origin:x * vrobj.scale_x;
-		vrobj.origin:y = vrobj.origin:y * vrobj.scale_y;
-		vrobj.origin:z = vrobj.origin:z * vrobj.scale_z;
-		if (vrobj.scale_x gt 1) {
-			vrobj.location:x = vrobj.location:x - vrobj.origin:x;
-		}
-		if (vrobj.scale_y gt 1) {
-			vrobj.location:y = vrobj.location:y - vrobj.origin:y;
-		}
-		if (vrobj.scale_z gt 1) {
-			vrobj.location:z = vrobj.location:z - vrobj.origin:z;
-		}
-		vrobj.set_vertices(vertex_list);
-	</function>
+<function name="scaleobject" params="vrobj">
+	vertex_list = vrobj.get_vertices();
+	for n = 0 to vrobj.vertices {
+		vertex_list.set(n,vrobj.vertex[n]:x * vrobj.scale_x,vrobj.vertex[n]:y * vrobj.scale_y,vrobj.vertex[n]:z * vrobj.scale_z);
+	}
+	vrobj.origin:x = vrobj.origin:x * vrobj.scale_x;
+	vrobj.origin:y = vrobj.origin:y * vrobj.scale_y;
+	vrobj.origin:z = vrobj.origin:z * vrobj.scale_z;
+	if (vrobj.scale_x gt 1) {
+		vrobj.location:x = vrobj.location:x - vrobj.origin:x;
+	}
+	if (vrobj.scale_y gt 1) {
+		vrobj.location:y = vrobj.location:y - vrobj.origin:y;
+	}
+	if (vrobj.scale_z gt 1) {
+		vrobj.location:z = vrobj.location:z - vrobj.origin:z;
+	}
+	vrobj.set_vertices(vertex_list);
+</function>
 </define>
 </include>
