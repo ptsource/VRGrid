@@ -147,7 +147,7 @@
 </imagemap>
 <popup trigger="everywhere" texture="images/github.vri" imagemap="github" placement="bottom-right" brightness="100%"/>
 <popup trigger="everywhere" texture="images/tutorial.vri" imagemap="tutorial" placement="top-right" brightness="100%"/>
-<popup location="(13,26,1)" radius="1" placement="center" text="This sample shows how to use the gametools library to generate game actions, it also uses the scope tag on globals to hide and position the VRGrid cursor. Use the 'CTRL' key to soot and the 'F9' key to show or hide the cursor. View source for more details."/>
+<popup location="(13,26,1)" radius="1" placement="center" text="This sample shows how to use the gametools library to generate game actions, it also uses the scope tag on globals to hide and position the VRGrid cursor. Use the 'CTRL' key to shoot and the 'F9' key to show or hide the cursor. View source for more details."/>
 <enter location="(13,26,1)" name="default" angle="5,5" />
 </design>
 </vrf>
