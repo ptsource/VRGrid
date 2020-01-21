@@ -24,7 +24,7 @@ VRI image format only displays in VRGrid. VRI image format supports palette-base
 
 ## Features
 
-* Cloud based VRF(xml) files
+* Cloud based VRF files
 * Native VR support
 * Github hosting support for team management
 * Multiuser metaverse capabilities
