@@ -9,13 +9,6 @@ PTSource VRGrid is a free standard based desktop application and markup language
 
 [![Maintenance](/images/maintained.svg)]() [![Travis](/images/rust.svg)]()  [![You can download here.](/images/version-10-red.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1)  [![You can download here.](/images/download-here-green.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1) [![Help here.](/images/docs-here-blue.svg)](https://wiki.ptsource.eu/software/vrgrid/start)
 
-# VRF File format
-
-The VRF format uses standard XML developed by the World Wide Web Consortium along with the Powers & Stephens parsers for XML. The design goals of XML emphasize simplicity, generality, and usability across diferent platforms. It is a textual data format with strong support via Unicode for different human languages.
-
-# VRI Image format
-
-VRI image format only displays in VRGrid. VRI image format supports palette-based images (with palettes of 24-bit RGB or 32-bit RGBA colors), grayscale images (with or without alpha channel for transparency), and full-color non-palette-based RGB/RGBA images (with or without alpha channel) converted from PNG or APNG high resolution format.
 
 ## Screenshots
 
