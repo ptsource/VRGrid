@@ -2,7 +2,7 @@
 <!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
-     <globals>
+<globals>
      <title name="VRGrid Replace Action" />
      <lib href="https://ptsource.github.io/vrgrid/libs/basic.vlib" />
      <assets href="https://ptsource.github.io/VRGrid/assets/" />
@@ -12,7 +12,7 @@
      <orb position="(10,10)" brightness="100%" />
      <atmosphere brightness="80%" />
      <devel />
-     </globals>
+</globals>
 <design> 
 <create unit="#1" vrobj="basic:platform"> 
         <side name="under,bottom" color="(0,0,0)" clarity="50%" solid="yes" faces="2" />
