@@ -1,28 +1,41 @@
 <vrf>
 <globals>
-	<title name="Shijo Street"/>
-	<map dimensions="(190,40,10)" /> 
+	<title name="Shijo Street"/> 
 	<lib href="https://ptsource.github.io/VRGrid/packs/city.vlib"/>
     <lib href="https://ptsource.github.io/VRGrid/tpacks/shijo.vlib"/>
+    <map dimensions="(190,40,10)" />
     <view radius="85"/>
 	<atmosphere brightness="100%"/>
 	<ground texture="@shijo:ground.gif" /> 
-	<orb texture="@city:moon.gif" position="(20,20)" brightness="90%"/>
+	<sky texture="@city:sky.gif" brightness="90%"/>
+	<orb texture="@city:sun.gif" position="(20,20)" brightness="90%"/>
 	<devel/>
 </globals>
 <design>
+<script trigger="timer" delay="1">
+   if ((vrf.time:hour gt 6) and (vrf.time:hour lt 20)) {  
+    	orb.texture = "@city:sun.gif"; 
+    	sky.texture = "@city:sky.gif"; 
+    	sky.brightness = "100%";
+        atmosphere.brightness = "80%";
+	}  else {                                                                  
+	    orb.texture = "@city:moon.gif"; 
+	    sky.texture = "@city:night.gif"; 
+	    sky.brightness = "70%"; 
+	}
+</script>
 <create unit="1a" vrobj="city:fulls" >
 	<side name="*" faces="0"/>
-	<side name="S" texture="@shijo:tanakaya151.gif" FACES="2"/>
+	<side name="S" texture="@shijo:tanakaya151.gif" faces="2"/>
 </create>
 <create unit="1b" vrobj="city:fulls" >
 	<side name="*" faces="0"/>
-	<side name="S" texture="@shijo:kirihata201.gif" FACES="2"/>
+	<side name="S" texture="@shijo:kirihata201.gif" faces="2"/>
 </create>
-<CREATE unit="1f" vrobj="city:fulls">
+<create unit="1f" vrobj="city:fulls">
  	<side name="*" FACES="0"/>
-	<side NAME ="S" TEXTURE="@shijo:dsc0005Yn.gif"  FACES="2"/>
-</CREATE>
+	<side name ="S" texture="@shijo:dsc0005yn.gif"  faces="2"/>
+</create>
 <create unit="1=" vrobj="city:fulls" >
     <side name="*" texture="@shijo:ground3.gif" />
 </create>
@@ -34,9 +47,9 @@
 </create>
 <create unit="[C" vrobj="city:wramps" >
 	<side name="*" FACES="0"/>
-	<PARAM ORIENT="90, 180, 270"/>
+	<param orient="90, 180, 270"/>
 </create>
-<create unit="[$" vrobj="city:ERAMPS" >
+<create unit="[$" vrobj="city:eramps" >
 	<side name="*" FACES="0"/>	
 	<param orient="90, 0, 270"/>
 </create>
@@ -141,27 +154,27 @@
 </create>
 <create unit="ay" vrobj="city:HALFS" >
     <side name="*" texture="@shijo:dsc00028lot.gif" />
-	<side name="top" ANGLE="90" texture="@shijo:ground.gif" />
+	<side name="top" angle="90" texture="@shijo:ground.gif" />
 </create>
 <create unit="az" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />
-	<side name="top" ANGLE="90" texture="@shijo:taka_logo.gif" />
-	<PARAM ORIENT="90, 180, 270"/>
+	<side name="top" angle="90" texture="@shijo:taka_logo.gif" />
+	<param orient="90, 180, 270"/>
 </create>
 <create unit="aA" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />    
-	<side name="top" ANGLE="90" texture="@shijo:dsc00024100.gif" />
-	<PARAM ORIENT="90, 180, 270"/>
+	<side name="top" angle="90" texture="@shijo:dsc00024100.gif" />
+	<param orient="90, 180, 270"/>
 </create>
 <create unit="aB" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />    
-	<side name="top" ANGLE="90" texture="@shijo:dsc00024101.gif" />
-	<PARAM ORIENT="90, 180, 270"/>
+	<side name="top" angle="90" texture="@shijo:dsc00024101.gif" />
+	<param orient="90, 180, 270"/>
 </create>
 <create unit="aC" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />    
-	<side name="top" ANGLE="90" texture="@shijo:dsc00024102.gif" />
-	<PARAM ORIENT="90, 180, 270"/>
+	<side name="top" angle="90" texture="@shijo:dsc00024102.gif" />
+	<param orient="90, 180, 270"/>
 </create>
 <create unit="aD" vrobj="city:fulls" >
     <side name="*" texture="@shijo:dsc00027100.gif" />
@@ -3242,7 +3255,6 @@ C) C- C_ C= C+ .. .. .. .. DG DH .. DN DO DP DW DX ej ek el em en eo ep .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. b6 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
 </layer>
-		 
-<enter location="(118,21,5)" name="default" angle="240" /> 
+<enter location="(118,21,5)" name="default" angle="270" /> 
 </design>
 </vrf>
