@@ -3,19 +3,20 @@
 	<title name="Shijo Street"/>
 	<map dimensions="(190,40,10)" /> 
 	<lib href="https://ptsource.github.io/VRGrid/packs/city.vlib"/>
-        <lib href="https://ptsource.github.io/VRGrid/tpacks/shijo.vlib"/>
-        <view radius="85"/>
+    <lib href="https://ptsource.github.io/VRGrid/tpacks/shijo.vlib"/>
+    <view radius="85"/>
 	<atmosphere brightness="100%"/>
 	<ground texture="@shijo:ground.gif" /> 
+	<orb texture="@city:moon.gif" position="(20,20)" brightness="90%"/>
 	<devel/>
 </globals>
 <design>
 <create unit="1a" vrobj="city:fulls" >
-	<side name="*" FACES="0"/>
+	<side name="*" faces="0"/>
 	<side name="S" texture="@shijo:tanakaya151.gif" FACES="2"/>
 </create>
 <create unit="1b" vrobj="city:fulls" >
-	<side name="*" FACES="0"/>
+	<side name="*" faces="0"/>
 	<side name="S" texture="@shijo:kirihata201.gif" FACES="2"/>
 </create>
 <CREATE unit="1f" vrobj="city:fulls">
@@ -29,34 +30,35 @@
     <side name="*" texture="@shijo:ground2.gif" />
 </create>
 <create unit="[]" vrobj="city:fulls" >
-	<side name="*" FACES="0"/></create>
-<create unit="[C" vrobj="city:WRAMPS" >
+	<side name="*" FACES="0"/>
+</create>
+<create unit="[C" vrobj="city:wramps" >
 	<side name="*" FACES="0"/>
 	<PARAM ORIENT="90, 180, 270"/>
 </create>
 <create unit="[$" vrobj="city:ERAMPS" >
 	<side name="*" FACES="0"/>	
-	<PARAM ORIENT="90, 0, 270"/>
+	<param orient="90, 0, 270"/>
 </create>
-<create unit="[%" vrobj="city:WRAMPS" >
-	<side name="*" FACES="0"/>		
-	<PARAM ORIENT="90, 0, 270"/>
+<create unit="[%" vrobj="city:wramps" >
+	<side name="*" faces="0"/>		
+	<param orient="90, 0, 270"/>
 </create>
-<create unit="[)" vrobj="city:ERAMPS" >
-	<side name="*" FACES="0" />
-	<PARAM ORIENT="90, 180, 270"/>
+<create unit="[)" vrobj="city:eramps" >
+	<side name="*" faces="0" />
+	<param orient="90, 180, 270"/>
 </create>
 <create unit="~," vrobj="city:ERAMPH" >
-   <param solid="yes" ORIENT="90,180,270"/>
-	<side name="*" FACES="0" />
+   <param solid="yes" orient="90,180,270"/>
+	<side name="*" faces="0" />
 </create>
 <create unit=",~" vrobj="city:WRAMPH" >
     <param solid="yes" ORIENT="90,180,270"/>
 	<side name="*" FACES="0"/>
 </create>
 <create unit="~\" vrobj="city:WRAMPH" >
-    <param solid="yes" ORIENT="90,0,270"/>
-	<side name="*" FACES="0" />
+    <param solid="yes" orient="90,0,270"/>
+	<side name="*" faces="0" />
 </create>
 <create unit="\~" vrobj="city:ERAMPH" >
     <param solid="yes" ORIENT="90,0,270"/>
@@ -141,22 +143,22 @@
     <side name="*" texture="@shijo:dsc00028lot.gif" />
 	<side name="top" ANGLE="90" texture="@shijo:ground.gif" />
 </create>
-<create unit="az" vrobj="city:WRAMPS" >
+<create unit="az" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />
 	<side name="top" ANGLE="90" texture="@shijo:taka_logo.gif" />
 	<PARAM ORIENT="90, 180, 270"/>
 </create>
-<create unit="aA" vrobj="city:WRAMPS" >
+<create unit="aA" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />    
 	<side name="top" ANGLE="90" texture="@shijo:dsc00024100.gif" />
 	<PARAM ORIENT="90, 180, 270"/>
 </create>
-<create unit="aB" vrobj="city:WRAMPS" >
+<create unit="aB" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />    
 	<side name="top" ANGLE="90" texture="@shijo:dsc00024101.gif" />
 	<PARAM ORIENT="90, 180, 270"/>
 </create>
-<create unit="aC" vrobj="city:WRAMPS" >
+<create unit="aC" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />    
 	<side name="top" ANGLE="90" texture="@shijo:dsc00024102.gif" />
 	<PARAM ORIENT="90, 180, 270"/>
@@ -1995,7 +1997,7 @@
 <create unit="Ho" vrobj="city:almostfull" ><side name="N" texture="@shijo:dsc000510002.gif" /></create>
 <create unit="Hp" vrobj="city:almostfull" ><side name="N" texture="@shijo:dsc000510003.gif" /></create>
 <create unit="Hq" vrobj="city:almostfull" ><side name="N" texture="@shijo:dsc000510004.gif" /></create>
-<create unit="H]" vrobj="city:WRAMPS" >
+<create unit="H]" vrobj="city:wramps" >
     <side name="*" texture="@city:clear.gif" />    
     	<side name="top" ANGLE="90" texture="@shijo:dsc000510004_1.gif" />
     	<PARAM ORIENT="90, 180, 270"/>
@@ -2122,17 +2124,15 @@
 <create unit="Ib" vrobj="city:almostfull" ><side name="S" texture="@shijo:dscnw0530001.gif" /></create>
 <create unit="Ic" vrobj="city:almostfull" ><side name="S" texture="@shijo:dscnw0530002.gif" /></create>
 <create unit="Id" vrobj="city:almostfull" ><side name="S" texture="@shijo:dscnw0530003.gif" /></create>
-<create unit="Ie" vrobj="city:almostfull" ><side name="*" texture="@shijo:dscnw05400.gif" /><side name="TOP" texture="@city:clear.gif" /></create>
+<create unit="Ie" vrobj="city:almostfull" ><side name="*" texture="@shijo:dscnw05400.gif" /><side name="top" texture="@city:clear.gif" /></create>
 <create unit="If" vrobj="city:almostfull" ><side name="*" texture="@shijo:dscnw05401.gif" /></create>
-<create unit="Ig" vrobj="city:almostfull" ><side name="*" texture="@shijo:dscnw05500.gif" /><side name="TOP" texture="@city:clear.gif" /></create>
+<create unit="Ig" vrobj="city:almostfull" ><side name="*" texture="@shijo:dscnw05500.gif" /><side name="top" texture="@city:clear.gif" /></create>
 <create unit="Ih" vrobj="city:almostfull" ><side name="*" texture="@shijo:dscnw05501.gif" /></create>
 <create unit="Ii" vrobj="city:almostfull" ><side name="*" texture="@shijo:dscnw05600.gif" /></create>
 <create unit="Ja" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg00.gif" /></create>
 <create unit="Jb" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg01.gif" /></create>
-<create unit="Jc" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg02.gif" />
-</create>
-<create unit="Jd" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg03.gif" />
-</create>
+<create unit="Jc" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg02.gif" /></create>
+<create unit="Jd" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg03.gif" /></create>
 <create unit="Je" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg04.gif" /></create>
 <create unit="Jf" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg05.gif" /></create>
 <create unit="Jg" vrobj="city:almostfull" ><side name="W" texture="@shijo:aut_0089front_bldg06.gif" /></create>
