@@ -3,8 +3,8 @@
 	<title name="Shijo Street"/>
 	<map dimensions="(190,40,10)" /> 
 	<lib href="https://ptsource.github.io/VRGrid/packs/city.vlib"/>
-    <lib href="https://ptsource.github.io/VRGrid/tpacks/shijo.vlib"/>
-    <view radius="85"/>
+        <lib href="https://ptsource.github.io/VRGrid/tpacks/shijo.vlib"/>
+        <view radius="85"/>
 	<atmosphere brightness="100%"/>
 	<ground texture="@shijo:ground.gif" /> 
 	<orb texture="@city:moon.gif" position="(20,20)" brightness="90%"/>
@@ -2745,12 +2745,12 @@
 </create>
 <CREATE unit= "XG" vrobj = "city:SPRITEFACE">
  <side NAME = "*"  TEXTURE="@shijo:XG.gif" />
-<POPUP TEXT="Kamo river　　　　　You can get down a bank" placement="bottom" color="(80,80,80)" size="(200,40)"/>
+<POPUP TEXT="Kamo riverﾂ　ﾂ　ﾂ　ﾂ　ﾂ　You can get down a bank" placement="bottom" color="(80,80,80)" size="(200,40)"/>
 <PARAM SOLID="no"/> 
 </CREATE>
 <CREATE unit="XH" vrobj="city:SPRITEFACE">
  <side NAME ="*" TEXTURE="@shijo:XH.gif" />
-<POPUP TEXT="Kamo river　　　　　You can get down a bank" placement="bottom" color="(80,80,80)" size="(200,40)"/>
+<POPUP TEXT="Kamo riverﾂ　ﾂ　ﾂ　ﾂ　ﾂ　You can get down a bank" placement="bottom" color="(80,80,80)" size="(200,40)"/>
 <PARAM SOLID="no"/> 
 </CREATE>
 <create unit="@1" vrobj="city:HALFS" ><param solid="yes" ORIENT="0,270,270"/>
