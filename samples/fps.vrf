@@ -20,8 +20,6 @@
   <design>
     <!-- We add jump capabilities by pressing the space key by including the jumpkey functions in the script located in the assets folder  -->
     <include href="jumpkey.vrf" />
-    
-    
     <create unit="11" vrobj="village:gateopen" />
     <create unit="es" vrobj="gametools:spriterevolve">
       <side name="sprite" texture="@gametools:gun.vri" angle="0" />
