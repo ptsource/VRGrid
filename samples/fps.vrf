@@ -13,6 +13,7 @@
     <atmosphere brightness="65%" />
     <orb position="(160,60)" brightness="100%" />
     <ambience file="@gametools:comeon.wav" playback="once"/>
+    <view radius="40"/>
     <scope />
     <devel />
   </globals>
