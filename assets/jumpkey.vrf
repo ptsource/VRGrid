@@ -8,21 +8,18 @@
 	<lastlayer>264</lastlayer>
 </define>
 <script trigger="timer" delay="0">
-
 	// Determine Ground Level
 	if (player.location:y - vrf.lastlayer = 0) {
 		vrf.groundlayer = player.location:y;
 		vrf.y = 0;
 	}
 	vrf.lastlayer = player.location:y;
-	
 	// Determine Ceiling Level
 	unitabove = map.get_vrobjs(player.location:column, player.location:row, player.location:layer+1);
 	vrf.ceilinglayer = map.dimensions:layers * 512;
 	if (unitabove.elements gt 0) {
 		vrf.ceilinglayer = player.location:layer * 256 + 110;
 	}
-	
 	// Gravity
 	if (math.abs(vrf.y) gt 0) {
 		vrf.t = (vrf.time:millisecond - vrf.st) / 1000;
@@ -41,7 +38,6 @@
 		}
 	}
 </script>
-
 <script location="(1,1,1)" trigger="key down" key="[space]" delay="0.01">
 	if (player.location:y = vrf.groundlayer) {
 		vrf.st = vrf.time:millisecond;
