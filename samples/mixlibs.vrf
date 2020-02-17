@@ -16,7 +16,6 @@
 	<devel/>
 </globals>
 <design>
-
 <define>
 	<layer>6</layer>
 	<goto>0</goto>
