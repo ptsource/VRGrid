@@ -13,6 +13,7 @@
 	<sky texture="@house:sky.jpg" brightness="70%"/>
 	<ground texture="@house:clear.gif"/>
 	<atmosphere brightness="80%"/>
+	<view radius="60"/>
 	<devel/>
 </globals>
 <design>
