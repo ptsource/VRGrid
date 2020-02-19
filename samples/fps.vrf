@@ -19,6 +19,7 @@
   </globals>
   <design>
     <!-- Add jump capabilities by pressing space key by including the jumpkey functions in the script located in the assets folder  -->
+    <!-- This method allows you to costumize the jump event in every way  -->
     <include href="jumpkey.vrf" />
     <create unit="11" vrobj="village:gateopen" />
     <create unit="es" vrobj="gametools:spriterevolve">
