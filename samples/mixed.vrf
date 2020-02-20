@@ -9,11 +9,12 @@
 	<lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" required="2.8"/>
 	<assets href="https://ptsource.github.io/VRGrid/assets/" />
 	<map dimensions="(30,20,11)"/>
-	<loader texture="@basic:loadtile.vri" />
-	<sky texture="@basic:clouds.gif" brightness="80%" />
-	<atmosphere brightness="60%" color="(255,255,255)" /> 
-	<orb position="(45,60)" brightness="60%" color="(255,255,204)" />
+	<loader texture="@basic:loadtile.vri"/>
+	<sky texture="@basic:clouds.gif" brightness="80%"/>
+	<atmosphere brightness="60%" color="(255,255,255)"/> 
+	<orb position="(45,60)" brightness="60%" color="(255,255,204)"/>
 	<ambience file="@basic:ambient.wav" volume="85%" playback="looped"/> 
+	<view radius="45"/>
 	<devel />
 </globals>
 <design>
