@@ -8,13 +8,13 @@
 	<lastlayer>264</lastlayer>
 </define>
 <script trigger="timer" delay="0">
-	// Determine Ground Level
+	// Determine Ground Layer
 	if (player.location:y - vrf.lastlayer = 0) {
 		vrf.groundlayer = player.location:y;
 		vrf.y = 0;
 	}
 	vrf.lastlayer = player.location:y;
-	// Determine Ceiling Level
+	// Determine Ceiling Layer
 	unitabove = map.get_vrobjs(player.location:column, player.location:row, player.location:layer+1);
 	vrf.ceilinglayer = map.dimensions:layers * 512;
 	if (unitabove.elements gt 0) {
