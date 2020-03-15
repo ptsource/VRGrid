@@ -70,7 +70,7 @@
 <create unit="bF" vrobj="interior:wallcornerc"><popup text="interior:wallcornerc" placement="top" trigger="rollover"/></create>
 <create unit="bG" vrobj="interior:bedb"><popup text="interior:bedb" placement="top" trigger="rollover"/></create>
 <create unit="bH" vrobj="interior:screen"><popup text="interior:screen" placement="top" trigger="rollover"/></create>
-<create unit="b(" vrobj="interior:washer"><popup text="nterior:washer" placement="top" trigger="rollover"/></create>
+<create unit="b(" vrobj="interior:washer"><popup text="interior:washer" placement="top" trigger="rollover"/></create>
 
 <!-- textures -->
 <create unit="ta" vrobj="interior:spriteface"><side NAME="*" TEXTURE="@interior:blackcushion.gif"/><popup text="@interior:blackcushion.gif" placement="top" trigger="rollover"/></create>
