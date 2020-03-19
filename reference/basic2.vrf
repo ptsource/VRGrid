@@ -85,8 +85,7 @@
 <create unit="t2" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:stone9.jpg"/><popup text="@basic2:stone9.jpg" placement="top" trigger="rollover"/></create>
 <create unit="t3" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:strawtile.vri"/><popup text="@basic2:strawtile.vri" placement="top" trigger="rollover"/></create>
 <create unit="t4" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:fence.vri"/><popup text="@basic2:fence.vri" placement="top" trigger="rollover"/></create>
-<create unit="t5" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:specular.vri"/><popup text="@basic2:specular.vri" placement="top" trigger="rollover"/></create>
-<create unit="t6" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:woodpanel.vri"/><popup text="@basic2:woodpanel.vri" placement="top" trigger="rollover"/></create>
+<create unit="t5" vrobj="basic2:spriteface"><side NAME="*" TEXTURE="@basic2:woodpanel.vri"/><popup text="@basic2:woodpanel.vri" placement="top" trigger="rollover"/></create>
 
 
 <create unit="--" vrobj="basic2:ceiling">
@@ -152,9 +151,9 @@
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. tp .. tq .. tr .. ts .. tt .. tu .. tv ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. tx .. tz .. t1 .. t2 .. t3 .. t6 .. t5 ..
+.. tx .. tz .. t1 .. t2 .. t3 .. t4 .. t5 ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-.. t4 .. .. .. .. .. .. .. .. .. .. .. .. ..
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
