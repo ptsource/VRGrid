@@ -10,7 +10,6 @@
 	<map dimensions="(14, 14, 2)" />
 	<sky color="(0,0,255)"/>
 	<ground texture="@basic:gtile.gif"/>
-	<stream name="streamscreen" rmurl="http://repo.ptsource.eu/rms/trailer.rm"/>
 	<devel/>
 </globals>
 <design>
@@ -33,7 +32,6 @@ rotation = rotation + 180;
 self.orient(rotation, 0, 0); // Set the object orientation to the angle
 }
 </script>
-<side name="screen" stream="streamscreen" />
 </create>
 
 <create unit="BD" vrobj="interior:door">
