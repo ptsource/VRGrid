@@ -26,7 +26,6 @@ PTSource VRGrid is a free standard based desktop application and markup language
 * [Convert support from more than 50 3d formats with PTSource PolyDraw](https://wiki.ptsource.eu/software/polydraw/start)
 * More than 50 pre-made maps and designs included
 * Full visual tutorial included
-* Integrated Video Encoder to produce streams from MP4, FLV, MPG or 3GP videos
 * Integrated speech engine
 * Integrated HTML render support
 * Integrated Media render support
