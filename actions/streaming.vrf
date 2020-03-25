@@ -9,7 +9,7 @@
       <map dimensions="(7,10,2)"/>
       <sky color="(0,0,255)"/>
     	<ground texture="@basic:gtile.gif"/>
-      <stream name="video" wmp="http://spots.flatland.com/castleoffate/lara_220k.asf"/>
+      <stream name="video" rmurl="http://repo.ptsource.eu/rms/trailer.rm"/>
       <devel />
 </globals>
 <design>
