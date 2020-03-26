@@ -11,7 +11,7 @@
 	<sky texture="@base:clear.gif"/>
 	<ground texture="images/sfloor.vri"/>
 	<atmosphere brightness="90%"/>
-	<stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/video.rm"/>
+	<stream name="bugslife" rmurl="http://repo.ptsource.eu/rms/trailer.rm"/>
 <devel/>
 </globals>
 <design>
@@ -97,6 +97,7 @@
 	<param orient="270,0,0"/>
 </create>
 <create unit="bu" vrobj="interior:plasma">
+	<side name="screen" stream="bugslife" />
 </create>
 <create unit="bx" vrobj="interior:vidscreen">
 	<side name="screen" stream="bugslife" />
