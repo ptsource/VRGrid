@@ -97,7 +97,6 @@
 	<param orient="270,0,0"/>
 </create>
 <create unit="bu" vrobj="interior:plasma">
-	<side name="screen" stream="bugslife" />
 </create>
 <create unit="bx" vrobj="interior:vidscreen">
 	<side name="screen" stream="bugslife" />
