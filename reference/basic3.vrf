@@ -4,7 +4,7 @@
 <vrf>
 <globals>
          <title name="VRGrid Basic3 Lib Reference" />
-         <lib href="https://ptsource.github.io/VRGrid/libs/basic3.vlib" required="2.8"/>
+         <lib href="hTTps://ptsource.github.io/VRGrid/libs/basic3.vlib" required="2.8"/>
          <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" required="2.8"/>
          <assets href="https://ptsource.github.io/VRGrid/assets/" />
          <map dimensions="(37,15,3)" />
