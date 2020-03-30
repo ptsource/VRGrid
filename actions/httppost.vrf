@@ -14,7 +14,7 @@
 </globals>
 <design>
 <!-- VRGRID USES FULL XML COMPLIANCE SO YOU NEED TO ESCAPE INVALID CHAR WITH &amp; IF POSTING MULTIPLE VARIABLES -->
-<!-- <httppost pageurl="http://repo.ptsource.eu/rms/data.php?id=object1&amp;message=Test"/> -->
+<!-- <httppost pageurl="https://repo.ptsource.eu/rms/data.php?id=object1&amp;message=Test"/> -->
 
 <!-- This POST uses 1 after | so it displays a data sent message in the status bar of VRGrid -->
 <create unit="aa" vrobj="base:full">
