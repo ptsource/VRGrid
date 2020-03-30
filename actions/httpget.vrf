@@ -14,7 +14,7 @@
 <design> 
 <create unit="##" vrobj="base:full">
 <action trigger="click on" text="Make a HTTP Get request to PHP" sidename="w">
-	<httpget pageurl="http://repo.ptsource.eu/rms/get.php"/>
+	<httpget pageurl="https://repo.ptsource.eu/rms/get.php"/>
 </action>
 </create>
 <layer number="1" >
