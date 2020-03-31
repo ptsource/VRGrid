@@ -31,6 +31,7 @@ PTSource VRGrid is a free standard based desktop application and markup language
 * Integrated Media render support
 * Custom VRI Texture format
 * HTTP Get and Post support for database backend
+* SSL/TLS support
 * ... and much more
 
 ## VRModes supported
