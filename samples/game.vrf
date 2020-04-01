@@ -37,7 +37,7 @@
 <create unit="!R" vrobj="gametools:spriterevolve">
 	<side name="*" texture="@gametools:score.gif"/>
 	<action trigger="click on" text="Click here to see your results" sidename="*">
-        <htmlpage pageurl="http://repo.ptsource.eu/rms/results.php|Game Results|560|400"/>
+        <htmlpage pageurl="https://vrgrid.ptsource.eu/demos/results.php|Game Results|560|400"/>
     </action>
 </create>
 <!-- Gold -->
@@ -45,7 +45,7 @@
 	<side name="*" faces="0"/>
 	<popup trigger="everywhere" text="One pot of gold for you" placement="center"/>
 	<action trigger="timer" delay="2">
-	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=gold"/>
+	    <httppost pageurl="https://vrgrid.ptsource.eu/demos/score.php?id=gold"/>
 		<replace source=".."/>
 	</action>
 </create>
@@ -54,7 +54,7 @@
 	<side name="*" faces="0"/>
 	<popup trigger="everywhere" text="One pot of gold for you" placement="center"/>
 	<action trigger="timer" delay="2">
-	    <httppost pageurl="http://repo.ptsource.eu/rms/score.php?id=gold"/>
+	    <httppost pageurl="https://vrgrid.ptsource.eu/demos/score.php?id=gold"/>
 		<replace source="!q"/>
 	</action>
 </create>
