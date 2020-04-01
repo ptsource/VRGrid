@@ -15,7 +15,7 @@
 	<sky texture="@islands:starrysky.jpg"/>
 	<ground texture="@medieval:pebble.jpg"/>
 	<atmosphere brightness="30%"/>
-    <stream name="video" rmurl="http://repo.ptsource.eu/rms/trailer.rm"/>
+    <stream name="video" rmurl="https://vrgrid.ptsource.eu/demos/trailer.rm"/>
 </globals>
 <design>
 
