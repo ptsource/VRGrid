@@ -14,13 +14,13 @@
 </globals>
 <design>
 <!-- VRGRID USES FULL XML COMPLIANCE SO YOU NEED TO ESCAPE INVALID CHAR WITH &amp; IF POSTING MULTIPLE VARIABLES -->
-<!-- <httppost pageurl="https://repo.ptsource.eu/rms/data.php?id=object1&amp;message=Test"/> -->
+<!-- <httppost pageurl="https://vrgrid.ptsource.eu/demos/data.php?id=object1&amp;message=Test"/> -->
 
 <!-- This POST uses 1 after | so it displays a data sent message in the status bar of VRGrid -->
 <create unit="aa" vrobj="base:full">
 <side name="*" texture="@warehouse:_1.gif" />
 <action trigger="click on" text="Make a HTTP Post to PHP from Object 1" sidename="*">
-	 <httppost pageurl="https://repo.ptsource.eu/rms/data.php?id=object1|1"/>
+	 <httppost pageurl="https://vrgrid.ptsource.eu/demos/data.php?id=object1|1"/>
 </action>
 </create>
 
@@ -28,7 +28,7 @@
 <create unit="bb" vrobj="base:full">
 <side name="*" texture="@warehouse:_2.gif" />
 <action trigger="click on" text="Click to make a HTTP Post to PHP from Object 2" sidename="*">
-	<httppost pageurl="https://repo.ptsource.eu/rms/data.php?id=object2|0"/>
+	<httppost pageurl="https://vrgrid.ptsource.eu/demos/data.php?id=object2|0"/>
 </action>
 </create>
 
@@ -36,7 +36,7 @@
 <create unit="cc" vrobj="base:full">
 <side name="*" texture="@warehouse:_3.gif" />
 <action trigger="click on" text="Click to make a HTTP Post to PHP from Object 3" sidename="*">
-	<httppost pageurl="https://repo.ptsource.eu/rms/data.php?id=object3|1"/>
+	<httppost pageurl="https://vrgrid.ptsource.eu/demos/data.php?id=object3|1"/>
 </action>
 </create>
 
@@ -45,7 +45,7 @@
 <param solid="no" />
 <side name="*" texture="@warehouse:4.gif" />
 <action trigger="step in" text="Step in to make a HTTP Post to PHP from Object 4" sidename="*">
-	<httppost pageurl="https://repo.ptsource.eu/rms/data.php?id=object4"/>
+	<httppost pageurl="https://vrgrid.ptsource.eu/demos/data.php?id=object4"/>
 </action>
 </create>
 
@@ -53,7 +53,7 @@
 <create unit="ff" vrobj="base:full">
 <side name="*" texture="@warehouse:_5.gif" />
 <action trigger="click on" text="Click to make a HTTP Post to PHP from Object 5" sidename="*">
-	<httppost pageurl="https://repo.ptsource.eu/rms/data.php?id=object5|2"/>
+	<httppost pageurl="https://vrgrid.ptsource.eu/demos/data.php?id=object5|2"/>
 </action>
 </create>
 
@@ -61,7 +61,7 @@
 <create unit="rr" vrobj="base:full">
 <side name="*" texture="@warehouse:r.gif" />
 <action trigger="click on" text="Click here to view the objects count" sidename="*">
-        <htmlpage pageurl="https://repo.ptsource.eu/rms/view.php|ClickObjectResults|560|400"/>
+        <htmlpage pageurl="https://vrgrid.ptsource.eu/demos/view.php|ClickObjectResults|560|400"/>
 </action>
 </create>
 <layer number="1" >
