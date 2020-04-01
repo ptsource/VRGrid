@@ -11,7 +11,7 @@
 	<sky texture="@base:clear.gif"/>
 	<ground texture="images/sfloor.vri"/>
 	<atmosphere brightness="90%"/>
-	<stream name="bugslife" rmurl="https://repo.ptsource.eu/rms/trailer.rm"/>
+	<stream name="bugslife" rmurl="https://vrgrid.ptsource.eu/demos/trailer.rm"/>
 <devel/>
 </globals>
 <design>
