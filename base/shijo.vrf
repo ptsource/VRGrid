@@ -2,9 +2,9 @@
 <globals>
 	<title name="Shijo Street"/> 
 	<lib href="https://ptsource.github.io/VRGrid/packs/city.vlib"/>
-    <lib href="https://ptsource.github.io/VRGrid/tpacks/shijo.vlib"/>
-    <map dimensions="(190,40,10)" />
-    <view radius="85"/>
+    	<lib href="https://ptsource.github.io/VRGrid/tpacks/shijo.vlib"/>
+    	<map dimensions="(190,40,10)" />
+    	<view radius="85"/>
 	<atmosphere brightness="100%"/>
 	<ground texture="@shijo:ground.gif" /> 
 	<sky texture="@city:sky.gif" brightness="90%"/>
