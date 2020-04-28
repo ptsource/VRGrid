@@ -5,6 +5,7 @@
 <globals>
       <title name="VRGrid Video Streaming Action" />
       <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/> 
+      <lib href="https://ptsource.github.io/VRGrid/packs/interior.vlib" />
       <assets href="https://ptsource.github.io/VRGrid/assets/" />
       <map dimensions="(7,10,2)"/>
       <sky color="(0,0,255)"/>
