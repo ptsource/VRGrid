@@ -40,8 +40,11 @@
       <side name="n,e,w,top,bottom" texture="@basic:black.jpg" clarity="50%"/>
       <side name="s" stream="video" rect="66.6%,50%,100%,100%"/>
 </create>
+<create unit="Wz" vrobj="interior:largetv">
+<side name="screen" stream="video" />
+</create>
 <layer number="1">
-.. .. v4 v5 v6 .. ..
+.. .. v4 v5 v6 .. Wz
 .. .. .. .. .. .. ..
 .. .. .. .. .. .. ..
 .. @@ .. .. .. .. ..
