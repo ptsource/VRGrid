@@ -57,6 +57,6 @@ PTSource VRGrid is a free standard based desktop application and markup language
 
 ## Support
 
-[![Visit homepage.](/images/homepage-here-yellowgreen.svg)](https://wiki.ptsource.eu/)
+[![Visit homepage.](/images/homepage-here-yellowgreen.svg)](https://wiki.ptsource.eu/software/vrgrid/start)
 
 
