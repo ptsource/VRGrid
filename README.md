@@ -23,6 +23,8 @@ PTSource VRGrid is a free standard based desktop application and markup language
 * Multiuser metaverse capabilities
 * [Full syntax highlighting and preview support with PTSource Developer Platform](https://wiki.ptsource.eu/software/platform/start)
 * [More than 1000 pre-made objects](https://wiki.ptsource.eu/software/vrgrid/3dobjects)
+* [Ready to use free texture packs](https://wiki.ptsource.eu/software/vrgrid/textures)
+* [Ready to use free sound packs](https://wiki.ptsource.eu/software/vrgrid/sounds)
 * [Convert support from more than 50 3d formats with PTSource PolyDraw](https://wiki.ptsource.eu/software/polydraw/start)
 * More than 50 pre-made maps and designs included
 * Full visual tutorial included
