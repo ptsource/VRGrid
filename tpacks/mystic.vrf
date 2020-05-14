@@ -5,6 +5,7 @@
 	<globals>
 		<title name="VRGrid Mystic Pack Reference"/>
 		<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
+		<lib href="https://ptsource.github.io/VRGrid/tpacks/mystic.vlib"/>
 		<map dimensions="(30, 30, 3)"/>
 		<loader texture="@basic:loadtile.vri"/>
 		<sky color="(0,0,255)"/>
