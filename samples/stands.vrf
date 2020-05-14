@@ -103,6 +103,7 @@
 	<side name="screen" stream="bugslife" />
 </create>
 <create unit="bS" vrobj="interior:terminal">
+	<side name="screen" stream="bugslife" />
 </create>
 <layer number="1" name="walklevel">
 ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
