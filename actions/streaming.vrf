@@ -42,7 +42,7 @@
 </create>
 <create unit="Wz" vrobj="interior:plasma">
       <side name="screen" stream="video" />
-      <param orient="0,0"/>
+      <param orient="180,0"/>
 </create>
 <layer number="1">
 @@ .. v4 v5 v6 .. Wz
