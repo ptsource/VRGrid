@@ -58,7 +58,6 @@
 	quit();
 </script>
 <script trigger="timer" delay="0.1">
-// TODO Bug here DirectX Crashes on resize when timer is less than 0.2
 if (intro = 1) {
 		vrf.title = "VRGrid Scripting Example (Simple AI) - Press 'N' to start, 'R' to reset or 'Q' to quit.";
 } else {
