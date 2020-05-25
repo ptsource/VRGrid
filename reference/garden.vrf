@@ -3,15 +3,15 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="VRGrid Garden Lib Reference" />
-<lib href="https://ptsource.github.io/VRGrid/packs/garden.vlib" />
-<lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(15,23,3)"/>
-<sky />
-<ground/>
-<ambience file="@people:welcome.wav" playback="once"/>
-<devel />
+         <title name="VRGrid Garden Lib Reference" />
+         <lib href="https://ptsource.github.io/VRGrid/packs/garden.vlib" />
+         <lib href="https://ptsource.github.io/VRGrid/utils/people.vlib" />
+         <assets href="https://ptsource.github.io/VRGrid/assets/" />
+         <map dimensions="(15,23,3)"/>
+         <sky />
+         <ground/>
+         <ambience file="@people:welcome.wav" playback="once"/>
+         <devel />
 </globals>
 <design>
 <!-- 3d objects -->
@@ -51,7 +51,6 @@
 <create unit="bV" vrobj="garden:torch"><popup text="garden:torch" placement="top" trigger="rollover"/></create>
 <create unit="bX" vrobj="garden:bricksanddoor"><popup text="garden:bricksanddoor" placement="top" trigger="rollover"/></create>
 <create unit="bZ" vrobj="garden:lumenaria"><popup text="garden:lumenaria" placement="top" trigger="rollover"/></create>
-
 <!-- textures -->
 <create unit="ta" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:blackmarble.jpg"/><popup text="@garden:blackmarble.jpg" placement="top" trigger="rollover"/></create>
 <create unit="tb" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:brownpillar.jpg"/><popup text="@garden:brownpillar.jpg" placement="top" trigger="rollover"/></create>
@@ -71,8 +70,6 @@
 <create unit="tq" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:water.gif"/><popup text="@garden:water.gif" placement="top" trigger="rollover"/></create>
 <create unit="tr" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:water1.gif"/><popup text="@garden:water1.gif" placement="top" trigger="rollover"/></create>
 <create unit="ts" vrobj="garden:spriteface"><side NAME="*" TEXTURE="@garden:whitepillar.jpg"/><popup text="@garden:whitepillar.jpg" placement="top" trigger="rollover"/></create>
-
-
 <create unit="--" vrobj="garden:ceiling">
          <side NAME="*" TEXTURE="@garden:box.gif" STYLE="scaled"/>
 </create>
