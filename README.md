@@ -12,11 +12,8 @@ PTSource VRGrid is a free standard based desktop application and markup language
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/01.PNG" width="50%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/02.PNG" width="50%">
-<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/03.PNG">
-<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/04.PNG">
-<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/05.PNG">
-<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/06.PNG">
+<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/01.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/02.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/03.PNG" width="33%">
+<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/04.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/05.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/06.PNG" width="33%">
 
 ## Features
 
