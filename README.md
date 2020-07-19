@@ -17,6 +17,7 @@ PTSource VRGrid is a free standard based desktop application for Windows x32 and
 
 ## Features
 
+* Cuboid Engine
 * Cloud based VRF files
 * Native VR support
 * Github hosting support for team management
