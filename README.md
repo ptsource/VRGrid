@@ -29,6 +29,7 @@ PTSource VRGrid is a free standard based desktop application for Windows x32 and
 * [Convert support from more than 50 3d formats with PTSource PolyDraw](https://wiki.ptsource.eu/software/polydraw/start)
 * More than 50 pre-made maps and designs included
 * Full visual tutorial included
+* Directly convert video and streams from Youtube MP4
 * Integrated speech engine
 * Integrated HTML render support
 * Integrated Media render support
