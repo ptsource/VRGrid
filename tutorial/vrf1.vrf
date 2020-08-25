@@ -14,7 +14,7 @@
      <devel />
 </globals> 
 <design> 
-<layer number="1">  
+<layer number="1" name="ground">  
      ## ## ## .. .. .. ## ## ## 
      ## .. .. .. .. .. .. .. ##
      ## .. .. .. .. .. .. .. ## 
