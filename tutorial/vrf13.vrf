@@ -3,30 +3,30 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="Tutorial 13 - Scaling" />
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(15,23,3)" />
-<sky texture="images/clouds.gif" brightness="90%" /> 
-<ground texture="images/dirt.gif" />
-<devel />
+  <title name="Tutorial 13 - Scaling" />
+  <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
+  <assets href="https://ptsource.github.io/VRGrid/assets/" />
+  <map dimensions="(15,23,3)" />
+  <sky texture="images/clouds.gif" brightness="90%" /> 
+  <ground texture="images/dirt.gif" />
+  <devel />
 </globals>
 <design>
 <create unit="CL" vrobj="basic:full">
-<param walkable="yes" origin="(0,0,0)" scale="(2.0,2.0,2.0)"/>
+  <param walkable="yes" origin="(0,0,0)" scale="(2.0,2.0,2.0)"/>
 <popup text="3DObject scaled 2x" placement="top" trigger="rollover"/>
 </create>  
 <create unit="CV" vrobj="basic:full">
-<param walkable="yes" origin="(0,0,0)" scale="(4.0,4.0,4.0)"/>
-<popup text="3DObject scaled 4x" placement="top" trigger="rollover"/>
+  <param walkable="yes" origin="(0,0,0)" scale="(4.0,4.0,4.0)"/>
+  <popup text="3DObject scaled 4x" placement="top" trigger="rollover"/>
 </create>  
 <create unit="CI" vrobj="basic:full">
-<param walkable="yes" origin="(0,0,0)" scale="(0.5,0.5,0.5)"/>
-<popup text="3DObject scaled in half" placement="top" trigger="rollover"/>
+  <param walkable="yes" origin="(0,0,0)" scale="(0.5,0.5,0.5)"/>
+  <popup text="3DObject scaled in half" placement="top" trigger="rollover"/>
 </create>
 <create unit="CD" vrobj="basic:full">
-<param walkable="yes" origin="(0,0,0)" scale="(0.5,1.5,0.5)"/>
-<popup text="3DObject scaled (x = half , y = one and half, z = half)" placement="top" trigger="rollover"/>
+  <param walkable="yes" origin="(0,0,0)" scale="(0.5,1.5,0.5)"/>
+  <popup text="3DObject scaled (x = half , y = one and half, z = half)" placement="top" trigger="rollover"/>
 </create>
   
 <layer number="1">
