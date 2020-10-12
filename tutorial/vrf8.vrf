@@ -3,16 +3,16 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf> 
 <globals>
-<title name="Tutorial 08 - Lighting" /> 
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(9,9,3)" /> 
-<sky texture= "images/clouds.gif" brightness="90%" /> 
-<ground texture="images/dirt.gif" /> 
-<atmosphere brightness="30%" /> 
-<ambience file="sounds/waves.wav" volume="65%" playback="looped"/>
-<orb position="(45,45)" brightness="60%"/>
-<devel />
+    <title name="Tutorial 08 - Lighting" /> 
+    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map dimensions="(9,9,3)" /> 
+    <sky texture= "images/clouds.gif" brightness="90%" /> 
+    <ground texture="images/dirt.gif" /> 
+    <atmosphere brightness="30%" /> 
+    <ambience file="sounds/waves.wav" volume="65%" playback="looped"/>
+    <orb position="(45,45)" brightness="60%"/>
+    <devel />
 </globals> 
 <design>
 <create unit="cc" vrobj="basic:ceiling"> 
