@@ -18,7 +18,7 @@
 ..
 ..
 </layer>
-<popup location="(1,3,1)" radius="1" placement="center" text="You are now running in Devel Mode. This mode only accepts VTPL libs."/>
+<popup location="(1,3,1)" radius="1" placement="center" text="Running in non published libs mode. This mode only accepts VTPL libs."/>
 <enter name="default" location="(1,3,1)"/>
 </design>
 </vrf>
