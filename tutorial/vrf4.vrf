@@ -3,15 +3,15 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf> 
 <globals> 
-<title name="Tutorial 04 - Textures" /> 
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/> 
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(9,9,2)" /> 
-<sky texture= "images/clouds.gif" brightness="90%" /> 
-<ground texture="images/dirt.gif" /> 
-<atmosphere brightness="100%" /> 
-<ambience file="sounds/waves.wav" volume="65%" playback="looped"/> 
-<devel />
+    <title name="Tutorial 04 - Textures" /> 
+    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/> 
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map dimensions="(9,9,2)" /> 
+    <sky texture= "images/clouds.gif" brightness="90%" /> 
+    <ground texture="images/dirt.gif" /> 
+    <atmosphere brightness="100%" /> 
+    <ambience file="sounds/waves.wav" volume="65%" playback="looped"/> 
+    <devel />
 </globals> 
 <design> 
 <create unit="##" vrobj="basic:full"> 
