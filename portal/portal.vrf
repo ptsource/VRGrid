@@ -1,6 +1,6 @@
 <vrf>
 <globals>
-	<title name="Welcome to VRGrid (Devel Mode)"/>
+	<title name="Welcome to VRGrid (VTPL Mode)"/>
 	<lib href="https://ptsource.github.io/VRGrid/utils/compat.vtpl"/>
 	<map dimensions="(1,3,1)"/>
 	<sky colour="(0,0,0)"/>
