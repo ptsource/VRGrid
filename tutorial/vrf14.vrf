@@ -3,14 +3,14 @@
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
 <vrf>
 <globals>
-<title name="Tutorial 14 - Using Faces"/>
-<lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
-<lib href="https://ptsource.github.io/VRGrid/packs/village.vlib"/>
-<assets href="https://ptsource.github.io/VRGrid/assets/" />
-<map dimensions="(11,10,1)" />
-<sky texture="images/clouds.gif" brightness="90%" />
-<ground texture="images/dirt.gif" />
-<devel />
+    <title name="Tutorial 14 - Using Faces"/>
+    <lib href="https://ptsource.github.io/VRGrid/libs/basic.vlib"/>
+    <lib href="https://ptsource.github.io/VRGrid/packs/village.vlib"/>
+    <assets href="https://ptsource.github.io/VRGrid/assets/" />
+    <map dimensions="(11,10,1)" />
+    <sky texture="images/clouds.gif" brightness="90%" />
+    <ground texture="images/dirt.gif" />
+    <devel />
 </globals>
 <design>
 
