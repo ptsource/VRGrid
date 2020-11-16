@@ -22,7 +22,7 @@
     <side name="*" texture="images/vrgrid.vri"/>
     <param speed="1" /> 
 </create> 
-<layer number="1"> 
+<layer number="1" name="ground"> 
      ## ## ## .. @@ .. ## ## ## 
      ## .. .. .. .. .. .. .. ##
      ## .. 11 .. .. .. .. .. ## 
