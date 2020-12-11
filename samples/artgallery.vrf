@@ -166,7 +166,7 @@
 	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
 	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
 </layer>
-<layer number="2" name="walls1">
+<layer number="2" name="walls">
 	Ww Wn Wn Wn Wn Wn Wn Wn Ao Wn Ap Wn Aq Wn Ar Wn Wn Wn Wn Aa Wn Ab Wn Ac Wn We
 	Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. .. .. We
 	Aw .. p6 .. .. We Ba .. .. .. p2 .. .. .. .. .. Al Ak .. .. .. .. .. p3 .. Ad
@@ -178,7 +178,7 @@
 	Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. p9 .. We
 	Ww Ws Ws Ws Ws Ws Ws Ws As Ws At Ws Au Ws Av Ws Ws Ws Ws Ai Ws Ah Ws Ag Ws We
 </layer>
-<layer number="3" name="walls2">
+<layer number="3" name="topbeams">
 	Ww Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn We
 	Ww Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih We
 	Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
