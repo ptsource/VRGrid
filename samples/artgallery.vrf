@@ -154,53 +154,53 @@
 <create unit="p9" vrobj="people:personsprite">
    <side name="*" texture="@people:people9.vri"/>
 </create>
-<layer number="1">
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ 
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ 
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+<layer number="1" name="ground">
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ 
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ 
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+	__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
 </layer>
-<layer number="2">
-Ww Wn Wn Wn Wn Wn Wn Wn Ao Wn Ap Wn Aq Wn Ar Wn Wn Wn Wn Aa Wn Ab Wn Ac Wn We
-Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. .. .. We
-Aw .. p6 .. .. We Ba .. .. .. p2 .. .. .. .. .. Al Ak .. .. .. .. .. p3 .. Ad
-Ww .. .. .. .. We Ww .. .. .. .. .. .. .. p7 .. We Ww .. .. .. .. .. .. .. We
-Ww .. I! IC .. Ws Ws .. .. .. IB IB IB .. .. .. Ws Ws .. .. IB IB .. .. .. We
-Ww .. I! IC .. Wn Wn .. .. .. Ib Ib Ib .. .. .. Wn Wn .. .. Ib Ib .. p8 .. Ae
-Bb .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. .. .. We
-Ww .. p4 .. .. We An .. .. .. .. p5 .. .. .. .. Am Aj .. .. p1 .. .. .. .. Af
-Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. p9 .. We
-Ww Ws Ws Ws Ws Ws Ws Ws As Ws At Ws Au Ws Av Ws Ws Ws Ws Ai Ws Ah Ws Ag Ws We
+<layer number="2" name="walls1">
+	Ww Wn Wn Wn Wn Wn Wn Wn Ao Wn Ap Wn Aq Wn Ar Wn Wn Wn Wn Aa Wn Ab Wn Ac Wn We
+	Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. .. .. We
+	Aw .. p6 .. .. We Ba .. .. .. p2 .. .. .. .. .. Al Ak .. .. .. .. .. p3 .. Ad
+	Ww .. .. .. .. We Ww .. .. .. .. .. .. .. p7 .. We Ww .. .. .. .. .. .. .. We
+	Ww .. I! IC .. Ws Ws .. .. .. IB IB IB .. .. .. Ws Ws .. .. IB IB .. .. .. We
+	Ww .. I! IC .. Wn Wn .. .. .. Ib Ib Ib .. .. .. Wn Wn .. .. Ib Ib .. p8 .. Ae
+	Bb .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. .. .. We
+	Ww .. p4 .. .. We An .. .. .. .. p5 .. .. .. .. Am Aj .. .. p1 .. .. .. .. Af
+	Ww .. .. .. .. We Ww .. .. .. .. .. .. .. .. .. We Ww .. .. .. .. .. p9 .. We
+	Ww Ws Ws Ws Ws Ws Ws Ws As Ws At Ws Au Ws Av Ws Ws Ws Ws Ai Ws Ah Ws Ag Ws We
 </layer>
-<layer number="3">
-Ww Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn We
-Ww Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih We
-Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
-Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
-Ww Ih Ih Ih Ih Ws Ws Ih Ih Ih Ih Ih Ih Ih Ih Ih Ih Ww Ih Ih Ih Ih Ih Ih Ih We
-Ww Ih Ih Ih Ih Wn Wn Ih Ii Ii Ih Ih Ih Ih Ih Ih Ih Ww Ih Ih Ih Ih Ih Ih Ih We
-Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
-Ww Ih Ii Ii Ih We Ww Ih Ii Ih Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We 
-Ww Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih We 
-Ww Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws We
+<layer number="3" name="walls2">
+	Ww Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn Wn We
+	Ww Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih We
+	Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
+	Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
+	Ww Ih Ih Ih Ih Ws Ws Ih Ih Ih Ih Ih Ih Ih Ih Ih Ih Ww Ih Ih Ih Ih Ih Ih Ih We
+	Ww Ih Ih Ih Ih Wn Wn Ih Ii Ii Ih Ih Ih Ih Ih Ih Ih Ww Ih Ih Ih Ih Ih Ih Ih We
+	Ww Ih Ii Ii Ih We Ww Ih Ii Ii Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We
+	Ww Ih Ii Ii Ih We Ww Ih Ii Ih Ih Ih Ii Ih Ii Ih We Ww Ih Ii Ii Ih Ii Ii Ih We 
+	Ww Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih Ih Ih We Ww Ih Ih Ih Ih Ih Ih Ih We 
+	Ww Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws Ws We
 </layer>
-<layer number="4">
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
-R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+<layer number="4" name="ceiling">
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
+	R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R, R,
 </layer>
 <imagemap name="github">
     <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
