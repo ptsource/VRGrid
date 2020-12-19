@@ -13,19 +13,12 @@
     <devel />
 </globals>
 <design>
-
-
-
 <!--
     The first object, object "AA", is a basic, boring object. 
     This object is the furthest to the left as you enter the VRF.
 -->
-
 <create unit="AA" vrobj="basic:full">
 </create>
-
-
-
 <!--
     The "BB" object is the second from the left as you enter the VRF
     If you look directly through the fence in this object you will not be
@@ -34,13 +27,9 @@
     be able to see the "outside" of those surfaces to see how to fix this 
     see the next object "CC"
 -->
-
 <create unit="BB" vrobj="basic:full">
         <side name="s" texture="@village:fence.vri"/>
 </create>
-
-
-
 <!--
     The "CC" object is the third object from the left as you enter the VRF
     This object is identical to the object "BB" above however all the sides of
@@ -48,14 +37,10 @@
     draw both sides of a surface so when you look through the fance you can 
     see the inside of the object
 -->
-
 <create unit="CC" vrobj="basic:full">
        <side name="s" texture="@village:fence.vri"/>
         <side name="n,e,w,top,bottom" texture="@basic:cement.vri" faces="2"/>
 </create>
-
-
-
 <!--
     The "DD" object is the fourth object from the left as you enter the VRF
     Clarity is an amazing effect that you can use in your VRFs to
@@ -63,53 +48,38 @@
     of the object because you have not told  VRGrid that you want the inside of the 
     surfaces of the object to be drawn
 -->
-
-
 <create unit="DD" vrobj="basic:full">
         <side name="s" texture="@basic:cement.vri" clarity="40%"/>
 </create>
-
-
 <!-- 
     The "EE" object is the object closest to the right of the VRF as you enter
     This object is identical to the one immediately to its left, however we
     have added the faces="2" to the other sides of the object that previously 
     could not be seen
 -->
-
 <create unit="EE" vrobj="basic:full">
         <side name="s" texture="@basic:cement.vri" clarity="40%"/>
         <side name="n,e,w,top,bottom" texture="@basic:cement.vri" faces="2"/>
 </create>
-
-
-
-
 <!-- 
     This object is the closest to the right as you enter the VRF
     using faces="0" on a side means that VRGrid does not draw that side
 -->
-
-
 <create unit="FF" vrobj="basic:full">
         <side name="s" faces="0"/>
         <side name="n,e,w,top,bottom" texture="@basic:cement.vri" faces="2"/>
 </create>
-
-
-
-
 <layer number="1">
-.. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. ..
-AA .. BB .. CC .. DD .. EE .. FF
-.. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. ..
-.. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
+    AA .. BB .. CC .. DD .. EE .. FF
+    .. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
+    .. .. .. .. .. .. .. .. .. .. ..
 </layer>
 <popup trigger="rollover" placement="center" textcolor="(255,255,255)" text="Here is a normal FULL object with the default FACES='1'" textalign="top-left" location="(1,5,1)"/>
 <popup trigger="rollover" placement="center" textcolor="(255,255,255)" text="a transparent grate texture on a FULL object, with FACES='1' on all sides" textalign="top-left" location="(3,5,1)"/>
