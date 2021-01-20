@@ -15,6 +15,7 @@
 	<ground texture="@medieval:pebble.jpg"/>
 	<atmosphere brightness="60%"/>
 	<orb position="(180,60)" texture="@medieval:sun.gif" brightness="100%"/>
+	<devel />
 </globals>
 <design>
 <!-- We add jump capabilities by pressing the space key by including the jumpkey functions in the script located in the assets folder  -->
