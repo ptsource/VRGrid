@@ -58,6 +58,15 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 * Hillcrest Labs Tracker
 * FreeTrack Tracker
 
+**Note :** This software does not use a digitally signed installer, so
+you might get a warning. You should dismiss it and continue.
+
+-   Download the Installer.
+-   When Windows says the installer is not trusted, click "more info"
+    and then "run anyway".
+-   Follow the instructions in the installer.
+-   You can now launch the software from your desktop.
+
 ## Download
 
 [![You can download here.](/images/download-here-green.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1)
