@@ -57,7 +57,7 @@
 <script trigger="key down" key="q" location="(1,1,1)">
 	quit();
 </script>
-<script trigger="timer" delay="0.1">
+<script trigger="timer" delay="0.2">
 if (intro = 1) {
 		vrf.title = "VRGrid Scripting Example (Simple AI) - Press 'N' to start, 'R' to reset or 'Q' to quit.";
 } else {
