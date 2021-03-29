@@ -1,6 +1,7 @@
 <!-- This sample code is licensed under Creative Commons https://creativecommons.org/licenses/by/4.0/ -->
 <!-- PTSource Developer Platform has native support for PTSource VRGrid VRF Files -->
 <!-- Visit wiki.ptsource.eu for the full tutorial, tips and much more -->
+<?xml version = "1.0">
 <vrf> 
 <globals> 
      <title name="Tutorial 01 - The basics" /> 
