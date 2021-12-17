@@ -75,4 +75,9 @@ you might get a warning. You should dismiss it and continue.
 
 [![Visit homepage.](/images/homepage-here-yellowgreen.svg)](https://wiki.ptsource.eu/soft/vrgrid/start)
 
+## Donate with PayPal
+
+[![Donate with PayPal.](/images/paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D3EH7N735BVVW)
+
+
 
