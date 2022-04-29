@@ -11,7 +11,9 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 |         :---:         | 
 | Windows 7, 8, 8.1, 10, 11 platforms x86 or x64. | 
 
-[![Maintenance](/images/maintained.svg)]() [![You can download here.](/images/version-10-red.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1)  [![You can download here.](/images/download-here-green.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1) [![Help here.](/images/docs-here-blue.svg)](https://wiki.ptsource.eu/soft/vrgrid/start)
+## Download
+
+[![Maintenance](/images/maintained.svg)](https://wiki.ptsource.eu/soft/vrgrid/start) [![You can download here.](/images/version-10-red.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1)  [![You can download here.](/images/download-here-green.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1) [![Help here.](/images/docs-here-blue.svg)](https://wiki.ptsource.eu/soft/vrgrid/start)
 
 
 ## Screenshots
@@ -70,10 +72,6 @@ you might get a warning. You should dismiss it and continue.
     and then "run anyway".
 -   Follow the instructions in the installer.
 -   You can now launch the software from your desktop.
-
-## Download
-
-[![You can download here.](/images/download-here-green.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1)
 
 ## Support
 
