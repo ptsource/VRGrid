@@ -15,11 +15,11 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 
 [![Maintenance](/images/maintained.svg)](https://wiki.ptsource.eu/soft/vrgrid/start) [![You can download here.](/images/version-10-red.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1)  [![You can download here.](/images/download-here-green.svg)](https://dl.orangedox.com/tX6IL0ZzYy6z5vI2sE?dl=1) [![Help here.](/images/docs-here-blue.svg)](https://wiki.ptsource.eu/soft/vrgrid/start)
 
-## Donate a cup of coffee
+## Support development
 
-If you like this project and find it useful to you you can support it by offering a cup of coffee.
+If you would like to support general development efforts by making a donation please click the Paypal Donate button
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D3EH7N735BVVW" target="_blank"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/coffee.png" alt="Buy Us A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D3EH7N735BVVW" target="_blank"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/donate.gif"></a>
 
 ## Screenshots
 
