@@ -9,7 +9,7 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 
 |  System requirements  |  
 |         :---:         | 
-| Windows 7, 8, 8.1, 10, 11 platforms x86 or x64. | 
+| Windows 8.1, 10 or 11 platforms arch x86 or x64. | 
 
 ## Download
 
