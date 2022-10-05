@@ -15,12 +15,6 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 
 [![Maintenance](/images/maintained.svg)](https://wiki.ptsource.eu/soft/vrgrid/start) [![You can download here.](/images/version-10-red.svg)](https://wiki.ptsource.eu/files)  [![You can download here.](/images/download-here-green.svg)](https://wiki.ptsource.eu/files) [![Help here.](/images/docs-here-blue.svg)](https://wiki.ptsource.eu/soft/vrgrid/start)
 
-## Support development
-
-If you would like to support general development efforts by making a donation please click the Paypal Donate button
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D3EH7N735BVVW" target="_blank"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/donate.png"></a>
-
 ## Screenshots
 
 <img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/01.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/02.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/03.PNG" width="33%">
