@@ -14,7 +14,7 @@
 </globals>
 
 <design>
-
+<!DT
 <define>
 	<velocity x="0.0" y="0.0" z="0.0"/> <!--Initial Velocity-->
 	<bounce>-0.75</bounce> <!--Defines elasticity of collisions (must be negative)-->
@@ -33,7 +33,7 @@
 		}   
 	</function>  
 </define>
-
+DT!>
 <create unit="oo" vrobj="gametools:football">
 	<param walkable="yes"/>
 </create>
@@ -144,7 +144,7 @@
 		vrf.kickFunc();
 	</script>
 </create>
-
+<!DT
 <script trigger="timer" delay="0.01">
 	// Get object data
 	o = map.get_vrobj("oo");
@@ -290,6 +290,7 @@
 	}
 	vrf.kicksound = vrf.kicksound - 0.1;	
 </script>
+DT!>
 <create unit="PL" vrobj="gametools:playersprite">
 </create>
 <player vrobj="PL"/>
