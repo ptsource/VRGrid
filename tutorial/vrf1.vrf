@@ -26,7 +26,7 @@
      ## ## ## ## ## ## ## ## ## 
  </layer> 
  <imagemap name="github">
-    <area shape="circle" coords="32,32,32" href="javascript:alert('ok');" text="Hosted at Github" />
+    <area shape="circle" coords="32,32,32" href="https://github.com/ptsource/VRGrid" text="Hosted at Github" />
 </imagemap>
 <imagemap name="tutorial">
     <area shape="circle" coords="32,32,32" href="https://wiki.ptsource.eu/soft/vrgrid/tutorial" text="Go to full tutorial" />
