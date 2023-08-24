@@ -26,7 +26,6 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 * Cloud based VRF files
 * Native VR support
 * Github hosting support for team management
-* Multiuser metaverse capabilities
 * [Full syntax highlighting and preview support with PTSource Developer Platform](https://wiki.ptsource.eu/soft/platform/start)
 * [More than 1000 pre-made objects](https://wiki.ptsource.eu/soft/vrgrid/3dobjects)
 * [Ready to use free texture packs](https://wiki.ptsource.eu/soft/vrgrid/textures)
@@ -38,6 +37,7 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 * Integrated speech engine
 * Integrated HTML render support
 * Integrated Media render support
+* Integrated PTSource Player with embedded WebServer
 * Custom VRI Texture format
 * HTTP Get and Post support for database backend
 * SSL/TLS support
