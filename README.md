@@ -17,8 +17,8 @@ PTSource VRGrid is a free standard based desktop application for Windows x86 and
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/01.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/02.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/03.PNG" width="33%">
-<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/04.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/05.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/06.PNG" width="33%">
+<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/01B.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/02B.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/03B.PNG" width="33%">
+<img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/04B.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/05B.PNG" width="33%"><img src="https://raw.githubusercontent.com/ptsource/VRGrid/master/images/06B.PNG" width="33%">
 
 ## Features
 
