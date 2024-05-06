@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 
-var NextId=1,Custom="Custom",GoogleCheckout="GoogleCheckout",PayPal="PayPal",Email="Email",AustralianDollar=AUD="AUD",CanadianDollar=CAD="CAD",CzechKoruna=CZK="CZK",DanishKrone=DKK="DKK",Euro=EUR="EUR",HongKongDollar=HKD="HKD",HungarianForint=HUF="HUF",IsraeliNewSheqel=ILS="ILS",JapaneseYen=JPY="JPY",MexicanPeso=MXN="MXN",NorwegianKrone=NOK="NOK",NewZealandDollar=NZD="NZD",PolishZloty=PLN="PLN",PoundSterling=GBP="GBP",SingaporeDollar=SGD="SGD",SwedishKrona=SEK="SEK",SwissFranc=CHF="CHF",USDollar=USD="USD";
+var NextId=1,Custom="Custom",PayPal="PayPal",Email="Email",AustralianDollar=AUD="AUD",CanadianDollar=CAD="CAD",CzechKoruna=CZK="CZK",DanishKrone=DKK="DKK",Euro=EUR="EUR",HongKongDollar=HKD="HKD",HungarianForint=HUF="HUF",IsraeliNewSheqel=ILS="ILS",JapaneseYen=JPY="JPY",MexicanPeso=MXN="MXN",NorwegianKrone=NOK="NOK",NewZealandDollar=NZD="NZD",PolishZloty=PLN="PLN",PoundSterling=GBP="GBP",SingaporeDollar=SGD="SGD",SwedishKrona=SEK="SEK",SwissFranc=CHF="CHF",USDollar=USD="USD";
 function Cart(){
 
 	var me = this;
@@ -169,9 +169,6 @@ function Cart(){
 			case PayPal:
 				simpleCart.paypalCheckout();
 				break;
-			case GoogleCheckout:
-				simpleCart.googleCheckout();
-				break;
 			case Email:
 				simpleCart.emailCheckout();
 				break;
@@ -233,54 +230,7 @@ function Cart(){
 		window.open (strn, "paypal", winpar);
 	};
 
-	me.googleCheckout = function() {
-		var me = this;
-		if( me.currency != USD && me.currency != GBP ){
-			error( "Google Checkout only allows the USD and GBP for currency.");
-			return;
-		} else if( me.merchantId === "" || me.merchantId === null || !me.merchantId ){
-			error( "No merchant Id for google checkout supplied.");
-			return;
-		} 
-		
-		var form = document.createElement("form"),
-			counter = 1;
-		form.style.display = "none";
-		form.method = "POST";
-		form.action = "https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/" + 
-						me.merchantId;
-		form.acceptCharset = "utf-8";
-		
-		for( var current in me.items ){
-			var item 				= me.items[current];
-			form.appendChild( me.createHiddenElement( "item_name_" 		+ counter, item.name		) );
-			form.appendChild( me.createHiddenElement( "item_quantity_" 	+ counter, item.quantity 	) );
-			form.appendChild( me.createHiddenElement( "item_price_" 		+ counter, item.price		) );
-			form.appendChild( me.createHiddenElement( "item_currency_" 	+ counter, me.currency 	) );
-			form.appendChild( me.createHiddenElement( "item_tax_rate_" 	+ counter, me.taxRate 	) );
-			form.appendChild( me.createHiddenElement( "_charset_"					 , ""				) );
-			
-			var descriptionString = "";
-			
-			for( var field in item){
-				if( typeof( item[field] ) != "function" && 
-									field != "id" 		&& 
-									field != "quantity"	&& 
-									field != "price" )
-				{
-						descriptionString = descriptionString + ", " + field + ": " + item[field];				
-				}
-			}
-			descriptionString = descriptionString.substring( 1 );
-			form.appendChild( me.createHiddenElement( "item_description_" + counter, descriptionString) );
-			counter++;
-		}
-		
-		document.body.appendChild( form );
-		form.submit();
-		document.body.removeChild( form );
-	};
-	
+
 	
 	
 	me.emailCheckout = function() {
