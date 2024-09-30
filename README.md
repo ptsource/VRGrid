@@ -5,7 +5,7 @@ Virtual reality (VR) is an interactive computer-generated experience taking plac
 # PTSource VRGrid
 ### Current version 10 updated 23/08/2023 for Windows
 
-PTSource VRGrid is a standard based desktop application for Windows x86 and x64 for representing interactive 3D and 2D with VR support inside a cuboid engine. It includes its own scripting language for software design, and a format support for 3D models. The design goals its to emphasize simplicity, generality, and usability and to be a simple and fun way to learn markup and algorithms fast.
+PTSource VRGrid is a standards-based desktop application for Windows x86 and x64 designed for creating and representing interactive 3D and 2D environments with VR support within a versatile cuboid engine. It features its own scripting language for intuitive software design and support for its own 3D model format. Built with simplicity, generality, and usability in mind, PTSource VRGrid empowers users to easily create immersive virtual experiences and interactive designs with minimal complexity. Ideal for developers and creators looking for a flexible and user-friendly VR solution.
 
 |  System requirements  |  
 |         :---:         | 
