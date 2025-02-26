@@ -29,7 +29,6 @@ PTSource VRGrid is a standards-based desktop application for Windows x86 and x64
 * [Full syntax highlighting and preview support with PTSource Developer Platform](https://wiki.ptsource.eu/soft/platform/start)
 * [More than 1000 pre-made objects](https://wiki.ptsource.eu/soft/vrgrid/3d_objects)
 * [Ready to use free texture packs](https://wiki.ptsource.eu/soft/vrgrid/textures)
-* [Ready to use free sound packs](https://wiki.ptsource.eu/soft/vrgrid/sounds)
 * [Convert support from more than 50 3d formats with PTSource PolyDraw](https://wiki.ptsource.eu/soft/polydraw/start)
 * More than 50 pre-made maps and designs included
 * Full visual tutorial included
