@@ -3,7 +3,7 @@
 Virtual reality (VR) is an interactive computer-generated experience taking place within a simulated environment. It incorporates mainly auditory and visual feedback, but may also allow other types of sensory feedback like haptic. This immersive environment can be similar to the real world or it can be fantastical. Augmented reality systems may also be considered a form of VR that layers virtual information over a live camera feed into a headset or through a smartphone or tablet device giving the user the ability to view three-dimensional images.
 
 # PTSource VRGrid
-### Current version 10 updated 23/08/2024 for Windows
+### Current version 10 Final for Windows
 #### [![ko-fi](/images/ko-fi.png)](https://ko-fi.com/ptsource) For updates and change logs.
 
 PTSource VRGrid is a standards-based desktop application for Windows x86 and x64 designed for creating and representing interactive 3D and 2D environments with VR support within a versatile cuboid engine. It features its own scripting language for intuitive software design and support for its own 3D model format. Built with simplicity, generality, and usability in mind, PTSource VRGrid empowers users to easily create immersive virtual experiences and interactive designs with minimal complexity.
