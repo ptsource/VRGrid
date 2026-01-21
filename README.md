@@ -62,7 +62,7 @@ PTSource VRGrid is a standards-based desktop application for Windows x86 and x64
 * FreeTrack Tracker
 
 
-## Support
+## Homepage
 
 [![Visit homepage.](/images/homepage-here-yellowgreen.svg)](https://wiki.ptsource.eu/soft/vrgrid/start)
 
