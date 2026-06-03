@@ -66,6 +66,10 @@ PTSource VRGrid is a standards-based desktop application for Windows x86 and x64
 
 [![Visit homepage.](/images/homepage-here-yellowgreen.svg)](https://wiki.ptsource.eu/soft/vrgrid/start)
 
+<p align="center" width="100%">
+    <a href="https://store.ptsource.eu/soft/vrgrid/start" target="_blank"><img src="/images/bannervrgrid.png" alt="PTSource VRGrid"></a> 
+</p>
+
 
 
 
